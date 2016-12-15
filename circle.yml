@@ -6,8 +6,4 @@ deployment:
   production:
     branch: master
     commands:
-      - aws s3 sync . s3://architizer-design-kit/
-    branch: production
-    commands:
-      - aws s3 sync . s3://architizer-design-kit/
-
+      - cp -R . $CIRCLE_ARTIFACTS/
