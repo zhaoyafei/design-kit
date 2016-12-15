@@ -14,3 +14,15 @@ You can also drag and drop the elements you want to use from the template file t
 Ultimately, both designers and engineers should have a solid enough understanding of our UI components that designers will not need to concern themselves with making everything pixel-perfect and defined by visual specs because the implementation in code will already have been defined and understood by all parties. Everything down to the sizing and spacing of elements is to be defined in a hierarchical system in this document and reflected in code.
 
 A note about where this document lives. The working copy of it lives in our [_Design Resources](https://www.dropbox.com/sh/7lyl5cwkbrlbiks/AAAe901ekNM6ErFaCEWNRXTua?dl=0) folder on Dropbox and the master version lives in Github, with the most updated date in its file name. Changes should not be regularly made on the Dropbox version of the file. When style changes happen and items need to be added, we will do so as a team and update the “master file” which lives here, in Github, which documents all the changes made over time and grants us access to older versions.
+
+## Semantic Kitchen Sink Quick Setup
+
+```bash
+npm install -g gulp
+npm install semantic-ui
+cd semantic
+gulp build
+```
+Then open `index-semantic.html` in your browser. No server needed.
+
+If you intend to change Semantic styles, run `gulp watch`.
