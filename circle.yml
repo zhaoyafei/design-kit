@@ -1,0 +1,13 @@
+test:
+  override:
+    - echo "we don't need no tests we're perect"
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - aws s3 sync . s3://architizer-design-kit/
+    branch: production
+    commands:
+      - aws s3 sync . s3://architizer-design-kit/
+
