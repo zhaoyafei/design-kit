@@ -23,6 +23,6 @@ npm install semantic-ui
 cd semantic
 gulp build
 ```
-Then open `index-semantic.html` in your browser. No server needed.
+Then open `kitchen-sink/index.html` in your browser. No server needed.
 
 If you intend to change Semantic styles, run `gulp watch`.
