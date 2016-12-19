@@ -4,64 +4,75 @@
 
 /* Architizer Glyphs
    ========================================================================== */
+@glyphFontName: 'Architizer Glyphs';
+@glyphFontFileNameBase: 'architizerglyphs';
+
 @font-face {
-  font-family: 'Architizer Glyphs';
-  src: url('http://scdn.architizer.com/fonts/glyphs/architizerglyphs-regular-webfont.eot');
-  src: url('http://scdn.architizer.com/fonts/glyphs/architizerglyphs-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('http://scdn.architizer.com/fonts/glyphs/architizerglyphs-regular-webfont.woff') format('woff'),
-       url('http://scdn.architizer.com/fonts/glyphs/architizerglyphs-regular-webfont.ttf') format('truetype');
+  font-family: @glyphFontName;
+  src: url('@{fontPath}/@{glyphFontFileNameBase}/@{glyphFontFileNameBase}-regular-webfont.eot');
+  src: url('@{fontPath}/@{glyphFontFileNameBase}/@{glyphFontFileNameBase}-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('@{fontPath}/@{glyphFontFileNameBase}/@{glyphFontFileNameBase}-regular-webfont.woff') format('woff'),
+       url('@{fontPath}/@{glyphFontFileNameBase}/@{glyphFontFileNameBase}-regular-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 /* Theinhardt Fonts
    ========================================================================== */
+@theinhardtFontName: 'Theinhardt-web';
+@theinhardtFontFileNameBase: 'theinhardt';
 
+// Light
 @font-face {
-  font-family: 'Theinhardt-web';
-  src: url('http://scdn.architizer.com/fonts/theinhardt/theinhardtlight_alt-webfont.eot');
-  src: url('http://scdn.architizer.com/fonts/theinhardt/theinhardtlight_alt-webfont.eot?#iefix') format('embedded-opentype'),
-       url('http://scdn.architizer.com/fonts/theinhardt/theinhardtlight_alt-webfont.woff') format('woff'),
-       url('http://scdn.architizer.com/fonts/theinhardt/theinhardtlight_alt-webfont.ttf') format('truetype');
+  font-family: @theinhardtFontName;
+  src: url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}light_alt-webfont.eot');
+  src: url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}light_alt-webfont.eot?#iefix') format('embedded-opentype'),
+       url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}light_alt-webfont.woff') format('woff'),
+       url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}light_alt-webfont.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
+// Regular
 @font-face {
-  font-family: 'Theinhardt-web';
-  src: url('http://scdn.architizer.com/fonts/theinhardt/theinhardtreg-webfont.eot');
-  src: url('http://scdn.architizer.com/fonts/theinhardt/theinhardtreg-webfont.eot?#iefix') format('embedded-opentype'),
-       url('http://scdn.architizer.com/fonts/theinhardt/theinhardtreg-webfont.woff') format('woff'),
-       url('http://scdn.architizer.com/fonts/theinhardt/theinhardtreg-webfont.ttf') format('truetype');
+  font-family: @theinhardtFontName;
+  src: url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}reg-webfont.eot');
+  src: url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}reg-webfont.eot?#iefix') format('embedded-opentype'),
+       url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}reg-webfont.woff') format('woff'),
+       url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}reg-webfont.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
+
+// Regular Italic
 @font-face {
-  font-family: 'Theinhardt-web';
-  src: url('http://scdn.architizer.com/fonts/theinhardt/theinhardtregit-webfont.eot');
-  src: url('http://scdn.architizer.com/fonts/theinhardt/theinhardtregit-webfont.eot?#iefix') format('embedded-opentype'),
-       url('http://scdn.architizer.com/fonts/theinhardt/theinhardtregit-webfont.woff') format('woff'),
-       url('http://scdn.architizer.com/fonts/theinhardt/theinhardtregit-webfont.ttf') format('truetype');
+  font-family: @theinhardtFontName;
+  src: url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}regit-webfont.eot');
+  src: url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}regit-webfont.eot?#iefix') format('embedded-opentype'),
+       url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}regit-webfont.woff') format('woff'),
+       url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}regit-webfont.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
 }
 
+// Medium
 @font-face {
-  font-family: 'Theinhardt-web';
-  src: url('http://scdn.architizer.com/fonts/theinhardt/theinhardtmed-webfont.eot');
-  src: url('http://scdn.architizer.com/fonts/theinhardt/theinhardtmed-webfont.eot?#iefix') format('embedded-opentype'),
-       url('http://scdn.architizer.com/fonts/theinhardt/theinhardtmed-webfont.woff') format('woff'),
-       url('http://scdn.architizer.com/fonts/theinhardt/theinhardtmed-webfont.ttf') format('truetype');
+  font-family: @theinhardtFontName;
+  src: url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}med-webfont.eot');
+  src: url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}med-webfont.eot?#iefix') format('embedded-opentype'),
+       url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}med-webfont.woff') format('woff'),
+       url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}med-webfont.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
+// Heavy
 @font-face {
-  font-family: 'Theinhardt-web';
-  src: url('http://scdn.architizer.com/fonts/theinhardt/theinhardtheavy-webfont.eot');
-  src: url('http://scdn.architizer.com/fonts/theinhardt/theinhardtheavy-webfont.eot?#iefix') format('embedded-opentype'),
-       url('http://scdn.architizer.com/fonts/theinhardt/theinhardtheavy-webfont.woff') format('woff'),
-       url('http://scdn.architizer.com/fonts/theinhardt/theinhardtheavy-webfont.ttf') format('truetype');
+  font-family: @theinhardtFontName;
+  src: url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}heavy-webfont.eot');
+  src: url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}heavy-webfont.eot?#iefix') format('embedded-opentype'),
+       url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}heavy-webfont.woff') format('woff'),
+       url('@{fontPath}/@{theinhardtFontFileNameBase}/@{theinhardtFontFileNameBase}heavy-webfont.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
