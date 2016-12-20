@@ -11,6 +11,7 @@ RUN npm install -g grunt-cli
 
 WORKDIR /code/bootstrap
 RUN npm install
+RUN npm rebuild node-sass
 RUN bundle install
 
 RUN grunt dist
