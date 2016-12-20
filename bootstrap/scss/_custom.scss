@@ -1,32 +1,55 @@
-// Bootstrap overrides
+// Custom Architizer Styles
 //
-// Copy variables from `_variables.scss` to this file to override default values
-// without modifying source files.
+// Add any scss to modify element styles that cannot be controlled by a default
+// variable override. For default variable overrides, use _overrides.scss.
 
+// Add Font smoothing
 
-// Architizer Colors
-//
-// Grayscale and brand colors for use across views.
-
-$gunmetal: #b8c8d1;
-$quicksilver: #859daf;
-$gray-dark: #292929;
-$gray: #757575;
-$gray-light: #9e9e9e;
-$brand-primary: #1ca3fc;
-$brand-success: #22d290;
-$brand-info: $gunmetal;
-$brand-warning: #ffcd00;
-$brand-danger: #ff4b1f;
-$brand-inverse: $gray-dark;
+html, body {
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
 
 // Architizer Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: "Theinhardt-web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
-// Glpyh fonts
 .architizer-glyph {
   font-family: "Architizer Glyphs";
+}
+
+// Architizer Navbar
+//
+// Custom styles for the Bootstrap navbar element
+
+.navbar-brand {
+  margin-right: $navbar-brand-margin-right;
+  .navbar-dark  & {
+    color: $white; // override $navbar-dark-active-color
+    &:hover, &:active, &:visited {
+      color: $white;
+    }
+  }
+}
+
+.navbar-nav {
+  .nav-item + .nav-item {
+    margin-left: 1.5rem; // spacing in between links
+  }
+}
+
+// Architizer Inputs
+//
+// Custom styles for input elements
+
+.form-group {
+  label {
+    margin-bottom: 0;
+    font-size: $font-size-xs;
+    color: $quicksilver;
+  }
+  .form-control {
+    font-size: $font-size-sm;
+  }
 }
