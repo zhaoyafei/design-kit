@@ -1,9 +1,38 @@
-test:
+general:
+  build_dir: bootstrap
+  branches:
+    only:
+      # - master
+      - andrew/bootstrap-deploy-to-s3
+  artifacts:
+    - "_gh_pages" # Compiled Jekyll Docs Site
+    - "dist" # Compiled Bootstrap CSS/JS
+
+# machine:
+#   node:
+#     version: v6.1.0
+#   ruby:
+#     version: ruby-2.2.4
+#   python:
+#     version: 2.7.11
+
+dependencies:
+  pre:
+    - npm install -g grunt-cli
+    - gem install bundler
   override:
-    - echo "we don't need no tests we're perect"
+    - bundle install
+    - npm install
+    - grunt dist
+    - grunt docs
+    - jekyll build
 
 deployment:
-  production:
-    branch: master
+  andrew-bootstrap-deploy-to-s3:
+    branch: andrew/bootstrap-deploy-to-s3
     commands:
-      - cp -R . $CIRCLE_ARTIFACTS/
+      - aws s3 sync _gh_pages s3://architizer-design-kit/ --delete
+
+notify:
+  webhooks:
+    - url: https://hooks.slack.com/services/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
