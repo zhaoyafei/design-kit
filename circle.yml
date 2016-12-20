@@ -1,20 +1,8 @@
 general:
   build_dir: bootstrap
-  branches:
-    only:
-      # - master
-      - andrew/bootstrap-deploy-to-s3
   artifacts:
     - "_gh_pages" # Compiled Jekyll Docs Site
     - "dist" # Compiled Bootstrap CSS/JS
-
-# machine:
-#   node:
-#     version: v6.1.0
-#   ruby:
-#     version: ruby-2.2.4
-#   python:
-#     version: 2.7.11
 
 dependencies:
   pre:
@@ -28,11 +16,11 @@ dependencies:
     - jekyll build
 
 deployment:
-  andrew-bootstrap-deploy-to-s3:
-    branch: andrew/bootstrap-deploy-to-s3
+  production:
+    branch: master
     commands:
       - aws s3 sync _gh_pages s3://architizer-design-kit/ --delete
-
-notify:
-  webhooks:
-    - url: https://hooks.slack.com/services/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
+  andrew/bootstrap:
+    branch: andrew/bootstrap
+    commands:
+      - aws s3 sync _gh_pages s3://architizer-design-kit/ --delete
