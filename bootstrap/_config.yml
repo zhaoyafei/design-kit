@@ -40,10 +40,6 @@ download:
   source:         https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.5.zip
   dist:           https://github.com/twbs/bootstrap/releases/download/v4.0.0-alpha.5/bootstrap-4.0.0-alpha.5-dist.zip
 
-blog:             https://blog.getbootstrap.com
-expo:             https://expo.getbootstrap.com
-themes:           https://themes.getbootstrap.com
-
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:            https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css
