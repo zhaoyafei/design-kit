@@ -1,6 +1,6 @@
 version: '2'
 services:
-  docs:
+  serve_docs:
     build: .
     command: "jekyll serve --incremental"
     working_dir: "/code/bootstrap"
@@ -8,6 +8,25 @@ services:
       - .:/code
     ports:
       - "9001:9001"
+    depends_on:
+      - build_docs
+
+  build_docs:
+    build: .
+    command: "grunt docs"
+    working_dir: "/code/bootstrap"
+    volumes:
+      - .:/code
+    depends_on:
+      - build_dist
+
+  build_dist:
+    build: .
+    command: "grunt dist"
+    working_dir: "/code/bootstrap"
+    volumes:
+      - .:/code
+
   # watcher:
   #   build: .
   #   command: "grunt watch"

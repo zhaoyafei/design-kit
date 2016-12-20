@@ -14,6 +14,6 @@ RUN npm install
 RUN npm rebuild node-sass
 RUN bundle install
 
-RUN grunt dist
-
 EXPOSE 9001
+
+CMD ['grunt', 'dist']
