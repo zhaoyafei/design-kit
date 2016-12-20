@@ -10,9 +10,9 @@
 
 $gunmetal: #B8C8D1;
 $quicksilver: #859DAF;
-$gray-dark: rgba(0,0,0,0.87);
-$gray: rgba(0,0,0,0.54);
-$gray-light: rgba(0,0,0,0.38);
+$gray-dark: #292929;
+$gray: #757575;
+$gray-light: #9E9E9E;
 $brand-primary: #1ca3fc;
 $brand-success: #22D290;
 $brand-info: $gunmetal;
@@ -24,56 +24,9 @@ $brand-inverse: $gray-dark;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-@font-face {
-    font-family: 'Theinhardt-web';
-    src: url("../fonts/theinhardt/theinhardtlight_alt-webfont.eot");
-    src: url("../fonts/theinhardt/theinhardtlight_alt-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/theinhardt/theinhardtlight_alt-webfont.woff") format("woff"), url("../fonts/theinhardt/theinhardtlight_alt-webfont.ttf") format("truetype");
-    font-weight: 100;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Theinhardt-web';
-    src: url("../fonts/theinhardt/theinhardtlightit-webfont.eot");
-    src: url("../fonts/theinhardt/theinhardtlightit-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/theinhardt/theinhardtlightit-webfont.woff") format("woff"), url("../fonts/theinhardt/theinhardtlightit-webfont.ttf") format("truetype");
-    font-weight: 100;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'Theinhardt-web';
-    src: url("../fonts/theinhardt/theinhardtreg-webfont.eot");
-    src: url("../fonts/theinhardt/theinhardtreg-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/theinhardt/theinhardtreg-webfont.woff") format("woff"), url("../fonts/theinhardt/theinhardtreg-webfont.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Theinhardt-web';
-    src: url("../fonts/theinhardt/theinhardtregit-webfont.eot");
-    src: url("../fonts/theinhardt/theinhardtregit-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/theinhardt/theinhardtregit-webfont.woff") format("woff"), url("../fonts/theinhardt/theinhardtregit-webfont.ttf") format("truetype");
-    font-weight: 400;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'Theinhardt-web';
-    src: url("../fonts/theinhardt/theinhardtmed-webfont.eot");
-    src: url("../fonts/theinhardt/theinhardtmed-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/theinhardt/theinhardtmed-webfont.woff") format("woff"), url("../fonts/theinhardt/theinhardtmed-webfont.ttf") format("truetype");
-    font-weight: 800;
-    font-style: normal;
-}
-
 $font-family-sans-serif: 'Theinhardt-web', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
 // Glpyh fonts
-
-@font-face {
-  font-family: 'Architizer Glyphs';
-  src: url('../fonts/architizerglyphs/architizerglyphs-regular-webfont.eot');
-  src: url('../fonts/architizerglyphs/architizerglyphs-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/architizerglyphs/architizerglyphs-regular-webfont.woff') format('woff'),
-       url('../fonts/architizerglyphs/architizerglyphs-regular-webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 .architizer-glyph {
   font-family: 'Architizer Glyphs';
 }

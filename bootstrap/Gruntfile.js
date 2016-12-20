@@ -200,6 +200,14 @@ module.exports = function (grunt) {
           '**/*'
         ],
         dest: 'docs/dist/'
+      },
+      fonts: {
+        expand: true,
+        cwd: 'fonts/',
+        src: [
+          '**/*'
+        ],
+        dest: 'docs/dist/fonts/'
       }
     },
 
@@ -361,7 +369,7 @@ module.exports = function (grunt) {
   if (typeof process.env.SAUCE_ACCESS_KEY !== 'undefined' &&
       // Skip Sauce if running a different subset of the test suite
       runSubset('sauce-js-unit')) {
-    testSubtasks = testSubtasks.concat(['dist', 'docs-css', 'docs-js', 'clean:docs', 'copy:docs', 'exec:upload-preview']);
+    testSubtasks = testSubtasks.concat(['dist', 'docs-css', 'docs-js', 'clean:docs', 'copy:docs', 'copy:fonts', 'exec:upload-preview']);
     // Skip Sauce on Travis when [skip sauce] is in the commit message
     if (isUndefOrNonZero(process.env.TWBS_DO_SAUCE)) {
       testSubtasks.push('connect');
@@ -395,7 +403,7 @@ module.exports = function (grunt) {
   grunt.registerTask('docs-css', ['cssmin:docs', 'exec:postcss-docs']);
   grunt.registerTask('lint-docs-css', ['scsslint:docs']);
   grunt.registerTask('docs-js', ['uglify:docsJs']);
-  grunt.registerTask('docs', ['lint-docs-css', 'docs-css', 'docs-js', 'clean:docs', 'copy:docs']);
+  grunt.registerTask('docs', ['lint-docs-css', 'docs-css', 'docs-js', 'clean:docs', 'copy:docs', 'copy:fonts']);
   grunt.registerTask('docs-github', ['jekyll:github']);
 
   grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress']);
