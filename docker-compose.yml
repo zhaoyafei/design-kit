@@ -1,0 +1,10 @@
+version: '2'
+services:
+  docs:
+    build: .
+    command: "jekyll serve --incremental"
+    working_dir: "/code/bootstrap"
+    volumes:
+      - .:/code
+    ports:
+      - "9001:9001"
