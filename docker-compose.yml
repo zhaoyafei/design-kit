@@ -8,3 +8,9 @@ services:
       - .:/code
     ports:
       - "9001:9001"
+  # watcher:
+  #   build: .
+  #   command: "grunt watch"
+  #   working_dir: "/code/bootstrap"
+  #   volumes:
+  #     - .:/code
