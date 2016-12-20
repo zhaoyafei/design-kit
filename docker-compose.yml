@@ -13,16 +13,7 @@ services:
 
   build_docs:
     build: .
-    command: "grunt docs"
-    working_dir: "/code/bootstrap"
-    volumes:
-      - .:/code
-    depends_on:
-      - build_dist
-
-  build_dist:
-    build: .
-    command: "grunt dist"
+    command: sh -c "grunt dist && grunt docs"
     working_dir: "/code/bootstrap"
     volumes:
       - .:/code
