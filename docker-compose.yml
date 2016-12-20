@@ -1,0 +1,26 @@
+version: '2'
+services:
+  serve_docs:
+    build: .
+    command: "jekyll serve"
+    working_dir: "/code/bootstrap"
+    volumes:
+      - .:/code
+    ports:
+      - "9001:9001"
+    depends_on:
+      - build_docs
+
+  build_docs:
+    build: .
+    command: sh -c "grunt dist && grunt docs"
+    working_dir: "/code/bootstrap"
+    volumes:
+      - .:/code
+
+  # watcher:
+  #   build: .
+  #   command: "grunt watch"
+  #   working_dir: "/code/bootstrap"
+  #   volumes:
+  #     - .:/code
