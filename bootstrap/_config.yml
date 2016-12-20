@@ -17,6 +17,7 @@ baseurl:          ""
 url:              https://v4-alpha.getbootstrap.com
 encoding:         UTF-8
 exclude:          [assets/scss/]
+incremental:      true
 
 gems:
   - jekyll-redirect-from

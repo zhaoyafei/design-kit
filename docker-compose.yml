@@ -2,7 +2,7 @@ version: '2'
 services:
   serve_docs:
     build: .
-    command: "jekyll serve --incremental"
+    command: "jekyll serve"
     working_dir: "/code/bootstrap"
     volumes:
       - .:/code
