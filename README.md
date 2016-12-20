@@ -29,11 +29,13 @@ If you intend to change Semantic styles, run `gulp watch`.
 
 ## Bootstrap Documentation Site
 
+Run the documentation site with the following command:
+
 ```bash
 docker-compose up
 ```
 
-Visit (http://localhost:9001) in your browser.
+Visit <http://localhost:9001> in your browser.
 
 ## Editing Bootstrap styles
 
@@ -64,7 +66,7 @@ build_docs_1  |
 build_docs_1  | http://gruntjs.com/getting-started
 designkit_build_docs_1 exited with code 99
 ```
-To resolve, run `npm install` inside a running `designkit_serve_docs` container:
+To resolve, run `npm install` inside a `build_docs` container:
 
 ```bash
 docker-compose run build_docs sh
