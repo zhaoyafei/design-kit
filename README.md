@@ -26,3 +26,11 @@ gulp build
 Then open `kitchen-sink/index.html` in your browser. No server needed.
 
 If you intend to change Semantic styles, run `gulp watch`.
+
+## Bootstrap Documentation Site
+
+```bash
+docker-compose up
+```
+
+Visit (http://localhost:9001) in your browser.
