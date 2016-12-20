@@ -1,0 +1,53 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+// Architizer Colors
+//
+// Grayscale and brand colors for use across views.
+
+$gunmetal: #b8c8d1;
+$quicksilver: #859daf;
+$white: #ffffff;
+$gray-dark: #292929;
+$gray: #757575;
+$gray-light: #9e9e9e;
+$brand-primary: #1ca3fc;
+$brand-success: #22d290;
+$brand-info: $gunmetal;
+$brand-warning: #ffcd00;
+$brand-danger: #ff4b1f;
+$brand-inverse: rgba(20,20,19,.94);
+
+// Architizer Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: "Theinhardt-web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-size-h1: 3.75rem;
+$font-size-h2: 3rem;
+$font-size-h3: 2.25rem;
+$font-size-h4: 1.875rem;
+$font-size-h5: 1.5rem;
+$font-size-h6: 1.3125rem;
+$headings-font-weight:   100;
+$headings-line-height:   1.5;
+
+// Architizer Navbar
+//
+// Custom styles for the Bootstrap navbar element
+
+$navbar-padding-y: 0.2rem;
+$navbar-brand-margin-right: 2rem;
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: darken($brand-primary, 5%);
+$navbar-dark-active-color: $brand-primary;
+
+// Architizer inputs
+//
+// Custom styles for input elements
+
+$input-border-color: $gunmetal;
+$input-padding-x: 0.5rem;
+$input-padding-y: 0.25rem;

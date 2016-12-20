@@ -9,7 +9,13 @@ Customize Bootstrap 4 with our built-in custom variables file and easily toggle 
 
 ## Customizing variables
 
-Bootstrap 4 ships with a `_custom.scss` file for easy variable overrides. Copy and paste relevant lines from `_variables.scss` into the custom file and recompile your Sass to change our default values. **Be sure to remove the `!default` flag from override values.**
+Bootstrap 4 ships with a `_custom.scss` file for easy variable overrides.
+{% callout warning %}
+#### Renamed Custom File
+We rename `_custom.scss` to `_overrides.scss`, as it only overrides *already existing* variable values. This file is included before `_variables.scss`. For custom Architizer styles on top of Bootstrap that aren't controlled by variables exclusively, we include a `_custom.scss` file as the last `@import`.
+{% endcallout %}
+
+Copy and paste relevant lines from `_variables.scss` into the custom file and recompile your Sass to change our default values. **Be sure to remove the `!default` flag from override values.**
 
 For example, to change out the `background-color` and `color` for the `<body>`, you'd do the following:
 
