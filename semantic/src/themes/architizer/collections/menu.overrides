@@ -1,9 +1,0 @@
-/*******************************
-         Theme Overrides
-*******************************/
-
-.ui.menu .architizer.glyph.item {
-  font-family: 'Architizer Glyphs';
-  font-size: 1.25rem;
-  font-weight: normal;
-}
