@@ -44,12 +44,12 @@ html, body {
 // Custom styles for input elements
 
 .form-group {
-  & label {
+  label {
+    margin-bottom: 0;
     font-size: $font-size-xs;
     color: $quicksilver;
-    margin-bottom: 0;
   }
-  & .form-control {
+  .form-control {
     font-size: $font-size-sm;
   }
 }

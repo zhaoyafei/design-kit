@@ -9,7 +9,7 @@
 
 $gunmetal: #b8c8d1;
 $quicksilver: #859daf;
-$white: #ffffff;
+$white: #fff;
 $gray-dark: #292929;
 $gray: #757575;
 $gray-light: #9e9e9e;
@@ -38,7 +38,7 @@ $headings-line-height:   1.5;
 //
 // Custom styles for the Bootstrap navbar element
 
-$navbar-padding-y: 0.2rem;
+$navbar-padding-y: .2rem;
 $navbar-brand-margin-right: 2rem;
 $navbar-dark-color: $white;
 $navbar-dark-hover-color: darken($brand-primary, 5%);
@@ -49,5 +49,5 @@ $navbar-dark-active-color: $brand-primary;
 // Custom styles for input elements
 
 $input-border-color: $gunmetal;
-$input-padding-x: 0.5rem;
-$input-padding-y: 0.25rem;
+$input-padding-x: .5rem;
+$input-padding-y: .25rem;
