@@ -88,5 +88,14 @@ If you encounter this error while running `grunt watch` outside of the container
 npm rebuild node-sass
 ```
 
+**PhantomJS threw an error**
 
+```bash
+PhantomJS threw an error:ERROR
+>> /Users/yatrik/code/design-kit/bootstrap/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs: /Users/yatrik/code/design-kit/bootstrap/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs: cannot execute binary file 0 [ '/Users/yatrik/code/design-kit/bootstrap/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs: /Users/yatrik/code/design-kit/bootstrap/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs: cannot execute binary file' ]
+Warning: PhantomJS exited unexpectedly with exit code 126. Use --force to continue.
+```
+This error comes up while running `npm test` sometimes. It usually occurs when you have recently upgraded Node.
+
+To resolve, completely remove the `bootstrap/node_modules` folder and run `npm install` again.
 
