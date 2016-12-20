@@ -28,22 +28,6 @@ Use either the Bootstrap mark (a capital **B**) or the standard logo (just **Boo
   </div>
 </div>
 
-## Download mark
-
-Download the Bootstrap mark in one of three styles, each available as an SVG file. Right click, Save as.
-
-<div class="bd-brand-logos">
-  <div class="bd-brand-item">
-    <img class="svg" src="{{ site.baseurl }}/assets/brand/bootstrap-solid.svg" alt="Bootstrap" width="144" height="144">
-  </div>
-  <div class="bd-brand-item inverse">
-    <img class="svg" src="{{ site.baseurl }}/assets/brand/bootstrap-outline.svg" alt="Bootstrap" width="144" height="144">
-  </div>
-  <div class="bd-brand-item inverse">
-    <img class="svg" src="{{ site.baseurl }}/assets/brand/bootstrap-punchout.svg" alt="Bootstrap" width="144" height="144">
-  </div>
-</div>
-
 ## Name
 
 The project and framework should always be referred to as **Bootstrap**. No Twitter before it, no capital _s_, and no abbreviations except for one, a capital **B**.

@@ -84,7 +84,7 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 <!-- Just an image -->
 <nav class="navbar navbar-light bg-faded">
   <a class="navbar-brand" href="#">
-    <img src="{{ site.baseurl }}/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+    <img src="{{ site.baseurl }}/assets/brand/architizer-solid.svg" width="30" height="30" alt="">
   </a>
 </nav>
 {% endexample %}
@@ -93,8 +93,8 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 <!-- Image and text -->
 <nav class="navbar navbar-light bg-faded">
   <a class="navbar-brand" href="#">
-    <img src="{{ site.baseurl }}/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Bootstrap
+    <img src="{{ site.baseurl }}/assets/brand/architizer-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Architizer
   </a>
 </nav>
 {% endexample %}

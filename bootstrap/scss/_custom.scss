@@ -2,3 +2,31 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
+
+
+// Architizer Colors
+//
+// Grayscale and brand colors for use across views.
+
+$gunmetal: #B8C8D1;
+$quicksilver: #859DAF;
+$gray-dark: #292929;
+$gray: #757575;
+$gray-light: #9E9E9E;
+$brand-primary: #1ca3fc;
+$brand-success: #22D290;
+$brand-info: $gunmetal;
+$brand-warning: #FFCD00;
+$brand-danger: #FF4B1F;
+$brand-inverse: $gray-dark;
+
+// Architizer Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: 'Theinhardt-web', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// Glpyh fonts
+.architizer-glyph {
+  font-family: 'Architizer Glyphs';
+}
