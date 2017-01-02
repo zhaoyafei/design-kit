@@ -1,6 +1,16 @@
 var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
 
+/**
+ * CSS Wrap
+ *
+ * Wraps all Architizer Design Kit styles in the .adk class
+ * This allows us to turn on Design Kit styles at will by adding this class to the <html> element
+ *
+ * (We are using l0-gulp-css-wrap because of https://github.com/benignware/css-wrap/issues/3 )
+ */
+var cssWrap = require('l0-gulp-css-wrap');
+
 var sassPaths = [
   'bower_components/normalize.scss/sass',
   'bower_components/foundation-sites/scss',
@@ -16,6 +26,10 @@ gulp.task('sass', function() {
       .on('error', $.sass.logError))
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
+    }))
+    .pipe(cssWrap({
+      selector: '.adk',
+      skip: new RegExp('html'),
     }))
     .pipe(gulp.dest('css'));
 });
