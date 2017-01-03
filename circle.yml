@@ -11,19 +11,19 @@ dependencies:
     - npm install
     - gulp sass
 
+test:
+  override:
+    - echo 'No Tests'
+
 deployment:
-  production:
+  design-kit.arc.ht:
     branch: master
-    commands:
-      - aws s3 sync _gh_pages s3://design-kit.arc.ht/ --delete
-  andrew/foundation-deploy:
-    branch: andrew/foundation-deploy
     commands:
       - aws s3 sync css s3://design-kit.arc.ht/css/ --delete
       - aws s3 sync js s3://design-kit.arc.ht/js/ --delete
       - aws s3 sync fonts s3://design-kit.arc.ht/fonts/ --delete
-      - aws s3 sync index.html s3://design-kit.arc.ht/index.html --delete
-      - aws s3 sync kitchen-sink.html s3://design-kit.arc.ht/kitchen-sink.html --delete
+      - aws s3 sync assets s3://design-kit.arc.ht/assets/ --delete
+      - aws s3 sync . s3://design-kit.arc.ht/ --exclude "*" --include "*.html"
 
 experimental:
   notify:
