@@ -1,0 +1,27 @@
+/**
+ * Architizer Design Kit Resets
+ *
+ * The following resets are normally added to Foundation using normalize.css
+ *
+ * Because we wrap all our styles in the .adk class, these resets don't get inherited
+ * unless the <html> or <body> tags have the .adk class
+ *
+ * This file enables the html and body tag resets on all .adk elements so that
+ * Design Kit elements can exist inside of a page with non-design-kit elements.
+ */
+
+// This becomes .adk * {} when gulp-css-wrap runs
+* {
+  // html
+  box-sizing: border-box;
+  font-size: 100%;
+
+  // body
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #0a0a0a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
