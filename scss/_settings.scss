@@ -60,6 +60,7 @@ $foundation-palette: (
   warning: #ffcd00,
   alert: #ff4b1f,
 );
+$extra-light-gray: #F7F9FA;
 $light-gray: rgba(0,0,0, 0.38);
 $medium-gray: rgba(0,0,0, 0.54);
 $dark-gray: #292929;
@@ -365,7 +366,8 @@ $callout-border: 1px solid $gunmetal;
 // $helptext-font-style: italic;
 // $input-prefix-color: $black;
 // $input-prefix-background: $light-gray;
-// $input-prefix-border: 1px solid $medium-gray;
+$input-prefix-border: 1px solid $gunmetal;
+$input-prefix-border-hover: 1px solid $quicksilver;
 // $input-prefix-padding: 1rem;
 // $form-label-color: $black;
 // $form-label-font-size: rem-calc(14);
@@ -381,7 +383,7 @@ $input-placeholder-color: $light-gray;
 // $input-font-weight: $global-weight-normal;
 // $input-background: $white;
 // $input-background-focus: $white;
-// $input-background-disabled: $light-gray;
+$input-background-disabled: $extra-light-gray;
 $input-border: 1px solid $gunmetal;
 $input-border-focus: 1px solid $adk-blue;
 $input-border-hover: 1px solid $quicksilver;
