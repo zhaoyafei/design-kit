@@ -47,7 +47,7 @@
 // // ---------
 $gray: #757575;
 $gunmetal: #b8c8d1;
-$quicksilver: #859daf;
+$quicksilver: #859DAF;
 $adk-blue: #1CA3FC;
 
 // $global-font-size: 100%;
@@ -278,7 +278,7 @@ $global-radius: 3px;
 
 // $callout-background: $white;
 // $callout-background-fade: 85%;
-// $callout-border: 1px solid rgba($black, 0.25);
+$callout-border: 1px solid $gunmetal;
 // $callout-margin: 0 0 1rem 0;
 // $callout-padding: 1rem;
 // $callout-font-color: $body-font-color;
@@ -375,17 +375,18 @@ $global-radius: 3px;
 // $select-triangle-color: $dark-gray;
 // $select-radius: $global-radius;
 // $input-color: $black;
-$input-placeholder-color: $medium-gray;
+$input-placeholder-color: $light-gray;
 // $input-font-family: inherit;
 // $input-font-size: rem-calc(16);
 // $input-font-weight: $global-weight-normal;
 // $input-background: $white;
 // $input-background-focus: $white;
 // $input-background-disabled: $light-gray;
-// $input-border: 1px solid $medium-gray;
+$input-border: 1px solid $gunmetal;
 $input-border-focus: 1px solid $adk-blue;
-// $input-shadow: inset 0 1px 2px rgba($black, 0.1);
-// $input-shadow-focus: 0 0 5px $medium-gray;
+$input-border-hover: 1px solid $quicksilver;
+$input-shadow: none;
+$input-shadow-focus: none;
 // $input-cursor-disabled: not-allowed;
 // $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 // $input-number-spinners: true;
