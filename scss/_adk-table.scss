@@ -1,3 +1,12 @@
-/// If `true`, tables are striped by default and an .unstriped class is created. If `false`, a .striped class is created.
-/// @type Boolean
-$table-is-striped: false !default;
+table
+tbody
+thead
+tr {
+	border-bottom: $table-border;
+}
+
+table
+thead
+tr {
+	border-bottom: $table-border;
+}
