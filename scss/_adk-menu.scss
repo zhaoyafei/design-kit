@@ -6,3 +6,10 @@ ul.menu {
 		}
 	}
 }
+
+.is-dropdown-submenu {
+	border-radius: $global-radius;
+	.is-dropdown-submenu-item:hover {
+		background-color: $global-hover;
+	}
+}

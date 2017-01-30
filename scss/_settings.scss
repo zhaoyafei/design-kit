@@ -74,10 +74,13 @@ $global-padding: $space-m;
 // $global-weight-normal: normal;
 // $global-weight-bold: bold;
 $global-radius: $space-micro;
+$global-outline: 1px solid $gunmetal;
 // $global-text-direction: ltr;
 // $global-flexbox: false;
 // $print-transparent-backgrounds: true;
 $card-border: 1px solid $gunmetal;
+$global-hover-scale: 20%;
+$global-hover: lighten($gunmetal, $global-hover-scale);
 
 // @include add-foundation-colors;
 
@@ -206,7 +209,7 @@ $card-border: 1px solid $gunmetal;
 // $accordion-title-font-size: rem-calc(12);
 // $accordion-item-color: $primary-color;
 $accordion-item-scale: 20%;
-$accordion-item-background-hover: lighten($gunmetal, $accordion-item-scale);
+$accordion-item-background-hover: $global-hover;
 $accordion-item-padding: $space-m;
 // $accordion-content-background: $white;
 $accordion-content-border: $card-border;
@@ -352,7 +355,7 @@ $callout-border: $card-border;
 // $dropdownmenu-arrow-size: 6px;
 // $dropdownmenu-min-width: 200px;
 // $dropdownmenu-background: $white;
-// $dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-border: $global-outline;
 
 // // 19. Forms
 // // ---------
@@ -367,7 +370,7 @@ $callout-border: $card-border;
 // $helptext-font-style: italic;
 // $input-prefix-color: $black;
 // $input-prefix-background: $light-gray;
-$input-prefix-border: 1px solid $gunmetal;
+$input-prefix-border: $global-outline;
 $input-prefix-border-hover: 1px solid $quicksilver;
 // $input-prefix-padding: 1rem;
 // $form-label-color: $black;
@@ -385,7 +388,7 @@ $input-placeholder-color: $light-gray;
 // $input-background: $white;
 // $input-background-focus: $white;
 $input-background-disabled: $extra-light-gray;
-$input-border: 1px solid $gunmetal;
+$input-border: $global-outline;
 $input-border-focus: 1px solid $adk-blue;
 $input-border-hover: 1px solid $quicksilver;
 $input-shadow: none;
@@ -622,8 +625,8 @@ $table-head-font-color: $medium-gray;
 // // 37. Top Bar
 // // -----------
 
-// $topbar-padding: 0.5rem;
-// $topbar-background: $light-gray;
+$topbar-padding: $space-xs;
+$topbar-background: $white;
 // $topbar-submenu-background: $topbar-background;
 // $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 // $topbar-input-width: 200px;
