@@ -1,0 +1,15 @@
+// Spacing Variables
+// 1.25 Scale: Major Third (some intervals skip steps)
+// ---------
+$scale: 1.25;
+
+$space-xxxl: $space-xxl*$scale;
+$space-xxl: $space-xl*$scale;
+$space-xl: $space-l*$scale;
+$space-l: $space-m*$scale;
+$space-m: 1rem;
+$space-s: $space-m/$scale;
+$space-xs: $space-s/pow($scale, 2);
+$space-xxs: $space-xs/pow($scale, 2);
+$space-xxxs: $space-xxs/pow($scale, 2);
+$space-micro: $space-xxs/pow($scale, 2);

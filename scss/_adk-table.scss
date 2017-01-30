@@ -1,0 +1,3 @@
+/// If `true`, tables are striped by default and an .unstriped class is created. If `false`, a .striped class is created.
+/// @type Boolean
+$table-is-striped: false !default;
