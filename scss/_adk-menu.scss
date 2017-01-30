@@ -1,0 +1,8 @@
+ul.menu {
+	a {
+	color: $quicksilver;
+	&:hover {
+		color: $menu-item-color-hover;
+		}
+	}
+}
