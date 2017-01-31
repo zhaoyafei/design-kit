@@ -81,6 +81,8 @@ $global-outline: 1px solid $gunmetal;
 $card-border: 1px solid $gunmetal;
 $global-hover-scale: 20%;
 $global-hover: lighten($gunmetal, $global-hover-scale);
+$thick-underline: 2px solid rgba($adk-blue, 0.2);
+$thick-underline-hover: 2px solid $adk-blue;
 
 // @include add-foundation-colors;
 
