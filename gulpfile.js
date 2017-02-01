@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
+var sherpa = require('style-sherpa');
 
 /**
  * CSS Wrap
@@ -31,6 +32,15 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('default', ['sass'], function() {
+// Generate Style-Sherpa pages
+gulp.task('sherpa', function() {
+  return sherpa('src/pages/index.md', {
+    output: 'dist/pages/index.html',
+    template: 'src/templates/default.hbs'
+  });
+});
+
+gulp.task('default', ['sass', 'sherpa'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
+  gulp.watch(['src/**/*.md'], ['sherpa']);
 });
