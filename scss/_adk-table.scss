@@ -1,0 +1,10 @@
+table {
+	border-collapse: collapse;
+	tbody, thead {
+		border: none; // Clear default table-border while preserving the $table-border variable
+	}
+	tbody tr {
+		border: none; // Remove default border-bottom on tbody tr
+		border-bottom: $table-border;
+	}
+}

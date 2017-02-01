@@ -1,0 +1,6 @@
+// Text Inputs - get rid of box shadow
+textarea, input {
+  &:hover {
+    border: $input-border-hover;
+  }
+}

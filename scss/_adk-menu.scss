@@ -1,0 +1,29 @@
+ul.menu {
+	a {
+	color: $quicksilver;
+	border-bottom: none;
+	&:hover {
+		color: $menu-item-color-hover;
+		}
+	}
+}
+
+a {
+	color: $quicksilver;
+	border-bottom: $thick-underline;
+	&:hover {
+		color: $black;
+		border-bottom: $thick-underline-hover;
+	}
+}
+.is-dropdown-submenu {
+	border-radius: $global-radius;
+	.is-dropdown-submenu-item:hover {
+		background-color: $global-hover;
+	}
+}
+
+// Top Bar to be used as action/nav bars
+// .top-bar {
+// 	border-bottom: $global-outline;
+// }

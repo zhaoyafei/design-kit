@@ -43,39 +43,48 @@
 
 // @import 'util/util';
 
-// // 1. Global
-// // ---------
+// 1. Global
+// ---------
 $gray: #757575;
 $gunmetal: #b8c8d1;
-$quicksilver: #859daf;
-
+$quicksilver: #859DAF;
+$adk-blue: #1CA3FC;
+$adk-blue-dark: #3E688D;
+$adk-slate: #6487A7;
+$extra-light-gray: #F7F9FA;
+$light-gray: rgba(0,0,0, 0.38);
+$medium-gray: rgba(0,0,0, 0.54);
+$dark-gray: #292929;
+$black: rgba(0,0,0, 0.84);
+$white: #fff;
 // $global-font-size: 100%;
 // $global-width: rem-calc(1200);
 // $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #1ca3fc,
+  primary: $adk-blue,
   secondary: $gray,
   success: #22d290,
   warning: #ffcd00,
   alert: #ff4b1f,
 );
-$light-gray: #9e9e9e;
-$medium-gray: $gray;
-$dark-gray: #292929;
-// $black: #0a0a0a;
-$white: #fff;
 // $body-background: $white;
 $body-font-color: $dark-gray;
 $body-font-family: "Theinhardt-web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 // $body-antialiased: true;
-// $global-margin: 1rem;
-// $global-padding: 1rem;
+$global-margin: $space-m;
+$global-padding: $space-m;
 // $global-weight-normal: normal;
 // $global-weight-bold: bold;
-$global-radius: 3px;
+$global-radius: $space-micro;
+$global-outline: 1px solid $gunmetal;
 // $global-text-direction: ltr;
 // $global-flexbox: false;
 // $print-transparent-backgrounds: true;
+$card-border: 1px solid $gunmetal;
+$global-hover-scale: 20%;
+$global-hover: lighten($gunmetal, $global-hover-scale);
+$thick-underline: 2px solid rgba($adk-blue, 0.2);
+$thick-underline-hover: 2px solid $adk-blue;
 
 // @include add-foundation-colors;
 
@@ -203,10 +212,11 @@ $global-radius: 3px;
 // $accordion-plusminus: true;
 // $accordion-title-font-size: rem-calc(12);
 // $accordion-item-color: $primary-color;
-// $accordion-item-background-hover: $light-gray;
-// $accordion-item-padding: 1.25rem 1rem;
+$accordion-item-scale: 20%;
+$accordion-item-background-hover: $global-hover;
+$accordion-item-padding: $space-m;
 // $accordion-content-background: $white;
-// $accordion-content-border: 1px solid $light-gray;
+$accordion-content-border: $card-border;
 // $accordion-content-color: $body-font-color;
 // $accordion-content-padding: 1rem;
 
@@ -277,7 +287,7 @@ $global-radius: 3px;
 
 // $callout-background: $white;
 // $callout-background-fade: 85%;
-// $callout-border: 1px solid rgba($black, 0.25);
+$callout-border: $card-border;
 // $callout-margin: 0 0 1rem 0;
 // $callout-padding: 1rem;
 // $callout-font-color: $body-font-color;
@@ -349,7 +359,7 @@ $global-radius: 3px;
 // $dropdownmenu-arrow-size: 6px;
 // $dropdownmenu-min-width: 200px;
 // $dropdownmenu-background: $white;
-// $dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-border: $global-outline;
 
 // // 19. Forms
 // // ---------
@@ -364,7 +374,8 @@ $global-radius: 3px;
 // $helptext-font-style: italic;
 // $input-prefix-color: $black;
 // $input-prefix-background: $light-gray;
-// $input-prefix-border: 1px solid $medium-gray;
+$input-prefix-border: $global-outline;
+$input-prefix-border-hover: 1px solid $quicksilver;
 // $input-prefix-padding: 1rem;
 // $form-label-color: $black;
 // $form-label-font-size: rem-calc(14);
@@ -374,17 +385,18 @@ $global-radius: 3px;
 // $select-triangle-color: $dark-gray;
 // $select-radius: $global-radius;
 // $input-color: $black;
-// $input-placeholder-color: $medium-gray;
+$input-placeholder-color: $light-gray;
 // $input-font-family: inherit;
 // $input-font-size: rem-calc(16);
 // $input-font-weight: $global-weight-normal;
 // $input-background: $white;
 // $input-background-focus: $white;
-// $input-background-disabled: $light-gray;
-// $input-border: 1px solid $medium-gray;
-// $input-border-focus: 1px solid $dark-gray;
-// $input-shadow: inset 0 1px 2px rgba($black, 0.1);
-// $input-shadow-focus: 0 0 5px $medium-gray;
+$input-background-disabled: $extra-light-gray;
+$input-border: $global-outline;
+$input-border-focus: 1px solid $adk-blue;
+$input-border-hover: 1px solid $quicksilver;
+$input-shadow: none;
+$input-shadow-focus: none;
 // $input-cursor-disabled: not-allowed;
 // $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 // $input-number-spinners: true;
@@ -414,9 +426,10 @@ $global-radius: 3px;
 
 // $menu-margin: 0;
 // $menu-margin-nested: 1rem;
-// $menu-item-padding: 0.7rem 1rem;
-// $menu-item-color-active: $white;
-// $menu-item-background-active: get-color(primary);
+$menu-item-padding: $space-xs $space-s;
+$menu-item-color-hover: darken($adk-blue, 10);
+$menu-item-color-active: $adk-blue;
+$menu-item-background-active: none;
 // $menu-icon-spacing: 0.25rem;
 // $menu-item-background-hover: $light-gray;
 // $menu-border: $light-gray;
@@ -543,21 +556,22 @@ $global-radius: 3px;
 // // 32. Table
 // // ---------
 
-// $table-background: $white;
-// $table-color-scale: 5%;
-// $table-border: 1px solid smart-scale($table-background, $table-color-scale);
-// $table-padding: rem-calc(8 10 10);
+$table-background: $white;
+$table-color-scale: 5%;
+$table-border: 1px solid smart-scale($gunmetal, $table-color-scale);
+$table-padding: $space-xs $space-s;
 // $table-hover-scale: 2%;
-// $table-row-hover: darken($table-background, $table-hover-scale);
+$table-hover-scale-lighten: 20%;
+$table-row-hover: lighten($gunmetal, $table-hover-scale-lighten);
 // $table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
-// $table-is-striped: true;
+$table-is-striped: false;
 // $table-striped-background: smart-scale($table-background, $table-color-scale);
 // $table-stripe: even;
-// $table-head-background: smart-scale($table-background, $table-color-scale / 2);
-// $table-head-row-hover: darken($table-head-background, $table-hover-scale);
+$table-head-background: none;
+$table-head-row-hover: none;
 // $table-foot-background: smart-scale($table-background, $table-color-scale);
-// $table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
-// $table-head-font-color: $body-font-color;
+$table-foot-row-hover: lighten($gunmetal, $table-hover-scale-lighten);
+$table-head-font-color: $medium-gray;
 // $table-foot-font-color: $body-font-color;
 // $show-header-for-stacked: false;
 
@@ -615,8 +629,8 @@ $global-radius: 3px;
 // // 37. Top Bar
 // // -----------
 
-// $topbar-padding: 0.5rem;
-// $topbar-background: $light-gray;
+$topbar-padding: $space-xs;
+$topbar-background: $white;
 // $topbar-submenu-background: $topbar-background;
 // $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 // $topbar-input-width: 200px;
