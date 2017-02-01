@@ -32,15 +32,19 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('css'));
 });
 
-// Generate Style-Sherpa pages
+/**
+  * Generate Style-Sherpa pages
+  * TODO: Don't commit the generated docs/index.html; or set a 'clean' task for the docs/index.html file
+  */
+
 gulp.task('sherpa', function() {
-  return sherpa('src/pages/index.md', {
-    output: 'dist/pages/index.html',
-    template: 'src/templates/default.hbs'
+  return sherpa('docs/src/index.md', {
+    output: 'docs/index.html',
+    template: 'docs/src/template.hbs'
   });
 });
 
 gulp.task('default', ['sass', 'sherpa'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
-  gulp.watch(['src/**/*.md'], ['sherpa']);
+  gulp.watch(['src/docs/**/*'], ['sherpa']);
 });
