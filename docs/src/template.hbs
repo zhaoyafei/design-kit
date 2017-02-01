@@ -66,28 +66,28 @@
     <div class="row">
 
       <div class="large-3 medium-4 columns">
-        <dl class="vertical tabs" data-tab>
+        <ul class="tabs vertical" id="tabs-navigation" data-tabs>
           {{#each pages}}
-            <dd{{#if @first}} class="active"{{/if}}><a href="#{{ anchor }}">{{ title }}</a></dd>
+            <li class="tabs-title {{#if @first}}is-active{{/if}}"><a href="#{{ anchor }}">{{ title }}</a></li>
           {{/each}}
-        </dl>
+        </ul>
       </div>
 
       <div class="large-9 medium-8 columns">
-        <div class="tabs-content">
+        <div class="tabs-content vertical" data-tabs-content="tabs-navigation">
           {{#each pages}}
-            <section class="content {{#if @first}}active{{/if}}" id="{{ anchor }}">
+            <div class="tabs-panel {{#if @first}}is-active{{/if}} content" id="{{ anchor }}">
               {{ body }}
-            </section>
+            </div>
           {{/each}}
         </div>
       </div>
 
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
-    <script src="../js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
     <script>
       $(document).foundation();
     </script>

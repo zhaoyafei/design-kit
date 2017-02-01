@@ -46,5 +46,5 @@ gulp.task('sherpa', function() {
 
 gulp.task('default', ['sass', 'sherpa'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
-  gulp.watch(['src/docs/**/*'], ['sherpa']);
+  gulp.watch(['docs/src/**/*'], ['sherpa']);
 });
