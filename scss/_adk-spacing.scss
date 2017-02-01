@@ -1,0 +1,27 @@
+// Spacing Variables
+// 1.25 Scale: Major Third (some intervals skip steps)
+// ---------
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+
+  @return $value;
+}
+
+$scale: 1.25;
+
+$space-m: 1rem;
+$space-l: $space-m*$scale;
+$space-xl: $space-l*$scale;
+$space-xxl: $space-xl*$scale;
+$space-xxxl: $space-xxl*$scale;
+$space-s: $space-m/$scale;
+$space-xs: $space-s/pow($scale, 2);
+$space-xxs: $space-xs/pow($scale, 2);
+$space-xxxs: $space-xxs/pow($scale, 2);
+$space-micro: $space-xxs/pow($scale, 2);
