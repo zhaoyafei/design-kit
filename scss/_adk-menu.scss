@@ -2,8 +2,11 @@ a {
 	color: $dark-gray;
 	border-bottom: $thick-underline;
 	&:hover {
-		// color: $black;
+		color: $black;
 		border-bottom: $thick-underline-hover;
+	}
+	&.button {
+		border-bottom: none;
 	}
 }
 

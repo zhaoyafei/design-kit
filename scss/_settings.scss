@@ -76,7 +76,7 @@ $global-padding: $space-m;
 // $global-weight-normal: normal;
 $global-weight-light: lighter; //added
 // $global-weight-bold: bold;
-$global-radius: $space-micro;
+$global-radius: $space-xxxs;
 $global-outline: 1px solid $gunmetal;
 $global-separator: 1px solid rgba($gunmetal, 0.3);
 // $global-text-direction: ltr;
@@ -257,7 +257,7 @@ $accordion-content-border: $card-border;
 // // 11. Button
 // // ----------
 
-// $button-padding: 0.85em 1em;
+$button-padding: $space-s $space-m;
 // $button-margin: 0 0 $global-margin 0;
 // $button-fill: solid;
 // $button-background: $primary-color;
@@ -265,12 +265,12 @@ $accordion-content-border: $card-border;
 // $button-color: $white;
 // $button-color-alt: $black;
 // $button-radius: $global-radius;
-// $button-sizes: (
-//   tiny: 0.6rem,
-//   small: 0.75rem,
-//   default: 0.9rem,
-//   large: 1.25rem,
-// );
+$button-sizes: (
+  tiny: $space-xs,
+  small: $space-s,
+  default: $space-m,
+  large: $space-l,
+);
 // $button-palette: $foundation-palette;
 // $button-opacity-disabled: 0.25;
 // $button-background-hover-lightness: -20%;
