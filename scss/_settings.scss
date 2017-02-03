@@ -108,10 +108,10 @@ $thick-underline-hover: 2px solid $adk-blue;
 
 // $grid-row-width: $global-width;
 // $grid-column-count: 12;
-// $grid-column-gutter: (
-//   small: 20px,
-//   medium: 30px,
-// );
+$grid-column-gutter: (
+  small: $space-l,
+  medium: $space-xl,
+);
 // $grid-column-align-edge: true;
 // $block-grid-max: 8;
 
@@ -145,6 +145,7 @@ $header-styles: (
 );
 // $header-text-rendering: optimizeLegibility;
 $small-font-size: percentage(1/$scale);
+// $large-font-size: percentage($scale); //added
 // $header-small-font-color: $medium-gray;
 // $paragraph-lineheight: 1.6;
 // $paragraph-margin-bottom: 1rem;
