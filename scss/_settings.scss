@@ -52,17 +52,22 @@ $adk-blue: #1CA3FC;
 $adk-blue-dark: #3E688D;
 $adk-slate: #6487A7;
 $extra-light-gray: #F7F9FA;
-$light-gray: rgba(0,0,0, 0.38);
-$medium-gray: rgba(0,0,0, 0.54);
+$light-gray: #9E9E9E;
+$medium-gray: #757575;
 $dark-gray: #292929;
-$black: rgba(0,0,0, 0.84);
+$black: #292929;
 $white: #fff;
+
+$text-light-gray: rgba(0,0,0, 0.38);
+$text-medium-gray: rgba(0,0,0, 0.54);
+$text-black: rgba(0,0,0, 0.84);
+
 // $global-font-size: 100%;
 // $global-width: rem-calc(1200);
 // $global-lineheight: 1.5;
 $foundation-palette: (
   primary: $adk-blue,
-  secondary: $gray,
+  secondary: $gunmetal,
   success: #22d290,
   warning: #ffcd00,
   alert: #ff4b1f,
