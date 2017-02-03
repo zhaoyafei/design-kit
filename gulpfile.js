@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
+var sherpa = require('style-sherpa');
 
 /**
  * CSS Wrap
@@ -31,6 +32,19 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('default', ['sass'], function() {
+/**
+  * Generate Style-Sherpa pages
+  * TODO: Don't commit the generated docs/index.html; or set a 'clean' task for the docs/index.html file
+  */
+
+gulp.task('sherpa', function() {
+  return sherpa('docs/src/index.md', {
+    output: 'docs/index.html',
+    template: 'docs/src/template.hbs'
+  });
+});
+
+gulp.task('default', ['sass', 'sherpa'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
+  gulp.watch(['docs/src/**/*'], ['sherpa']);
 });
