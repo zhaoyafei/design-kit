@@ -74,9 +74,11 @@ $body-font-family: "Theinhardt-web", -apple-system, BlinkMacSystemFont, "Segoe U
 $global-margin: $space-m;
 $global-padding: $space-m;
 // $global-weight-normal: normal;
+$global-weight-light: lighter; //added
 // $global-weight-bold: bold;
 $global-radius: $space-micro;
 $global-outline: 1px solid $gunmetal;
+$global-separator: 1px solid rgba($gunmetal, 0.3);
 // $global-text-direction: ltr;
 // $global-flexbox: false;
 // $print-transparent-backgrounds: true;
@@ -122,27 +124,27 @@ $thick-underline-hover: 2px solid $adk-blue;
 // $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 // $header-color: inherit;
 // $header-lineheight: 1.4;
-// $header-margin-bottom: 0.5rem;
-// $header-styles: (
-//   small: (
-//     'h1': ('font-size': 24),
-//     'h2': ('font-size': 20),
-//     'h3': ('font-size': 19),
-//     'h4': ('font-size': 18),
-//     'h5': ('font-size': 17),
-//     'h6': ('font-size': 16),
-//   ),
-//   medium: (
-//     'h1': ('font-size': 48),
-//     'h2': ('font-size': 40),
-//     'h3': ('font-size': 31),
-//     'h4': ('font-size': 25),
-//     'h5': ('font-size': 20),
-//     'h6': ('font-size': 16),
-//   ),
-// );
+$header-margin-bottom: $space-xs;
+$header-styles: (
+  small: (
+    'h1': ('font-size': $space-s + ($space-micro*5)),
+    'h2': ('font-size': $space-s + ($space-micro*4)),
+    'h3': ('font-size': $space-s + ($space-micro*3)),
+    'h4': ('font-size': $space-s + ($space-micro*2)),
+    'h5': ('font-size': $space-s + $space-micro),
+    'h6': ('font-size': $space-s),
+  ),
+  medium: (
+    'h1': ('font-size': $space-xxxl),
+    'h2': ('font-size': $space-xxl),
+    'h3': ('font-size': $space-xl),
+    'h4': ('font-size': $space-l),
+    'h5': ('font-size': $space-m),
+    'h6': ('font-size': $space-s),
+  ),
+);
 // $header-text-rendering: optimizeLegibility;
-// $small-font-size: 80%;
+$small-font-size: percentage(1/$scale);
 // $header-small-font-color: $medium-gray;
 // $paragraph-lineheight: 1.6;
 // $paragraph-margin-bottom: 1rem;
@@ -558,7 +560,8 @@ $menu-item-background-active: none;
 
 $table-background: $white;
 $table-color-scale: 5%;
-$table-border: 1px solid smart-scale($gunmetal, $table-color-scale);
+// $table-border: 1px solid smart-scale($gunmetal, $table-color-scale);
+$table-border: $global-separator;
 $table-padding: $space-xs $space-s;
 // $table-hover-scale: 2%;
 $table-hover-scale-lighten: 20%;
