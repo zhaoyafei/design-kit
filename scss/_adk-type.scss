@@ -11,10 +11,10 @@ h3,
 h4,
 h5,
 h6 {
-	&.bold {
-		font-weight: $global-weight-bold;
-	}
-	&.light {
-		font-weight: $global-weight-light;
-	}
+  &.bold {
+    font-weight: $global-weight-bold;
+  }
+  &.light {
+    font-weight: $global-weight-light;
+  }
 }
