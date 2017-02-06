@@ -1,4 +1,4 @@
-// Spacing Variables
+// Scale and Spacing Variables
 // 1.25 Scale: Major Third (some intervals skip steps)
 // ---------
 @function pow($number, $exponent) {
@@ -16,12 +16,13 @@
 $scale: 1.25;
 
 $space-m: 1rem;
-$space-l: $space-m*$scale;
-$space-xl: $space-l*$scale;
-$space-xxl: $space-xl*$scale;
-$space-xxxl: $space-xxl*$scale;
-$space-s: $space-m/$scale;
-$space-xs: $space-s/pow($scale, 2);
-$space-xxs: $space-xs/pow($scale, 2);
-$space-xxxs: $space-xxs/pow($scale, 2);
-$space-micro: $space-xxs/pow($scale, 2);
+$space-l: $space-m*$scale; // 1.25rem;
+$space-xl: $space-l*$scale; // 1.563rem;
+$space-xxl: $space-xl*$scale; // 1.953rem;
+$space-xxxl: $space-xxl*$scale; // 2.441rem;
+$space-xxxxl: $space-xxxl*$scale; // 3.05rem;
+$space-s: $space-m/$scale; // 0.8rem;
+$space-xs: $space-s/pow($scale, 2); // 0.512rem;
+$space-xxs: $space-xs/pow($scale, 2); // 0.328rem;
+$space-xxxs: $space-xxs/pow($scale, 2); // 0.21rem;
+$space-micro: $space-xxs/pow($scale, 2); // 0.134rem;

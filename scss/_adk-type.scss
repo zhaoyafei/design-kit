@@ -1,0 +1,20 @@
+// T-shirt font sizes based on scale
+$font-size-xs: $space-xs;
+$font-size-s: $space-s;
+$font-size: $space-m;
+$font-size-m: $space-l;
+$font-size-l: $space-xl;
+
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.bold {
+    font-weight: $global-weight-bold;
+  }
+  &.light {
+    font-weight: $global-weight-light;
+  }
+}

@@ -1,10 +1,19 @@
 table {
-	border-collapse: collapse;
-	tbody, thead {
-		border: none; // Clear default table-border while preserving the $table-border variable
-	}
-	tbody tr {
-		border: none; // Remove default border-bottom on tbody tr
-		border-bottom: $table-border;
-	}
+  border-collapse: collapse;
+  font-size: $font-size-s;
+  tbody, 
+  thead {
+    border: none; // Clear default table-border while preserving the $table-border variable
+  }
+  thead, 
+  tbody tr {
+    border: none; // Remove default border-bottom on tbody tr
+    border-bottom: $table-border;
+  }
+  thead tr *, 
+  tfoot tr * {
+    color: $medium-gray;
+    font-weight: $global-weight-normal;
+    font-size: $font-size-s;
+  }
 }

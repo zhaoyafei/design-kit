@@ -32,6 +32,20 @@ Finally, run `npm start` to run the Sass compiler. It will re-run every time you
 
 You can edit variables in `scss/_settings.scss` to override Foundation's default styles.
 
+## Documentation
+
+To generate a documentation output file, run this in the terminal:
+
+```bash
+gulp sherpa
+```
+
+This will read the `docs/src/index.md` file and create a documentation output file at `docs/index.html`.
+
+When the Design Kit is merged to `master`, this file will be available at <http://design-kit.arc.ht/docs/index.html>.
+
+`gulp watch` will also regenerate this output file locally while it is running.
+
 ## Usage
 
 When changes are committed to the master branch, the styles are recompiled by CircleCI and pushed to http://design-kit.arc.ht.
