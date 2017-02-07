@@ -69,6 +69,10 @@
   font-weight: lighter;
 }
 
+.adk a :after {
+  content: none;
+}
+
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 
 .adk html {
@@ -6009,17 +6013,17 @@
   font-size: .8rem;
 }
 
-.adk a {
+.adk a.menu {
   color: #292929;
   border-bottom: 2px solid rgba(28,163,252,0.2);
 }
 
-.adk a:hover {
+.adk a.menu:hover {
   color: #292929;
   border-bottom: 2px solid #1CA3FC;
 }
 
-.adk a.button {
+.adk a.menu.button {
   border-bottom: none;
 }
 

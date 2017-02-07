@@ -1,12 +1,14 @@
 a {
-  color: $dark-gray;
-  border-bottom: $thick-underline;
-  &:hover {
-    color: $black;
-    border-bottom: $thick-underline-hover;
-  }
-  &.button {
-    border-bottom: none;
+  &.menu {
+    color: $dark-gray;
+    border-bottom: $thick-underline;
+    &:hover {
+      color: $black;
+      border-bottom: $thick-underline-hover;
+    }
+    &.button {
+      border-bottom: none;
+    }
   }
 }
 
