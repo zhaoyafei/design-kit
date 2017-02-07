@@ -18,3 +18,10 @@ h6 {
     font-weight: $global-weight-light;
   }
 }
+
+// Override past Architizer <a> styles
+a {
+  :after {
+    content: none;
+  }
+}
