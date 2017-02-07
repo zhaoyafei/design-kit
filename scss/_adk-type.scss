@@ -21,7 +21,7 @@ h6 {
 
 // Override past Architizer <a> styles
 a {
-  :after {
+  &:after {
     content: none;
   }
 }

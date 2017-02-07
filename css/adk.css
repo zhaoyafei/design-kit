@@ -69,7 +69,7 @@
   font-weight: lighter;
 }
 
-.adk a :after {
+.adk a:after {
   content: none;
 }
 
