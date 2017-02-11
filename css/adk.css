@@ -6055,3 +6055,12 @@
 .adk .is-dropdown-submenu .is-dropdown-submenu-item:hover {
   background-color: #f6f8f9;
 }
+
+.adk .selectize-control.multi .selectize-input>div {
+  cursor: pointer;
+  margin: 0 3px 3px 0;
+  padding: 2px 6px;
+  background: #1CA3FC;
+  color: #fff;
+  border: 0 solid #d0d0d0;
+}
