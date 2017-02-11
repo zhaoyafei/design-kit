@@ -344,12 +344,17 @@ Form elements in Foundation are styled based on their type attribute rather than
 
 
 
-# New Section
+---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora omnis suscipit id ut laborum recusandae molestias hic aliquid **expedita!** [Non dicta](zurb.com), autem obcaecati error, id ab voluptate unde culpa nulla.
+# Selectize
 
-```html_example
-<a href="#" class="button">Button</a>
-<a href="#" class="button">Button</a>
-<a href="#" class="button">Button</a>
-```
+This is a [selectize](http://selectize.github.io/selectize.js/) element.
+
+<input type="text" class="selectize"></input>
+
+There are classes in the `scss/_adk-selectize.scss` that affect the styling of this element. 
+
+We extend the default [`selectize.css`](https://github.com/selectize/selectize.js/blob/master/dist/css/selectize.css) with our `/scss/_adk-selectize.scss` file to overwrite default styles.
+
+
+---
