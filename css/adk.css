@@ -73,6 +73,13 @@
   content: none;
 }
 
+.adk .meta span+span {
+  display: inline-block;
+  margin-left: 8px;
+  border-left: 1px solid rgba(0,0,0,0.15);
+  padding-left: 8px;
+}
+
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 
 .adk html {
