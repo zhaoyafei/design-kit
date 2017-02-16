@@ -1,0 +1,10 @@
+// Pills
+
+$pill-padding: $space-xxs $space-s;
+
+button.pill {
+	color: $adk-blue;
+	background-color: rgba($adk-blue, 0.3);
+	padding: $pill-padding;
+	margin: 0 $space-xs $space-xs 0;
+}
