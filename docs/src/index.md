@@ -240,6 +240,18 @@ These buttons are used for less important, secondary actions on a page.
 <a href="#" class="secondary tiny button">Tiny button</a>
 ```
 
+---
+
+## Pills
+
+Pills are buttons are used in forms to add/append fields. They are distinct  from "tags", which look like pills but are static and cannot be clicked.
+
+```html_example
+<button type="button" class="button pill">I'm a pill</a>
+<button type="button" class="button pill">I'm another pill</a>
+<button type="button" class="button pill">Hey so am I!</a>
+```
+
 
 
 # Forms
