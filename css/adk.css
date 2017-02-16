@@ -2382,7 +2382,7 @@
 .adk .fieldset {
   margin: 1.125rem 0;
   padding: 1.25rem;
-  border: 1px solid #757575;
+  border: 1px solid #859DAF;
 }
 
 .adk .fieldset legend {
@@ -6070,4 +6070,11 @@
   background: #1CA3FC;
   color: #fff;
   border: 0 solid #d0d0d0;
+}
+
+.adk button.pill {
+  color: #1CA3FC;
+  background-color: rgba(28,163,252,0.3);
+  padding: .32768rem .8rem;
+  margin: 0 .512rem .512rem 0;
 }
