@@ -1501,35 +1501,35 @@
 }
 
 .adk h1 {
-  font-size: 1.84858rem;
+  font-size: 1.47109rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: .512rem;
 }
 
 .adk h2 {
-  font-size: 1.63886rem;
+  font-size: 1.33687rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: .512rem;
 }
 
 .adk h3 {
-  font-size: 1.42915rem;
+  font-size: 1.20265rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: .512rem;
 }
 
 .adk h4 {
-  font-size: 1.21943rem;
+  font-size: 1.06844rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: .512rem;
 }
 
 .adk h5 {
-  font-size: 1.00972rem;
+  font-size: .93422rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: .512rem;
@@ -6063,13 +6063,92 @@
   background-color: #f6f8f9;
 }
 
+.adk .selectize-input {
+  border: 1px solid #b8c8d1;
+  padding: .13422rem .512rem;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  box-shadow: none;
+  border-radius: .20972rem;
+}
+
+.adk .selectize-control.multi .selectize-input.has-items {
+  padding: .13422rem .512rem;
+}
+
+.adk .selectize-input.full {
+  background-color: #ffffff;
+}
+
+.adk .selectize-input.disabled,
+.adk .selectize-input.disabled * {
+  cursor: default !important;
+}
+
+.adk .selectize-input.focus {
+  box-shadow: none;
+  border: 1px solid #1CA3FC;
+}
+
+.adk .selectize-input.dropdown-active {
+  border-radius: .20972rem .20972rem 0 0;
+  border-bottom: 0;
+}
+
 .adk .selectize-control.multi .selectize-input>div {
   cursor: pointer;
   margin: 0 3px 3px 0;
-  padding: 2px 6px;
+  padding: .13422rem .512rem;
   background: #1CA3FC;
   color: #fff;
-  border: 0 solid #d0d0d0;
+  border-radius: .20972rem;
+}
+
+.adk .selectize-control.multi .selectize-input>div:hover {
+  background: #0389e2;
+}
+
+.adk .selectize-input.dropdown-active::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  background: none;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.adk .selectize-dropdown {
+  position: absolute;
+  z-index: 10;
+  border: 1px solid #1CA3FC;
+  border-top: 0;
+  background: #ffffff;
+  margin: -1px 0 0 0;
+  padding: 0 0 .32768rem 0;
+  border-top: 0 none;
+  box-sizing: border-box;
+  border-radius: 0 0 .20972rem .20972rem;
+}
+
+.adk .selectize-dropdown [data-selectable] {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.adk .selectize-dropdown [data-selectable] .highlight {
+  background: rgba(125,168,208,0.2);
+}
+
+.adk .selectize-dropdown .active {
+  background-color: #f5fafd;
+  color: #292929;
+  font-weight: bold;
 }
 
 .adk button.pill {
