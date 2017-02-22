@@ -29,21 +29,39 @@ $space-xxs: $space-xs/pow($scale, 2); // 0.328rem;
 $space-xxxs: $space-xxs/pow($scale, 2); // 0.21rem;
 $space-micro: $space-xxxs/pow($scale, 2); // 0.134rem;
 
+$sizes: 0 micro xxxs xxs xs s m l xl xxl xxxl;
+$spaces: 0 $space-micro $space-xxxs $space-xxs $space-xs $space-s $space-m $space-l $space-xl $space-xxl $space-xxxl;
+
 // Margins
-//To add more classes, multiply by the scale or use the power function like above
+// To add more classes, multiply by the scale or use the power function like above
 // ---------
-.mb-0 {
-  margin-bottom: 0 !important;
+
+// Spacing Utility Classes
+$property-var: m p;
+$property: margin padding;
+$sides-var: t b r l;
+$sides: top bottom right left;
+
+// First ceate margin and padding for 1rem then loop through all other space names and create their classes
+@for $i from 1 through 4 {
+  @for $prop from 1 through 2 {
+    .#{nth($property, $prop)} {
+      #{nth($property, $prop)}: $space !important;
+    }
+    .#{nth($property-var, $prop)}#{nth($sides-var, $i)} {
+      #{nth($property, $prop)}-#{nth($sides, $i)}: $space !important;
+    }
+    @each $name in $spaces{
+      $size-index: index($spaces, $name);
+      .#{nth($property-var, $prop)}#{nth($sides-var, $i)}-#{nth($sizes, $size-index)} {
+        #{nth($property, $prop)}-#{nth($sides, $i)}: $name !important;
+      }
+      .#{nth($property-var, $prop)}-#{nth($sizes, $size-index)} {
+        #{nth($property, $prop)}: $name !important;
+      }
+    }
+  }
 }
-.mb {
-  margin-bottom: $space !important;
-}
-.mb-l {
-  margin-bottom: $space-l !important;
-}
-.mb-xl {
-  margin-bottom: $space-xl !important;
-}
-.mb-xxl {
-  margin-bottom: $space-xxl !important;
-}
+
+// The above generates margin and padding spacing classes using tshirt sizes
+// For example, to add large padding top to an element, simply add the .pt-l class to it. Micro margin bottom would be .mb-micro, and so on.
