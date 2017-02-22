@@ -19,6 +19,15 @@ h6 {
   }
 }
 
+p > a {
+  color: $black;
+  text-decoration: none;
+  border-bottom: 1px solid rgba($adk-blue, 0.7);
+  &:hover {
+    border-bottom: 1px solid $adk-blue;
+  }
+}
+
 // Override past Architizer <a> styles
 a {
   &:after {
