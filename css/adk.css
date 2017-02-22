@@ -1,3 +1,23 @@
+.adk .mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.adk .mb {
+  margin-bottom: 1rem !important;
+}
+
+.adk .mb-l {
+  margin-bottom: 1.5625rem !important;
+}
+
+.adk .mb-xl {
+  margin-bottom: 1.95312rem !important;
+}
+
+.adk .mb-xxl {
+  margin-bottom: 2.44141rem !important;
+}
+
 @font-face {
   font-family: "Theinhardt-web";
   src: url("../fonts/theinhardt/theinhardtlight_alt-webfont.eot");
@@ -72,7 +92,7 @@
 .adk p>a {
   color: #292929;
   text-decoration: none;
-  border-bottom: 1px solid rgba(28,163,252,0.7);
+  border-bottom: 1px solid rgba(28,163,252,0.6);
 }
 
 .adk p>a:hover {

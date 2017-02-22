@@ -1,6 +1,8 @@
 // Scale and Spacing Variables
 // 1.25 Scale: Major Third (some intervals skip steps)
 // ---------
+
+//Power function to allow for skipping parts of the scale
 @function pow($number, $exponent) {
   $value: 1;
 
@@ -15,14 +17,33 @@
 
 $scale: 1.25;
 
-$space-m: 1rem;
-$space-l: $space-m*$scale; // 1.25rem;
-$space-xl: $space-l*$scale; // 1.563rem;
-$space-xxl: $space-xl*$scale; // 1.953rem;
-$space-xxxl: $space-xxl*$scale; // 2.441rem;
-$space-xxxxl: $space-xxxl*$scale; // 3.05rem;
-$space-s: $space-m/$scale; // 0.8rem;
+$space: 1rem;
+$space-m: $space*$scale; // 1.25rem;
+$space-l: $space-m*$scale; // 1.563rem;
+$space-xl: $space-l*$scale; // 1.953rem;
+$space-xxl: $space-xl*$scale; // 2.441rem;
+$space-xxxl: $space-xxl*$scale; // 3.05rem;
+$space-s: $space/$scale; // 0.8rem;
 $space-xs: $space-s/pow($scale, 2); // 0.512rem;
 $space-xxs: $space-xs/pow($scale, 2); // 0.328rem;
 $space-xxxs: $space-xxs/pow($scale, 2); // 0.21rem;
 $space-micro: $space-xxxs/pow($scale, 2); // 0.134rem;
+
+// Margins
+//To add more classes, multiply by the scale or use the power function like above
+// ---------
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.mb {
+  margin-bottom: $space !important;
+}
+.mb-l {
+  margin-bottom: $space-l !important;
+}
+.mb-xl {
+  margin-bottom: $space-xl !important;
+}
+.mb-xxl {
+  margin-bottom: $space-xxl !important;
+}
