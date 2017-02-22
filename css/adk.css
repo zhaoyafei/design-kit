@@ -6127,11 +6127,10 @@
   position: absolute;
   z-index: 10;
   border: 1px solid #1CA3FC;
-  border-top: 0;
+  border-top: 1px solid rgba(184,200,209,0.2);
   background: #ffffff;
   margin: -1px 0 0 0;
   padding: 0 0 .32768rem 0;
-  border-top: 0 none;
   box-sizing: border-box;
   border-radius: 0 0 .20972rem .20972rem;
 }
@@ -6149,6 +6148,10 @@
   background-color: #f5fafd;
   color: #292929;
   font-weight: bold;
+}
+
+.adk .selectize-control.multi .selectize-input.has-items>input[type=text] {
+  position: relative !important;
 }
 
 .adk button.pill {

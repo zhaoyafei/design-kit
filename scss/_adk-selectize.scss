@@ -251,11 +251,10 @@
   position: absolute;
   z-index: 10;
   border: $input-border-focus;
-  border-top: 0;
+  border-top: 1px solid rgba($gunmetal, 0.2);
   background: #ffffff;
   margin: -1px 0 0 0;
   padding: 0 0 $space-xxs 0;
-  border-top: 0 none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -287,6 +286,11 @@
   color: $black;
   font-weight: bold;
 }
+.selectize-control.multi .selectize-input.has-items > input[type=text] {
+  position: relative !important;
+}
+
+
 // .selectize-dropdown .active.create {
 //   color: #495c68;
 // }
