@@ -25,4 +25,4 @@ $space-s: $space-m/$scale; // 0.8rem;
 $space-xs: $space-s/pow($scale, 2); // 0.512rem;
 $space-xxs: $space-xs/pow($scale, 2); // 0.328rem;
 $space-xxxs: $space-xxs/pow($scale, 2); // 0.21rem;
-$space-micro: $space-xxs/pow($scale, 2); // 0.134rem;
+$space-micro: $space-xxxs/pow($scale, 2); // 0.134rem;
