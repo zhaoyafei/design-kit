@@ -32,10 +32,6 @@ $space-micro: $space-xxxs/pow($scale, 2); // 0.134rem;
 $sizes: 0 micro xxxs xxs xs s m l xl xxl xxxl;
 $spaces: 0 $space-micro $space-xxxs $space-xxs $space-xs $space-s $space-m $space-l $space-xl $space-xxl $space-xxxl;
 
-// Margins
-// To add more classes, multiply by the scale or use the power function like above
-// ---------
-
 // Spacing Utility Classes
 $property-var: m p;
 $property: margin padding;
