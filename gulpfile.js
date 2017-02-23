@@ -38,9 +38,9 @@ gulp.task('sass', function() {
   */
 
 gulp.task('sherpa', function() {
-  return sherpa('docs/src/index.md', {
-    output: 'docs/index.html',
-    template: 'docs/src/template.hbs'
+  return sherpa('docs/index.md', {
+    output: 'index.html',
+    template: 'docs/template.hbs'
   });
 });
 
