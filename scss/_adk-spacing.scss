@@ -29,35 +29,65 @@ $space-xxs: $space-xs/pow($scale, 2); // 0.328rem;
 $space-xxxs: $space-xxs/pow($scale, 2); // 0.21rem;
 $space-micro: $space-xxxs/pow($scale, 2); // 0.134rem;
 
-$sizes: 0 micro xxxs xxs xs s m l xl xxl xxxl;
-$spaces: 0 $space-micro $space-xxxs $space-xxs $space-xs $space-s $space-m $space-l $space-xl $space-xxl $space-xxxl;
+$sizes: (
+  0: 0,
+  base: $space,
+  micro: $space-micro,
+  xxxs: $space-xxxs,
+  xxs: $space-xxs,
+  xs: $space-xs,
+  s: $space-s,
+  m: $space-m,
+  l: $space-l,
+  xl: $space-xl,
+  xxl: $space-xxl,
+  xxxl: $space-xxxl,
+);
 
-// Spacing Utility Classes
-$property-var: m p;
-$property: margin padding;
-$sides-var: t b r l;
-$sides: top bottom right left;
+/**
+ * Utility classes for sizing/spacing
+ *
+ * This generates margin and padding spacing classes using tshirt sizes.
+ * For example, to add large padding top to an element, simply add the .pt-l class to it. Micro margin bottom would be .mb-micro, and so on. 
+ */
+@each $size, $space in $sizes {
+  // All Sides
+  .m-#{$size} {
+    margin: $space !important;
+  }
+  .p-#{$size} {
+    padding: $space !important;
+  }
 
-// First ceate margin and padding for 1rem then loop through all other space names and create their classes
-@for $i from 1 through 4 {
-  @for $prop from 1 through 2 {
-    .#{nth($property, $prop)} {
-      #{nth($property, $prop)}: $space !important;
-    }
-    .#{nth($property-var, $prop)}#{nth($sides-var, $i)} {
-      #{nth($property, $prop)}-#{nth($sides, $i)}: $space !important;
-    }
-    @each $name in $spaces{
-      $size-index: index($spaces, $name);
-      .#{nth($property-var, $prop)}#{nth($sides-var, $i)}-#{nth($sizes, $size-index)} {
-        #{nth($property, $prop)}-#{nth($sides, $i)}: $name !important;
-      }
-      .#{nth($property-var, $prop)}-#{nth($sizes, $size-index)} {
-        #{nth($property, $prop)}: $name !important;
-      }
-    }
+  // Top
+  .mt-#{$size} {
+    margin-top: $space !important;
+  }
+  .pt-#{$size} {
+    padding-top: $space !important;
+  }
+
+  // Bottom
+  .mb-#{$size} {
+    margin-bottom: $space !important;
+  }
+  .pb-#{$size} {
+    padding-bottom: $space !important;
+  }
+
+  // Left
+  .ml-#{$size} {
+    margin-left: $space !important;
+  }
+  .pl-#{$size} {
+    padding-left: $space !important;
+  }
+
+  // Right
+  .mr-#{$size} {
+    margin-right: $space !important;
+  }
+  .pr-#{$size} {
+    padding-right: $space !important;
   }
 }
-
-// The above generates margin and padding spacing classes using tshirt sizes
-// For example, to add large padding top to an element, simply add the .pt-l class to it. Micro margin bottom would be .mb-micro, and so on.
