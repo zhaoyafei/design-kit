@@ -356,8 +356,6 @@ Form elements in Foundation are styled based on their type attribute rather than
 
 
 
----
-
 # Selectize
 
 This is a [selectize](http://selectize.github.io/selectize.js/) element.
@@ -370,11 +368,11 @@ We extend the default [`selectize.css`](https://github.com/selectize/selectize.j
 
 
 
----
-
 # Spacing and Scale
 
-Ideally, the styling of every element in our UI is controlled by a scalar system which gives all our pages and interface a sense of relationship and harmony. That means that by changing one number, the scale itself, the spacing of elements in relation to each other and the elements themselves will all change according to the system. By using REMs, which reference font size of the root `html` element, the browser's font size, as well a scale that dictates the relationship to the default font size, we are able to do this. 
+Ideally, the styling of every element in our UI is controlled by a scalar system which gives all our pages and interface a sense of relationship and harmony. That means that by changing one number, the scale itself, the spacing of elements in relation to each other and the elements themselves will all change according to the system. By combining REMs, which reference font size of the root `html` element, the browser's font size, with a scale that dictates the relationship to the default font size, we are able to do this. 
+
+---
 
 ### Scale
 
@@ -382,7 +380,7 @@ ADK uses a scale of 1.25 (Major Third) and is set by the `$scale` variable. Refe
 
 `0.134rem` `0.21rem` `0.328rem` `0.512rem` `0.8rem` `1rem` `1.25rem` `1.563rem` `1.953rem` `2.441rem` `3.05rem` etc…
 
-Thus all of our spacing, font sizing, padding, etc. should be based on this scale. We've included t-shirt size variables that you should use to styling elements. **_Never hard-code pixel numbers_**.
+Thus all of our spacing, font sizing, padding, etc. should be based on this scale. We've included t-shirt size variables that you should use to styling elements. **_Try not to hard-code pixel numbers_**.
 
 These are the variables:
 ```
@@ -399,8 +397,8 @@ $space-xxxs: 0.21rem;
 $space-micro: 0.134rem;
 ``` 
 
+---
+
 ### Spacing Utility Classes
 
 [Bootstrap Reference](https://v4-alpha.getbootstrap.com/utilities/spacing/)
-
----
