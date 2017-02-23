@@ -31,12 +31,12 @@ $space-micro: $space-xxxs/pow($scale, 2); // 0.134rem;
 
 $sizes: (
   0: 0,
-  base: $space,
   micro: $space-micro,
   xxxs: $space-xxxs,
   xxs: $space-xxs,
   xs: $space-xs,
   s: $space-s,
+  base: $space,
   m: $space-m,
   l: $space-l,
   xl: $space-xl,
