@@ -356,8 +356,6 @@ Form elements in Foundation are styled based on their type attribute rather than
 
 
 
----
-
 # Selectize
 
 This is a [selectize](http://selectize.github.io/selectize.js/) element.
@@ -367,6 +365,92 @@ This is a [selectize](http://selectize.github.io/selectize.js/) element.
 There are classes in the `scss/_adk-selectize.scss` that affect the styling of this element. 
 
 We extend the default [`selectize.css`](https://github.com/selectize/selectize.js/blob/master/dist/css/selectize.css) with our `/scss/_adk-selectize.scss` file to overwrite default styles.
+
+
+
+# Spacing and Scale
+
+### Spacing Utility Classes
+
+Design Kit has utility classes for applying margins and paddings to elements.
+
+The classes are named using the format `{property}{side}-{size}`
+
+Where *property* is one of:
+
+* `m` - for classes that set `margin`
+* `p` - for classes that set `padding`
+
+Where *sides* is one of:
+
+* `t` - for classes that set `margin-top` or `padding-top`
+* `b` - for classes that set `margin-bottom` or `padding-bottom`
+* `l` - for classes that set `margin-left` or `padding-left`
+* `r` - for classes that set `margin-right` or `padding-right`
+* blank - for classes that set a `margin` or `padding` on all 4 sides of the element
+
+Where *size* is one of:
+
+* `0` - for classes that eliminate the margin or padding by setting it to `0`
+* `micro` - for classes that set the margin or padding to `$space-micro`
+* `xxxs` - for classes that set the margin or padding to `$space-xxxs`
+* `xxs` - for classes that set the margin or padding to `$space-xxs`
+* `xs` - for classes that set the margin or padding to `$space-xs`
+* `s` - for classes that set the margin or padding to `$space-s`
+* `base` - for classes that set the margin or padding to `$space`
+* `m` - for classes that set the margin or padding to `$space-m`
+* `l` - for classes that set the margin or padding to `$space-l`
+* `xl` - for classes that set the margin or padding to `$space-xl`
+* `xxl` - for classes that set the margin or padding to `$space-xxl`
+* `xxxl` - for classes that set the margin or padding to `$space-xxxl`
+
+(You can add more sizes by adding entries to the `$sizes` Sass map variable in `_adk-spacing.scss`)
+
+
+#### Example
+
+```html_example
+<button class="button p-0">.p-0</button>
+<button class="button p-micro">.p-micro</button>
+<button class="button p-xxs">.p-xxs</button>
+<button class="button p-xs">.p-xs</button>
+<button class="button p-s">.p-s</button>
+<button class="button p-base">.p-base</button>
+<button class="button p-m">.p-m</button>
+<button class="button p-l">.p-l</button>
+<button class="button p-xl">.p-xl</button>
+<button class="button p-xxl">.p-xxl</button>
+```
+
+---
+
+### Scale
+Ideally, the styling of every element in our UI is controlled by a scalar system which gives all our pages and interface a sense of relationship and harmony. That means that by changing one number, the scale itself, the spacing of elements in relation to each other and the elements themselves will all change according to the system. By combining REMs, which reference font size of the root `html` element, the browser's font size, with a scale that dictates the relationship to the default font size, we are able to do this.
+
+ADK uses a scale of 1.25 (Major Third) and is set by the `$scale` variable. Refer to [TypeScale](http://type-scale.com/) to play with different scales and see how the affect headings. These relationships are built of 1.25 scale (each subsequent number is multiplied by 1.25):
+
+`0.134rem` `0.21rem` `0.328rem` `0.512rem` `0.8rem` `1rem` `1.25rem` `1.563rem` `1.953rem` `2.441rem` `3.05rem` etc…
+
+Thus all of our spacing, font sizing, padding, etc. should be based on this scale. We've included t-shirt size variables that you should use to styling elements. **_Try not to hard-code pixel numbers_**.
+
+These are the variables:
+```
+$space: 1rem;
+$space-m: 1.25rem;
+$space-l: 1.563rem;
+$space-xl: 1.953rem;
+$space-xxl: 2.441rem;
+$space-xxxl: 3.05rem;
+$space-s: 0.8rem;
+$space-xs: 0.512rem;
+$space-xxs: 0.328rem;
+$space-xxxs: 0.21rem;
+$space-micro: 0.134rem;
+```
+
+#### Reference
+
+[Bootstrap Reference](https://v4-alpha.getbootstrap.com/utilities/spacing/)
 
 
 ---
