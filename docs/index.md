@@ -127,87 +127,111 @@ As you've probably noticed in the examples above, you have access to a small, me
 
 # Colors
 
-<p class="lead">We currently have the following palette available in our SCSS, with each available as a class itself (which sets the `color` property) and as a `bg-` class (which set the `background-color` property).</p>
-For example, quicksilver is available as both `.quicksilver` (for text) and `.bg-quicksilver` (for containers, e.g. the ones below).
+We currently have the following palette available in our SCSS, with each available as a class itself (which sets the `color` property) and as a `bg-` class (which set the `background-color` property).
+
+For example, quicksilver is available as both `.quicksilver` (for text) and `.bg-quicksilver` (for containers).
 
 ---
+<div class="row small-up-2 medium-up-4 large-up-4">
 
-<div class="row up-1 medium-up-3 large-up-5">
   <div class="column">
-    <div class="color-block">
-    <span class="bg-gray"></span>
-    `gray`
+    <div class="card">
+      <div class="card-section">
+        <p>white</p>
+      </div>
+    <div class="card-section bg-white" style="height: 100px;"></div>
     </div>
   </div>
   <div class="column">
-    <div class="color-block">
-    <span class="bg-gunmetal"></span>
-    `gunmetal`
+    <div class="card">
+      <div class="card-section">
+        <p>extra-light-gray</p>
+      </div>
+    <div class="card-section bg-extra-light-gray" style="height: 100px;"></div>
     </div>
   </div>
   <div class="column">
-    <div class="color-block">
-    <span class="bg-quicksilver"></span>
-    `quicksilver`
+    <div class="card">
+      <div class="card-section">
+        <p>light-gray</p>
+      </div>
+    <div class="card-section bg-light-gray" style="height: 100px;"></div>
     </div>
   </div>
   <div class="column">
-    <div class="color-block">
-    <span class="bg-adk-blue"></span>
-    `adk-blue`
+    <div class="card">
+      <div class="card-section">
+        <p>gray</p>
+      </div>
+    <div class="card-section bg-gray" style="height: 100px;"></div>
     </div>
   </div>
   <div class="column">
-    <div class="color-block">
-    <span class="bg-adk-blue-dark"></span>
-    `adk-blue-dark`
+    <div class="card">
+      <div class="card-section">
+        <p>medium-gray</p>
+      </div>
+    <div class="card-section bg-medium-gray" style="height: 100px;"></div>
     </div>
   </div>
   <div class="column">
-    <div class="color-block">
-    <span class="bg-adk-slate"></span>
-    `adk-slate`
+    <div class="card">
+      <div class="card-section">
+        <p>dark-gray</p>
+      </div>
+    <div class="card-section bg-dark-gray" style="height: 100px;"></div>
     </div>
   </div>
   <div class="column">
-    <div class="color-block">
-    <span class="bg-extra-light-gray"></span>
-    `extra-light-gray`
+    <div class="card">
+      <div class="card-section">
+        <p>black</p>
+      </div>
+    <div class="card-section bg-black" style="height: 100px;"></div>
     </div>
   </div>
   <div class="column">
-    <div class="color-block">
-    <span class="bg-light-gray"></span>
-    `light-gray`
+    <div class="card">
+      <div class="card-section">
+        <p>adk-blue</p>
+      </div>
+    <div class="card-section bg-adk-blue" style="height: 100px;"></div>
     </div>
   </div>
   <div class="column">
-    <div class="color-block">
-    <span class="bg-medium-gray"></span>
-    `medium-gray`
+    <div class="card">
+      <div class="card-section">
+        <p>adk-blue-dark</p>
+      </div>
+    <div class="card-section bg-adk-blue-dark" style="height: 100px;"></div>
     </div>
   </div>
   <div class="column">
-    <div class="color-block">
-    <span class="bg-dark-gray"></span>
-    `dark-gray`
+    <div class="card">
+      <div class="card-section">
+        <p>adk-slate</p>
+      </div>
+    <div class="card-section bg-adk-slate" style="height: 100px;"></div>
     </div>
   </div>
   <div class="column">
-    <div class="color-block">
-    <span class="bg-black"></span>
-    `black`
+    <div class="card">
+      <div class="card-section">
+        <p>quicksilver</p>
+      </div>
+    <div class="card-section bg-quicksilver" style="height: 100px;"></div>
     </div>
   </div>
   <div class="column">
-    <div class="color-block">
-    <span class="bg-white"></span>
-    `white`
+    <div class="card">
+      <div class="card-section">
+        <p>gunmetal</p>
+      </div>
+    <div class="card-section bg-gunmetal" style="height: 100px;"></div>
     </div>
   </div>
+
 </div>
-
-
 
 
 
