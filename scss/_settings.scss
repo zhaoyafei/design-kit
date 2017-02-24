@@ -62,6 +62,21 @@ $text-light-gray: rgba(0,0,0, 0.38);
 $text-medium-gray: rgba(0,0,0, 0.54);
 $text-black: rgba(0,0,0, 0.84);
 
+$adk-colors: (
+  gray: $gray,
+  gunmetal: $gunmetal,
+  quicksilver: $quicksilver,
+  adk-blue: $adk-blue,
+  adk-blue-dark: $adk-blue-dark,
+  adk-slate: $adk-slate,
+  extra-light-gray: $extra-light-gray,
+  light-gray: $light-gray,
+  medium-gray: $medium-gray,
+  dark-gray: $dark-gray,
+  black: $black,
+  white: $white,
+);
+
 // $global-font-size: 100%;
 // $global-width: rem-calc(1200);
 // $global-lineheight: 1.5;
