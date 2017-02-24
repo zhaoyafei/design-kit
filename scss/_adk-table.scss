@@ -35,4 +35,7 @@ table {
       text-align: center !important;
     }
   }
+  tbody > .dismissed {
+    opacity: 0.3;
+  }
 }
