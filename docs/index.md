@@ -127,42 +127,87 @@ As you've probably noticed in the examples above, you have access to a small, me
 
 # Colors
 
-<p class="lead">Below you can find the different values we created that support the primary color variable you can change at any time in <code>\_settings.scss</code></p>
+<p class="lead">We currently have the following palette available in our SCSS, with each available as a class itself (which sets the `color` property) and as a `bg-` class (which set the `background-color` property).</p>
+For example, quicksilver is available as both `.quicksilver` (for text) and `.bg-quicksilver` (for containers, e.g. the ones below).
 
 ---
 
 <div class="row up-1 medium-up-3 large-up-5">
   <div class="column">
     <div class="color-block">
-      <span style="background: #2199e8"></span>
-      #2199e8
+    <span class="bg-gray"></span>
+    `gray`
     </div>
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #3adb76"></span>
-      #3adb76
+    <span class="bg-gunmetal"></span>
+    `gunmetal`
     </div>
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #ffae00"></span>
-      #ffae00
+    <span class="bg-quicksilver"></span>
+    `quicksilver`
     </div>
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #ec5840"></span>
-      #ec5840
+    <span class="bg-adk-blue"></span>
+    `adk-blue`
     </div>
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #0a0a0a"></span>
-      #0a0a0a
+    <span class="bg-adk-blue-dark"></span>
+    `adk-blue-dark`
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+    <span class="bg-adk-slate"></span>
+    `adk-slate`
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+    <span class="bg-extra-light-gray"></span>
+    `extra-light-gray`
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+    <span class="bg-light-gray"></span>
+    `light-gray`
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+    <span class="bg-medium-gray"></span>
+    `medium-gray`
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+    <span class="bg-dark-gray"></span>
+    `dark-gray`
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+    <span class="bg-black"></span>
+    `black`
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+    <span class="bg-white"></span>
+    `white`
     </div>
   </div>
 </div>
+
+
 
 
 
@@ -362,7 +407,7 @@ This is a [selectize](http://selectize.github.io/selectize.js/) element.
 
 <input type="text" class="selectize"></input>
 
-There are classes in the `scss/_adk-selectize.scss` that affect the styling of this element. 
+There are classes in the `scss/_adk-selectize.scss` that affect the styling of this element.
 
 We extend the default [`selectize.css`](https://github.com/selectize/selectize.js/blob/master/dist/css/selectize.css) with our `/scss/_adk-selectize.scss` file to overwrite default styles.
 
