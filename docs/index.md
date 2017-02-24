@@ -435,17 +435,17 @@ Thus all of our spacing, font sizing, padding, etc. should be based on this scal
 
 These are the variables:
 ```
-$space: 1rem;
-$space-m: 1.25rem;
-$space-l: 1.563rem;
-$space-xl: 1.953rem;
-$space-xxl: 2.441rem;
-$space-xxxl: 3.05rem;
-$space-s: 0.8rem;
-$space-xs: 0.512rem;
-$space-xxs: 0.328rem;
-$space-xxxs: 0.21rem;
-$space-micro: 0.134rem;
+$space: 1rem; // 16px
+$space-m: 1.25rem; // 20px
+$space-l: 1.563rem; // 25px
+$space-xl: 1.953rem; // 31.25px
+$space-xxl: 2.441rem; // 39px
+$space-xxxl: 3.05rem; // 48.8px
+$space-s: 0.8rem; // 12.8px
+$space-xs: 0.512rem; // 8.2px
+$space-xxs: 0.328rem; // 5.2px
+$space-xxxs: 0.21rem; // 3.4px
+$space-micro: 0.134rem; // 2.1px
 ```
 
 #### Reference
