@@ -59,6 +59,43 @@ $sizes: (
 );
 
 /**
+ * Color Variables
+ */
+
+// Neutrals
+$white: #fff;
+$extra-light-gray: #F7F9FA;
+$light-gray: #9E9E9E;
+$medium-gray: #757575;
+$dark-gray: #292929;
+$black: #292929;
+
+// Palette colors
+$adk-blue: #1CA3FC;
+$adk-green: #22d290;
+$adk-red: #ff4b1f;
+$adk-yellow: #ffcd00;
+$adk-quicksilver: #859DAF;
+$adk-gunmetal: #b8c8d1;
+
+$adk-palette-colors: (
+  blue: $adk-blue,
+  green: $adk-green,
+  red: $adk-red,
+  yellow: $adk-yellow,
+  quicksilver: $adk-quicksilver,
+  gunmetal: $adk-gunmetal,
+  gray: $medium-gray,
+);
+
+$adk-neutral-colors: (
+  white: $white,
+  light-gray: $light-gray,
+  medium-gray: $medium-gray,
+  black: $black,
+);
+
+/**
  * Type Variables
  */
 

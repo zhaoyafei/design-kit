@@ -21,6 +21,7 @@
 @include foundation-badge;
 @include foundation-breadcrumbs;
 @include foundation-button-group;
+@include foundation-card;
 @include foundation-callout;
 @include foundation-close-button;
 @include foundation-menu;
@@ -56,6 +57,7 @@
 
 // Architizer Design Kit styles
 @import 'adk-buttons';
+@import 'adk-colors';
 @import 'adk-menu';
 @import 'adk-fonts';
 @import 'adk-forms';

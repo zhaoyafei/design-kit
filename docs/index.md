@@ -1,18 +1,12 @@
 # The Grid
 
-<p class="lead">Problem: You've got tons of content, each needing different sized vertical columns, and don't know how to quick and easily get it all done. Solution: The awesome grid!</p>
+Architizer Design Kit uses the standard Foundation 12-column flex-grid. You can [read more about it here](http://foundation.zurb.com/sites/docs/flex-grid.html).
 
 ---
 
 ## Overview
 
 The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don't give a specific structural style to should be within a row or column.
-
----
-
-## Nesting
-
-In the Grid you can nest columns down as far as you'd like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.
 
 ---
 
@@ -26,149 +20,231 @@ Using this framework is easy. Here's how your code will look when you use a seri
   <div class="small-6 medium-8 large-9 columns">...</div>
 </div>
 ```
+---
 
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-4 columns">4</div>
   <div class="small-12 large-4 columns">4</div>
   <div class="small-12 large-4 columns">4</div>
 </div>
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-3 columns">3</div>
   <div class="small-12 large-6 columns">6</div>
   <div class="small-12 large-3 columns">3</div>
 </div>
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-2 columns">2</div>
   <div class="small-12 large-8 columns">8</div>
   <div class="small-12 large-2 columns">2</div>
 </div>
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-3 columns">3</div>
   <div class="small-12 large-9 columns">9</div>
 </div>
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-4 columns">4</div>
   <div class="small-12 large-8 columns">8</div>
 </div>
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-5 columns">5</div>
   <div class="small-12 large-7 columns">7</div>
 </div>
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-6 columns">6</div>
   <div class="small-12 large-6 columns">6</div>
 </div>
 
 ---
 
-## Nesting Rows
+## Useful links
 
-In the Grid you can nest columns down as far as you'd like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.
-
-```html
-<div class="row">
-  <div class="small-8 columns">8
-    <div class="row">
-      <div class="small-8 columns">8 Nested
-        <div class="row">
-          <div class="small-8 columns">8 Nested Again</div>
-          <div class="small-4 columns">4</div>
-        </div>
-      </div>
-      <div class="small-4 columns">4</div>
-    </div>
-  </div>
-  <div class="small-4 columns">4</div>
-</div>
-```
-
-<div class="row display">
-  <div class="small-8 columns">8
-    <div class="row">
-      <div class="small-8 columns">8 Nested
-        <div class="row">
-          <div class="small-8 columns">8 Nested Again</div>
-          <div class="small-4 columns">4</div>
-        </div>
-      </div>
-      <div class="small-4 columns">4</div>
-    </div>
-  </div>
-  <div class="small-4 columns">4</div>
-</div>
-
----
-
-## Small Grid
-
-As you've probably noticed in the examples above, you have access to a small, medium, and large grid. If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid. You can override your small grid classes by adding medium or large grid classes.
-
-```html
-<div class="row">
-  <div class="small-2 columns">2</div>
-  <div class="small-10 columns">10, last</div>
-</div>
-<div class="row">
-  <div class="small-3 columns">3</div>
-  <div class="small-9 columns">9, last</div>
-</div>
-```
-
-<div class="row display">
-  <div class="small-2 columns">2</div>
-  <div class="small-10 columns">10, last</div>
-</div>
-<div class="row display">
-  <div class="small-3 columns">3</div>
-  <div class="small-9 columns">9, last</div>
-</div>
+* [Block Grids](http://foundation.zurb.com/sites/docs/flex-grid.html#block-grids)  
+Make grids of items without dealing with column widths
+* [Source Ordering](http://foundation.zurb.com/sites/docs/flex-grid.html#source-ordering)  
+Move things around in responsive views without Javascript
+* [Visibility classes](http://foundation.zurb.com/sites/docs/visibility.html)  
+The bread and butter of responsive design in Foundation
 
 
 
 # Colors
 
-<p class="lead">Below you can find the different values we created that support the primary color variable you can change at any time in <code>\_settings.scss</code></p>
+Based on the approach to color swatches taken by [Material Design](https://material.io/guidelines/style/color.html#color-color-palette), Design Kit's color system contains neutral colors and palette colors.
 
 ---
 
-<div class="row up-1 medium-up-3 large-up-5">
+## Neutral Colors
+
+Neutral colors exist stand-alone – they do not require a generated set of dynamic colors that are easily chosen and transitioned between for interactive or otherwise dynamic purposes.
+
+These colors are surfaced as utility classes in the format `.{color}` or `.bg-{color}`, where:
+* `{color}` is the name of the color,
+* `.{color}` sets the `color` CSS property, and
+* `.bg-{color}` sets the `background-color` CSS property.
+
+Our palette of neutral colors currently consists of the following:
+
+<div class="row color-blocks small-up-1">
   <div class="column">
-    <div class="color-block">
-      <span style="background: #2199e8"></span>
-      #2199e8
+    <div class="card">
+    <div class="card-section bg-white"><strong>white</strong></div>
+    <div class="card-section bg-extra-light-gray"><strong>extra-light-gray</strong></div>
+    <div class="card-section bg-light-gray"><strong>light-gray</strong></div>
+    <div class="card-section bg-medium-gray"><strong>medium-gray</strong></div>
+    <div class="card-section bg-black white"><strong>black</strong></div>
     </div>
   </div>
+</div>
+
+---
+
+## Palette Colors
+
+We use a base set of palette colors and generate 9 shades (5 lighter, 4 darker) for each of them.
+Currently, each shade is **incremented by 7% lightness**, but the SCSS functions are written to be modifiable.
+
+These colors are surfaced as utility classes in the format `.{color}-{shade}` or `.bg-{color}-{shade}`, where:
+* `{color}` is the name of the color,
+* `{shade}` is the *number* of the shade (e.g. *500* or *300*),
+* `.{color}-{shade}` sets the `color` CSS property, and
+* `.bg-{color}-{shade}` sets the `background-color` CSS property.
+
+
+<div class="row color-blocks small-up-2 medium-up-3 large-up-3">
+
   <div class="column">
-    <div class="color-block">
-      <span style="background: #3adb76"></span>
-      #3adb76
+    <div class="card">
+      <div class="card-section">
+        <p>quicksilver</p>
+      </div>
+    <div class="card-section bg-quicksilver-50"><strong>50</strong></div>
+    <div class="card-section bg-quicksilver-100"><strong>100</strong></div>
+    <div class="card-section bg-quicksilver-200"><strong>200</strong></div>
+    <div class="card-section bg-quicksilver-300"><strong>300</strong></div>
+    <div class="card-section bg-quicksilver-400"><strong>400</strong></div>
+    <div class="card-section bg-quicksilver-500"><strong>500</strong></div>
+    <div class="card-section bg-quicksilver-600"><strong>600</strong></div>
+    <div class="card-section bg-quicksilver-700 white"><strong>700</strong></div>
+    <div class="card-section bg-quicksilver-800 white"><strong>800</strong></div>
+    <div class="card-section bg-quicksilver-900 white"><strong>900</strong></div>
     </div>
   </div>
+
   <div class="column">
-    <div class="color-block">
-      <span style="background: #ffae00"></span>
-      #ffae00
+    <div class="card">
+      <div class="card-section">
+        <p>blue</p>
+      </div>
+    <div class="card-section bg-blue-50"><strong>50</strong></div>
+    <div class="card-section bg-blue-100"><strong>100</strong></div>
+    <div class="card-section bg-blue-200"><strong>200</strong></div>
+    <div class="card-section bg-blue-300"><strong>300</strong></div>
+    <div class="card-section bg-blue-400"><strong>400</strong></div>
+    <div class="card-section bg-blue-500"><strong>500</strong></div>
+    <div class="card-section bg-blue-600"><strong>600</strong></div>
+    <div class="card-section bg-blue-700 white"><strong>700</strong></div>
+    <div class="card-section bg-blue-800 white"><strong>800</strong></div>
+    <div class="card-section bg-blue-900 white"><strong>900</strong></div>
     </div>
   </div>
+
   <div class="column">
-    <div class="color-block">
-      <span style="background: #ec5840"></span>
-      #ec5840
+    <div class="card">
+      <div class="card-section">
+        <p>green</p>
+      </div>
+    <div class="card-section bg-green-50"><strong>50</strong></div>
+    <div class="card-section bg-green-100"><strong>100</strong></div>
+    <div class="card-section bg-green-200"><strong>200</strong></div>
+    <div class="card-section bg-green-300"><strong>300</strong></div>
+    <div class="card-section bg-green-400"><strong>400</strong></div>
+    <div class="card-section bg-green-500"><strong>500</strong></div>
+    <div class="card-section bg-green-600"><strong>600</strong></div>
+    <div class="card-section bg-green-700 white"><strong>700</strong></div>
+    <div class="card-section bg-green-800 white"><strong>800</strong></div>
+    <div class="card-section bg-green-900 white"><strong>900</strong></div>
     </div>
   </div>
+
   <div class="column">
-    <div class="color-block">
-      <span style="background: #0a0a0a"></span>
-      #0a0a0a
+    <div class="card">
+      <div class="card-section">
+        <p>red</p>
+      </div>
+    <div class="card-section bg-red-50"><strong>50</strong></div>
+    <div class="card-section bg-red-100"><strong>100</strong></div>
+    <div class="card-section bg-red-200"><strong>200</strong></div>
+    <div class="card-section bg-red-300"><strong>300</strong></div>
+    <div class="card-section bg-red-400"><strong>400</strong></div>
+    <div class="card-section bg-red-500"><strong>500</strong></div>
+    <div class="card-section bg-red-600"><strong>600</strong></div>
+    <div class="card-section bg-red-700 white"><strong>700</strong></div>
+    <div class="card-section bg-red-800 white"><strong>800</strong></div>
+    <div class="card-section bg-red-900 white"><strong>900</strong></div>
     </div>
   </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-section">
+        <p>yellow</p>
+      </div>
+    <div class="card-section bg-yellow-50"><strong>50</strong></div>
+    <div class="card-section bg-yellow-100"><strong>100</strong></div>
+    <div class="card-section bg-yellow-200"><strong>200</strong></div>
+    <div class="card-section bg-yellow-300"><strong>300</strong></div>
+    <div class="card-section bg-yellow-400"><strong>400</strong></div>
+    <div class="card-section bg-yellow-500"><strong>500</strong></div>
+    <div class="card-section bg-yellow-600"><strong>600</strong></div>
+    <div class="card-section bg-yellow-700 white"><strong>700</strong></div>
+    <div class="card-section bg-yellow-800 white"><strong>800</strong></div>
+    <div class="card-section bg-yellow-900 white"><strong>900</strong></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-section">
+        <p>gunmetal</p>
+      </div>
+    <div class="card-section bg-gunmetal-50"><strong>50</strong></div>
+    <div class="card-section bg-gunmetal-100"><strong>100</strong></div>
+    <div class="card-section bg-gunmetal-200"><strong>200</strong></div>
+    <div class="card-section bg-gunmetal-300"><strong>300</strong></div>
+    <div class="card-section bg-gunmetal-400"><strong>400</strong></div>
+    <div class="card-section bg-gunmetal-500"><strong>500</strong></div>
+    <div class="card-section bg-gunmetal-600"><strong>600</strong></div>
+    <div class="card-section bg-gunmetal-700 white"><strong>700</strong></div>
+    <div class="card-section bg-gunmetal-800 white"><strong>800</strong></div>
+    <div class="card-section bg-gunmetal-900 white"><strong>900</strong></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-section">
+        <p>gray</p>
+      </div>
+    <div class="card-section bg-gray-50"><strong>50</strong></div>
+    <div class="card-section bg-gray-100"><strong>100</strong></div>
+    <div class="card-section bg-gray-200"><strong>200</strong></div>
+    <div class="card-section bg-gray-300"><strong>300</strong></div>
+    <div class="card-section bg-gray-400"><strong>400</strong></div>
+    <div class="card-section bg-gray-500"><strong>500</strong></div>
+    <div class="card-section bg-gray-600"><strong>600</strong></div>
+    <div class="card-section bg-gray-700 white"><strong>700</strong></div>
+    <div class="card-section bg-gray-800 white"><strong>800</strong></div>
+    <div class="card-section bg-gray-900 white"><strong>900</strong></div>
+    </div>
+  </div>
+
 </div>
 
 
 
 # Typography
 
-<p class="lead">This design uses Helvetica Neue for headings and paragraph text.</p>
+This design uses Theinhardt for headings and paragraph text.
 
 ---
 
@@ -212,7 +288,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione 
 
 # Buttons
 
-<p class="lead">Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you're strapped to. On the web, we follow similar conventions.</p>
+Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you're strapped to. On the web, we follow similar conventions.
 
 ---
 
@@ -256,7 +332,7 @@ Pills are buttons are used in forms to add/append fields. They are distinct  fro
 
 # Forms
 
-<p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
+Use forms to allow users to interact with the site and provide information to the company.
 
 ---
 
@@ -362,7 +438,7 @@ This is a [selectize](http://selectize.github.io/selectize.js/) element.
 
 <input type="text" class="selectize"></input>
 
-There are classes in the `scss/_adk-selectize.scss` that affect the styling of this element. 
+There are classes in the `scss/_adk-selectize.scss` that affect the styling of this element.
 
 We extend the default [`selectize.css`](https://github.com/selectize/selectize.js/blob/master/dist/css/selectize.css) with our `/scss/_adk-selectize.scss` file to overwrite default styles.
 
@@ -371,11 +447,11 @@ We extend the default [`selectize.css`](https://github.com/selectize/selectize.j
 # Tables
 Tables are simple. We've got a few classes applied to set the styling and alignment of the cells. For all other table settings and classes, reference [Foundation's Table Documentation.](http://foundation.zurb.com/sites/docs/table.html)
 
-Table cells may have plain text, links (internal and external), buttons and actions. 
+Table cells may have plain text, links (internal and external), buttons and actions.
 
-"Actions" in tables should be used when doing something within the current view, such as opening a modal. They look like small links. To create one, apply `.action` to the cell's `<td>` tag. 
+"Actions" in tables should be used when doing something within the current view, such as opening a modal. They look like small links. To create one, apply `.action` to the cell's `<td>` tag.
 
-When building tables, try to keep the action/button columns hugging the right side table to give the impression of weight towards them. This makes a difference when the table is sparse and doesn't have too many columns, preventing each column from having too much space between it. 
+When building tables, try to keep the action/button columns hugging the right side table to give the impression of weight towards them. This makes a difference when the table is sparse and doesn't have too many columns, preventing each column from having too much space between it.
 
 As another rule of thumb, button's and actions should be centered on the column, numbers should be aligned right and text aligned left. Apply `.centered`, `.left` and `.right` to the cell tag to do so. Add `.dismissed` to make a row appear inactive, such as on product rows that have been dismissed by an architect.
 
