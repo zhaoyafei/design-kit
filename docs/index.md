@@ -469,21 +469,21 @@ For links in cells that direct the user to an external page (such as brand links
   </thead>
   <tbody>
     <tr>
-      <td><a class="external">Knoll</a></td>
+      <td><a class="underline">Knoll</a></td>
       <td>Pollock Executive Chair</td>
       <td>Recommended</td>
       <td class="action"><a>Send Email</a></td>
       <td class="action"><a>View</a></td>
     </tr>
     <tr>
-      <td><a class="external">Herman Miller</a></td>
+      <td><a class="underline">Herman Miller</a></td>
       <td>Aeron Chair</td>
       <td>In Review</td>
       <td class="action"><a>Send Email</a></td>
       <td class="action"><a>View</a></td>
     </tr>
     <tr class="dismissed">
-      <td><a class="external">Steelcase</a></td>
+      <td><a class="underline">Steelcase</a></td>
       <td>Mesh Think Chair</td>
       <td>Dismissed</td>
       <td class="action"><a>Send Email</a></td>
