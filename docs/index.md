@@ -1,6 +1,6 @@
 # The Grid
 
-<p class="lead">Problem: You've got tons of content, each needing different sized vertical columns, and don't know how to quick and easily get it all done. Solution: The awesome grid!</p>
+Problem: You've got tons of content, each needing different sized vertical columns, and don't know how to quick and easily get it all done. Solution: The awesome grid!
 
 ---
 
@@ -127,107 +127,203 @@ As you've probably noticed in the examples above, you have access to a small, me
 
 # Colors
 
-We currently have the following palette available in our SCSS, with each available as a class itself (which sets the `color` property) and as a `bg-` class (which set the `background-color` property).
-
-For example, quicksilver is available as both `.quicksilver` (for text) and `.bg-quicksilver` (for containers).
+Based on the approach to color swatches taken by [Material Design](https://material.io/guidelines/style/color.html#color-color-palette), Design Kit's color system contains neutral colors and palette colors.
 
 ---
-<div class="row small-up-2 medium-up-4 large-up-4">
 
-  <div class="column">
-    <div class="card">
-      <div class="card-section">
-        <p>white</p>
-      </div>
-    <div class="card-section bg-white" style="height: 100px;"></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-section">
-        <p>extra-light-gray</p>
-      </div>
-    <div class="card-section bg-extra-light-gray" style="height: 100px;"></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-section">
-        <p>light-gray</p>
-      </div>
-    <div class="card-section bg-light-gray" style="height: 100px;"></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-section">
-        <p>gray</p>
-      </div>
-    <div class="card-section bg-gray" style="height: 100px;"></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-section">
-        <p>medium-gray</p>
-      </div>
-    <div class="card-section bg-medium-gray" style="height: 100px;"></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-section">
-        <p>dark-gray</p>
-      </div>
-    <div class="card-section bg-dark-gray" style="height: 100px;"></div>
-    </div>
-  </div>
+## Neutral Colors
+
+Neutral colors exist stand-alone – they do not require a generated set of dynamic colors that are easily chosen and transitioned between for interactive or otherwise dynamic purposes.
+
+These colors are surfaced as utility classes in the format `.{color}` or `.bg-{color}`, where:
+* `{color}` is the name of the color,
+* `.{color}` sets the `color` CSS property, and
+* `.bg-{color}` sets the `background-color` CSS property.
+
+Our palette of neutral colors currently consists of the following:
+
+<div class="row color-blocks small-up-2 medium-up-3 large-up-3">
   <div class="column">
     <div class="card">
       <div class="card-section">
         <p>black</p>
       </div>
-    <div class="card-section bg-black" style="height: 100px;"></div>
+      <div class="card-section bg-black"><p>&nbsp;</p></div>
     </div>
   </div>
   <div class="column">
     <div class="card">
       <div class="card-section">
-        <p>adk-blue</p>
+        <p>text-black</p>
       </div>
-    <div class="card-section bg-adk-blue" style="height: 100px;"></div>
+      <div class="card-section bg-text-black"><p>&nbsp;</p></div>
     </div>
   </div>
   <div class="column">
     <div class="card">
       <div class="card-section">
-        <p>adk-blue-dark</p>
+        <p>text-medium-gray</p>
       </div>
-    <div class="card-section bg-adk-blue-dark" style="height: 100px;"></div>
+      <div class="card-section bg-text-medium-gray"><p>&nbsp;</p></div>
     </div>
   </div>
   <div class="column">
     <div class="card">
       <div class="card-section">
-        <p>adk-slate</p>
+        <p>text-light-gray</p>
       </div>
-    <div class="card-section bg-adk-slate" style="height: 100px;"></div>
+      <div class="card-section bg-text-light-gray"><p>&nbsp;</p></div>
     </div>
   </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-section">
+        <p>white</p>
+      </div>
+      <div class="card-section bg-white"><p>&nbsp;</p></div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Palette Colors
+
+We use a base set of palette colors and generate 9 shades (5 lighter, 4 darker) for each of them.
+Currently, each shade is **incremented by 7% lightness**, but the SCSS functions are written to be modifiable.
+
+These colors are surfaced as utility classes in the format `.{color}-{shade}` or `.bg-{color}-{shade}`, where:
+* `{color}` is the name of the color,
+* `{shade}` is the *number* of the shade (e.g. *500* or *300*),
+* `.{color}-{shade}` sets the `color` CSS property, and
+* `.bg-{color}-{shade}` sets the `background-color` CSS property.
+
+
+<div class="row color-blocks small-up-2 medium-up-3 large-up-3">
+
   <div class="column">
     <div class="card">
       <div class="card-section">
         <p>quicksilver</p>
       </div>
-    <div class="card-section bg-quicksilver" style="height: 100px;"></div>
+    <div class="card-section bg-quicksilver-50"><small><strong>50</strong></small></div>
+    <div class="card-section bg-quicksilver-100"><strong>100</strong></div>
+    <div class="card-section bg-quicksilver-200"><strong>200</strong></div>
+    <div class="card-section bg-quicksilver-300"><strong>300</strong></div>
+    <div class="card-section bg-quicksilver-400"><strong>400</strong></div>
+    <div class="card-section bg-quicksilver-500"><strong>500</strong></div>
+    <div class="card-section bg-quicksilver-600"><strong>600</strong></div>
+    <div class="card-section bg-quicksilver-700 white"><strong>700</strong></div>
+    <div class="card-section bg-quicksilver-800 white"><strong>800</strong></div>
+    <div class="card-section bg-quicksilver-900 white"><strong>900</strong></div>
     </div>
   </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-section">
+        <p>blue</p>
+      </div>
+    <div class="card-section bg-blue-50"><strong>50</strong></div>
+    <div class="card-section bg-blue-100"><strong>100</strong></div>
+    <div class="card-section bg-blue-200"><strong>200</strong></div>
+    <div class="card-section bg-blue-300"><strong>300</strong></div>
+    <div class="card-section bg-blue-400"><strong>400</strong></div>
+    <div class="card-section bg-blue-500"><strong>500</strong></div>
+    <div class="card-section bg-blue-600"><strong>600</strong></div>
+    <div class="card-section bg-blue-700 white"><strong>700</strong></div>
+    <div class="card-section bg-blue-800 white"><strong>800</strong></div>
+    <div class="card-section bg-blue-900 white"><strong>900</strong></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-section">
+        <p>green</p>
+      </div>
+    <div class="card-section bg-green-50"><strong>50</strong></div>
+    <div class="card-section bg-green-100"><strong>100</strong></div>
+    <div class="card-section bg-green-200"><strong>200</strong></div>
+    <div class="card-section bg-green-300"><strong>300</strong></div>
+    <div class="card-section bg-green-400"><strong>400</strong></div>
+    <div class="card-section bg-green-500"><strong>500</strong></div>
+    <div class="card-section bg-green-600"><strong>600</strong></div>
+    <div class="card-section bg-green-700 white"><strong>700</strong></div>
+    <div class="card-section bg-green-800 white"><strong>800</strong></div>
+    <div class="card-section bg-green-900 white"><strong>900</strong></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-section">
+        <p>red</p>
+      </div>
+    <div class="card-section bg-red-50"><strong>50</strong></div>
+    <div class="card-section bg-red-100"><strong>100</strong></div>
+    <div class="card-section bg-red-200"><strong>200</strong></div>
+    <div class="card-section bg-red-300"><strong>300</strong></div>
+    <div class="card-section bg-red-400"><strong>400</strong></div>
+    <div class="card-section bg-red-500"><strong>500</strong></div>
+    <div class="card-section bg-red-600"><strong>600</strong></div>
+    <div class="card-section bg-red-700 white"><strong>700</strong></div>
+    <div class="card-section bg-red-800 white"><strong>800</strong></div>
+    <div class="card-section bg-red-900 white"><strong>900</strong></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-section">
+        <p>yellow</p>
+      </div>
+    <div class="card-section bg-yellow-50"><strong>50</strong></div>
+    <div class="card-section bg-yellow-100"><strong>100</strong></div>
+    <div class="card-section bg-yellow-200"><strong>200</strong></div>
+    <div class="card-section bg-yellow-300"><strong>300</strong></div>
+    <div class="card-section bg-yellow-400"><strong>400</strong></div>
+    <div class="card-section bg-yellow-500"><strong>500</strong></div>
+    <div class="card-section bg-yellow-600"><strong>600</strong></div>
+    <div class="card-section bg-yellow-700 white"><strong>700</strong></div>
+    <div class="card-section bg-yellow-800 white"><strong>800</strong></div>
+    <div class="card-section bg-yellow-900 white"><strong>900</strong></div>
+    </div>
+  </div>
+
   <div class="column">
     <div class="card">
       <div class="card-section">
         <p>gunmetal</p>
       </div>
-    <div class="card-section bg-gunmetal" style="height: 100px;"></div>
+    <div class="card-section bg-gunmetal-50"><strong>50</strong></div>
+    <div class="card-section bg-gunmetal-100"><strong>100</strong></div>
+    <div class="card-section bg-gunmetal-200"><strong>200</strong></div>
+    <div class="card-section bg-gunmetal-300"><strong>300</strong></div>
+    <div class="card-section bg-gunmetal-400"><strong>400</strong></div>
+    <div class="card-section bg-gunmetal-500"><strong>500</strong></div>
+    <div class="card-section bg-gunmetal-600"><strong>600</strong></div>
+    <div class="card-section bg-gunmetal-700 white"><strong>700</strong></div>
+    <div class="card-section bg-gunmetal-800 white"><strong>800</strong></div>
+    <div class="card-section bg-gunmetal-900 white"><strong>900</strong></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-section">
+        <p>gray</p>
+      </div>
+    <div class="card-section bg-gray-50"><strong>50</strong></div>
+    <div class="card-section bg-gray-100"><strong>100</strong></div>
+    <div class="card-section bg-gray-200"><strong>200</strong></div>
+    <div class="card-section bg-gray-300"><strong>300</strong></div>
+    <div class="card-section bg-gray-400"><strong>400</strong></div>
+    <div class="card-section bg-gray-500"><strong>500</strong></div>
+    <div class="card-section bg-gray-600"><strong>600</strong></div>
+    <div class="card-section bg-gray-700 white"><strong>700</strong></div>
+    <div class="card-section bg-gray-800 white"><strong>800</strong></div>
+    <div class="card-section bg-gray-900 white"><strong>900</strong></div>
     </div>
   </div>
 
@@ -237,7 +333,7 @@ For example, quicksilver is available as both `.quicksilver` (for text) and `.bg
 
 # Typography
 
-<p class="lead">This design uses Helvetica Neue for headings and paragraph text.</p>
+This design uses Theinhardt for headings and paragraph text.
 
 ---
 
@@ -281,7 +377,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione 
 
 # Buttons
 
-<p class="lead">Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you're strapped to. On the web, we follow similar conventions.</p>
+Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you're strapped to. On the web, we follow similar conventions.
 
 ---
 
@@ -325,7 +421,7 @@ Pills are buttons are used in forms to add/append fields. They are distinct  fro
 
 # Forms
 
-<p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
+Use forms to allow users to interact with the site and provide information to the company.
 
 ---
 
