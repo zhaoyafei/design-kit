@@ -1,0 +1,70 @@
+/**
+ * Architizer Design Kit Variables
+ *
+ * Define global variables here.
+ *
+ * Avoid defining variables inside of individual component files.
+ *
+ * If a variable needs to be accessible across multiple components, consider
+ * abstracting it and defining it here.
+ */
+
+/**
+ * Scale and Spacing Variables
+ */
+
+// Power function to allow for skipping parts of the scale
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+
+  @return $value;
+}
+
+// Base scale
+$scale: 1.25; // (Major Third)
+
+// Base spacing
+$space: 1rem;
+
+$space-m: $space*$scale;
+$space-l: $space-m*$scale;
+$space-xl: $space-l*$scale;
+$space-xxl: $space-xl*$scale;
+$space-xxxl: $space-xxl*$scale;
+$space-s: $space/$scale;
+$space-xs: $space-s/pow($scale, 2);
+$space-xxs: $space-xs/pow($scale, 2);
+$space-xxxs: $space-xxs/pow($scale, 2);
+$space-micro: $space-xxxs/pow($scale, 2);
+
+$sizes: (
+  0: 0,
+  micro: $space-micro,
+  xxxs: $space-xxxs,
+  xxs: $space-xxs,
+  xs: $space-xs,
+  s: $space-s,
+  base: $space,
+  m: $space-m,
+  l: $space-l,
+  xl: $space-xl,
+  xxl: $space-xxl,
+  xxxl: $space-xxxl,
+);
+
+/**
+ * Type Variables
+ */
+
+// T-shirt font sizes based on scale
+$font-size-xs: $space-xs;
+$font-size-s: $space-s;
+$font-size: $space;
+$font-size-m: $space-m;
+$font-size-l: $space-l;

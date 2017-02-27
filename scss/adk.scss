@@ -1,20 +1,13 @@
 @charset 'utf-8';
 @import 'util/util';
 
-// Spacing variables are used in settings, so this must be first
-@import 'adk-spacing';
+// Architizer Design Kit variables
+@import 'adk-variables';
 
+// Foundation settings and components
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-
-@import 'adk-buttons';
-@import 'adk-menu';
-@import 'adk-fonts';
-@import 'adk-forms';
-@import 'adk-selectize';
-@import 'adk-table';
-@import 'adk-type';
 
 @include foundation-global-styles;
 // @include foundation-grid;
@@ -61,4 +54,15 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+// Architizer Design Kit styles
+@import 'adk-buttons';
+@import 'adk-menu';
+@import 'adk-fonts';
+@import 'adk-forms';
+@import 'adk-selectize';
+@import 'adk-spacing';
+@import 'adk-table';
+@import 'adk-type';
+
+// Architizer Design Kit resets
 @import 'adk-resets';
