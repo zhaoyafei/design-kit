@@ -450,14 +450,31 @@ We extend the default [`selectize.css`](https://github.com/selectize/selectize.j
 # Tables
 Tables are simple. We've got a few classes applied to set the styling and alignment of the cells. For all other table settings and classes, reference [Foundation's Table Documentation.](http://foundation.zurb.com/sites/docs/table.html)
 
-Table cells may have plain text, links (internal and external), buttons and actions.
+Table cells may have plain text, links, buttons, and actions.
 
+## Actions
 "Actions" in tables should be used when doing something within the current view, such as opening a modal. They look like small links. To create one, apply `.action` to the cell's `<td>` tag.
+```html
+<td class="action"><a>Send Email</a></td>
+```
 
-When building tables, try to keep the action/button columns hugging the right side table to give the impression of weight towards them. This makes a difference when the table is sparse and doesn't have too many columns, preventing each column from having too much space between it.
+When building tables, try to keep the action/button columns hugging the right side of the table. This improves readability when scanning tables with sparse data.
 
-As another rule of thumb, button's and actions should be centered on the column, numbers should be aligned right and text aligned left. Apply `.centered`, `.left` and `.right` to the cell tag to do so. Add `.dismissed` to make a row appear inactive, such as on product rows that have been dismissed by an architect.
+## Alignment
+In columns:
 
+- Buttons and actions should be centered
+- Numbers should be aligned right
+- Text should be aligned left
+
+Apply `.centered`, `.left`, or `.right` to the cell tag.
+
+Add `.inactive` to make a row appear inactive, such as on product rows that have been dismissed by an architect.
+
+Add `.underline` to links that direct the user to external pages to keep these distinct from in-app links. 
+
+## Example
+```html_example
 <table class="hover">
   <thead>
     <tr>
@@ -470,21 +487,21 @@ As another rule of thumb, button's and actions should be centered on the column,
   </thead>
   <tbody>
     <tr>
-      <td>Knoll</td>
+      <td><a class="underline">Knoll</a></td>
       <td>Pollock Executive Chair</td>
       <td>Recommended</td>
       <td class="action"><a>Send Email</a></td>
       <td class="action"><a>View</a></td>
     </tr>
     <tr>
-      <td>Herman Miller</td>
+      <td><a class="underline">Herman Miller</a></td>
       <td>Aeron Chair</td>
       <td>In Review</td>
       <td class="action"><a>Send Email</a></td>
       <td class="action"><a>View</a></td>
     </tr>
-    <tr class="dismissed">
-      <td>Steelcase</td>
+    <tr class="inactive">
+      <td><a class="underline">Steelcase</a></td>
       <td>Mesh Think Chair</td>
       <td>Dismissed</td>
       <td class="action"><a>Send Email</a></td>
@@ -492,6 +509,7 @@ As another rule of thumb, button's and actions should be centered on the column,
     </tr>
   </tbody>
 </table>
+```
 
 
 
