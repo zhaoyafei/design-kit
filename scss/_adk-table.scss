@@ -1,6 +1,9 @@
+$table-cell: $font-size;
+$table-cell-small: $font-size-s;
+
 table {
   border-collapse: collapse;
-  font-size: $font-size-s;
+  font-size: 16px;
   tbody, 
   thead {
     border: none; // Clear default table-border while preserving the $table-border variable
@@ -12,8 +15,27 @@ table {
   }
   thead tr *, 
   tfoot tr * {
-    color: $medium-gray;
-    font-weight: $global-weight-normal;
+    color: $black;
+    font-weight: $global-weight-bold;
     font-size: $font-size-s;
+  }
+  tr {
+    .right {
+      text-align: right;
+    }
+    .center {
+      text-align: center;
+    }
+    .small {
+      font-size: $font-size-s;
+    }
+    .action {
+      font-size: $table-cell-small !important;
+      color: $adk-blue !important;
+      text-align: center !important;
+    }
+  }
+  tbody > .inactive {
+    opacity: 0.3;
   }
 }
