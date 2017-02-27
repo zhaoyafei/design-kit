@@ -255,10 +255,11 @@ $button-padding: $space-s $space;
 // $button-color-alt: $black;
 // $button-radius: $global-radius;
 $button-sizes: (
+  pill: $space-xxs,
   tiny: $space-xs,
   small: $space-s,
   default: $space,
-  large: $space-m,
+  large: $space $space-m,
 );
 // $button-palette: $foundation-palette;
 // $button-opacity-disabled: 0.25;
