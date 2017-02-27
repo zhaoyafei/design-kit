@@ -34,6 +34,16 @@ table {
       color: $adk-blue !important;
       text-align: center !important;
     }
+    a {
+      &.external{
+        color: inherit;
+        border-bottom: 1px solid $black;
+        &:hover {
+          color: $adk-blue;
+          border-bottom: 1px solid $adk-blue;
+        }
+      }
+    }
   }
   tbody > .inactive {
     opacity: 0.3;

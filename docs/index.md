@@ -455,6 +455,8 @@ When building tables, try to keep the action/button columns hugging the right si
 
 As another rule of thumb, button's and actions should be centered on the column, numbers should be aligned right and text aligned left. Apply `.centered`, `.left` and `.right` to the cell tag to do so. Add `.dismissed` to make a row appear inactive, such as on product rows that have been dismissed by an architect.
 
+For links in cells that direct the user to an external page, use the `.external` class on the `<a>` tag, giving it an underline. This will make it distinct from in-app links, which should have no underline. 
+
 <table class="hover">
   <thead>
     <tr>
@@ -467,21 +469,21 @@ As another rule of thumb, button's and actions should be centered on the column,
   </thead>
   <tbody>
     <tr>
-      <td>Knoll</td>
+      <td><a class="external">Knoll</a></td>
       <td>Pollock Executive Chair</td>
       <td>Recommended</td>
       <td class="action"><a>Send Email</a></td>
       <td class="action"><a>View</a></td>
     </tr>
     <tr>
-      <td>Herman Miller</td>
+      <td><a class="external">Herman Miller</a></td>
       <td>Aeron Chair</td>
       <td>In Review</td>
       <td class="action"><a>Send Email</a></td>
       <td class="action"><a>View</a></td>
     </tr>
     <tr class="dismissed">
-      <td>Steelcase</td>
+      <td><a class="external">Steelcase</a></td>
       <td>Mesh Think Chair</td>
       <td>Dismissed</td>
       <td class="action"><a>Send Email</a></td>
