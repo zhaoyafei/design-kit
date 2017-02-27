@@ -301,6 +301,7 @@ These buttons are primary calls to action and should be used sparingly. Their si
 <a href="#" class="primary button">Regular button</a>
 <a href="#" class="primary small button">Small button</a>
 <a href="#" class="primary tiny button">Tiny button</a>
+<a href="#" class="primary pill button">Pill button</a>
 ```
 
 ---
@@ -314,6 +315,7 @@ These buttons are used for less important, secondary actions on a page.
 <a href="#" class="secondary button">Regular button</a>
 <a href="#" class="secondary small button">Small button</a>
 <a href="#" class="secondary tiny button">Tiny button</a>
+<a href="#" class="secondary pill button">Pill button</a>
 ```
 
 ---
