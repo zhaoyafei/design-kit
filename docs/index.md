@@ -455,7 +455,7 @@ When building tables, try to keep the action/button columns hugging the right si
 
 As another rule of thumb, button's and actions should be centered on the column, numbers should be aligned right and text aligned left. Apply `.centered`, `.left` and `.right` to the cell tag to do so. Add `.dismissed` to make a row appear inactive, such as on product rows that have been dismissed by an architect.
 
-For links in cells that direct the user to an external page, use the `.external` class on the `<a>` tag, giving it an underline. This will make it distinct from in-app links, which should have no underline. 
+For links in cells that direct the user to an external page (such as brand links), use the `.external` class on the `<a>` tag, giving it an underline. This will make it distinct from in-app links, which should have no underline. 
 
 <table class="hover">
   <thead>
