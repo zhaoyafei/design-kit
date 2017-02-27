@@ -468,6 +468,8 @@ Apply `.centered`, `.left`, or `.right` to the cell tag.
 
 Add `.inactive` to make a row appear inactive, such as on product rows that have been dismissed by an architect.
 
+Add `.underline` to links that direct the user to external pages to keep these distinct from in-app links. 
+
 ## Example
 ```html_example
 <table class="hover">
