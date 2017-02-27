@@ -8,7 +8,12 @@
 @import 'foundation';
 @import 'motion-ui';
 
+@import 'adk-buttons';
+@import 'adk-menu';
 @import 'adk-fonts';
+@import 'adk-forms';
+@import 'adk-selectize';
+@import 'adk-table';
 @import 'adk-type';
 
 @include foundation-global-styles;
@@ -57,10 +62,3 @@
 @include motion-ui-animations;
 
 @import 'adk-resets';
-
-@import 'adk-kitchen-sink';
-@import 'adk-forms';
-@import 'adk-table';
-@import 'adk-menu';
-@import 'adk-selectize';
-@import 'adk-buttons';
