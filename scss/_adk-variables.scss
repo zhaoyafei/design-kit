@@ -79,54 +79,51 @@ $adk-quicksilver: #859DAF;
 $adk-gunmetal: #b8c8d1;
 
 $adk-palette-colors: (
- blue: $adk-blue,
- green: $adk-green,
- red: $adk-red,
- yellow: $adk-yellow,
- quicksilver: $adk-quicksilver,
- gunmetal: $adk-gunmetal,
- gray: $medium-gray,
+  blue: $adk-blue,
+  green: $adk-green,
+  red: $adk-red,
+  yellow: $adk-yellow,
+  quicksilver: $adk-quicksilver,
+  gunmetal: $adk-gunmetal,
+  gray: $medium-gray,
 );
 
 $adk-neutral-colors: (
- white: $white,
- light-gray: $light-gray,
- medium-gray: $medium-gray,
- black: $black,
- text-black: $text-black
+  white: $white,
+  light-gray: $light-gray,
+  medium-gray: $medium-gray,
+  black: $black,
 );
 
 @function generate-palette($color) {
- $palette: (
-   50: lighten($color, 35%),
-   100: lighten($color, 28%),
-   200: lighten($color, 21%),
-   300: lighten($color, 14%),
-   400: lighten($color, 7%),
-   500: $color,
-   600: darken($color, 7%),
-   700: darken($color, 14%),
-   800: darken($color, 21%),
-   900: darken($color, 28%)
- );
- @return $palette;
+  $palette: (
+    50: lighten($color, 35%),
+    100: lighten($color, 28%),
+    200: lighten($color, 21%),
+    300: lighten($color, 14%),
+    400: lighten($color, 7%),
+    500: $color,
+    600: darken($color, 7%),
+    700: darken($color, 14%),
+    800: darken($color, 21%),
+    900: darken($color, 28%)
+  );
+  @return $palette;
 };
 
 // Generate palette color classes:
 
 @each $name, $color in $adk-palette-colors {
+  $palette: generate-palette($color);
 
- $palette: generate-palette($color);
-
- @each $shade, $value in $palette {
-   .#{$name}-#{$shade} {
-     color: $value;
-   }
-   .bg-#{$name}-#{$shade} {
-     background-color: $value;
-   }
- }
-
+  @each $shade, $value in $palette {
+    .#{$name}-#{$shade} {
+      color: $value;
+    }
+    .bg-#{$name}-#{$shade} {
+      background-color: $value;
+    }
+  }
 }
 
 // Generate neutral color classes:
