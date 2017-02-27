@@ -45,42 +45,6 @@
 
 // 1. Global
 // --------
-$white: #fff;
-$extra-light-gray: #F7F9FA;
-$light-gray: #9E9E9E;
-$medium-gray: #757575;
-$dark-gray: #292929;
-$black: #292929;
-
-$adk-blue: #1CA3FC;
-$adk-green: #22d290;
-$adk-red: #ff4b1f;
-$adk-yellow: #ffcd00;
-$adk-quicksilver: #859DAF;
-$adk-gunmetal: #b8c8d1;
-
-$text-light-gray: rgba(0,0,0, 0.38);
-$text-medium-gray: rgba(0,0,0, 0.54);
-$text-black: rgba(0,0,0, 0.84);
-
-// adk-palette-colors and adk-neutral-colors generate classes as defined in
-$adk-palette-colors: (
-  blue: $adk-blue,
-  green: $adk-green,
-  red: $adk-red,
-  yellow: $adk-yellow,
-  quicksilver: $adk-quicksilver,
-  gunmetal: $adk-gunmetal,
-  gray: $medium-gray,
-);
-
-$adk-neutral-colors: (
-  black: $black,
-  white: $white,
-  text-light-gray: $text-light-gray,
-  text-medium-gray: $text-medium-gray,
-  text-black: $text-black
-);
 
 // $global-font-size: 100%;
 // $global-width: rem-calc(1200);

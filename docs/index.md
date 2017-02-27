@@ -1,18 +1,12 @@
 # The Grid
 
-Problem: You've got tons of content, each needing different sized vertical columns, and don't know how to quick and easily get it all done. Solution: The awesome grid!
+Architizer Design Kit uses the standard Foundation 12-column flex-grid. You can [read more about it here](http://foundation.zurb.com/sites/docs/flex-grid.html).
 
 ---
 
 ## Overview
 
 The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don't give a specific structural style to should be within a row or column.
-
----
-
-## Nesting
-
-In the Grid you can nest columns down as far as you'd like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.
 
 ---
 
@@ -26,102 +20,50 @@ Using this framework is easy. Here's how your code will look when you use a seri
   <div class="small-6 medium-8 large-9 columns">...</div>
 </div>
 ```
+---
 
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-4 columns">4</div>
   <div class="small-12 large-4 columns">4</div>
   <div class="small-12 large-4 columns">4</div>
 </div>
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-3 columns">3</div>
   <div class="small-12 large-6 columns">6</div>
   <div class="small-12 large-3 columns">3</div>
 </div>
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-2 columns">2</div>
   <div class="small-12 large-8 columns">8</div>
   <div class="small-12 large-2 columns">2</div>
 </div>
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-3 columns">3</div>
   <div class="small-12 large-9 columns">9</div>
 </div>
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-4 columns">4</div>
   <div class="small-12 large-8 columns">8</div>
 </div>
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-5 columns">5</div>
   <div class="small-12 large-7 columns">7</div>
 </div>
-<div class="row display">
+<div class="row display bg-quicksilver-50">
   <div class="small-12 large-6 columns">6</div>
   <div class="small-12 large-6 columns">6</div>
 </div>
 
 ---
 
-## Nesting Rows
+## Useful links
 
-In the Grid you can nest columns down as far as you'd like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.
-
-```html
-<div class="row">
-  <div class="small-8 columns">8
-    <div class="row">
-      <div class="small-8 columns">8 Nested
-        <div class="row">
-          <div class="small-8 columns">8 Nested Again</div>
-          <div class="small-4 columns">4</div>
-        </div>
-      </div>
-      <div class="small-4 columns">4</div>
-    </div>
-  </div>
-  <div class="small-4 columns">4</div>
-</div>
-```
-
-<div class="row display">
-  <div class="small-8 columns">8
-    <div class="row">
-      <div class="small-8 columns">8 Nested
-        <div class="row">
-          <div class="small-8 columns">8 Nested Again</div>
-          <div class="small-4 columns">4</div>
-        </div>
-      </div>
-      <div class="small-4 columns">4</div>
-    </div>
-  </div>
-  <div class="small-4 columns">4</div>
-</div>
-
----
-
-## Small Grid
-
-As you've probably noticed in the examples above, you have access to a small, medium, and large grid. If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid. You can override your small grid classes by adding medium or large grid classes.
-
-```html
-<div class="row">
-  <div class="small-2 columns">2</div>
-  <div class="small-10 columns">10, last</div>
-</div>
-<div class="row">
-  <div class="small-3 columns">3</div>
-  <div class="small-9 columns">9, last</div>
-</div>
-```
-
-<div class="row display">
-  <div class="small-2 columns">2</div>
-  <div class="small-10 columns">10, last</div>
-</div>
-<div class="row display">
-  <div class="small-3 columns">3</div>
-  <div class="small-9 columns">9, last</div>
-</div>
+* [Block Grids](http://foundation.zurb.com/sites/docs/flex-grid.html#block-grids)  
+Make grids of items without dealing with column widths
+* [Source Ordering](http://foundation.zurb.com/sites/docs/flex-grid.html#source-ordering)  
+Move things around in responsive views without Javascript
+* [Visibility classes](http://foundation.zurb.com/sites/docs/visibility.html)  
+The bread and butter of responsive design in Foundation
 
 
 
@@ -142,45 +84,14 @@ These colors are surfaced as utility classes in the format `.{color}` or `.bg-{c
 
 Our palette of neutral colors currently consists of the following:
 
-<div class="row color-blocks small-up-2 medium-up-3 large-up-3">
+<div class="row color-blocks small-up-1">
   <div class="column">
     <div class="card">
-      <div class="card-section">
-        <p>black</p>
-      </div>
-      <div class="card-section bg-black"><p>&nbsp;</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-section">
-        <p>text-black</p>
-      </div>
-      <div class="card-section bg-text-black"><p>&nbsp;</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-section">
-        <p>text-medium-gray</p>
-      </div>
-      <div class="card-section bg-text-medium-gray"><p>&nbsp;</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-section">
-        <p>text-light-gray</p>
-      </div>
-      <div class="card-section bg-text-light-gray"><p>&nbsp;</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-section">
-        <p>white</p>
-      </div>
-      <div class="card-section bg-white"><p>&nbsp;</p></div>
+    <div class="card-section bg-white"><strong>white</strong></div>
+    <div class="card-section bg-extra-light-gray"><strong>extra-light-gray</strong></div>
+    <div class="card-section bg-light-gray"><strong>light-gray</strong></div>
+    <div class="card-section bg-medium-gray"><strong>medium-gray</strong></div>
+    <div class="card-section bg-black white"><strong>black</strong></div>
     </div>
   </div>
 </div>
@@ -206,7 +117,7 @@ These colors are surfaced as utility classes in the format `.{color}-{shade}` or
       <div class="card-section">
         <p>quicksilver</p>
       </div>
-    <div class="card-section bg-quicksilver-50"><small><strong>50</strong></small></div>
+    <div class="card-section bg-quicksilver-50"><strong>50</strong></div>
     <div class="card-section bg-quicksilver-100"><strong>100</strong></div>
     <div class="card-section bg-quicksilver-200"><strong>200</strong></div>
     <div class="card-section bg-quicksilver-300"><strong>300</strong></div>
@@ -536,11 +447,11 @@ We extend the default [`selectize.css`](https://github.com/selectize/selectize.j
 # Tables
 Tables are simple. We've got a few classes applied to set the styling and alignment of the cells. For all other table settings and classes, reference [Foundation's Table Documentation.](http://foundation.zurb.com/sites/docs/table.html)
 
-Table cells may have plain text, links (internal and external), buttons and actions. 
+Table cells may have plain text, links (internal and external), buttons and actions.
 
-"Actions" in tables should be used when doing something within the current view, such as opening a modal. They look like small links. To create one, apply `.action` to the cell's `<td>` tag. 
+"Actions" in tables should be used when doing something within the current view, such as opening a modal. They look like small links. To create one, apply `.action` to the cell's `<td>` tag.
 
-When building tables, try to keep the action/button columns hugging the right side table to give the impression of weight towards them. This makes a difference when the table is sparse and doesn't have too many columns, preventing each column from having too much space between it. 
+When building tables, try to keep the action/button columns hugging the right side table to give the impression of weight towards them. This makes a difference when the table is sparse and doesn't have too many columns, preventing each column from having too much space between it.
 
 As another rule of thumb, button's and actions should be centered on the column, numbers should be aligned right and text aligned left. Apply `.centered`, `.left` and `.right` to the cell tag to do so. Add `.dismissed` to make a row appear inactive, such as on product rows that have been dismissed by an architect.
 

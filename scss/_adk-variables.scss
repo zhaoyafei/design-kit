@@ -59,6 +59,90 @@ $sizes: (
 );
 
 /**
+ * Color Variables
+ */
+
+// Neutrals
+$white: #fff;
+$extra-light-gray: #F7F9FA;
+$light-gray: #9E9E9E;
+$medium-gray: #757575;
+$dark-gray: #292929;
+$black: #292929;
+
+// Palette colors
+$adk-blue: #1CA3FC;
+$adk-green: #22d290;
+$adk-red: #ff4b1f;
+$adk-yellow: #ffcd00;
+$adk-quicksilver: #859DAF;
+$adk-gunmetal: #b8c8d1;
+
+$adk-palette-colors: (
+ blue: $adk-blue,
+ green: $adk-green,
+ red: $adk-red,
+ yellow: $adk-yellow,
+ quicksilver: $adk-quicksilver,
+ gunmetal: $adk-gunmetal,
+ gray: $medium-gray,
+);
+
+$adk-neutral-colors: (
+ white: $white,
+ light-gray: $light-gray,
+ medium-gray: $medium-gray,
+ black: $black,
+ text-black: $text-black
+);
+
+@function generate-palette($color) {
+ $palette: (
+   50: lighten($color, 35%),
+   100: lighten($color, 28%),
+   200: lighten($color, 21%),
+   300: lighten($color, 14%),
+   400: lighten($color, 7%),
+   500: $color,
+   600: darken($color, 7%),
+   700: darken($color, 14%),
+   800: darken($color, 21%),
+   900: darken($color, 28%)
+ );
+ @return $palette;
+};
+
+// Generate palette color classes:
+
+@each $name, $color in $adk-palette-colors {
+
+ $palette: generate-palette($color);
+
+ @each $shade, $value in $palette {
+   .#{$name}-#{$shade} {
+     color: $value;
+   }
+   .bg-#{$name}-#{$shade} {
+     background-color: $value;
+   }
+ }
+
+}
+
+// Generate neutral color classes:
+
+@each $name, $color in $adk-neutral-colors {
+
+ .#{$name} {
+   color: $color;
+ }
+ .bg-#{$name} {
+   background-color: $color;
+ }
+
+}
+
+/**
  * Type Variables
  */
 
