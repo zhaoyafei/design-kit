@@ -9,13 +9,12 @@ button.pill {
   margin: 0 $space-xs $space-xs 0;
 }
 
-
 .button {
   &.large {
     padding: $space $space-m;
   }
   &.small {
-    padding: $space-s;
+    padding: $space-s $space-xs;
     font-size: $font-size-s;
   }
   &.tiny {
