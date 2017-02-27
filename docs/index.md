@@ -306,16 +306,17 @@ These buttons are primary calls to action and should be used sparingly. Their si
 
 ---
 
-## Secondary Buttons
+## Button Colors
 
-These buttons are used for less important, secondary actions on a page.
+These are all the other colors you can use for buttons
 
 ```html_example
-<a href="#" class="secondary large button">Large button</a>
-<a href="#" class="secondary button">Regular button</a>
-<a href="#" class="secondary small button">Small button</a>
-<a href="#" class="secondary tiny button">Tiny button</a>
-<a href="#" class="secondary pill button">Pill button</a>
+<a href="#" class="primary button">Large button</a>
+<a href="#" class="secondary button">Large button</a>
+<a href="#" class="success button">Large button</a>
+<a href="#" class="alert button">Large button</a>
+<a href="#" class="warning button">Large button</a>
+
 ```
 
 ---
