@@ -63,8 +63,8 @@ $body-font-family: "Theinhardt-web", -apple-system, BlinkMacSystemFont, "Segoe U
 $global-margin: $space;
 $global-padding: $space;
 // $global-weight-normal: normal;
-$global-weight-light: lighter; //added
-// $global-weight-bold: bold;
+$global-weight-light: 300; //added
+$global-weight-bold: 800;
 $global-radius: $space-xxxs;
 $global-outline: 1px solid $adk-gunmetal;
 $global-separator: 1px solid rgba($adk-gunmetal, 0.3);
