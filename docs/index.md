@@ -447,16 +447,29 @@ We extend the default [`selectize.css`](https://github.com/selectize/selectize.j
 # Tables
 Tables are simple. We've got a few classes applied to set the styling and alignment of the cells. For all other table settings and classes, reference [Foundation's Table Documentation.](http://foundation.zurb.com/sites/docs/table.html)
 
-Table cells may have plain text, links (internal and external), buttons and actions.
+Table cells may have plain text, links, buttons, and actions.
 
+## Actions
 "Actions" in tables should be used when doing something within the current view, such as opening a modal. They look like small links. To create one, apply `.action` to the cell's `<td>` tag.
+```html
+<td class="action"><a>Send Email</a></td>
+```
 
-When building tables, try to keep the action/button columns hugging the right side table to give the impression of weight towards them. This makes a difference when the table is sparse and doesn't have too many columns, preventing each column from having too much space between it.
+When building tables, try to keep the action/button columns hugging the right side of the table. This improves readability when scanning tables with sparse data.
 
-As another rule of thumb, button's and actions should be centered on the column, numbers should be aligned right and text aligned left. Apply `.centered`, `.left` and `.right` to the cell tag to do so. Add `.dismissed` to make a row appear inactive, such as on product rows that have been dismissed by an architect.
+## Alignment
+In columns:
 
-For links in cells that direct the user to an external page (such as brand links), use the `.external` class on the `<a>` tag, giving it an underline. This will make it distinct from in-app links, which should have no underline. 
+- Buttons and actions should be centered
+- Numbers should be aligned right
+- Text should be aligned left
 
+Apply `.centered`, `.left`, or `.right` to the cell tag.
+
+Add `.inactive` to make a row appear inactive, such as on product rows that have been dismissed by an architect.
+
+## Example
+```html_example
 <table class="hover">
   <thead>
     <tr>
@@ -482,7 +495,7 @@ For links in cells that direct the user to an external page (such as brand links
       <td class="action"><a>Send Email</a></td>
       <td class="action"><a>View</a></td>
     </tr>
-    <tr class="dismissed">
+    <tr class="inactive">
       <td><a class="underline">Steelcase</a></td>
       <td>Mesh Think Chair</td>
       <td>Dismissed</td>
@@ -491,6 +504,7 @@ For links in cells that direct the user to an external page (such as brand links
     </tr>
   </tbody>
 </table>
+```
 
 
 
