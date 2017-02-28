@@ -4,6 +4,9 @@ $(document).foundation();
 // Initialize Selectize
 $('.selectize').selectize(selectizeOptions());
 
+// Initialize Dropzone
+$('#dropzoneExample').dropzone(dropzoneOptions());
+
 ////////////////////////////////////////////////////////////////////////////////
 // Element Options
 ////////////////////////////////////////////////////////////////////////////////
@@ -62,5 +65,15 @@ function selectizeOptions () {
     labelField: 'label',
     valueField: 'value',
     searchField: ['label', 'value'],
+  };
+}
+
+// Dropzone Options
+function dropzoneOptions() {
+  return {
+    url: 'file/',
+    addRemoveLinks: true,
+    dictDefaultMessage: 'Drag attachments here or click to browse',
+    clickable: true,
   };
 }
