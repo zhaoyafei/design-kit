@@ -1,3 +1,20 @@
+# Design Kit
+
+A system of styles specific to Architizer's interface and presence on the web.
+The Design Kit is based on [Foundation 6](http://foundation.zurb.com/docs), and includes a number of custom utilities:
+* [Spacing & Scale](#spacing-and-scale)
+* [Colors](#colors)
+* [Styled Extensions](#extensions)
+* <span class="light-gray">Starter code snippets (coming soon!)</span>
+
+---
+
+## View on GitHub
+You can see instructions for contributing and deploying to the `Architizer/design-kit` repository on Github.
+<a class="primary hollow button mt-s" target="_blank" href="https://github.com/Architizer/design-kit">View on Github</a>
+
+
+
 # The Grid
 
 Architizer Design Kit uses the standard Foundation 12-column flex-grid. You can [read more about it here](http://foundation.zurb.com/sites/docs/flex-grid.html).
@@ -432,33 +449,6 @@ Form elements in Foundation are styled based on their type attribute rather than
 
 
 
-# Selectize
-
-This is a [selectize](http://selectize.github.io/selectize.js/) element.
-
-<input type="text" class="selectize"></input>
-
-There are classes in `scss/_adk-selectize.scss` that affect the styling of this element.
-
-We extend the default [`selectize.css`](https://github.com/selectize/selectize.js/blob/master/dist/css/selectize.css) with our `/scss/_adk-selectize.scss` file to overwrite default styles.
-
-
-
----
-# Dropzone
-
-This is a [Dropzone.js](http://dropzonejs.com) element.
-
-<div id="dropzoneExample" action="file/" class="dropzone mb-m"></div>
-
-There are classes in `scss/_adk-dropzone.scss` that affect the styling of this element.
-
-We extend the default [`dropzone.scss`](https://github.com/enyo/dropzone/blob/master/src/dropzone.scss) with our `/scss/_adk-dropzone.scss` file to overwrite default styles.
-
-
-
----
-
 # Tables
 Tables are simple. We've got a few classes applied to set the styling and alignment of the cells. For all other table settings and classes, reference [Foundation's Table Documentation.](http://foundation.zurb.com/sites/docs/table.html)
 
@@ -611,3 +601,32 @@ $space-micro: 0.134rem; // 2.1px
 
 
 ---
+
+
+
+# Extensions
+
+Extensions are Architizer styles applied to third-party JavaScript/CSS libraries.
+
+---
+## Selectize
+
+This is a [selectize](http://selectize.github.io/selectize.js/) element.
+
+<input type="text" class="selectize"></input>
+
+There are classes in `scss/_adk-selectize.scss` that affect the styling of this element.
+
+We extend the default [`selectize.css`](https://github.com/selectize/selectize.js/blob/master/dist/css/selectize.css) with our `/scss/_adk-selectize.scss` file to overwrite default styles.
+
+---
+
+## Dropzone
+
+This is a [Dropzone.js](http://dropzonejs.com) element.
+
+<div id="dropzoneExample" action="file/" class="dropzone mb-m"></div>
+
+There are classes in `scss/_adk-dropzone.scss` that affect the styling of this element.
+
+We extend the default [`dropzone.scss`](https://github.com/enyo/dropzone/blob/master/src/dropzone.scss) with our `/scss/_adk-dropzone.scss` file to overwrite default styles.
