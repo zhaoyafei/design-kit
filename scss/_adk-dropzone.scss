@@ -98,8 +98,6 @@
 
   $image-size: 120px;
 
-  $image-border-radius: 20px;
-
   &.dz-clickable {
     cursor: pointer;
 
@@ -114,8 +112,9 @@
   }
 
   min-height: 150px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  background: white;
+  border-radius: $global-radius;
+  border: $card-border;
+  background: $extra-light-gray;
   padding: 20px 20px;
 
   &.dz-started {
@@ -133,6 +132,7 @@
   .dz-message {
     text-align: center;
     margin: 2em 0;
+    color: $adk-gunmetal;
 
 
   }
@@ -159,7 +159,7 @@
     &.dz-file-preview {
 
       .dz-image {
-        border-radius: $image-border-radius;
+        border-radius: $global-radius;
         background: #999;
         background: linear-gradient(to bottom, #eee, #ddd);
       }
@@ -257,7 +257,7 @@
       }
     }
     .dz-image {
-      border-radius: $image-border-radius;
+      border-radius: $global-radius;
       overflow: hidden;
       width: $image-size;
       height: $image-size;
@@ -385,7 +385,7 @@
       @include prefix((transition: opacity 0.3s ease));
       border-radius: 8px;
       font-size: 13px;
-      top: $image-size + 10px;
+      top: $image-size + 25px;
       left: -10px;
       width: $width;
       background: $color;
