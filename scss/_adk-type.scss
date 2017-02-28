@@ -37,7 +37,7 @@ a {
     &::before{
       content: "|";
       padding-right: 8px;
-      color: $extra-light-gray;
+      color: map-get(generate-palette($adk-quicksilver), 400);
     }
   }
 }
