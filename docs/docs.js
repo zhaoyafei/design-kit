@@ -5,6 +5,7 @@ $(document).foundation();
 $('.selectize').selectize(selectizeOptions());
 
 // Initialize Dropzone
+Dropzone.autoDiscover = false;
 $('#dropzoneExample').dropzone(dropzoneOptions());
 
 ////////////////////////////////////////////////////////////////////////////////
