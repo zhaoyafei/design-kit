@@ -1,14 +1,4 @@
-// Pills
-
-$pill-padding: $space-xxs $space-s;
-
-button.pill {
-  color: $adk-blue;
-  background-color: rgba($adk-blue, 0.3);
-  padding: $pill-padding;
-  margin: 0 $space-xs $space-xs 0;
-}
-
+// These classes replace the Sizes section of the adk-button mixin below
 .button {
   &.large {
     padding: $space $space-m;
@@ -23,7 +13,7 @@ button.pill {
   }
   &.pill {
     padding: $space-xxs;
-    font-size: $font-size-s;
+    font-size: $font-size;
   }
 }
 
@@ -45,6 +35,12 @@ button.pill {
       @if $button-fill != hollow {
         &.#{$name} {
           @include button-style($color, auto, auto);
+        }
+        &.#{$name}-light {
+          @include button-style(rgba($color, 0.25), $color, $color);
+          &:hover, &:focus {
+            color: $white;
+          }
         }
       }
       @else {
