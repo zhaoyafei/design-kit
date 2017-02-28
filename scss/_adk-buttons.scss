@@ -1,32 +1,20 @@
 // These classes replace the Sizes section of the adk-button mixin below
-.button {
-  &.large {
-    padding: $space $space-m;
-  }
-  &.small {
-    padding: $space-s $space-xs;
-    font-size: $font-size-s;
-  }
-  &.tiny {
-    padding: $space-xs;
-    font-size: $font-size-s;
-  }
-  &.pill {
-    padding: $space-xxs;
-    font-size: $font-size;
-  }
-}
-
 @mixin adk-button {
   .button {
     @include button;
 
-    // Sizes
-    // @each $size, $value in map-remove($button-sizes, default) {
-    //   // &.#{$size} {
-    //   //   padding: $value;
-    //   // }
-    // }
+    // Padding
+    @each $size, $value in map-remove($button-paddings, default) {
+      &.#{$size} {
+        padding: $value;
+      }
+    }
+    // Font Sizes
+    @each $size, $value in map-remove($button-font-sizes, default) {
+      &.#{$size} {
+        font-size: $value;
+      }
+    }
 
     &.expanded { @include button-expand; }
 
