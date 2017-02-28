@@ -441,11 +441,26 @@ This is a [selectize](http://selectize.github.io/selectize.js/) element.
 
 <input type="text" class="selectize"></input>
 
-There are classes in the `scss/_adk-selectize.scss` that affect the styling of this element.
+There are classes in `scss/_adk-selectize.scss` that affect the styling of this element.
 
 We extend the default [`selectize.css`](https://github.com/selectize/selectize.js/blob/master/dist/css/selectize.css) with our `/scss/_adk-selectize.scss` file to overwrite default styles.
 
 
+
+---
+# Dropzone
+
+This is a [Dropzone.js](http://dropzonejs.com) element.
+
+<div id="dropzoneExample" action="file/" class="dropzone mb-m"></div>
+
+There are classes in `scss/_adk-dropzone.scss` that affect the styling of this element.
+
+We extend the default [`dropzone.scss`](https://github.com/enyo/dropzone/blob/master/src/dropzone.scss) with our `/scss/_adk-dropzone.scss` file to overwrite default styles.
+
+
+
+---
 
 # Tables
 Tables are simple. We've got a few classes applied to set the styling and alignment of the cells. For all other table settings and classes, reference [Foundation's Table Documentation.](http://foundation.zurb.com/sites/docs/table.html)
