@@ -4,3 +4,12 @@ textarea, input {
     border: $input-border-hover;
   }
 }
+input[type="checkbox"] + label,
+input[type="radio"] + label,  {
+  color: $black;
+}
+
+span.input-group-label {
+  background: transparent;
+  border-radius: 0 $global-radius $global-radius 0;
+}
