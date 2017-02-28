@@ -33,8 +33,11 @@ a {
 .meta {
   span + span {
     display: inline-block;
-    margin-left: 8px;
-    border-left: 1px solid rgba(0,0,0,0.15);
     padding-left: 8px;
+    &::before{
+      content: "|";
+      padding-right: 8px;
+      color: $extra-light-gray;
+    }
   }
 }
