@@ -1,0 +1,20 @@
+/* This styles code blocks used for examples. */
+.ss-code code {
+  display: block;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* Color-block cards */
+.row.color-blocks .card .card-section {
+  padding: 0.5rem;
+}
+.row.color-blocks .card .card-section a {
+  padding: 0rem;
+}
+
+/* Grid examples */
+.row.display * {
+  border: solid 1px #c6d1d9;
+}
