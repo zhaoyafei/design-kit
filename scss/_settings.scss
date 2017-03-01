@@ -74,7 +74,7 @@ $global-separator: 1px solid rgba($adk-gunmetal, 0.3);
 $card-border: 1px solid $adk-gunmetal;
 $global-hover-scale: 20%;
 $global-hover: lighten($adk-gunmetal, $global-hover-scale);
-$global-selected: darken($global-hover, 2);
+$global-selected: darken($global-hover, 1);
 $thick-underline: 2px solid rgba($adk-blue, 0.2);
 $thick-underline-hover: 2px solid $adk-blue;
 
@@ -575,12 +575,12 @@ $table-head-font-color: $medium-gray;
 
 // $tab-margin: 0;
 // $tab-background: $white;
-// $tab-color: $primary-color;
+$tab-color: map-get(generate-palette($adk-quicksilver), 600);
 $tab-background-active: $global-selected;
-// $tab-active-color: $primary-color;
-$tab-item-font-size: $space-s;
+$tab-active-color: map-get(generate-palette($adk-quicksilver), 900);
+$tab-item-font-size: $space;
 $tab-item-background-hover: $global-hover;
-// $tab-item-padding: 1.25rem 1.5rem;
+$tab-item-padding: 0.8rem 1.2rem;
 // $tab-expand-max: 6;
 // $tab-content-background: $white;
 $tab-content-border: none;
@@ -624,9 +624,9 @@ $tab-content-border: none;
 // // 37. Top Bar
 // // -----------
 
-$topbar-padding: $space-xs;
-$topbar-background: $white;
-// $topbar-submenu-background: $topbar-background;
+$topbar-padding: $space-xs $space;
+$topbar-background: $extra-light-gray;
+$topbar-submenu-background: $topbar-background;
 // $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 // $topbar-input-width: 200px;
 // $topbar-unstack-breakpoint: medium;

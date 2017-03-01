@@ -8,6 +8,9 @@ $('.selectize').selectize(selectizeOptions());
 Dropzone.autoDiscover = false;
 $('#dropzoneExample').dropzone(dropzoneOptions());
 
+// Check hash for loading a particular tab
+$(document).ready(checkHash);
+
 ////////////////////////////////////////////////////////////////////////////////
 // Element Options
 ////////////////////////////////////////////////////////////////////////////////
@@ -77,4 +80,13 @@ function dropzoneOptions() {
     dictDefaultMessage: 'Drag attachments here or click to browse',
     clickable: true,
   };
+}
+
+function checkHash() {
+  if(window.location.hash) {
+    $('a[href="'+window.location.hash+'"]').click();
+  }
+  $('#tabs-navigation li a').click(function() {
+    window.location.hash = $(this).attr('href');
+  });
 }
