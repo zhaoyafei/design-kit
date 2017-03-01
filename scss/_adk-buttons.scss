@@ -1,7 +1,161 @@
-// These classes replace the Sizes section of the adk-button mixin below
-@mixin adk-button {
+/**
+ * _adk-buttons.scss
+ *
+ * This is effectively a fork of /scss/components/_button.scss in Foundation for Sites.
+ *
+ * We have copied Foundation's mixins and prefixed them with `adk-` so we can control all the aspects of buttons explicitly.
+ *
+ * The original Foundation _button.scss file includes default variable values. 
+ * We omitted the defaults in this file because they can still be overwritten in scss/_settings.scss if needed.
+ */
+
+// TODO: Document button-base() mixin
+@mixin adk-button-base {
+  @include disable-mouse-outline;
+  display: inline-block;
+  vertical-align: middle;
+  margin: $button-margin;
+  padding: $button-padding;
+
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  border-radius: $button-radius;
+  transition: $button-transition;
+
+  font-size: map-get($button-sizes, default);
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+/// Expands a button to make it full-width.
+/// @param {Boolean} $expand [true] - Set to `true` to enable the expand behavior. Set to `false` to reverse this behavior.
+@mixin adk-button-expand($expand: true) {
+  @if $expand {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  @else {
+    display: inline-block;
+    width: auto;
+    margin: $button-margin;
+  }
+}
+
+/// Sets the visual style of a button.
+/// @param {Color} $background [$button-background] - Background color of the button.
+/// @param {Color} $background-hover [$button-background-hover] - Background color of the button on hover. Set to `auto` to have the mixin automatically generate a hover color.
+/// @param {Color} $color [$button-color] - Text color of the button. Set to `auto` to automatically generate a color based on the background color.
+@mixin adk-button-style(
+  $background: $button-background,
+  $background-hover: $button-background-hover,
+  $color: $button-color,
+  $background-hover-lightness: $button-background-hover-lightness
+) {
+  @if $color == auto {
+    $color: color-pick-contrast($background, ($button-color, $button-color-alt));
+  }
+
+  @if $background-hover == auto {
+    $background-hover: scale-color($background, $lightness: $background-hover-lightness);
+  }
+
+  background-color: $background;
+  color: $color;
+
+  &:hover, &:focus {
+    background-color: $background-hover;
+    color: $color;
+  }
+}
+
+/// Removes background fill on hover and focus for hollow buttons.
+@mixin adk-button-hollow {
+  &,
+  &:hover, &:focus {
+    background-color: transparent;
+  }
+}
+
+@mixin adk-button-hollow-style(
+  $color: $primary-color,
+  $hover-lightness: $button-hollow-hover-lightness
+) {
+  $color-hover: scale-color($color, $lightness: $hover-lightness);
+
+  border: 1px solid $color;
+  color: $color;
+
+  &:hover, &:focus {
+    border-color: $color-hover;
+    color: $color-hover;
+  }
+}
+
+/// Adds disabled styles to a button by fading the element, reseting the cursor, and disabling pointer events.
+@mixin adk-button-disabled($color: $primary-color) {
+  opacity: $button-opacity-disabled;
+  cursor: not-allowed;
+
+  &:hover, &:focus {
+    background-color: $color;
+    color: $button-color;
+  }
+}
+
+/// Adds a dropdown arrow to a button.
+/// @param {Number} $size [0.4em] - Size of the arrow. We recommend using an `em` value so the triangle scales when used inside different sizes of buttons.
+/// @param {Color} $color [white] - Color of the arrow.
+/// @param {Number} $offset [$button-padding] - Distance between the arrow and the text of the button. Defaults to whatever the right padding of a button is.
+@mixin adk-button-dropdown(
+  $size: 0.4em,
+  $color: $white,
+  $offset: get-side($button-padding, right)
+) {
+  &::after {
+    @include css-triangle($size, $color, down);
+    position: relative;
+    top: 0.4em; // Aligns the arrow with the text of the button
+
+    display: inline-block;
+    float: #{$global-right};
+    margin-#{$global-left}: get-side($button-padding, right);
+  }
+}
+
+/// Adds all styles for a button. For more granular control over styles, use the individual button mixins.
+/// @param {Boolean} $expand [false] - Set to `true` to make the button full-width.
+/// @param {Color} $background [$button-background] - Background color of the button.
+/// @param {Color} $background-hover [$button-background-hover] - Background color of the button on hover. Set to `auto` to have the mixin automatically generate a hover color.
+/// @param {Color} $color [$button-color] - Text color of the button. Set to `auto` to automatically generate a color based on the background color.
+/// @param {Keyword} $style [solid] - Set to `hollow` to create a hollow button. The color defined in `$background` will be used as the primary color of the button.
+@mixin adk-button(
+  $expand: false,
+  $background: $button-background,
+  $background-hover: $button-background-hover,
+  $color: $button-color,
+  $style: $button-fill
+) {
+  @include adk-button-base;
+
+  @if $style == solid {
+    @include adk-button-style($background, $background-hover, $color);
+  }
+  @else if $style == hollow {
+    @include adk-button-hollow;
+    @include adk-button-hollow-style($background);
+  }
+
+  @if $expand {
+    @include adk-button-expand;
+  }
+}
+
+@mixin adk-foundation-button {
   .button {
-    @include button;
+    @include adk-button;
 
     // Padding
     @each $size, $value in $button-paddings {
@@ -16,16 +170,16 @@
       }
     }
 
-    &.expanded { @include button-expand; }
+    &.expanded { @include adk-button-expand; }
 
     // Colors
     @each $name, $color in $button-palette {
       @if $button-fill != hollow {
         &.#{$name} {
-          @include button-style($color, auto, auto);
+          @include adk-button-style($color, auto, auto);
         }
         &.#{$name}-light {
-          @include button-style(rgba($color, 0.25), $color, $color);
+          @include adk-button-style(rgba($color, 0.25), $color, $color);
           &:hover, &:focus {
             color: $white;
           }
@@ -33,7 +187,7 @@
       }
       @else {
         &.#{$name} {
-          @include button-hollow-style($color);
+          @include adk-button-hollow-style($color);
         }
 
         &.#{$name}.dropdown::after {
@@ -45,12 +199,12 @@
     // Hollow style
     @if $button-fill != hollow {
       &.hollow {
-        @include button-hollow;
-        @include button-hollow-style;
+        @include adk-button-hollow;
+        @include adk-button-hollow-style;
 
         @each $name, $color in $button-palette {
           &.#{$name} {
-            @include button-hollow-style($color);
+            @include adk-button-hollow-style($color);
           }
         }
       }
@@ -59,18 +213,18 @@
     // Disabled style
     &.disabled,
     &[disabled] {
-      @include button-disabled;
+      @include adk-button-disabled;
 
       @each $name, $color in $button-palette {
         &.#{$name} {
-          @include button-disabled($color);
+          @include adk-button-disabled($color);
         }
       }
     }
 
     // Dropdown arrow
     &.dropdown {
-      @include button-dropdown;
+      @include adk-button-dropdown;
 
       @if $button-fill == hollow {
         &::after {
