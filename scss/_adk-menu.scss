@@ -24,7 +24,7 @@ ul {
   }
   &.tabs {
     border-bottom: none;
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
     & li.tabs-title {
       float: none;
