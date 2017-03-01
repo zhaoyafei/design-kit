@@ -246,7 +246,7 @@ $accordion-content-border: $card-border;
 // // 11. Button
 // // ----------
 
-$button-padding: $space-s $space;
+// $button-padding: $space-s $space;
 // $button-margin: 0 0 $global-margin 0;
 // $button-fill: solid;
 // $button-background: $primary-color;
@@ -254,12 +254,13 @@ $button-padding: $space-s $space;
 // $button-color: $white;
 // $button-color-alt: $black;
 // $button-radius: $global-radius;
-$button-sizes: (
-  tiny: $space-xs,
-  small: $space-s,
-  default: $space,
-  large: $space-m,
-);
+// $button-sizes: (
+//   pill: $space-xxs,
+//   tiny: $space-xs,
+//   small: $space-s,
+//   default: $space,
+//   large: $space-m,
+// );
 // $button-palette: $foundation-palette;
 // $button-opacity-disabled: 0.25;
 // $button-background-hover-lightness: -20%;
