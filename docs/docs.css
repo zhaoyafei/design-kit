@@ -3,6 +3,8 @@
   display: block;
   padding: 1rem;
   overflow-x: auto;
+  overflow-y: auto;
+  max-height: 15rem;
   margin-bottom: 1.5rem;
 }
 
@@ -17,4 +19,13 @@
 /* Grid examples */
 .row.display * {
   border: solid 1px #c6d1d9;
+}
+
+/* Tabs container */
+.tabs-container.expanded,
+.tabs-container.expanded ul {
+  background: transparent;
+}
+.tabs-container {
+  border-bottom: 1px solid rgba(184,200,209,0.3);
 }

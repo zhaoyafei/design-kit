@@ -24,6 +24,12 @@ ul {
   }
   &.tabs {
     border-bottom: none;
+    overflow-x: auto;
+    white-space: nowrap;
+    & li.tabs-title {
+      float: none;
+      display: inline-block;
+    }
   }
   a {
     border-bottom: none;
@@ -41,6 +47,6 @@ ul {
 }
 
 // Top Bar to be used as action/nav bars
-// .top-bar {
-//  border-bottom: $global-outline;
-// }
+.top-bar {
+  border-bottom: $global-separator;
+}
