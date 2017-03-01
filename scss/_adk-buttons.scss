@@ -4,13 +4,13 @@
     @include button;
 
     // Padding
-    @each $size, $value in map-remove($button-paddings, default) {
+    @each $size, $value in $button-paddings {
       &.#{$size} {
         padding: $value;
       }
     }
     // Font Sizes
-    @each $size, $value in map-remove($button-font-sizes, default) {
+    @each $size, $value in $button-font-sizes {
       &.#{$size} {
         font-size: $value;
       }
