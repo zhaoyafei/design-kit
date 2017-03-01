@@ -305,27 +305,37 @@ These buttons are primary calls to action and should be used sparingly. Their si
 
 ---
 
-## Secondary Buttons
+## Button Colors
 
-These buttons are used for less important, secondary actions on a page.
+These are all the other colors you can use for buttons
 
 ```html_example
-<a href="#" class="secondary large button">Large button</a>
-<a href="#" class="secondary button">Regular button</a>
-<a href="#" class="secondary small button">Small button</a>
-<a href="#" class="secondary tiny button">Tiny button</a>
+<a href="#" class="primary button">Default button</a>
+<a href="#" class="secondary button">Default button</a>
+<a href="#" class="success button">Default button</a>
+<a href="#" class="alert button">Default button</a>
+<a href="#" class="warning button">Default button</a>
+
+```
+
+Append `-light` to the color name to make the button lighter. This is mainly used on pills (below) but may be used elsewhere down the line. 
+
+```html_example
+<a href="#" class="primary-light button">Light button</a>
+<a href="#" class="secondary-light button">Light button</a>
+
 ```
 
 ---
 
 ## Pills
 
-Pills are buttons are used in forms to add/append fields. They are distinct  from "tags", which look like pills but are static and cannot be clicked.
+Pills are small buttons that are used in forms to add/append fields or content. They are distinct  from "tags", which look like pills but are static and cannot be clicked. To create one, use both the `.pill` and `.[color]-light` classes on the button. 
 
 ```html_example
-<button type="button" class="button pill">I'm a pill</a>
-<button type="button" class="button pill">I'm another pill</a>
-<button type="button" class="button pill">Hey so am I!</a>
+<a href="#" class="primary-light pill button">I'm a pill button</a>
+<a href="#" class="alert-light pill button">So am I!</a>
+<a href="#" class="success-light pill button">Me too</a>
 ```
 
 
