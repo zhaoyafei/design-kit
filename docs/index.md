@@ -384,6 +384,12 @@ Make forms great and easy to use with the following rules:
 - Series of checkboxes and radio buttons below within a `<ul class="inline-list">`.
 - Before selecting any set of fields to use for a required input, explore other options (e.g., radio buttons over select lists).
 
+**Utilities**
+
+`.no-h-resize` - Add this to textareas to prevent the user from resizing the element horizontally
+
+`.no-v-resize` - Add this to textareas to prevent the user from resizing the element vertically
+
 ---
 
 ## Learn All About Forms
