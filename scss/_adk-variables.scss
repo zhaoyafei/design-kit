@@ -132,7 +132,7 @@ $button-paddings: (
   pill: $space-xxs,
   tiny: $space-xs,
   small: $space-s $space-xs,
-  default: $space,
+  default: $space-s $space,
   large: $space $space-m,
 );
 

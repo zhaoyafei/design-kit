@@ -10,12 +10,13 @@
  */
 
 // TODO: Document button-base() mixin
+/// This mixin creates the default button distinct from the rest of the buttons in the button-paddings/button-font-sizes maps
 @mixin adk-button-base {
   @include disable-mouse-outline;
   display: inline-block;
   vertical-align: middle;
   margin: $button-margin;
-  padding: $button-padding;
+  padding: map-get($button-paddings, default);
 
   -webkit-appearance: none;
   border: 1px solid transparent;
@@ -153,6 +154,7 @@
   }
 }
 
+/// This mixin creates the buttons in the button-paddings/button-font-sizes maps, except for default, which is created in adk-button-base
 @mixin adk-foundation-button {
   .button {
     @include adk-button;
