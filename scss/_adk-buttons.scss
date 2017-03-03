@@ -22,7 +22,7 @@
   border-radius: $button-radius;
   transition: $button-transition;
 
-  font-size: map-get($button-sizes, default);
+  font-size: map-get($button-font-sizes, default);
   line-height: 1;
   text-align: center;
   cursor: pointer;
@@ -158,13 +158,13 @@
     @include adk-button;
 
     // Padding
-    @each $size, $value in $button-paddings {
+    @each $size, $value in map-remove($button-paddings, default) {
       &.#{$size} {
         padding: $value;
       }
     }
     // Font Sizes
-    @each $size, $value in $button-font-sizes {
+    @each $size, $value in map-remove($button-font-sizes, default) {
       &.#{$size} {
         font-size: $value;
       }
