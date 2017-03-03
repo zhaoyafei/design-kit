@@ -1,0 +1,8 @@
+.row {
+  &.actionbar {
+    margin:0;
+    max-width: none;
+    padding: $space $space-l;
+    border-bottom: $global-separator;
+  }
+}
