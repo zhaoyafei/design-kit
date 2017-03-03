@@ -1,8 +1,13 @@
+//Actionbar Layout
 .row {
   &.actionbar {
     margin:0;
     max-width: none;
-    padding: $space $space-l;
+    padding: $actionbar-padding;
     border-bottom: $global-separator;
   }
+}
+
+.row.actionbar > .columns {
+  padding:0;
 }

@@ -35,6 +35,8 @@ a {
 
 // Styling for Metadata
 .meta {
+  font-size: $font-size-s;
+  color: $light-gray;
   span + span {
     display: inline-block;
     padding-left: 8px;
