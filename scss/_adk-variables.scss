@@ -122,25 +122,3 @@ $font-size-s: $space-s;
 $font-size: $space;
 $font-size-m: $space-m;
 $font-size-l: $space-l;
-
-/**
- * Button Variables
- */
-
-// Button Paddings
-$button-paddings: (
-  pill: $space-xxs,
-  tiny: $space-xs,
-  small: $space-s $space-xs,
-  default: $space-s $space,
-  large: $space $space-m,
-);
-
-// Button Font Sizes
-$button-font-sizes: (
-  pill: $font-size,
-  tiny: $font-size-s,
-  small: $font-size-s,
-  default: $font-size,
-  large: $font-size-m,
-)

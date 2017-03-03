@@ -9,21 +9,58 @@
  * We omitted the defaults in this file because they can still be overwritten in scss/_settings.scss if needed.
  */
 
+ /**
+  * Button Variables
+  */
+
+ // Button Paddings
+ $adk-button-paddings: (
+   pill: $space-xxs,
+   tiny: $space-xs,
+   small: $space-s $space-xs,
+   default: $space-s $space,
+   large: $space $space-m,
+ );
+
+ // Button Font Sizes
+ $adk-button-font-sizes: (
+   pill: $font-size,
+   tiny: $font-size-s,
+   small: $font-size-s,
+   default: $font-size,
+   large: $font-size-m,
+ );
+
+ $adk-button-padding: $space-s $space;
+ $adk-button-margin: 0 0 $global-margin 0;
+ $adk-button-fill: solid;
+ $adk-button-background: $primary-color;
+ $adk-button-background-hover: scale-color($adk-button-background, $lightness: -15%);
+ $adk-button-color: $white;
+ $adk-button-color-alt: $black;
+ $adk-button-radius: $global-radius;
+ $adk-button-palette: $foundation-palette;
+ $adk-button-opacity-disabled: 0.25;
+ $adk-button-background-hover-lightness: -20%;
+ $adk-button-hollow-hover-lightness: -50%;
+ $adk-button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+
+
 // TODO: Document button-base() mixin
 /// This mixin creates the default button distinct from the rest of the buttons in the button-paddings/button-font-sizes maps
 @mixin adk-button-base {
   @include disable-mouse-outline;
   display: inline-block;
   vertical-align: middle;
-  margin: $button-margin;
-  padding: map-get($button-paddings, default);
+  margin: $adk-button-margin;
+  padding: map-get($adk-button-paddings, default);
 
   -webkit-appearance: none;
   border: 1px solid transparent;
-  border-radius: $button-radius;
-  transition: $button-transition;
+  border-radius:  $adk-button-radius;
+  transition: $adk-button-transition;
 
-  font-size: map-get($button-font-sizes, default);
+  font-size: map-get($adk-button-font-sizes, default);
   line-height: 1;
   text-align: center;
   cursor: pointer;
@@ -41,7 +78,7 @@
   @else {
     display: inline-block;
     width: auto;
-    margin: $button-margin;
+    margin: $adk-button-margin;
   }
 }
 
@@ -50,13 +87,13 @@
 /// @param {Color} $background-hover [$button-background-hover] - Background color of the button on hover. Set to `auto` to have the mixin automatically generate a hover color.
 /// @param {Color} $color [$button-color] - Text color of the button. Set to `auto` to automatically generate a color based on the background color.
 @mixin adk-button-style(
-  $background: $button-background,
-  $background-hover: $button-background-hover,
-  $color: $button-color,
-  $background-hover-lightness: $button-background-hover-lightness
+  $background: $adk-button-background,
+  $background-hover: $adk-button-background-hover,
+  $color: $adk-button-color,
+  $background-hover-lightness: $adk-button-background-hover-lightness
 ) {
   @if $color == auto {
-    $color: color-pick-contrast($background, ($button-color, $button-color-alt));
+    $color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt));
   }
 
   @if $background-hover == auto {
@@ -82,7 +119,7 @@
 
 @mixin adk-button-hollow-style(
   $color: $primary-color,
-  $hover-lightness: $button-hollow-hover-lightness
+  $hover-lightness: $adk-button-hollow-hover-lightness
 ) {
   $color-hover: scale-color($color, $lightness: $hover-lightness);
 
@@ -97,12 +134,12 @@
 
 /// Adds disabled styles to a button by fading the element, reseting the cursor, and disabling pointer events.
 @mixin adk-button-disabled($color: $primary-color) {
-  opacity: $button-opacity-disabled;
+  opacity: $adk-button-opacity-disabled;
   cursor: not-allowed;
 
   &:hover, &:focus {
     background-color: $color;
-    color: $button-color;
+    color: $adk-button-color;
   }
 }
 
@@ -113,7 +150,7 @@
 @mixin adk-button-dropdown(
   $size: 0.4em,
   $color: $white,
-  $offset: get-side($button-padding, right)
+  $offset: get-side($adk-button-padding, right)
 ) {
   &::after {
     @include css-triangle($size, $color, down);
@@ -122,7 +159,7 @@
 
     display: inline-block;
     float: #{$global-right};
-    margin-#{$global-left}: get-side($button-padding, right);
+    margin-#{$global-left}: get-side($adk-button-padding, right);
   }
 }
 
@@ -134,10 +171,10 @@
 /// @param {Keyword} $style [solid] - Set to `hollow` to create a hollow button. The color defined in `$background` will be used as the primary color of the button.
 @mixin adk-button(
   $expand: false,
-  $background: $button-background,
-  $background-hover: $button-background-hover,
-  $color: $button-color,
-  $style: $button-fill
+  $background: $adk-button-background,
+  $background-hover: $adk-button-background-hover,
+  $color: $adk-button-color,
+  $style: $adk-button-fill
 ) {
   @include adk-button-base;
 
@@ -160,13 +197,13 @@
     @include adk-button;
 
     // Padding
-    @each $size, $value in map-remove($button-paddings, default) {
+    @each $size, $value in map-remove($adk-button-paddings, default) {
       &.#{$size} {
         padding: $value;
       }
     }
     // Font Sizes
-    @each $size, $value in map-remove($button-font-sizes, default) {
+    @each $size, $value in map-remove($adk-button-font-sizes, default) {
       &.#{$size} {
         font-size: $value;
       }
@@ -175,8 +212,8 @@
     &.expanded { @include adk-button-expand; }
 
     // Colors
-    @each $name, $color in $button-palette {
-      @if $button-fill != hollow {
+    @each $name, $color in $adk-button-palette {
+      @if $adk-button-fill != hollow {
         &.#{$name} {
           @include adk-button-style($color, auto, auto);
         }
@@ -199,12 +236,12 @@
     }
 
     // Hollow style
-    @if $button-fill != hollow {
+    @if $adk-button-fill != hollow {
       &.hollow {
         @include adk-button-hollow;
         @include adk-button-hollow-style;
 
-        @each $name, $color in $button-palette {
+        @each $name, $color in $adk-button-palette {
           &.#{$name} {
             @include adk-button-hollow-style($color);
           }
@@ -217,7 +254,7 @@
     &[disabled] {
       @include adk-button-disabled;
 
-      @each $name, $color in $button-palette {
+      @each $name, $color in $adk-button-palette {
         &.#{$name} {
           @include adk-button-disabled($color);
         }
@@ -228,9 +265,9 @@
     &.dropdown {
       @include adk-button-dropdown;
 
-      @if $button-fill == hollow {
+      @if $adk-button-fill == hollow {
         &::after {
-          border-top-color: $button-background;
+          border-top-color: $adk-button-background;
         }
       }
     }
