@@ -235,6 +235,11 @@
       }
     }
 
+    //Pill
+    &.pill {
+      margin-bottom: $space-xs;
+    }
+
     // Hollow style
     @if $adk-button-fill != hollow {
       &.hollow {
