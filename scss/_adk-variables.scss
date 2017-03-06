@@ -69,11 +69,11 @@ $font-size-m: $space-m;
 $font-size-l: $space-l;
 
 $adk-font-sizes: (
-  fs-xs: $space-xs,
-  fs-s: $space-s,
-  fs: $space,
-  fs-m: $space-m,
-  fs-l: $space-l,
+  xs: $space-xs,
+  s: $space-s,
+  base: $space,
+  m: $space-m,
+  l: $space-l,
 );
 
 // Header sizing follows scale

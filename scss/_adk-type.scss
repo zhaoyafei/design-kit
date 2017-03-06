@@ -1,9 +1,9 @@
 // ADK Font Sizes
-  @each $size, $value in $adk-font-sizes {
-    &.#{$size} {
-      font-size: $value;
-    }
+@each $size, $value in $adk-font-sizes {
+  &.#{$size} {
+    font-size: $value;
   }
+}
 
 h1,
 h2,
