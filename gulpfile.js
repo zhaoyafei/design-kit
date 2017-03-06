@@ -44,7 +44,21 @@ gulp.task('sherpa', function() {
   });
 });
 
-gulp.task('default', ['sass', 'sherpa'], function() {
+/** 
+ * Run a web server on port 8080
+ */
+gulp.task('webserver', function() {
+  return gulp.src('')
+    .pipe($.webserver({
+      path: '/',
+      port: 8080,
+      open: true,
+      fallback: 'index.html',
+      livereload: true,
+    }));
+});
+
+gulp.task('default', ['sass', 'sherpa', 'webserver'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
   gulp.watch(['docs/**/*'], ['sherpa']);
 });
