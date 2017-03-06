@@ -75,6 +75,29 @@ $adk-font-sizes: (
   fs-m: $space-m,
   fs-l: $space-l,
 );
+
+// Header sizing follows scale
+$header-margin-bottom: $space-xs;
+$header-styles: (
+  small: (
+    'h1': ('font-size': $space-s + ($space-micro*5)),
+    'h2': ('font-size': $space-s + ($space-micro*4)),
+    'h3': ('font-size': $space-s + ($space-micro*3)),
+    'h4': ('font-size': $space-s + ($space-micro*2)),
+    'h5': ('font-size': $space-s + $space-micro),
+    'h6': ('font-size': $space-s),
+  ),
+  medium: (
+    'h1': ('font-size': $space-xxl),
+    'h2': ('font-size': $space-xl),
+    'h3': ('font-size': $space-l),
+    'h4': ('font-size': $space-m),
+    'h5': ('font-size': $space),
+    'h6': ('font-size': $space-s),
+  ),
+);
+
+/**
  * Color Variables
  */
 
