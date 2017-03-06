@@ -12,6 +12,10 @@ h6 {
   }
 }
 
+row.actionbar > h1,h2,h3,h4,h5 {
+  margin-bottom: 0;
+}
+
 a.underline,
 p > a {
   color: $black;
@@ -31,6 +35,8 @@ a {
 
 // Styling for Metadata
 .meta {
+  font-size: $font-size-s;
+  color: $light-gray;
   span + span {
     display: inline-block;
     padding-left: 8px;

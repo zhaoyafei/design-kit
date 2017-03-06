@@ -355,6 +355,63 @@ Pills are small buttons that are used in forms to add/append fields or content. 
 <a href="#" class="success-light pill button">Me too</a>
 ```
 
+---
+
+## Icon Buttons
+
+To create a button out of an icon, use the button size `.icon`. Icon buttons are a take on hollow buttons, but they only have an outline on hover so as not to overwhelm the UI with superfluous lines. To create an icon button with a fill, just add `.fill`.
+
+Because icon buttons are often used in Action Bar elements, they will be vertically centered and therefore have no bottom margin. 
+
+```html_example
+<button class="secondary icon button">
+  <span class="material-icons">add</span></button>
+<button class="primary icon fill button"><span class="material-icons">more_horiz</span></button>
+```
+
+
+
+# UI
+
+### Action Bars
+
+Action Bars are elements that are used across our UI. They can be thought of as title bars with functionality inside them, to be used on Project pages, Search pages and more. 
+
+They are generally composed of a title `H3` element, a meta description line and/or breadcrumbs, and a button section floating on the right. These may be regular buttons or icon buttons, depending on the design.  
+
+```html_example
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li><span class="architizer-glyph black">B</span></li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
+    </ul>
+  </div>
+</div>
+<div class="row align-middle actionbar">
+  <div class="columns">
+    <div class="row">
+      <div class="columns">
+        <h3>Dark grey tile</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="columns">
+        <div class="meta">
+          <span>17 days left</span><span>AMW</span><span>Andrew Museum</span><span><a>Preview</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="columns shrink">
+    <button class="secondary icon button mb-0">
+      <span class="material-icons">add</span></button>
+      <button class="secondary icon button ml-xxs mb-0"><span class="material-icons">more_horiz</span></button>
+  </div>
+</div>
+```
+
 
 
 # Forms
