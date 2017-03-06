@@ -372,6 +372,11 @@ Because icon buttons are often used in Action Bar elements, they will be vertica
 
 
 # UI
+
+### Action Bars
+
+Action Bars are elements that are used across our UI. They can be thought of as title bars with functionality inside them, to be used 
+
 ```html_example
 <div class="top-bar">
   <div class="top-bar-left">
