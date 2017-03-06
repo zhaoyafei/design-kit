@@ -11,9 +11,9 @@ var sherpa = require('style-sherpa');
 var cssWrap = require('gulp-css-wrap');
 
 var sassPaths = [
-  'bower_components/normalize.scss/sass',
-  'bower_components/foundation-sites/scss',
-  'bower_components/motion-ui/src'
+  'node_modules/normalize-scss/sass',
+  'node_modules/foundation-sites/scss',
+  'node_modules/motion-ui/src'
 ];
 
 gulp.task('sass', function() {
@@ -34,7 +34,6 @@ gulp.task('sass', function() {
 
 /**
   * Generate Style-Sherpa pages
-  * TODO: Don't commit the generated docs/index.html; or set a 'clean' task for the docs/index.html file
   */
 
 gulp.task('sherpa', function() {
@@ -44,7 +43,21 @@ gulp.task('sherpa', function() {
   });
 });
 
-gulp.task('default', ['sass', 'sherpa'], function() {
+/** 
+ * Run a web server on port 8080
+ */
+gulp.task('webserver', function() {
+  return gulp.src('')
+    .pipe($.webserver({
+      path: '/',
+      port: 8080,
+      open: true,
+      fallback: 'index.html',
+      livereload: true,
+    }));
+});
+
+gulp.task('default', ['sass', 'sherpa', 'webserver'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
   gulp.watch(['docs/**/*'], ['sherpa']);
 });

@@ -13,3 +13,11 @@ span.input-group-label {
   background: transparent;
   border-radius: 0 $global-radius $global-radius 0;
 }
+
+//Utility classes for `.no-resize` on textareas
+.no-h-resize {
+  resize: vertical;
+}
+.no-v-resize {
+  resize: horizontal;
+}
