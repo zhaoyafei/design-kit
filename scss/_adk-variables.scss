@@ -59,6 +59,22 @@ $sizes: (
 );
 
 /**
+ * Type Variables
+ */
+
+$font-size-xs: $space-xs;
+$font-size-s: $space-s;
+$font-size: $space;
+$font-size-m: $space-m;
+$font-size-l: $space-l;
+
+$adk-font-sizes: (
+  fs-xs: $space-xs,
+  fs-s: $space-s,
+  fs: $space,
+  fs-m: $space-m,
+  fs-l: $space-l,
+);
  * Color Variables
  */
 
@@ -111,17 +127,6 @@ $adk-neutral-colors: (
   );
   @return $palette;
 };
-
-/**
- * Type Variables
- */
-
-// T-shirt font sizes based on scale
-$font-size-xs: $space-xs;
-$font-size-s: $space-s;
-$font-size: $space;
-$font-size-m: $space-m;
-$font-size-l: $space-l;
 
 /**
  * Layout Variables
