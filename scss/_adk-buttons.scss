@@ -20,6 +20,7 @@
    small: $space-s $space-xs,
    default: $space-s $space,
    large: $space $space-m,
+   icon: $space-xxs,
  );
 
  // Button Font Sizes
@@ -29,6 +30,7 @@
    small: $font-size-s,
    default: $font-size,
    large: $font-size-m,
+   icon: $font-size-m,
  );
 
  $adk-button-padding: $space-s $space;
@@ -43,7 +45,8 @@
  $adk-button-opacity-disabled: 0.25;
  $adk-button-background-hover-lightness: -20%;
  $adk-button-hollow-hover-lightness: -50%;
- $adk-button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+ $adk-button-icon-hover-lightness: -20%;
+ $adk-button-transition: background-color 0.15s ease-out, color 0.15s ease-out;
 
 
 // TODO: Document button-base() mixin
@@ -129,6 +132,41 @@
   &:hover, &:focus {
     border-color: $color-hover;
     color: $color-hover;
+  }
+}
+
+// Icon Button Mixins
+@mixin adk-button-icon {
+  margin-bottom: 0;
+  &,
+  &:hover, &:focus {
+    background-color: transparent;
+  }
+  &.fill:hover {
+    background-color: inherit;
+  }
+}
+
+@mixin adk-button-icon-style(
+  $color: $primary-color,
+  $hover-lightness: $adk-button-icon-hover-lightness
+) {
+  $color-hover: scale-color($color, $lightness: $hover-lightness);
+
+  border: 1px solid 0;
+  color: $color;
+
+  &:hover, &:focus {
+    border: 1px solid $color-hover;
+    color: $color-hover;
+  }
+  &.fill {
+    color: $white;
+    border: 1px solid 0;
+    background-color: $color;
+    &:hover, &:focus {
+      background-color: $color-hover;
+    }
   }
 }
 
@@ -249,6 +287,20 @@
         @each $name, $color in $adk-button-palette {
           &.#{$name} {
             @include adk-button-hollow-style($color);
+          }
+        }
+      }
+    }
+
+    // Icon style
+    @if $adk-button-fill != icon {
+      &.icon {
+        @include adk-button-icon;
+        @include adk-button-icon-style;
+
+        @each $name, $color in $adk-button-palette {
+          &.#{$name} {
+            @include adk-button-icon-style($color);
           }
         }
       }

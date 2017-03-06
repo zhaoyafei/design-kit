@@ -355,6 +355,20 @@ Pills are small buttons that are used in forms to add/append fields or content. 
 <a href="#" class="success-light pill button">Me too</a>
 ```
 
+---
+
+## Icon Buttons
+
+To create a button out of an icon, use the button size `.icon`. Icon buttons are a take on hollow buttons, but they only have an outline on hover so as not to overwhelm the UI with superfluous lines. To create an icon button with a fill, just add `.fill`.
+
+Because icon buttons are often used in Action Bar elements, they will be vertically centered and therefore have no bottom margin. 
+
+```html_example
+<button class="secondary icon button">
+  <span class="material-icons">add</span></button>
+<button class="primary icon fill button"><span class="material-icons">more_horiz</span></button>
+```
+
 
 
 # UI
@@ -384,9 +398,9 @@ Pills are small buttons that are used in forms to add/append fields or content. 
     </div>
   </div>
   <div class="columns shrink">
-    <button class="secondary hollow button p-xxs mb-0">
+    <button class="secondary icon button mb-0">
       <span class="material-icons">add</span></button>
-      <button class="secondary hollow button p-xxs ml-xxs mb-0"><span class="material-icons">more_horiz</span></button>
+      <button class="secondary icon button ml-xxs mb-0"><span class="material-icons">more_horiz</span></button>
   </div>
 </div>
 ```
