@@ -301,6 +301,26 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione 
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.
 
+---
+## Utility Classes
+
+### Ellipsis
+
+Add `.ellipsis` to overflow a long text element with an ellipsis.
+
+The text must be contained inside an element with a defined width, like a `.columns` div.
+
+```html_example
+<div class="row">
+  <div class="small-3 columns">
+    <div class="card">
+      <img src="assets/img/generic/rectangle-1.jpg">
+      <p class="ellipsis">This is a really long text field and it definitely won't fit on this card.</p>
+    </div>
+  </div>
+</div>
+```
+
 
 
 # Buttons
