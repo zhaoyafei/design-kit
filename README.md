@@ -33,21 +33,11 @@ You can edit variables in `scss/_settings.scss` to override Foundation's default
 
 ## Documentation
 
-To generate a documentation output file, run this in the terminal:
+The static documentation page is regenerated automatically while running the `npm start` command.
 
-```bash
-gulp sherpa
-```
-
-This will read the `docs/index.md` file and create a documentation output file at `index.html`.
-
-When the Design Kit is merged to `master`, this file will be available at <http://design-kit.arc.ht/index.html>.
-
-`gulp watch` will also regenerate this output file locally while it is running.
+While `npm start` is running, you can access the documentation site at [localhost:8080](http://localhost:8080).
 
 ## Usage
-
-When changes are committed to the master branch, the styles are recompiled by CircleCI and pushed to http://design-kit.arc.ht.
 
 To use Architizer Design Kit on a page, include `adk.css`:
 
@@ -139,3 +129,13 @@ Here's a starter template:
   </body>
 </html>
 ```
+
+## Builds
+
+### Master
+When changes are merged to the master branch, the styles and documentation page are rebuilt by CircleCI and pushed to http://design-kit.arc.ht.
+
+### Development Builds
+When changes are pushed to feature branches, the styles are built by CircleCI and pushed to http://design-kit.arc.ht/css/dev/abcd123.css where `abcd123` is the abbreviated hash of the built commit from the feature branch.
+
+To test a development CSS build on our Angular app, add `?adk=abcd123` to the end of the URL of the page you want to test.

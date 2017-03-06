@@ -17,15 +17,16 @@ test:
 
 deployment:
   design-kit.arc.ht:
+    owner: Architizer
     branch: master
     commands:
-      - mv css $CIRCLE_ARTIFACTS
-      - aws s3 sync $CIRCLE_ARTIFACTS/css s3://design-kit.arc.ht/css/ --delete
-      - aws s3 sync js s3://design-kit.arc.ht/js/ --delete
-      - aws s3 sync fonts s3://design-kit.arc.ht/fonts/ --delete
-      - aws s3 sync assets s3://design-kit.arc.ht/assets/ --delete
-      - aws s3 sync docs s3://design-kit.arc.ht/docs/ --exclude "*" --include "*.css" --include "*.js" --delete
-      - aws s3 sync . s3://design-kit.arc.ht/ --exclude "*" --include "*.html"
+      - bash -x deploy.sh
+
+  development-builds:
+    owner: Architizer
+    branch: /.*?/
+    commands:
+      - bash -x deploy.sh
 
 experimental:
   notify:
