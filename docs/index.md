@@ -375,13 +375,15 @@ Because icon buttons are often used in Action Bar elements, they will be vertica
 
 ### Action Bars
 
-Action Bars are elements that are used across our UI. They can be thought of as title bars with functionality inside them, to be used 
+Action Bars are elements that are used across our UI. They can be thought of as title bars with functionality inside them, to be used on Project pages, Search pages and more. 
+
+They are generally composed of a title `H3` element, a meta description line and/or breadcrumbs, and a button section floating on the right. These may be regular buttons or icon buttons, depending on the design.  
 
 ```html_example
 <div class="top-bar">
   <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">Architizer Source</li>
+    <ul class="menu">
+      <li><span class="architizer-glyph black">B</span></li>
       <li><a href="#">Two</a></li>
       <li><a href="#">Three</a></li>
     </ul>
