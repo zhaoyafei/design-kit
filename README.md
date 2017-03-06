@@ -13,19 +13,18 @@ The following tools are required:
 - [NodeJS](https://nodejs.org/en/) (0.12 or greater)
 - [Git](https://git-scm.com/)
 
-Install [Bower](https://bower.io) and [Gulp](http://gulpjs.com/) globally:
+Install [Gulp](http://gulpjs.com/) globally:
 
 ```bash
-npm install -g bower gulp
+npm install -g gulp
 ```
 
 ## Development
 
-Run this in the terminal:
+Install dependencies:
 
 ```bash
 npm install
-bower install
 ```
 
 Finally, run `npm start` to run the Sass compiler. It will re-run every time you save a Sass file.
