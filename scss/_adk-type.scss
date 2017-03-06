@@ -1,6 +1,6 @@
 // ADK Font Sizes
 @each $size, $value in $adk-font-sizes {
-  &.#{$size} {
+  &.fs-#{$size} {
     font-size: $value;
   }
 }

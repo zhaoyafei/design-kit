@@ -311,6 +311,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione 
 * Medium `fs-m` 
 * Large `fs-l`
 
+#### Ellipsis
+
 Add `.ellipsis` to overflow a long text element with an ellipsis.
 
 The text must be contained inside an element with a defined width, like a `.columns` div.
