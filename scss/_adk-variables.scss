@@ -59,6 +59,45 @@ $sizes: (
 );
 
 /**
+ * Type Variables
+ */
+
+$font-size-xs: $space-xs;
+$font-size-s: $space-s;
+$font-size: $space;
+$font-size-m: $space-m;
+$font-size-l: $space-l;
+
+$adk-font-sizes: (
+  xs: $space-xs,
+  s: $space-s,
+  base: $space,
+  m: $space-m,
+  l: $space-l,
+);
+
+// Header sizing follows scale
+$header-margin-bottom: $space-xs;
+$header-styles: (
+  small: (
+    'h1': ('font-size': $space-s + ($space-micro*5)),
+    'h2': ('font-size': $space-s + ($space-micro*4)),
+    'h3': ('font-size': $space-s + ($space-micro*3)),
+    'h4': ('font-size': $space-s + ($space-micro*2)),
+    'h5': ('font-size': $space-s + $space-micro),
+    'h6': ('font-size': $space-s),
+  ),
+  medium: (
+    'h1': ('font-size': $space-xxl),
+    'h2': ('font-size': $space-xl),
+    'h3': ('font-size': $space-l),
+    'h4': ('font-size': $space-m),
+    'h5': ('font-size': $space),
+    'h6': ('font-size': $space-s),
+  ),
+);
+
+/**
  * Color Variables
  */
 
@@ -111,17 +150,6 @@ $adk-neutral-colors: (
   );
   @return $palette;
 };
-
-/**
- * Type Variables
- */
-
-// T-shirt font sizes based on scale
-$font-size-xs: $space-xs;
-$font-size-s: $space-s;
-$font-size: $space;
-$font-size-m: $space-m;
-$font-size-l: $space-l;
 
 /**
  * Layout Variables

@@ -304,7 +304,14 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione 
 ---
 ## Utility Classes
 
-### Ellipsis
+#### Font T-Shirt sizes 
+* XSmall `fs-xs` 
+* Small `fs-s` 
+* Base `fs-base` 
+* Medium `fs-m` 
+* Large `fs-l`
+
+#### Ellipsis
 
 Add `.ellipsis` to overflow a long text element with an ellipsis.
 
