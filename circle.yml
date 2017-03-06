@@ -5,9 +5,8 @@ general:
 
 dependencies:
   pre:
-    - npm install -g bower gulp
+    - npm install -g gulp
   override:
-    - bower install
     - npm install
     - gulp sass
     - gulp sherpa

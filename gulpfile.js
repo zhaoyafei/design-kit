@@ -11,9 +11,9 @@ var sherpa = require('style-sherpa');
 var cssWrap = require('gulp-css-wrap');
 
 var sassPaths = [
-  'bower_components/normalize.scss/sass',
-  'bower_components/foundation-sites/scss',
-  'bower_components/motion-ui/src'
+  'node_modules/normalize-scss/sass',
+  'node_modules/foundation-sites/scss',
+  'node_modules/motion-ui/src'
 ];
 
 gulp.task('sass', function() {
@@ -34,7 +34,6 @@ gulp.task('sass', function() {
 
 /**
   * Generate Style-Sherpa pages
-  * TODO: Don't commit the generated docs/index.html; or set a 'clean' task for the docs/index.html file
   */
 
 gulp.task('sherpa', function() {
