@@ -11,7 +11,7 @@ mv css $CIRCLE_ARTIFACTS
 if [ "$CIRCLE_BRANCH" = "master" ]; then
 
   # Master Builds
-  aws s3 sync $CIRCLE_ARTIFACTS/css s3://design-kit.arc.ht/css/ --delete
+  aws s3 sync $CIRCLE_ARTIFACTS/css/adk.css s3://design-kit.arc.ht/css/adk.css --delete
   aws s3 sync js s3://design-kit.arc.ht/js/ --delete
   aws s3 sync fonts s3://design-kit.arc.ht/fonts/ --delete
   aws s3 sync assets s3://design-kit.arc.ht/assets/ --delete
