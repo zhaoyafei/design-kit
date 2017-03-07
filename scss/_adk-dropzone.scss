@@ -116,6 +116,7 @@
   border: $card-border;
   background: $extra-light-gray;
   padding: 20px 20px;
+  margin: 0 0 $space 0;
 
   &.dz-started {
     .dz-message {
@@ -124,16 +125,17 @@
   }
 
   &.dz-drag-hover {
+    background: lighten($adk-blue, 40%);
     border-style: solid;
+    border: $input-border-focus;
     .dz-message {
-      opacity: 0.5;
+     color: $adk-gunmetal;
     }
   }
   .dz-message {
     text-align: center;
     margin: 2em 0;
-    color: $adk-gunmetal;
-
+    color: $adk-quicksilver;
 
   }
 
