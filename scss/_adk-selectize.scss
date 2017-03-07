@@ -160,6 +160,10 @@
   -webkit-border-radius: $global-radius;
   -moz-border-radius: $global-radius;
   border-radius: $global-radius;
+
+  &:hover {
+    border: $input-border-hover;
+  }
 }
 .selectize-control.multi .selectize-input.has-items {
   padding: $space-micro $space-xs;

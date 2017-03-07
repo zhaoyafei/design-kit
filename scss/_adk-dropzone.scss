@@ -98,6 +98,10 @@
 
   $image-size: 120px;
 
+  &:hover {
+    border: $input-border-hover;
+  }
+
   &.dz-clickable {
     cursor: pointer;
 
