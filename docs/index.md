@@ -725,7 +725,7 @@ We extend the default [`selectize.css`](https://github.com/selectize/selectize.j
 
 This is a [Dropzone.js](http://dropzonejs.com) element.
 
-<div id="dropzoneExample" action="file/" class="dropzone mb-m"></div>
+<div id="dropzoneExample" action="file/" class="dropzone"></div>
 
 There are classes in `scss/_adk-dropzone.scss` that affect the styling of this element.
 

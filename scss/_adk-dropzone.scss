@@ -98,6 +98,10 @@
 
   $image-size: 120px;
 
+  &:hover {
+    border: $input-border-hover;
+  }
+
   &.dz-clickable {
     cursor: pointer;
 
@@ -111,11 +115,12 @@
     }
   }
 
-  min-height: 150px;
+  min-height: $space-xxl;
   border-radius: $global-radius;
   border: $card-border;
   background: $extra-light-gray;
-  padding: 20px 20px;
+  padding: $space;
+  margin: 0 0 $space-m 0;
 
   &.dz-started {
     .dz-message {
@@ -124,16 +129,17 @@
   }
 
   &.dz-drag-hover {
+    background: lighten($adk-blue, 40%);
     border-style: solid;
+    border: $input-border-focus;
     .dz-message {
-      opacity: 0.5;
+     color: $adk-gunmetal;
     }
   }
   .dz-message {
     text-align: center;
-    margin: 2em 0;
-    color: $adk-gunmetal;
-
+    margin: $space-l 0;
+    color: $adk-quicksilver;
 
   }
 
@@ -145,8 +151,9 @@
 
     vertical-align: top;
 
-    margin: 16px;
+    margin: $space;
     min-height: 100px;
+    border-radius: $global-radius;
 
     &:hover {
       // Making sure that always the hovered preview element is on top
@@ -159,8 +166,8 @@
     &.dz-file-preview {
 
       .dz-image {
-        border-radius: $global-radius;
-        background: #999;
+        border-radius: $global-radius $global-radius 0 0;
+        background: $white;
         background: linear-gradient(to bottom, #eee, #ddd);
       }
 
@@ -177,7 +184,7 @@
     }
 
     .dz-remove {
-      font-size: 14px;
+      font-size: $font-size-s;
       text-align: center;
       display: block;
       cursor: pointer;
@@ -201,7 +208,7 @@
 
       opacity: 0;
 
-      font-size: 13px;
+      font-size: $font-size-s;
       min-width: 100%;
       max-width: 100%;
       padding: 2em 1em;
@@ -213,8 +220,8 @@
       line-height: 150%;
 
       .dz-size {
-        margin-bottom: 1em;
-        font-size: 16px;
+        margin-bottom: $space;
+        font-size: $space;
       }
 
       .dz-filename {
@@ -252,12 +259,12 @@
         // opacity: 0.8;
         img {
           @include prefix((transform: scale(1.05, 1.05))); // Getting rid of that white bleed-in
-          @include prefix((filter: blur(8px)), webkit); // Getting rid of that white bleed-in
+          @include prefix((filter: blur(4px)), webkit); // Getting rid of that white bleed-in
         }
       }
     }
     .dz-image {
-      border-radius: $global-radius;
+      border-radius: $global-radius $global-radius 0 0;
       overflow: hidden;
       width: $image-size;
       height: $image-size;
@@ -384,7 +391,7 @@
       opacity: 0;
       @include prefix((transition: opacity 0.3s ease));
       border-radius: 8px;
-      font-size: 13px;
+      font-size: $font-size-s;
       top: $image-size + 25px;
       left: -10px;
       width: $width;
