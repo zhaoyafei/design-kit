@@ -41,3 +41,14 @@ table {
     opacity: 0.3;
   }
 }
+
+// Add global gutter to first and last table elements
+.row .expanded > table > thead > tr > th,
+.row .expanded > table > tbody > tr > td {
+    &:first-child {
+      padding-left: $global-page-gutter;
+    }
+    &:last-child {
+      padding-right: $global-page-gutter;
+    }
+  }

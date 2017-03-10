@@ -577,40 +577,42 @@ Add `.underline` to links that direct the user to external pages to keep these d
 
 ## Example
 ```html_example
-<table class="hover">
-  <thead>
-    <tr>
-      <th width="140">Brand</th>
-      <th width="200">Product Name</th>
-      <th>Status</th>
-      <th class="center" width="100">Outreach</th>
-      <th class="center" width="100">Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a class="underline">Knoll</a></td>
-      <td>Pollock Executive Chair</td>
-      <td>Recommended</td>
-      <td class="action"><a>Send Email</a></td>
-      <td class="action"><a>View</a></td>
-    </tr>
-    <tr>
-      <td><a class="underline">Herman Miller</a></td>
-      <td>Aeron Chair</td>
-      <td>In Review</td>
-      <td class="action"><a>Send Email</a></td>
-      <td class="action"><a>View</a></td>
-    </tr>
-    <tr class="inactive">
-      <td><a class="underline">Steelcase</a></td>
-      <td>Mesh Think Chair</td>
-      <td>Dismissed</td>
-      <td class="action"><a>Send Email</a></td>
-      <td class="action"><a>View</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="row expanded">
+  <table class="hover">
+    <thead>
+      <tr>
+        <th width="140">Brand</th>
+        <th width="200">Product Name</th>
+        <th>Status</th>
+        <th class="center" width="100">Outreach</th>
+        <th class="center" width="100">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="underline">Knoll</a></td>
+        <td>Pollock Executive Chair</td>
+        <td>Recommended</td>
+        <td class="action"><a>Send Email</a></td>
+        <td class="action"><a>View</a></td>
+      </tr>
+      <tr>
+        <td><a class="underline">Herman Miller</a></td>
+        <td>Aeron Chair</td>
+        <td>In Review</td>
+        <td class="action"><a>Send Email</a></td>
+        <td class="action"><a>View</a></td>
+      </tr>
+      <tr class="inactive">
+        <td><a class="underline">Steelcase</a></td>
+        <td>Mesh Think Chair</td>
+        <td>Dismissed</td>
+        <td class="action"><a>Send Email</a></td>
+        <td class="action"><a>View</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 ```
 
 
