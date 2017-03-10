@@ -12,12 +12,14 @@ table {
   tbody tr {
     border: none; // Remove default border-bottom on tbody tr
     border-bottom: $table-border;
+    background-color: $white
   }
   thead tr *, 
   tfoot tr * {
     color: $black;
     font-weight: $global-weight-bold;
     font-size: $font-size-s;
+    // background-color: $white;
   }
   tr {
     .right {
