@@ -339,7 +339,7 @@ The text must be contained inside an element with a defined width, like a `.colu
 <div class="row">
   <div class="small-3 columns">
     <div class="card">
-      <img src="assets/img/generic/rectangle-1.jpg">
+      <img src="docs/img/saturn.jpg">
       <p class="ellipsis">This is a really long text field and it definitely won't fit on this card.</p>
     </div>
   </div>
