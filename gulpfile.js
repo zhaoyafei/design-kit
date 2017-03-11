@@ -36,10 +36,10 @@ gulp.task('sass', function() {
   * Generate Style-Sherpa pages
   */
 
-gulp.task('sherpa', function() {
-  return sherpa('docs/index.md', {
+gulp.task('docs', function() {
+  return sherpa('docs.md', {
     output: 'index.html',
-    template: 'docs/template.hbs'
+    template: 'docs.hbs'
   });
 });
 
@@ -57,7 +57,7 @@ gulp.task('webserver', function() {
     }));
 });
 
-gulp.task('default', ['sass', 'sherpa', 'webserver'], function() {
+gulp.task('default', ['sass', 'docs', 'webserver'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
-  gulp.watch(['docs/**/*'], ['sherpa']);
+  gulp.watch(['docs/**/*'], ['docs']);
 });

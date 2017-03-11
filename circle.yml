@@ -9,7 +9,7 @@ dependencies:
   override:
     - npm install
     - gulp sass
-    - gulp sherpa
+    - gulp docs
 
 test:
   override:
