@@ -33,7 +33,7 @@ gulp.task('sass', function() {
 // Generate documentation
 gulp.task('docs', function() {
   return sherpa('docs.md', {
-    output: 'index.html',
+    output: '/docs/index.html',
     template: 'docs.hbs'
   });
 });
