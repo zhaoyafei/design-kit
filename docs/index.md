@@ -1,17 +1,35 @@
 # Design Kit
 
-A system of styles specific to Architizer's interface and presence on the web.
-The Design Kit is based on [Foundation 6](http://foundation.zurb.com/docs), and includes a number of custom utilities:
-* [Spacing & Scale](#spacing-and-scale)
-* [Colors](#colors)
-* [Styled Extensions](#extensions)
-* <span class="light-gray">Starter code snippets (coming soon!)</span>
+Architizer Design Kit is a system of styles and interface elements based on [Foundation 6](http://foundation.zurb.com/docs).
 
----
+<a class="primary hollow button" target="_blank" href="https://github.com/Architizer/design-kit">View on GitHub</a>
 
-## View on GitHub
-You can see instructions for contributing and deploying to the `Architizer/design-kit` repository on Github.
-<a class="primary hollow button mt-s" target="_blank" href="https://github.com/Architizer/design-kit">View on Github</a>
+## Starter Template
+```html
+<!doctype html>
+<html class="adk no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Architizer Design Kit Starter Template</title>
+    <!-- Architizer Design Kit CSS -->
+    <link rel="stylesheet" href="https://design-kit.arc.ht/css/adk.css" />
+  </head>
+  <body>
+    <!-- Page content begins here -->
+    <h1>Hello, world!</h1>
+    <!-- Page content ends here -->
+    <!-- JavaScript dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+```
 
 
 
