@@ -18,7 +18,7 @@ npm start
 
 ### Documentation
 
-Edit [docs/index.md](docs/index.md) to update the documentation site.
+Edit [docs.md](docs.md) to update the documentation site.
 
 While `npm start` is running, you can access the static documentation site at [http://localhost:8080](http://localhost:8080).
 
