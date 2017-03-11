@@ -1,41 +1,26 @@
-# Architizer/design-kit
+# Architizer Design Kit
 
 ## About
 
-The purpose of the Design Kit is to enable Architizer’s designers to be familiar with our styles and components and to be able to use the symbols and assets in here to piece together future designs. 
-
-Design Kit is generated from the basic starter project for [Foundation for Sites 6](http://foundation.zurb.com/sites). It includes a Sass compiler and a starter HTML file. It was made from `foundation-cli`.
-
-## Installation
-
-The following tools are required:
-
-- [NodeJS](https://nodejs.org/en/) (0.12 or greater)
-- [Git](https://git-scm.com/)
-
-Install [Gulp](http://gulpjs.com/) globally:
-
-```bash
-npm install -g gulp
-```
+Architizer Design Kit is a system of styles and interface elements based on [Foundation 6](http://foundation.zurb.com/docs).
 
 ## Development
 
-Install dependencies:
+### Get Started
+
+Install [Gulp](http://gulpjs.com/) globally, install dependencies, then run the start script.
 
 ```bash
+npm install -g gulp
 npm install
+npm start
 ```
 
-Finally, run `npm start` to run the Sass compiler. It will re-run every time you save a Sass file.
+### Documentation
 
-You can edit variables in `scss/_settings.scss` to override Foundation's default styles.
+Edit [docs/index.md](docs/index.md) to update the documentation site.
 
-## Documentation
-
-The static documentation page is regenerated automatically while running the `npm start` command.
-
-While `npm start` is running, you can access the documentation site at [localhost:8080](http://localhost:8080).
+While `npm start` is running, you can access the static documentation site at [http://localhost:8080](http://localhost:8080).
 
 ## Usage
 
@@ -131,6 +116,8 @@ Here's a starter template:
 ```
 
 ## Builds
+
+See [gulpfile.js](gulpfile.js), [circle.yml](circle.yml), and [deploy.sh](deploy.sh) for detailed build configuration.
 
 ### Master
 When changes are merged to the master branch, the styles and documentation page are rebuilt by CircleCI and pushed to http://design-kit.arc.ht.
