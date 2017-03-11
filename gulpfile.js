@@ -53,7 +53,7 @@ gulp.task('webserver', function() {
       port: 8080,
       open: true,
       fallback: 'index.html',
-      livereload: true,
+      livereload: false,
     }));
 });
 
