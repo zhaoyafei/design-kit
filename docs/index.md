@@ -416,7 +416,7 @@ They are generally composed of a title `H3` element, a meta description line and
     </ul>
   </div>
 </div>
-<div class="row align-middle actionbar">
+<div class="row actionbar">
   <div class="columns">
     <div class="row">
       <div class="columns">

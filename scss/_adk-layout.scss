@@ -1,14 +1,8 @@
-//Actionbar Layout
-.row {
-  &.actionbar {
-    margin:0;
-    max-width: none;
-    padding: $actionbar-padding;
-    border-bottom: $global-separator;
-    background-color: $white;
-  }
-}
+// Action Bar
+.actionbar {
+  @include flex-align(null, middle);
 
-.row.actionbar > .columns {
-  padding:0;
+  padding: $space-s 0;
+  border-bottom: $global-separator;
+  background-color: $white;
 }
