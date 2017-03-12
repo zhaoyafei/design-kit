@@ -42,6 +42,20 @@ table {
   }
 }
 
+// Make tables scroll on mobile small screens
+@include breakpoint(small) {
+  table {
+    overflow-x: auto;
+    display: block;
+  }
+}
+@include breakpoint(medium) {
+  table {
+    display: table;
+    overflow-x: hidden;
+  }
+}
+
 // Add global gutter to first and last table elements
 .row .expanded > table > thead > tr > th,
 .row .expanded > table > tbody > tr > td {
