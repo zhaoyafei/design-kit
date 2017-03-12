@@ -349,10 +349,10 @@ $callout-border: $card-border;
 // // -----------------
 
 // $dropdownmenu-arrows: true;
-// $dropdownmenu-arrow-color: $anchor-color;
-// $dropdownmenu-arrow-size: 6px;
+$dropdownmenu-arrow-color: $light-gray;
+$dropdownmenu-arrow-size: 4px;
 // $dropdownmenu-min-width: 200px;
-// $dropdownmenu-background: $white;
+$dropdownmenu-background: $white;
 $dropdownmenu-border: $global-outline;
 
 // // 19. Forms
@@ -624,9 +624,9 @@ $tab-content-border: none;
 // // 37. Top Bar
 // // -----------
 
-$topbar-padding: $space-xs $space;
+// $topbar-padding: $space-xs $space;
 $topbar-background: $extra-light-gray;
 $topbar-submenu-background: $topbar-background;
-// $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
+$topbar-title-spacing: 0 $space 0 0;
 // $topbar-input-width: 200px;
 // $topbar-unstack-breakpoint: medium;
