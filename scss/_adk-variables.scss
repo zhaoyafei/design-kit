@@ -58,8 +58,6 @@ $sizes: (
   xxxl: $space-xxxl,
 );
 
-$global-page-gutter: $space-l !default;
-
 /**
  * Type Variables
  */
@@ -152,8 +150,3 @@ $adk-neutral-colors: (
   );
   @return $palette;
 };
-
-/**
- * Layout Variables
- */
-$actionbar-padding: $space-s $global-page-gutter;
