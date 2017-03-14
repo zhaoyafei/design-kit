@@ -12,12 +12,14 @@ table {
   tbody tr {
     border: none; // Remove default border-bottom on tbody tr
     border-bottom: $table-border;
+    background-color: $white
   }
   thead tr *, 
   tfoot tr * {
     color: $black;
     font-weight: $global-weight-bold;
     font-size: $font-size-s;
+    // background-color: $white;
   }
   tr {
     .right {
@@ -37,5 +39,19 @@ table {
   }
   tbody > .inactive {
     opacity: 0.3;
+  }
+}
+
+// Make tables scroll on mobile small screens
+@include breakpoint(small) {
+  table {
+    overflow-x: auto;
+    display: block;
+  }
+}
+@include breakpoint(medium) {
+  table {
+    display: table;
+    overflow-x: hidden;
   }
 }
