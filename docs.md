@@ -418,6 +418,52 @@ Because icon buttons are often used in Action Bar elements, they will be vertica
 
 # UI
 
+### Top Bar
+
+The top bar is the main header on Architizer.
+
+```html_example
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="row"> <!-- Wrap the contents in a row so the $grid-row-width will be applied -->
+    <div class="columns">
+      <div class="top-bar-title">
+        <span data-hide-for="medium" data-responsive-toggle="responsive-menu">
+          <button type="button" data-toggle><i class="material-icons">menu</i></button>
+        </span>
+        <a href="#"><span class="architizer-glyph black">B</span></a>
+      </div>
+      <div id="responsive-menu">
+        <div class="top-bar-left">
+          <ul class="vertical medium-horizontal menu">
+            <li><a href="#">News</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Brands</a></li>
+            <li><a href="#">A+Awards</a></li>
+            <li class="active"><a href="#">Source</a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+            <li>
+              <a href="#">Rem Koolhaas</a>
+              <ul class="menu">
+                <li><a href="#">Your Profile &amp; Collections</a></li>
+                <li><a href="#"><i class="material-icons">work</i> OMA</a></li>
+                <li><a href="#">Account Settings</a></li>
+                <li><a href="#">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+---
+
 ### Action Bars
 
 Action Bars are elements that are used across our UI. They can be thought of as title bars with functionality inside them, to be used on Project pages, Search pages and more. 
@@ -425,16 +471,7 @@ Action Bars are elements that are used across our UI. They can be thought of as 
 They are generally composed of a title `H3` element, a meta description line and/or breadcrumbs, and a button section floating on the right. These may be regular buttons or icon buttons, depending on the design.  
 
 ```html_example
-<div class="top-bar">
-  <div class="top-bar-left">
-    <ul class="menu">
-      <li><span class="architizer-glyph black">B</span></li>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li>
-    </ul>
-  </div>
-</div>
-<div class="row align-middle actionbar">
+<div class="row actionbar">
   <div class="columns">
     <div class="row">
       <div class="columns">
@@ -595,40 +632,42 @@ Add `.underline` to links that direct the user to external pages to keep these d
 
 ## Example
 ```html_example
-<table class="hover">
-  <thead>
-    <tr>
-      <th width="140">Brand</th>
-      <th width="200">Product Name</th>
-      <th>Status</th>
-      <th class="center" width="100">Outreach</th>
-      <th class="center" width="100">Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a class="underline">Knoll</a></td>
-      <td>Pollock Executive Chair</td>
-      <td>Recommended</td>
-      <td class="action"><a>Send Email</a></td>
-      <td class="action"><a>View</a></td>
-    </tr>
-    <tr>
-      <td><a class="underline">Herman Miller</a></td>
-      <td>Aeron Chair</td>
-      <td>In Review</td>
-      <td class="action"><a>Send Email</a></td>
-      <td class="action"><a>View</a></td>
-    </tr>
-    <tr class="inactive">
-      <td><a class="underline">Steelcase</a></td>
-      <td>Mesh Think Chair</td>
-      <td>Dismissed</td>
-      <td class="action"><a>Send Email</a></td>
-      <td class="action"><a>View</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="row expanded">
+  <table class="hover">
+    <thead>
+      <tr>
+        <th width="140">Brand</th>
+        <th width="200">Product Name</th>
+        <th>Status</th>
+        <th class="center" width="100">Outreach</th>
+        <th class="center" width="100">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="underline">Knoll</a></td>
+        <td>Pollock Executive Chair</td>
+        <td>Recommended</td>
+        <td class="action"><a>Send Email</a></td>
+        <td class="action"><a>View</a></td>
+      </tr>
+      <tr>
+        <td><a class="underline">Herman Miller</a></td>
+        <td>Aeron Chair</td>
+        <td>In Review</td>
+        <td class="action"><a>Send Email</a></td>
+        <td class="action"><a>View</a></td>
+      </tr>
+      <tr class="inactive">
+        <td><a class="underline">Steelcase</a></td>
+        <td>Mesh Think Chair</td>
+        <td>Dismissed</td>
+        <td class="action"><a>Send Email</a></td>
+        <td class="action"><a>View</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 ```
 
 
