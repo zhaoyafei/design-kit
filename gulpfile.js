@@ -45,7 +45,6 @@ gulp.task('webserver', function() {
       path: '/',
       port: 8080,
       open: true,
-      fallback: 'index.html',
       livereload: false,
     }));
 });
@@ -53,5 +52,5 @@ gulp.task('webserver', function() {
 // Default task
 gulp.task('default', ['sass', 'docs', 'webserver'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
-  gulp.watch(['docs/**/*'], ['docs']);
+  gulp.watch(['docs/**/*', '/docs.md'], ['docs']);
 });
