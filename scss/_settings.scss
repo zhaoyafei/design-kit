@@ -47,7 +47,7 @@
 // --------
 
 // $global-font-size: 100%;
-// $global-width: rem-calc(1200);
+// $global-width is defined below breakpoints so we can use a breakpoint value
 // $global-lineheight: 1.5;
 $foundation-palette: (
   primary: $adk-blue,
@@ -83,20 +83,22 @@ $thick-underline-hover: 2px solid $adk-blue;
 // // 2. Breakpoints
 // // --------------
 
-// $breakpoints: (
-//   small: 0,
-//   medium: 640px,
-//   large: 1024px,
-//   xlarge: 1200px,
-//   xxlarge: 1440px,
-// );
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1600px,
+);
+$global-width: rem-calc(map-get($breakpoints, xxlarge));
+
 // $print-breakpoint: large;
 // $breakpoint-classes: (small medium large);
 
 // // 3. The Grid
 // // -----------
 
-// $grid-row-width: $global-width;
+$grid-row-width: $global-width;
 // $grid-column-count: 12;
 $grid-column-gutter: (
   small: $space-m,
@@ -349,10 +351,10 @@ $callout-border: $card-border;
 // // -----------------
 
 // $dropdownmenu-arrows: true;
-// $dropdownmenu-arrow-color: $anchor-color;
-// $dropdownmenu-arrow-size: 6px;
+$dropdownmenu-arrow-color: $light-gray;
+$dropdownmenu-arrow-size: 4px;
 // $dropdownmenu-min-width: 200px;
-// $dropdownmenu-background: $white;
+$dropdownmenu-background: $white;
 $dropdownmenu-border: $global-outline;
 
 // // 19. Forms
@@ -624,9 +626,9 @@ $tab-content-border: none;
 // // 37. Top Bar
 // // -----------
 
-$topbar-padding: $space-xs $space;
+// $topbar-padding: $space-xs $space;
 $topbar-background: $extra-light-gray;
 $topbar-submenu-background: $topbar-background;
-// $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
+$topbar-title-spacing: 0 $space 0 0;
 // $topbar-input-width: 200px;
 // $topbar-unstack-breakpoint: medium;
