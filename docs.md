@@ -1,17 +1,35 @@
 # Design Kit
 
-A system of styles specific to Architizer's interface and presence on the web.
-The Design Kit is based on [Foundation 6](http://foundation.zurb.com/docs), and includes a number of custom utilities:
-* [Spacing & Scale](#spacing-and-scale)
-* [Colors](#colors)
-* [Styled Extensions](#extensions)
-* <span class="light-gray">Starter code snippets (coming soon!)</span>
+Architizer Design Kit is a system of styles and interface elements based on [Foundation 6](http://foundation.zurb.com/docs).
 
----
+<a class="primary hollow button" target="_blank" href="https://github.com/Architizer/design-kit">View on GitHub</a>
 
-## View on GitHub
-You can see instructions for contributing and deploying to the `Architizer/design-kit` repository on Github.
-<a class="primary hollow button mt-s" target="_blank" href="https://github.com/Architizer/design-kit">View on Github</a>
+## Starter Template
+```html
+<!doctype html>
+<html class="adk no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Architizer Design Kit Starter Template</title>
+    <!-- Architizer Design Kit CSS -->
+    <link rel="stylesheet" href="https://design-kit.arc.ht/css/adk.css" />
+  </head>
+  <body>
+    <!-- Page content begins here -->
+    <h1>Hello, world!</h1>
+    <!-- Page content ends here -->
+    <!-- JavaScript dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+```
 
 
 
@@ -321,7 +339,7 @@ The text must be contained inside an element with a defined width, like a `.colu
 <div class="row">
   <div class="small-3 columns">
     <div class="card">
-      <img src="assets/img/generic/rectangle-1.jpg">
+      <img src="docs/img/saturn.jpg">
       <p class="ellipsis">This is a really long text field and it definitely won't fit on this card.</p>
     </div>
   </div>
@@ -400,52 +418,6 @@ Because icon buttons are often used in Action Bar elements, they will be vertica
 
 # UI
 
-### Top Bar
-
-The top bar is the main header on Architizer.
-
-```html_example
-<!-- Top Bar -->
-<div class="top-bar">
-  <div class="row"> <!-- Wrap the contents in a row so the $grid-row-width will be applied -->
-    <div class="columns">
-      <div class="top-bar-title">
-        <span data-hide-for="medium" data-responsive-toggle="responsive-menu">
-          <button type="button" data-toggle><i class="material-icons">menu</i></button>
-        </span>
-        <a href="#"><span class="architizer-glyph black">B</span></a>
-      </div>
-      <div id="responsive-menu">
-        <div class="top-bar-left">
-          <ul class="vertical medium-horizontal menu">
-            <li><a href="#">News</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Brands</a></li>
-            <li><a href="#">A+Awards</a></li>
-            <li class="active"><a href="#">Source</a></li>
-          </ul>
-        </div>
-        <div class="top-bar-right">
-          <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
-            <li>
-              <a href="#">Rem Koolhaas</a>
-              <ul class="menu">
-                <li><a href="#">Your Profile &amp; Collections</a></li>
-                <li><a href="#"><i class="material-icons">work</i> OMA</a></li>
-                <li><a href="#">Account Settings</a></li>
-                <li><a href="#">Sign Out</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
----
-
 ### Action Bars
 
 Action Bars are elements that are used across our UI. They can be thought of as title bars with functionality inside them, to be used on Project pages, Search pages and more. 
@@ -453,7 +425,16 @@ Action Bars are elements that are used across our UI. They can be thought of as 
 They are generally composed of a title `H3` element, a meta description line and/or breadcrumbs, and a button section floating on the right. These may be regular buttons or icon buttons, depending on the design.  
 
 ```html_example
-<div class="row actionbar">
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li><span class="architizer-glyph black">B</span></li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
+    </ul>
+  </div>
+</div>
+<div class="row align-middle actionbar">
   <div class="columns">
     <div class="row">
       <div class="columns">
@@ -614,42 +595,40 @@ Add `.underline` to links that direct the user to external pages to keep these d
 
 ## Example
 ```html_example
-<div class="row expanded">
-  <table class="hover">
-    <thead>
-      <tr>
-        <th width="140">Brand</th>
-        <th width="200">Product Name</th>
-        <th>Status</th>
-        <th class="center" width="100">Outreach</th>
-        <th class="center" width="100">Details</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="underline">Knoll</a></td>
-        <td>Pollock Executive Chair</td>
-        <td>Recommended</td>
-        <td class="action"><a>Send Email</a></td>
-        <td class="action"><a>View</a></td>
-      </tr>
-      <tr>
-        <td><a class="underline">Herman Miller</a></td>
-        <td>Aeron Chair</td>
-        <td>In Review</td>
-        <td class="action"><a>Send Email</a></td>
-        <td class="action"><a>View</a></td>
-      </tr>
-      <tr class="inactive">
-        <td><a class="underline">Steelcase</a></td>
-        <td>Mesh Think Chair</td>
-        <td>Dismissed</td>
-        <td class="action"><a>Send Email</a></td>
-        <td class="action"><a>View</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table class="hover">
+  <thead>
+    <tr>
+      <th width="140">Brand</th>
+      <th width="200">Product Name</th>
+      <th>Status</th>
+      <th class="center" width="100">Outreach</th>
+      <th class="center" width="100">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="underline">Knoll</a></td>
+      <td>Pollock Executive Chair</td>
+      <td>Recommended</td>
+      <td class="action"><a>Send Email</a></td>
+      <td class="action"><a>View</a></td>
+    </tr>
+    <tr>
+      <td><a class="underline">Herman Miller</a></td>
+      <td>Aeron Chair</td>
+      <td>In Review</td>
+      <td class="action"><a>Send Email</a></td>
+      <td class="action"><a>View</a></td>
+    </tr>
+    <tr class="inactive">
+      <td><a class="underline">Steelcase</a></td>
+      <td>Mesh Think Chair</td>
+      <td>Dismissed</td>
+      <td class="action"><a>Send Email</a></td>
+      <td class="action"><a>View</a></td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 
