@@ -21,6 +21,9 @@ table {
     font-size: $font-size-s;
     // background-color: $white;
   }
+  thead th {
+    padding: $space $space-s;
+  }
   tr {
     .right {
       text-align: right;
