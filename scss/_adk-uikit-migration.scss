@@ -1,0 +1,21 @@
+/**
+ * Overrides for Migration to Design Kit from UIKit
+ *
+ * This file includes fixes for classes that cause issues when UIKit and Design Kit are used together.
+ *
+ * PLEASE:
+ * Add a comment above each class override to indicate why it's needed. 
+ * This will help when we are culling these classes after we complete more of our migration to Design Kit.
+ */
+
+
+// The "Need Help?" <li> link in the header shows its standard list bullet
+.navItem {
+  list-style: none;
+}
+
+// Notification badges have incorrect padding/margin (the red circles with numbers indicating unread messages/responses)
+.notificationBadge {
+  padding: 0 5px;
+  margin-left: 10px;
+}
