@@ -418,7 +418,7 @@ Because icon buttons are often used in Action Bar elements, they will be vertica
 
 # UI
 
-### Top Bar
+## Top Bar
 
 The top bar is the main header on Architizer.
 
@@ -464,7 +464,7 @@ The top bar is the main header on Architizer.
 ```
 ---
 
-### Action Bars
+## Action Bars
 
 Action Bars are elements that are used across our UI. They can be thought of as title bars with functionality inside them, to be used on Project pages, Search pages and more. 
 
@@ -490,6 +490,68 @@ They are generally composed of a title `H3` element, a meta description line and
     <button class="secondary icon button mb-0">
       <span class="material-icons">add</span></button>
       <button class="secondary icon button ml-xxs mb-0"><span class="material-icons">more_horiz</span></button>
+  </div>
+</div>
+```
+---
+
+## Cards 
+Card elements are modules that can be used across our UI, and are currently mainly used in 
+
+Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.  
+
+- `.card` - Top level class for creating card elements. Add `.blue` to create a blue outline.
+- `.card-divider` - Use for card headers.
+- `.caption` - To be used inside card headers to show the status or type of a card, if it's a product. Add `.new` or `.shortlist` or `.error` to denote status (potentially deprecate use of pills/tags for status).
+- `.card-footer` - Use card footers on cards that have actions associated with them. Actions should be default buttons.
+- `.card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
+
+```html_example
+<div class="row small-up-2 medium-up-3">
+  <div class="column">
+    <div class="card">
+      <div class="card-divider">
+        <span class="caption">Product Card</span>
+      </div>
+      <div class="card-section">
+        <img src="/docs/img/table.jpg">
+      </div>
+      <div class="card-section">
+        <strong>Product Title</strong>
+        <p>This card makes use of the card-divider element.</p>
+      </div>
+      <div class="card-footer">
+        <a href="#" class="primary hollow button">View Recommendation</a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-divider">
+        <span class="caption new">New Product</span>
+      </div>
+      <div class="card-section">
+        <div class="row">
+          <div class="medium-8 columns">
+            <strong>Product Title</strong>
+            <p>This card is a new product with our old button.</p>
+          </div>
+          <div class="columns">
+            <img src="/docs/img/table.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="card-button">
+        <a href="#">View Product</a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card blue">
+      <div class="card-section">
+      <p>A basic message with a blue outline</p>
+      </div>
+    </div>
   </div>
 </div>
 ```
