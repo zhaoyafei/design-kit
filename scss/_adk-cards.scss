@@ -1,0 +1,57 @@
+// Card Types
+.card {
+  padding: $card-padding;
+  &.message {
+    min-width: 360px;
+  }
+  &.blue {
+    border-color: rgba($adk-blue, 0.5);
+  }
+  .caption {
+    font-size: $font-size-s;
+    font-weight: $global-weight-bold;
+    line-height: 1;
+    color: $adk-quicksilver;
+    &.new {
+      color: $adk-blue;
+    }
+    &.shortlist {
+      color: $adk-green;
+    }
+    &.error {
+      color: $adk-red;
+    }
+  }
+  .card-footer {
+    @include card-divider;
+    border-top: $global-separator;
+    padding: $space-s 0 0 0;
+  }
+  .card-button {
+    @include card-divider;
+    border-top: $global-separator;
+    margin: 0 -$space;
+    text-align: center;
+  }
+  img {
+    border-radius: $global-radius;
+  }
+}
+
+// Divider
+.card-divider, 
+.card-section {
+  padding: 0;
+  margin-bottom: $space-s;
+  &.right {
+    text-align: right;
+  }
+  .row {
+    margin: 0;
+  }
+  .columns {
+    padding: 0;
+  }
+}
+
+//Sizing
