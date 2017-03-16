@@ -496,15 +496,18 @@ They are generally composed of a title `H3` element, a meta description line and
 ---
 
 ## Cards 
-Card elements are modules that can be used across our UI, and are currently mainly used in 
+Card elements are modules that can be used across our UI, and are currently used for the most part in our conversation feed. In these feeds cards can be basic messages, product activity/status cards, recommended products and more, but across the UI we should think of anything as being able to be a "card" that is reused across the system, e.g. product search criteria, so that we don't need to rebuild the same content over and over again when it appears in different places. Card componenets let us copy, paste and reuse. 
 
-Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.  
+**A note about card spacing:**
+Because cards are self-contained elements, the top-level `.card` class handles the spacing/gutter inside the card. Therefore the only spacing that happens on elements inside cards is margin-bottom to control vertical spacing, defined by `$card-content-margin`.
 
 - `.card` - Top level class for creating card elements. Add `.blue` to create a blue outline.
 - `.card-divider` - Use for card headers.
 - `.caption` - To be used inside card headers to show the status or type of a card, if it's a product. Add `.new` or `.shortlist` or `.error` to denote status (potentially deprecate use of pills/tags for status).
 - `.card-footer` - Use card footers on cards that have actions associated with them. Actions should be default buttons.
 - `.card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
+
+Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.  
 
 ```html_example
 <div class="row small-up-2 medium-up-3">
