@@ -52,5 +52,5 @@ gulp.task('webserver', function() {
 // Default task
 gulp.task('default', ['sass', 'docs', 'webserver'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
-  gulp.watch(['docs/**/*', '/docs.md'], ['docs']);
+  gulp.watch(['docs/**/*', 'docs.md'], ['docs']);
 });
