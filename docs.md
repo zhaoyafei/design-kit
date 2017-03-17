@@ -112,13 +112,16 @@ Based on the approach to color swatches taken by [Material Design](https://mater
 
 Neutral colors exist stand-alone – they do not require a generated set of dynamic colors that are easily chosen and transitioned between for interactive or otherwise dynamic purposes.
 
-These colors are surfaced as utility classes in the format `.{color}` or `.bg-{color}`, where:
-* `{color}` is the name of the color,
-* `.{color}` sets the `color` CSS property, and
-* `.bg-{color}` sets the `background-color` CSS property.
+### Utility Classes
+These colors are surfaced as utility classes in the format below:
+* `.{color}` sets the `color` CSS property
+* `.bg-{color}` sets the `background-color` CSS property
+* `.border-{color}` sets the `border-color` CSS property
 
-Our palette of neutral colors currently consists of the following:
+where:
+* `{color}` is the name of the color
 
+### Color Reference
 <div class="row color-blocks small-up-1">
   <div class="column">
     <div class="card">
@@ -138,13 +141,18 @@ Our palette of neutral colors currently consists of the following:
 We use a base set of palette colors and generate 9 shades (5 lighter, 4 darker) for each of them.
 Currently, each shade is **incremented by 7% lightness**, but the SCSS functions are written to be modifiable.
 
-These colors are surfaced as utility classes in the format `.{color}-{shade}` or `.bg-{color}-{shade}`, where:
-* `{color}` is the name of the color,
-* `{shade}` is the *number* of the shade (e.g. *500* or *300*),
-* `.{color}-{shade}` sets the `color` CSS property, and
-* `.bg-{color}-{shade}` sets the `background-color` CSS property.
+### Utility Classes
+These colors are surfaced as utility classes in the format below:
+* `.{color}` sets the `color` CSS property (uses the *500* shade for this color)
+* `.{color}-{shade}` sets the `color` CSS property  (to specify the shade)
+* `.bg-{color}-{shade}` sets the `background-color` CSS property
+* `.border-{color}-{shade}` sets the `border-color` CSS property
 
+where:
+* `{color}` is the name of the color
+* `{shade}` is the *number* of the shade (e.g. *500* or *300*)
 
+### Color Reference
 <div class="row color-blocks small-up-2 medium-up-3 large-up-3">
 
   <div class="column">
@@ -352,6 +360,7 @@ The text must be contained inside an element with a defined width, like a `.colu
 
 Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you're strapped to. On the web, we follow similar conventions.
 
+
 ---
 
 ## Primary Buttons
@@ -550,7 +559,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
     </div>
   </div>
   <div class="column">
-    <div class="card blue">
+    <div class="card border-blue">
       <div class="card-section">
       <p>A basic message with a blue outline</p>
       </div>
