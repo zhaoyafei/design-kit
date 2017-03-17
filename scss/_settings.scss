@@ -291,17 +291,17 @@ $callout-border: $card-border;
 // $callout-radius: $global-radius;
 // $callout-link-tint: 30%;
 
-// // 14. Card
-// // --------
+// 14. Card
+// --------
 
-// $card-background: $white;
-// $card-font-color: $body-font-color;
-// $card-divider-background: $light-gray;
+$card-background: $white;
+$card-font-color: $body-font-color;
+$card-divider-background: none;
 // $card-border: 1px solid $light-gray;
-// $card-shadow: none;
-// $card-border-radius: $global-radius;
-// $card-padding: $global-padding;
-// $card-margin: $global-margin;
+$card-shadow: none;
+$card-border-radius: $global-radius;
+$card-padding: $space-s $space;
+$card-margin: $global-margin;
 
 // // 15. Close Button
 // // ----------------

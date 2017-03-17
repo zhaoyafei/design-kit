@@ -112,13 +112,16 @@ Based on the approach to color swatches taken by [Material Design](https://mater
 
 Neutral colors exist stand-alone – they do not require a generated set of dynamic colors that are easily chosen and transitioned between for interactive or otherwise dynamic purposes.
 
-These colors are surfaced as utility classes in the format `.{color}` or `.bg-{color}`, where:
-* `{color}` is the name of the color,
-* `.{color}` sets the `color` CSS property, and
-* `.bg-{color}` sets the `background-color` CSS property.
+### Utility Classes
+These colors are surfaced as utility classes in the format below:
+* `.{color}` sets the `color` CSS property
+* `.bg-{color}` sets the `background-color` CSS property
+* `.border-{color}` sets the `border-color` CSS property
 
-Our palette of neutral colors currently consists of the following:
+where:
+* `{color}` is the name of the color
 
+### Color Reference
 <div class="row color-blocks small-up-1">
   <div class="column">
     <div class="card">
@@ -138,13 +141,18 @@ Our palette of neutral colors currently consists of the following:
 We use a base set of palette colors and generate 9 shades (5 lighter, 4 darker) for each of them.
 Currently, each shade is **incremented by 7% lightness**, but the SCSS functions are written to be modifiable.
 
-These colors are surfaced as utility classes in the format `.{color}-{shade}` or `.bg-{color}-{shade}`, where:
-* `{color}` is the name of the color,
-* `{shade}` is the *number* of the shade (e.g. *500* or *300*),
-* `.{color}-{shade}` sets the `color` CSS property, and
-* `.bg-{color}-{shade}` sets the `background-color` CSS property.
+### Utility Classes
+These colors are surfaced as utility classes in the format below:
+* `.{color}` sets the `color` CSS property (uses the *500* shade for this color)
+* `.{color}-{shade}` sets the `color` CSS property  (to specify the shade)
+* `.bg-{color}-{shade}` sets the `background-color` CSS property
+* `.border-{color}-{shade}` sets the `border-color` CSS property
 
+where:
+* `{color}` is the name of the color
+* `{shade}` is the *number* of the shade (e.g. *500* or *300*)
 
+### Color Reference
 <div class="row color-blocks small-up-2 medium-up-3 large-up-3">
 
   <div class="column">
@@ -352,6 +360,7 @@ The text must be contained inside an element with a defined width, like a `.colu
 
 Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you're strapped to. On the web, we follow similar conventions.
 
+
 ---
 
 ## Primary Buttons
@@ -418,7 +427,7 @@ Because icon buttons are often used in Action Bar elements, they will be vertica
 
 # UI
 
-### Top Bar
+## Top Bar
 
 The top bar is the main header on Architizer.
 
@@ -464,7 +473,7 @@ The top bar is the main header on Architizer.
 ```
 ---
 
-### Action Bars
+## Action Bars
 
 Action Bars are elements that are used across our UI. They can be thought of as title bars with functionality inside them, to be used on Project pages, Search pages and more. 
 
@@ -490,6 +499,71 @@ They are generally composed of a title `H3` element, a meta description line and
     <button class="secondary icon button mb-0">
       <span class="material-icons">add</span></button>
       <button class="secondary icon button ml-xxs mb-0"><span class="material-icons">more_horiz</span></button>
+  </div>
+</div>
+```
+---
+
+## Cards 
+Card elements are modules that can be used across our UI, and are currently used for the most part in our conversation feed. In these feeds cards can be basic messages, product activity/status cards, recommended products and more, but across the UI we should think of anything as being able to be a "card" that is reused across the system, e.g. product search criteria, so that we don't need to rebuild the same content over and over again when it appears in different places. Card componenets let us copy, paste and reuse. 
+
+**A note about card spacing:**
+Because cards are self-contained elements, the top-level `.card` class handles the spacing/gutter inside the card. Therefore the only spacing that happens on elements inside cards is margin-bottom to control vertical spacing, defined by `$card-content-margin`.
+
+- `.card` - Top level class for creating card elements. Add `.blue` to create a blue outline.
+- `.card-divider` - Use for card headers.
+- `.caption` - To be used inside card headers to show the status or type of a card, if it's a product. Add `.new` or `.shortlist` or `.error` to denote status (potentially deprecate use of pills/tags for status).
+- `.card-footer` - Use card footers on cards that have actions associated with them. Actions should be default buttons.
+- `.card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
+
+Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.  
+
+```html_example
+<div class="row small-up-2 medium-up-3">
+  <div class="column">
+    <div class="card">
+      <div class="card-divider">
+        <span class="caption">Product Card</span>
+      </div>
+      <div class="card-section">
+        <img src="/docs/img/table.jpg">
+      </div>
+      <div class="card-section">
+        <strong>Product Title</strong>
+        <p>This card makes use of the card-divider element.</p>
+      </div>
+      <div class="card-footer">
+        <a href="#" class="primary hollow button">View Recommendation</a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-divider">
+        <span class="caption new">New Product</span>
+      </div>
+      <div class="card-section">
+        <div class="row">
+          <div class="medium-8 columns">
+            <strong>Product Title</strong>
+            <p>This card is a new product with our old button.</p>
+          </div>
+          <div class="columns">
+            <img src="/docs/img/table.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="card-button">
+        <a href="#">View Product</a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card border-blue">
+      <div class="card-section">
+      <p>A basic message with a blue outline</p>
+      </div>
+    </div>
   </div>
 </div>
 ```

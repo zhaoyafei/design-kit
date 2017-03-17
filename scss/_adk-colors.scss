@@ -1,13 +1,27 @@
-// Generate palette color classes:
+// Generate palette color classes
 @each $name, $color in $adk-palette-colors {
-  $palette: generate-palette($color);
+  // Generate base (500) classes
+  .#{$name} {
+    color: $color;
+  }
+  .bg-#{$name} {
+    background-color: $color;
+  }
+  .border-#{$name} {
+    border-color: $color;
+  }
 
+  // Generate shade classes 
+  $palette: generate-palette($color);
   @each $shade, $value in $palette {
     .#{$name}-#{$shade} {
       color: $value;
     }
     .bg-#{$name}-#{$shade} {
       background-color: $value;
+    }
+    .border-#{$name}-#{$shade} {
+      border-color: $value;
     }
   }
 }
@@ -19,5 +33,8 @@
   }
   .bg-#{$name} {
     background-color: $color;
+  }
+  .border-#{$name} {
+    border-color: $color;
   }
 }
