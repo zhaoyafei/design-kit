@@ -180,6 +180,10 @@
     // Don't change the text color on hover for disabled:
     // color: $adk-button-color;
   }
+
+  &.hollow {
+    @include adk-button-hollow;
+  }
 }
 
 /// Adds a dropdown arrow to a button.
