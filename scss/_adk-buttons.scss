@@ -137,7 +137,6 @@
 
 // Icon Button Mixins
 @mixin adk-button-icon {
-  margin-bottom: 0;
   &,
   &:hover, &:focus {
     background-color: transparent;
