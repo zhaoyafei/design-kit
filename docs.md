@@ -383,9 +383,6 @@ The text must be contained inside an element with a defined width, like a `.colu
 ---
 ## Colors
 
-Buttons are compatible with Foundation's default color classes and Design Kit's color classes.
-
-### Foundation Default Color Classes
 Foundation comes the following classes for button colors:
 
 <div class="row small-up-2 medium-up-5">
@@ -441,58 +438,6 @@ Foundation comes the following classes for button colors:
 Append `-light` to the Foundation color classes to make the button lighter.
 
 ---
-### Design Kit Color Classes
-Design Kit colors and shades can also be applied to buttons:
-
-<div class="row small-up-2 medium-up-5">
-  <!-- .blue -->
-  <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded blue-900 button">.blue-900</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded blue button">.blue</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded blue-200 button">.blue-200</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled blue button">.blue .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow blue button">.blue .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled blue button">.blue .hollow .disabled</a></div></div>
-  </div>
-  <!-- .gunmetal -->
-  <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded gunmetal-900 button">.gunmetal-900</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded gunmetal button">.gunmetal</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded gunmetal-200 button">.gunmetal-200</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled gunmetal button">.gunmetal .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow gunmetal button">.gunmetal .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled gunmetal button">.gunmetal .hollow .disabled</a></div></div>
-  </div>
-  <!-- .red -->
-  <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded red-900 button">.red-900</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded red button">.red</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded red-200 button">.red-200</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled red button">.red .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow red button">.red .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled red button">.red .hollow .disabled</a></div></div>
-  </div>
-  <!-- .yellow -->
-  <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded yellow-900 button">.yellow-900</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded yellow button">.yellow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded yellow-200 button">.yellow-200</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled yellow button">.yellow .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow yellow button">.yellow .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled yellow button">.yellow .hollow .disabled</a></div></div>
-  </div>
-  <!-- .green -->
-  <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded green-900 button">.green-900</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded green button">.green</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded green-200 button">.green-200</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled green button">.green .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow green button">.green .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled green button">.green .hollow .disabled</a></div></div>
-  </div>
-</div>
-
----
 
 ## Variants
 
@@ -502,10 +447,10 @@ Pill buttons extend base buttons, but have a smaller padding. They are intended 
 
 ```html_example
 <a href="#" class="pill button">.pill</a>
-<a href="#" class="gunmetal pill button">.gunmetal .pill</a>
-<a href="#" class="red-200 pill button">.red-200 .pill</a>
+<a href="#" class="secondary pill button">.secondary .pill</a>
+<a href="#" class="alert hollow pill button">.alert .hollow .pill</a>
 <a href="#" class="warning-light pill button">.warning-light .pill</a>
-<a href="#" class="green disabled pill button">.green .disabled .pill</a>
+<a href="#" class="success disabled pill button">.success .disabled .pill</a>
 ```
 
 ---
@@ -520,9 +465,9 @@ Use `.fill` to set the background color.
 ```html_example
 <button class="secondary icon button"><span class="material-icons">add</span></button>
 <button class="primary icon button"><span class="material-icons">more_horiz</span></button>
-<button class="red-200 icon button"><span class="material-icons">close</span></button>
-<button class="green-200 icon button"><span class="material-icons">done</span></button>
-<button class="yellow icon fill button"><span class="material-icons">lightbulb_outline</span></button>
+<button class="alert icon button"><span class="material-icons">close</span></button>
+<button class="success icon button"><span class="material-icons">done</span></button>
+<button class="warning icon fill button"><span class="material-icons">lightbulb_outline</span></button>
 ```
 
 
