@@ -177,7 +177,8 @@
 
   &:hover, &:focus {
     background-color: $color;
-    color: $adk-button-color;
+    // Don't change the text color on hover for disabled:
+    // color: $adk-button-color;
   }
 }
 
