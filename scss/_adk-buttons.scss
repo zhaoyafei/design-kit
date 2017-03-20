@@ -278,6 +278,38 @@
       }
     }
 
+    // Add compatibility for ADK color and shade classes
+    @each $name, $color in $adk-palette-colors {
+      @if $adk-button-fill != hollow {
+        &.#{$name},
+        &.bg-#{$name} {
+          @include adk-button-style($color, auto, auto);
+        }
+      }
+      @else {
+        &.#{$name},
+        &.bg-#{$name} {
+          @include adk-button-hollow-style($color);
+        }
+      }
+
+      $palette: generate-palette($color);
+      @each $shade, $value in $palette {
+        @if $adk-button-fill != hollow {
+          &.#{$name}-#{$shade},
+          &.bg-#{$name}-#{$shade} {
+            @include adk-button-style($value, auto, auto);
+          }
+        }
+        @else {
+          &.#{$name}-#{$shade},
+          &.bg-#{$name}-#{$shade} {
+            @include adk-button-hollow-style($value);
+          }
+        }
+      }
+    }
+
     //Pill
     &.pill {
       margin-bottom: $space-xs;
@@ -294,6 +326,22 @@
             @include adk-button-hollow-style($color);
           }
         }
+
+        // Add compatibility for ADK color and shade classes
+        @each $name, $color in $adk-palette-colors {
+          &.#{$name},
+          &.bg-#{$name} {
+            @include adk-button-hollow-style($color);
+          }
+
+          $palette: generate-palette($color);
+          @each $shade, $value in $palette {
+            &.#{$name}-#{$shade},
+            &.bg-#{$name}-#{$shade} {
+              @include adk-button-hollow-style($value);
+            }
+          }
+        }
       }
     }
 
@@ -308,6 +356,22 @@
             @include adk-button-icon-style($color);
           }
         }
+
+        // Add compatibility for ADK color and shade classes
+        @each $name, $color in $adk-palette-colors {
+          &.#{$name},
+          &.bg-#{$name} {
+            @include adk-button-icon-style($color);
+          }
+
+          $palette: generate-palette($color);
+          @each $shade, $value in $palette {
+            &.#{$name}-#{$shade},
+            &.bg-#{$name}-#{$shade} {
+              @include adk-button-icon-style($value);
+            }
+          }
+        }
       }
     }
 
@@ -319,6 +383,22 @@
       @each $name, $color in $adk-button-palette {
         &.#{$name} {
           @include adk-button-disabled($color);
+        }
+      }
+
+      // Add compatibility for ADK color and shade classes
+      @each $name, $color in $adk-palette-colors {
+        &.#{$name},
+        &.bg-#{$name} {
+          @include adk-button-disabled($color);
+        }
+
+        $palette: generate-palette($color);
+        @each $shade, $value in $palette {
+          &.#{$name}-#{$shade},
+          &.bg-#{$name}-#{$shade} {
+            @include adk-button-disabled($value);
+          }
         }
       }
     }
