@@ -358,69 +358,171 @@ The text must be contained inside an element with a defined width, like a `.colu
 
 # Buttons
 
-Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you're strapped to. On the web, we follow similar conventions.
+## Sizes
 
+```html
+<a href="#" class="large button">.large .button</a>
+<a href="#" class="button">.button</a>
+<a href="#" class="small button">.small .button</a>
+<a href="#" class="tiny button">.tiny .button</a>
+<a href="#" class="icon button"><i class="material-icons">face</i></a>
+```
+
+<a href="#" class="large button">.large .button</a>
+<a href="#" class="button">.button</a>
+<a href="#" class="small button">.small .button</a>
+<a href="#" class="tiny button">.tiny .button</a>
+<a href="#" class="icon button">.icon .button</a>
+<a href="#" class="icon button"><i class="material-icons">face</i></a>
+<a href="#" class="icon button"><i class="material-icons">motorcycle</i></a>
+<a href="#" class="icon button"><i class="material-icons">help_outline</i></a>
+<a href="#" class="icon button"><i class="material-icons">favorite</i></a>
+<a href="#" class="icon button"><i class="material-icons">close</i></a>
+<a href="#" class="icon button"><i class="material-icons">done</i></a>
+
+---
+## Colors
+
+Buttons are compatible with Foundation's default color classes and Design Kit's color classes.
+
+### Foundation Default Color Classes
+Foundation comes the following classes for button colors:
+
+<div class="row small-up-2 medium-up-5">
+  <!-- .primary -->
+  <div class="columns">
+    <div class="row"><div class="columns"><a href="#" class="expanded primary button">.primary</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded primary-light button">.primary-light</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded disabled primary button">.primary .disabled</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow primary button">.primary .hollow</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled primary button">.primary .hollow .disabled</a></div></div>
+  </div>
+  <!-- .secondary -->
+  <div class="columns">
+    <div class="row"><div class="columns"><a href="#" class="expanded secondary button">.secondary</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded secondary-light button">.secondary-light</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded disabled secondary button">.secondary .disabled</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow secondary button">.secondary .hollow</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled secondary button">.secondary .hollow .disabled</a></div></div>
+  </div>
+  <!-- .alert -->
+  <div class="columns">
+    <div class="row"><div class="columns"><a href="#" class="expanded alert button">.alert</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded alert-light button">.alert-light</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded disabled alert button">.alert .disabled</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow alert button">.alert .hollow</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled alert button">.alert .hollow .disabled</a></div></div>
+  </div>
+  <!-- .warning -->
+  <div class="columns">
+    <div class="row"><div class="columns"><a href="#" class="expanded warning button">.warning</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded warning-light button">.warning-light</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded disabled warning button">.warning .disabled</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow warning button">.warning .hollow</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled warning button">.warning .hollow .disabled</a></div></div>
+  </div>
+  <!-- .success -->
+  <div class="columns">
+    <div class="row"><div class="columns"><a href="#" class="expanded success button">.success</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded success-light button">.success-light</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded disabled success button">.success .disabled</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow success button">.success .hollow</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled success button">.success .hollow .disabled</a></div></div>
+  </div>
+</div>
+
+```html
+<a href="#" class="primary button">.primary</a>
+<a href="#" class="primary-light button">.primary-light</a>
+<a href="#" class="expanded disabled primary button">.primary .disabled</a>
+<a href="#" class="primary hollow button">.primary .hollow</a>
+<a href="#" class="primary hollow disabled button">.primary .hollow .disabled</a>
+```
+Append `-light` to the Foundation color classes to make the button lighter.
+
+---
+### Design Kit Color Classes
+Design Kit colors and shades can also be applied to buttons:
+
+<div class="row small-up-2 medium-up-5">
+  <!-- .blue -->
+  <div class="columns">
+    <div class="row"><div class="columns"><a href="#" class="expanded blue-900 button">.blue-900</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded blue button">.blue</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded blue-200 button">.blue-200</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded disabled blue button">.blue .disabled</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow blue button">.blue .hollow</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled blue button">.blue .hollow .disabled</a></div></div>
+  </div>
+  <!-- .gunmetal -->
+  <div class="columns">
+    <div class="row"><div class="columns"><a href="#" class="expanded gunmetal-900 button">.gunmetal-900</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded gunmetal button">.gunmetal</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded gunmetal-200 button">.gunmetal-200</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded disabled gunmetal button">.gunmetal .disabled</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow gunmetal button">.gunmetal .hollow</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled gunmetal button">.gunmetal .hollow .disabled</a></div></div>
+  </div>
+  <!-- .red -->
+  <div class="columns">
+    <div class="row"><div class="columns"><a href="#" class="expanded red-900 button">.red-900</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded red button">.red</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded red-200 button">.red-200</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded disabled red button">.red .disabled</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow red button">.red .hollow</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled red button">.red .hollow .disabled</a></div></div>
+  </div>
+  <!-- .yellow -->
+  <div class="columns">
+    <div class="row"><div class="columns"><a href="#" class="expanded yellow-900 button">.yellow-900</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded yellow button">.yellow</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded yellow-200 button">.yellow-200</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded disabled yellow button">.yellow .disabled</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow yellow button">.yellow .hollow</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled yellow button">.yellow .hollow .disabled</a></div></div>
+  </div>
+  <!-- .green -->
+  <div class="columns">
+    <div class="row"><div class="columns"><a href="#" class="expanded green-900 button">.green-900</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded green button">.green</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded green-200 button">.green-200</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded disabled green button">.green .disabled</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow green button">.green .hollow</a></div></div>
+    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled green button">.green .hollow .disabled</a></div></div>
+  </div>
+</div>
 
 ---
 
-## Primary Buttons
+## Variants
 
-These buttons are primary calls to action and should be used sparingly. Their size can be adjusted with the `.tiny`, `.small`, and `.large` classes.
+### Pills
+
+Pill buttons extend base buttons, but have a smaller padding. They are intended for use in forms.
 
 ```html_example
-<a href="#" class="primary large button">Large button</a>
-<a href="#" class="primary button">Regular button</a>
-<a href="#" class="primary small button">Small button</a>
-<a href="#" class="primary tiny button">Tiny button</a>
+<a href="#" class="pill button">.pill</a>
+<a href="#" class="gunmetal pill button">.gunmetal .pill</a>
+<a href="#" class="red-200 pill button">.red-200 .pill</a>
+<a href="#" class="warning-light pill button">.warning-light .pill</a>
+<a href="#" class="green disabled pill button">.green .disabled .pill</a>
 ```
 
 ---
 
-## Button Colors
+### Icon Buttons
 
-These are all the other colors you can use for buttons
+Icon buttons extend hollow buttons, but only show an outline on hover. They are intended for use in action bars.
 
-```html_example
-<a href="#" class="primary button">Default button</a>
-<a href="#" class="secondary button">Default button</a>
-<a href="#" class="success button">Default button</a>
-<a href="#" class="alert button">Default button</a>
-<a href="#" class="warning button">Default button</a>
 
-```
-
-Append `-light` to the color name to make the button lighter. This is mainly used on pills (below) but may be used elsewhere down the line. 
+Use `.fill` to set the background color.
 
 ```html_example
-<a href="#" class="primary-light button">Light button</a>
-<a href="#" class="secondary-light button">Light button</a>
-
-```
-
----
-
-## Pills
-
-Pills are small buttons that are used in forms to add/append fields or content. They are distinct  from "tags", which look like pills but are static and cannot be clicked. To create one, use both the `.pill` and `.[color]-light` classes on the button. 
-
-```html_example
-<a href="#" class="primary-light pill button">I'm a pill button</a>
-<a href="#" class="alert-light pill button">So am I!</a>
-<a href="#" class="success-light pill button">Me too</a>
-```
-
----
-
-## Icon Buttons
-
-To create a button out of an icon, use the button size `.icon`. Icon buttons are a take on hollow buttons, but they only have an outline on hover so as not to overwhelm the UI with superfluous lines. To create an icon button with a fill, just add `.fill`.
-
-Because icon buttons are often used in Action Bar elements, they will be vertically centered and therefore have no bottom margin. 
-
-```html_example
-<button class="secondary icon button">
-  <span class="material-icons">add</span></button>
-<button class="primary icon fill button"><span class="material-icons">more_horiz</span></button>
+<button class="secondary icon button"><span class="material-icons">add</span></button>
+<button class="primary icon button"><span class="material-icons">more_horiz</span></button>
+<button class="red-200 icon button"><span class="material-icons">close</span></button>
+<button class="green-200 icon button"><span class="material-icons">done</span></button>
+<button class="yellow icon fill button"><span class="material-icons">lightbulb_outline</span></button>
 ```
 
 
