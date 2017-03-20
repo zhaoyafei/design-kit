@@ -5,4 +5,9 @@
   padding: $space-s 0;
   border-bottom: $global-separator;
   background-color: $white;
+
+  // Overwrite default margin-bottom on .button within Action Bar
+  .button {
+    margin-bottom: 0;
+  }
 }
