@@ -96,7 +96,7 @@
   $background-hover-lightness: $adk-button-background-hover-lightness
 ) {
   @if $color == auto {
-    $color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt));
+    $color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
   }
 
   @if $background-hover == auto {
@@ -104,11 +104,11 @@
   }
 
   background-color: $background;
-  color: $color;
+  color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
 
   &:hover, &:focus {
     background-color: $background-hover;
-    color: $color;
+    color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
   }
 }
 
@@ -161,7 +161,7 @@
     color: $color-hover;
   }
   &.fill {
-    color: $white;
+    color: color-pick-contrast($color, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
     border: 1px solid transparent;
     background-color: $color;
     &:hover, &:focus {
