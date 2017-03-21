@@ -303,25 +303,25 @@ $card-border-radius: $global-radius;
 $card-padding: $space-s $space;
 $card-margin: $global-margin;
 
-// // 15. Close Button
-// // ----------------
+// 15. Close Button
+// ----------------
 
-// $closebutton-position: right top;
-// $closebutton-offset-horizontal: (
-//   small: 0.66rem,
-//   medium: 1rem,
-// );
-// $closebutton-offset-vertical: (
-//   small: 0.33em,
-//   medium: 0.5rem,
-// );
-// $closebutton-size: (
-//   small: 1.5em,
-//   medium: 2em,
-// );
-// $closebutton-lineheight: 1;
-// $closebutton-color: $dark-gray;
-// $closebutton-color-hover: $black;
+$closebutton-position: right top;
+$closebutton-offset-horizontal: (
+  small: 0.66rem,
+  medium: 1rem,
+);
+$closebutton-offset-vertical: (
+  small: 0.33em,
+  medium: 0.5rem,
+);
+$closebutton-size: (
+  small: 1.5em,
+  medium: 2em,
+);
+$closebutton-lineheight: 1;
+$closebutton-color: $dark-gray;
+$closebutton-color-hover: $black;
 
 // // 16. Drilldown
 // // -------------

@@ -1,7 +1,14 @@
 // Modals
 .reveal {
+  // .header * {
+  //   line-height: 1;
+  // }
   .header {
-    min-width: 360px;
+    margin-left: -$reveal-padding;
+    margin-right: -$reveal-padding;
+    margin-bottom: $space;
+    padding: 0 $reveal-padding $space $reveal-padding;
+    border-bottom: $global-separator;
   }
   img {
     border-radius: $global-radius;
