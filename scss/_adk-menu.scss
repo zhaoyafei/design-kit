@@ -15,10 +15,19 @@ a {
 ul {
   &.menu {
     a {
-    color: $adk-quicksilver;
-    border-bottom: none;
-    &:hover {
-      color: $menu-item-color-hover;
+      color: $adk-quicksilver;
+      border-bottom: none;
+      &:hover {
+        color: $menu-item-color-hover;
+      }
+
+      // Disabled links in dropdowns
+      &.disabled {
+        color: map-get(generate-palette($adk-quicksilver), 200);
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }
