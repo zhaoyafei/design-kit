@@ -101,6 +101,9 @@ $header-styles: (
  * Color Variables
  */
 
+// Contrast Ratio Tolerance (for color-pick-contrast() function)
+$contrast-ratio-tolerance: 0;
+
 // Neutrals
 $white: #fff;
 $extra-light-gray: #F7F9FA;

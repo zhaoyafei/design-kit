@@ -96,7 +96,7 @@
   $background-hover-lightness: $adk-button-background-hover-lightness
 ) {
   @if $color == auto {
-    $color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt));
+    $color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
   }
 
   @if $background-hover == auto {
@@ -104,11 +104,11 @@
   }
 
   background-color: $background;
-  color: $color;
+  color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
 
   &:hover, &:focus {
     background-color: $background-hover;
-    color: $color;
+    color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
   }
 }
 
@@ -152,7 +152,7 @@
 ) {
   $color-hover: scale-color($color, $lightness: $hover-lightness);
 
-  border: 1px solid 0;
+  border: 1px solid transparent;
   color: $color;
 
   &:hover, &:focus {
@@ -160,8 +160,8 @@
     color: $color-hover;
   }
   &.fill {
-    color: $white;
-    border: 1px solid 0;
+    color: color-pick-contrast($color, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
+    border: 1px solid transparent;
     background-color: $color;
     &:hover, &:focus {
       background-color: $color-hover;
@@ -176,7 +176,18 @@
 
   &:hover, &:focus {
     background-color: $color;
-    color: $adk-button-color;
+    // Don't change the text color on hover for disabled:
+    // color: $adk-button-color;
+  }
+
+  &.hollow {
+    @include adk-button-hollow;
+
+    // Don't change border/text color on hover for .disabled .hollow
+    &:hover, &:focus {
+      border-color: $color;
+      color: $color;
+    }
   }
 }
 
