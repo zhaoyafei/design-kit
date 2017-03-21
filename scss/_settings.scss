@@ -507,17 +507,17 @@ $menu-item-background-active: none;
 //   widescreen: 16 by 9,
 // );
 
-// // 29. Reveal
-// // ----------
+// 29. Reveal
+// ----------
 
-// $reveal-background: $white;
-// $reveal-width: 600px;
-// $reveal-max-width: $global-width;
-// $reveal-padding: $global-padding;
-// $reveal-border: 1px solid $medium-gray;
-// $reveal-radius: $global-radius;
-// $reveal-zindex: 1005;
-// $reveal-overlay-background: rgba($black, 0.45);
+$reveal-background: $white;
+$reveal-width: 600px;
+$reveal-max-width: $global-width;
+$reveal-padding: $space-l;
+$reveal-border: none;
+$reveal-radius: $global-radius;
+$reveal-zindex: 1005;
+$reveal-overlay-background: rgba($adk-gunmetal, 0.5);
 
 // // 30. Slider
 // // ----------
