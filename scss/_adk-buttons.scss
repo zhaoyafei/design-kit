@@ -182,6 +182,12 @@
 
   &.hollow {
     @include adk-button-hollow;
+
+    // Don't change border/text color on hover for .disabled .hollow
+    &:hover, &:focus {
+      border-color: $color;
+      color: $color;
+    }
   }
 }
 
