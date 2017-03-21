@@ -1,3 +1,11 @@
+/**
+ * Utility classes for common display properties
+ */
+.display-inline-block,
+.inline-block {
+  display: inline-block !important;
+}
+
 // Action Bar
 .actionbar {
   @include flex-align(null, middle);
@@ -9,5 +17,27 @@
   // Overwrite default margin-bottom on .button within Action Bar
   .button {
     margin-bottom: 0;
+  }
+}
+
+// Breadcrumbs (Overrides)
+.breadcrumbs {
+  margin-bottom: 0;
+  font-size: $font-size-s;
+  & * {
+    vertical-align: middle;
+  }
+  & > li {
+    margin-right: 0; // Override Foundation default right margin on breadcrumb items
+
+    &:not(:last-child)::after {
+      position: relative;
+      margin: 0 $breadcrumbs-item-margin;
+      font-size: $font-size-s;
+
+      opacity: 1;
+      content: '\203A'; // Override Foundation default $slash with "›"
+      color: $light-gray;
+    }
   }
 }
