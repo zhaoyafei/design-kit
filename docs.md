@@ -475,30 +475,52 @@ The top bar is the main header on Architizer.
 
 ## Action Bars
 
-Action Bars are elements that are used across our UI. They can be thought of as title bars with functionality inside them, to be used on Project pages, Search pages and more. 
-
-They are generally composed of a title `H3` element, a meta description line and/or breadcrumbs, and a button section floating on the right. These may be regular buttons or icon buttons, depending on the design.  
+Action Bars are title bars with other functionality inside them.
 
 ```html_example
 <div class="row actionbar">
-  <div class="columns">
+  <!-- Left: Data -->
+  <div class="small-12 large-expand columns">
+    <!-- Breadcrumbs -->
     <div class="row">
       <div class="columns">
-        <h3>Dark grey tile</h3>
+        <ul class="breadcrumbs">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Journal Squared</a></li>
+          <li>
+            <!-- Current View Title -->
+            <span class="inline-block">14 Ergonomic Office Chairs</span>
+            <!-- Dropdown "..." Menu -->
+            <span class="inline-block">
+              <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+                <li>
+                  <span><i class="material-icons">more_horiz</i></span>
+                  <ul class="menu">
+                    <li><a href="#">Details</a></li>
+                    <li><a href="#">Edit</a></li>
+                    <li><a href="#">Preview</a></li>
+                    <li><a href="#">Download CSV</a></li>
+                    <li><a class="red" href="#">Delete</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </span>
+          </li>
+        </ul>
       </div>
     </div>
+    <!-- Current View Title -->
     <div class="row">
       <div class="columns">
-        <div class="meta">
-          <span>17 days left</span><span>AMW</span><span>Andrew Museum</span><span><a>Preview</a></span>
-        </div>
+        <h3>Products</h3>
       </div>
     </div>
   </div>
+  <!-- Right: Buttons -->
   <div class="columns shrink">
-    <button class="secondary icon button mb-0">
-      <span class="material-icons">add</span></button>
-      <button class="secondary icon button ml-xxs mb-0"><span class="material-icons">more_horiz</span></button>
+    <a class="light-gray mr-l">Searches</a>
+    <a class="light-gray mr-l">Messages</a>
+    <a class="primary button">New Search</a>
   </div>
 </div>
 ```
