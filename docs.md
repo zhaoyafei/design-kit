@@ -636,6 +636,177 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   </div>
 </div>
 ```
+---
+
+## Modals 
+<!-- Open Modal -->
+<a class="large button" style="color:white" data-open="exampleModal1">Click me for a modal</a>
+```
+<!-- Modal -->
+<div class="reveal" id="exampleModal1" data-reveal>
+  <div class="header">
+    <h4>Awesome Product.</h4>
+<!--       <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button> -->
+  </div>
+  <div class="modal-section">
+  <h5 class="mb-xs"><strong>Brand</strong></h5>
+    <div class="row collapse align-middle">
+      <div class="small-1 columns">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="columns">
+        <h5>Cubby Bear Manufacturing</h5>
+        <span class="meta">Sent on January 4, 2017</span>
+      </div>
+    </div>
+  </div>
+  <div class="modal-section">
+    <!-- <h4>Awesome Product.</h4> -->
+    <h5 class="mb-xs"><strong>Description</strong></h5>
+    <p>I'm really just a wonderful product inside of an even cooler modal. Wins!</p>
+  </div>
+  <!-- attacmhments -->
+  <div class="modal-section">
+    <h5 class="mb-xs"><strong>Attachments</strong></h5>
+    <div class="row small-up-4 collapse">
+      <div class="column">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="column">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="column">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="column">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+    </div>
+  </div>
+  <!-- metrics -->
+  <div class="modal-section">
+    <h5 class="mb-xs"><strong>Specifications</strong></h5>
+    <div class="row small-up-4 collapse">
+      <div class="column">
+        <h5>1.00 – 2.00 USD</h5>
+        <h6 class="subheader">Price Per Units</h6>
+      </div>
+      <div class="column">
+        <h5>Two Weeks</h5>
+        <h6 class="subheader">Lead Time</h6>
+      </div>
+      <div class="column">
+        <h5>2.00 – 3.00 USD</h5>
+        <h6 class="subheader">Price Per Units</h6>
+      </div>
+      <div class="column">
+        <h5>11 Week</h5>
+        <h6 class="subheader">Lead Time</h6>
+      </div>
+    </div>
+  </div>
+  <div class="modal-section">
+    <div class="row flex-dir-row-reverse">
+      <div class="small-2 columns">
+        <button class="secondary icon button"><span class="material-icons">add</span></button>
+        <button class="secondary icon button"><span class="material-icons">done</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="row align-center">
+      <div class="small-6 columns button-group expanded">
+        <button class="secondary hollow small button" data-close type="button">Close</button>
+        <button class="small button" data-close type="button">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+<!-- Modal -->
+<div class="reveal" id="exampleModal1" data-reveal>
+  <div class="header">
+    <h4>Awesome Product.</h4>
+<!--       <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button> -->
+  </div>
+  <div class="modal-section">
+  <h5 class="mb-xs"><strong>Brand</strong></h5>
+    <div class="row collapse align-middle">
+      <div class="small-1 columns">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="columns">
+        <h5>Cubby Bear Manufacturing</h5>
+        <span class="meta">Sent on January 4, 2017</span>
+      </div>
+    </div>
+  </div>
+  <div class="modal-section">
+    <!-- <h4>Awesome Product.</h4> -->
+    <h5 class="mb-xs"><strong>Description</strong></h5>
+    <p>I'm really just a wonderful product inside of an even cooler modal. Wins!</p>
+  </div>
+  <!-- attacmhments -->
+  <div class="modal-section">
+    <h5 class="mb-xs"><strong>Attachments</strong></h5>
+    <div class="row small-up-4 collapse">
+      <div class="column">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="column">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="column">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="column">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+    </div>
+  </div>
+  <!-- metrics -->
+  <div class="modal-section">
+    <h5 class="mb-xs"><strong>Specifications</strong></h5>
+    <div class="row small-up-4 collapse">
+      <div class="column">
+        <h5>1.00 – 2.00 USD</h5>
+        <h6 class="subheader">Price Per Units</h6>
+      </div>
+      <div class="column">
+        <h5>Two Weeks</h5>
+        <h6 class="subheader">Lead Time</h6>
+      </div>
+      <div class="column">
+        <h5>2.00 – 3.00 USD</h5>
+        <h6 class="subheader">Price Per Units</h6>
+      </div>
+      <div class="column">
+        <h5>11 Week</h5>
+        <h6 class="subheader">Lead Time</h6>
+      </div>
+    </div>
+  </div>
+  <div class="modal-section">
+    <div class="row flex-dir-row-reverse">
+      <div class="small-2 columns">
+        <button class="secondary icon button"><span class="material-icons">add</span></button>
+        <button class="secondary icon button"><span class="material-icons">done</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="row align-center">
+      <div class="small-6 columns button-group expanded">
+        <button class="secondary hollow small button" data-close type="button">Close</button>
+        <button class="small button" data-close type="button">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
