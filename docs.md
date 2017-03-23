@@ -665,7 +665,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   <div class="modal-section">
     <!-- <h4>Awesome Product.</h4> -->
     <h5 class="mb-xs"><strong>Description</strong></h5>
-    <p>I'm really just a wonderful product inside of an even cooler modal. Wins!</p>
+    <p>I'm really just a wonderful product inside of an even cooler modal. Puppy kitty ipsum dolor sit good dog roll over carrier tuxedo fish lol catz puppy kisses pet supplies meow scooby snacks meow mittens. Fido Rover lol catz yawn drool wag tail Fido food pet gate purr warm behavior kibble litter box ID tag. Roll Over house train chirp pet supplies shake polydactyl wet nose harness tabby biscuit gimme five Rover vaccine roll over licks nap parrot lol catz. Wins!</p>
   </div>
   <!-- attacmhments -->
   <div class="modal-section">
@@ -745,11 +745,6 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
       </div>
     </div>
   </div>
-  <div class="modal-section">
-    <!-- <h4>Awesome Product.</h4> -->
-    <h5 class="mb-xs"><strong>Description</strong></h5>
-    <p>I'm really just a wonderful product inside of an even cooler modal. Wins!</p>
-  </div>
   <!-- attacmhments -->
   <div class="modal-section">
     <h5 class="mb-xs"><strong>Attachments</strong></h5>
@@ -767,6 +762,11 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
         <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
     </div>
+  </div>
+  <div class="modal-section">
+    <!-- <h4>Awesome Product.</h4> -->
+    <h5 class="mb-xs"><strong>Description</strong></h5>
+    <p>I'm really just a wonderful product inside of an even cooler modal. Puppy kitty ipsum dolor sit good dog roll over carrier tuxedo fish lol catz puppy kisses pet supplies meow scooby snacks meow mittens. Fido Rover lol catz yawn drool wag tail Fido food pet gate purr warm behavior kibble litter box ID tag. Roll Over house train chirp pet supplies shake polydactyl wet nose harness tabby biscuit gimme five Rover vaccine roll over licks nap parrot lol catz. Wins!</p>
   </div>
   <!-- metrics -->
   <div class="modal-section">
