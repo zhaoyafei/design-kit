@@ -20,14 +20,11 @@
     }
   }
   .modal-section {
-    // * {
-    //   margin-bottom: 0;
-    // }
     margin-bottom: $modal-section-spacing;
-  }
-  .row {
-    .columns, .column {
-      padding-right: $space-xs;
+    .button {
+      margin-bottom: 0;
+      margin-left: $space-xxs;
+      float: right;
     }
   }
 }
