@@ -1,0 +1,4 @@
+.thumbnails-4 {
+  @include grid-layout(4, '.thumb-col', $space-xs);
+  margin-bottom: $space;
+}
