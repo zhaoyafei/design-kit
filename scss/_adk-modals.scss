@@ -13,9 +13,6 @@
   .header {
     @include border(bottom)
   }
-  img {
-    border-radius: $global-radius;
-  }
   .footer {
     @include border(top)
     * {
@@ -23,9 +20,9 @@
     }
   }
   .modal-section {
-    * {
-      margin-bottom: 0;
-    }
+    // * {
+    //   margin-bottom: 0;
+    // }
     margin-bottom: $modal-section-spacing;
   }
   .row {
