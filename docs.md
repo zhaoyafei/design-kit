@@ -737,7 +737,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   <h5 class="mb-xs"><strong>Brand</strong></h5>
     <div class="row collapse align-middle">
       <div class="small-1 columns">
-        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+        <img class="thumbnail brand" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
       <div class="columns">
         <h5>Cubby Bear Manufacturing</h5>
@@ -748,17 +748,17 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   <!-- attacmhments -->
   <div class="modal-section">
     <h5 class="mb-xs"><strong>Attachments</strong></h5>
-    <div class="row small-up-4 collapse">
-      <div class="column">
+    <div class="thumbnails-4">
+      <div class="thumb-col">
         <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
-      <div class="column">
+      <div class="thumb-col">
         <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
-      <div class="column">
+      <div class="thumb-col">
         <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
-      <div class="column">
+      <div class="thumb-col">
         <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
     </div>
