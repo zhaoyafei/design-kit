@@ -306,22 +306,22 @@ $card-margin: $global-margin;
 // 15. Close Button
 // ----------------
 
-$closebutton-position: right top;
-$closebutton-offset-horizontal: (
-  small: 0.66rem,
-  medium: 1rem,
-);
-$closebutton-offset-vertical: (
-  small: 0.33em,
-  medium: 0.5rem,
-);
-$closebutton-size: (
-  small: 1.5em,
-  medium: 2em,
-);
-$closebutton-lineheight: 1;
-$closebutton-color: $dark-gray;
-$closebutton-color-hover: $black;
+// $closebutton-position: right top;
+// $closebutton-offset-horizontal: (
+//   small: 0.66rem,
+//   medium: 1rem,
+// );
+// $closebutton-offset-vertical: (
+//   small: 0.33em,
+//   medium: 0.5rem,
+// );
+// $closebutton-size: (
+//   small: 1.5em,
+//   medium: 2em,
+// );
+// $closebutton-lineheight: 1;
+// $closebutton-color: $dark-gray;
+// $closebutton-color-hover: $black;
 
 // // 16. Drilldown
 // // -------------
@@ -510,13 +510,13 @@ $menu-item-background-active: none;
 // 29. Reveal
 // ----------
 
-$reveal-background: $white;
-$reveal-width: 600px;
-$reveal-max-width: $global-width;
+// $reveal-background: $white;
+// $reveal-width: 600px;
+// $reveal-max-width: $global-width;
 $reveal-padding: $space-l;
 $reveal-border: none;
-$reveal-radius: $global-radius;
-$reveal-zindex: 1005;
+// $reveal-radius: $global-radius;
+// $reveal-zindex: 1005;
 $reveal-overlay-background: rgba($adk-gunmetal, 0.5);
 
 // // 30. Slider
