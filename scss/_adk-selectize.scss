@@ -344,3 +344,26 @@
 //   opacity: 0.5;
 //   background-color: #fafafa;
 // }
+
+// Add spinner for loading class
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+.selectize-control.loading:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  width: 1rem;
+  height: 1rem;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid map-get(generate-palette($adk-quicksilver), 100);
+  border-top-color: $adk-quicksilver;
+  z-index: 10;
+  animation: spinner .6s linear infinite;
+}
+
+}
