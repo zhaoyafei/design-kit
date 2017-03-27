@@ -146,7 +146,7 @@
 // }
 .selectize-input {
   border: $input-border;
-  padding: $space-micro $space-xs;
+  padding: 0 ($form-spacing / 2);
   display: inline-block;
   width: 100%;
   overflow: hidden;
@@ -166,7 +166,7 @@
   }
 }
 .selectize-control.multi .selectize-input.has-items {
-  padding: $space-micro $space-xs;
+  padding: 0 $space-xs;
 }
 .selectize-input.full {
   background-color: #ffffff;
@@ -184,7 +184,7 @@
   -webkit-border-radius: $space-xxxs $space-xxxs 0 0;
   -moz-border-radius: $space-xxxs $space-xxxs 0 0;
   border-radius: $space-xxxs $space-xxxs 0 0;
-  border-bottom: 0;
+  border-bottom: 1px solid transparent;
 }
 // .selectize-input > * {
 //   vertical-align: baseline;
@@ -258,7 +258,7 @@
   border-top: 1px solid rgba($adk-gunmetal, 0.2);
   background: #ffffff;
   margin: -1px 0 0 0;
-  padding: 0 0 $space-xxs 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
