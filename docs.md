@@ -709,12 +709,12 @@ Refer to the code above to structure a modal or start with the modal template in
   </button> -->
   </div>
   <div class="modal-section">
-  <h5 class="mb-xs"><strong>Brand</strong></h5>
-    <div class="row collapse align-middle">
-      <div class="small-1 columns">
+    <h5 class="mb-xs"><strong>Brand</strong></h5>
+    <div class="media-object">
+      <div class="media-object-section middle">
         <img class="thumbnail brand" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
-      <div class="columns">
+      <div class="media-object-section main-section">
         <h5>Cubby Bear Manufacturing</h5>
         <span class="meta">Sent on January 4, 2017</span>
       </div>
@@ -794,12 +794,12 @@ Refer to the code above to structure a modal or start with the modal template in
   </button> -->
   </div>
   <div class="modal-section">
-  <h5 class="mb-xs"><strong>Brand</strong></h5>
-    <div class="row collapse align-middle">
-      <div class="small-1 columns">
+    <h5 class="mb-xs"><strong>Brand</strong></h5>
+    <div class="media-object">
+      <div class="media-object-section middle">
         <img class="thumbnail brand" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
-      <div class="columns">
+      <div class="media-object-section main-section">
         <h5>Cubby Bear Manufacturing</h5>
         <span class="meta">Sent on January 4, 2017</span>
       </div>
