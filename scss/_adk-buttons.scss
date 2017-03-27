@@ -155,6 +155,9 @@
   border: 1px solid transparent;
   color: $color;
 
+  &.hollow {
+    border: 1px solid $color;
+  }
   &:hover, &:focus {
     border: 1px solid $color-hover;
     color: $color-hover;

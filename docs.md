@@ -793,8 +793,8 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   <div class="modal-section">
     <div class="row flex-dir-row-reverse">
       <div class="small-2 columns">
-        <button class="secondary icon button"><span class="material-icons">add</span></button>
-        <button class="secondary icon button"><span class="material-icons">done</span></button>
+        <button class="secondary hollow icon button"><span class="material-icons">add</span></button>
+        <button class="secondary hollow icon button"><span class="material-icons">done</span></button>
       </div>
     </div>
   </div>
