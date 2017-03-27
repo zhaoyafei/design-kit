@@ -546,7 +546,7 @@ Action Bars are title bars with other functionality inside them.
                     <li><a href="#">Details</a></li>
                     <li><a href="#">Edit</a></li>
                     <li><a href="#">Preview</a></li>
-                    <li><a href="#">Download CSV</a></li>
+                    <li><a class="disabled" href="#">Download CSV</a></li>
                     <li><a class="red" href="#">Delete</a></li>
                   </ul>
                 </li>
