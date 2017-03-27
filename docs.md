@@ -472,6 +472,61 @@ Use `.fill` to set the background color.
 
 
 
+# Images
+When creating thumbnails in series, such as on product cards or modals, place the images inside thumbnail rows instead of the regular grid rows.
+
+`thumbnails-up-[n]` - Add this class to what will be the row of the thumbnails. It follows the normal grid's naming convention for how many columns should be inside of it. `n` can be a number from 2-6; you shouldn't ever need any more than 6 thumbnaisl in series, and try to use an even number of columns. 
+
+`thumb-col` - Add this class to the thumbnails column itself, and add the image inside of it.
+
+## Thumbnail Rows
+```html_example
+<div class="row">
+  <div class="small-12 medium-4 columns">
+    <div class="thumbnails-up-4">
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 medium-4 columns">
+    <div class="thumbnails-up-6">
+      <div class="thumb-col">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+
 # UI
 
 ## Top Bar
@@ -644,9 +699,6 @@ Building Architizer's modals is similar to building cards. The bounds of the mod
 
 Refer to the code above to structure a modal or start with the modal template in `design-kit/templates/modal.html`.
 
-<!-- Open Modal -->
-<a class="button" style="color:white" data-open="exampleModal1">Click me for a modal</a>
-
 ```
 <!-- Modal -->
 <div class="reveal" id="exampleModal1" data-reveal>
@@ -731,6 +783,8 @@ Refer to the code above to structure a modal or start with the modal template in
   </div>
 </div>
 ```
+<!-- Open Modal -->
+<a class="button" style="color:white" data-open="exampleModal1">Click me for a modal</a>
 <!-- Modal -->
 <div class="reveal" id="exampleModal1" data-reveal>
   <div class="header">
