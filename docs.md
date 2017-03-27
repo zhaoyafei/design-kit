@@ -639,8 +639,14 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
 ---
 
 ## Modals 
+
+Building Architizer's modals is similar to building cards. The bounds of the modal supply the padding for the content inside, so you should not ever add any side padding to the contents. This is done to retain consistency across all modals. Similarly, when creating content inside of a modal, organize it by divs with the `.modal-section` class, which takes care of the vertical spacing.
+
+Refer to the code above to structure a modal or start with the modal template in `design-kit/templates/modal.html`.
+
 <!-- Open Modal -->
-<a class="large button" style="color:white" data-open="exampleModal1">Click me for a modal</a>
+<a class="button" style="color:white" data-open="exampleModal1">Click me for a modal</a>
+
 ```
 <!-- Modal -->
 <div class="reveal" id="exampleModal1" data-reveal>
@@ -654,7 +660,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   <h5 class="mb-xs"><strong>Brand</strong></h5>
     <div class="row collapse align-middle">
       <div class="small-1 columns">
-        <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
+        <img class="thumbnail brand" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
       <div class="columns">
         <h5>Cubby Bear Manufacturing</h5>
@@ -670,17 +676,17 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   <!-- attacmhments -->
   <div class="modal-section">
     <h5 class="mb-xs"><strong>Attachments</strong></h5>
-    <div class="row small-up-4 collapse">
-      <div class="column">
+    <div class="thumbnails-up-4">
+      <div class="thumb-col">
         <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
-      <div class="column">
+      <div class="thumb-col">
         <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
-      <div class="column">
+      <div class="thumb-col">
         <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
-      <div class="column">
+      <div class="thumb-col">
         <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
     </div>
@@ -708,10 +714,10 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
     </div>
   </div>
   <div class="modal-section">
-    <div class="row flex-dir-row-reverse">
-      <div class="small-2 columns">
-        <button class="secondary icon button"><span class="material-icons">add</span></button>
-        <button class="secondary icon button"><span class="material-icons">done</span></button>
+    <div class="row flex-dir-row-reverse collapse">
+      <div class="column">
+        <button class="secondary hollow icon button"><span class="material-icons">done</span></button>
+        <button class="secondary hollow icon button"><span class="material-icons">close</span></button>
       </div>
     </div>
   </div>
@@ -748,7 +754,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   <!-- attacmhments -->
   <div class="modal-section">
     <h5 class="mb-xs"><strong>Attachments</strong></h5>
-    <div class="thumbnails-4">
+    <div class="thumbnails-up-4">
       <div class="thumb-col">
         <img class="thumbnail" src="https://architizer-prod.imgix.net/media/1485379392079-source.gif?q=60&auto=format,compress&cs=strip&w=1080" alt="Product">
       </div>
@@ -791,10 +797,10 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
     </div>
   </div>
   <div class="modal-section">
-    <div class="row flex-dir-row-reverse">
-      <div class="small-2 columns">
-        <button class="secondary hollow icon button"><span class="material-icons">add</span></button>
+    <div class="row flex-dir-row-reverse collapse">
+      <div class="column">
         <button class="secondary hollow icon button"><span class="material-icons">done</span></button>
+        <button class="secondary hollow icon button"><span class="material-icons">close</span></button>
       </div>
     </div>
   </div>
@@ -808,7 +814,12 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   </div>
 </div>
 
+### Modal Classes
+* `.header` - Use this class on the header div inside `.reveal` to add a full-width separator
+* `.footer` - Use this class on the header div inside `.reveal` to add a full-width separator
+* `.modal-section` - Organize modal content into chunks that are placed inside divs with this class to separate them vertically
 
+For full documentation refer to Foundation's [Reveal](http://foundation.zurb.com/sites/docs/reveal.html).
 
 # Forms
 
