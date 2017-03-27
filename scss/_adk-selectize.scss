@@ -380,4 +380,12 @@
   background-size: 9px 6px;
 }
 
+// Give Selectize elements the same margins as other form elements
+.selectize-control {
+  margin: 0 0 $form-spacing;
+}
+
+// Use font sizes from other input elements
+.selectize-control {
+  font-size: $input-font-size;
 }
