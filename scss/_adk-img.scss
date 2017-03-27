@@ -2,3 +2,9 @@
   @include grid-layout(4, '.thumb-col', $space-xs);
   margin-bottom: $space;
 }
+
+.thumbnail.brand {
+  // width: $space-xxl;
+  margin-bottom: 0;
+  float: left;
+}
