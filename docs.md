@@ -472,6 +472,73 @@ Use `.fill` to set the background color.
 
 
 
+# Images
+When creating thumbnails in series, such as on product cards or modals, place the images inside thumbnail rows instead of the regular grid rows.
+
+`thumbnails-up-[n]` - Add this class to what will be the row of the thumbnails. It follows the normal grid's naming convention for how many columns should be inside of it. `n` can be a number from 2-6; you shouldn't ever need any more than 6 thumbnails in series, and try to use an even number of columns. 
+
+`thumb-col` - Add this class to the thumbnails column itself, and add the image inside of it.
+
+## Thumbnail Rows
+```html_example
+<div class="row">
+  <div class="small-12 medium-4 columns">
+    <div class="thumbnails-up-2">
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 medium-4 columns">
+    <div class="thumbnails-up-4">
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 medium-4 columns">
+    <div class="thumbnails-up-6">
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+      <div class="thumb-col">
+        <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+
 # UI
 
 ## Top Bar
@@ -636,6 +703,129 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   </div>
 </div>
 ```
+---
+
+## Modals
+
+Modals are popup windows. They are based on Foundation [Reveal](http://foundation.zurb.com/sites/docs/reveal.html).
+
+### Modal Classes
+* `.header` - Header section for modal title
+* `.footer` - Footer section for modal buttons
+
+Use Foundation [Flex Grid](http://foundation.zurb.com/sites/docs/flex-grid.html) classes when building content inside of modals.
+
+Refer to the code below to structure a modal or start with the modal template in [`templates/modal.html`](/templates/modal.html).
+
+### Example
+```html_example
+<!-- Open Modal Button-->
+<a class="button" data-open="exampleModal1">Click me for a modal</a>
+
+<!-- Modal Content -->
+<div class="reveal" id="exampleModal1" data-reveal>
+  <!-- Header -->
+  <div class="header">
+    <div class="row">
+      <!-- Modal Title -->
+      <div class="columns">
+        <h4>Awesome Product.</h4>
+      </div>
+      <!-- Close Button -->
+      <div class="columns shrink">
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+          <span class="material-icons" aria-hidden="true">close</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Brand -->
+  <div class="row">
+    <div class="columns">
+      <h5 class="mb-xs"><strong>Brand</strong></h5>
+      <div class="media-object">
+        <div class="media-object-section middle">
+          <img class="thumbnail brand" src="img/bear.gif" alt="Product">
+        </div>
+        <div class="media-object-section main-section">
+          <h5>Cubby Bear Manufacturing</h5>
+          <span class="meta">Sent on January 4, 2017</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Description -->
+  <div class="row">
+    <div class="columns">
+      <h5 class="mb-xs"><strong>Description</strong></h5>
+      <p>I'm really just a wonderful product inside of an even cooler modal. Puppy kitty ipsum dolor sit good dog roll over carrier tuxedo fish lol catz puppy kisses pet supplies meow scooby snacks meow mittens. Fido Rover lol catz yawn drool wag tail Fido food pet gate purr warm behavior kibble litter box ID tag. Roll Over house train chirp pet supplies shake polydactyl wet nose harness tabby biscuit gimme five Rover vaccine roll over licks nap parrot lol catz. Wins!</p>
+    </div>
+  </div>
+  <!-- Attachments -->
+  <div class="row">
+    <div class="columns">
+      <h5 class="mb-xs"><strong>Attachments</strong></h5>
+      <div class="thumbnails-up-4">
+        <div class="thumb-col">
+          <img class="thumbnail" src="img/bear.gif" alt="Product">
+        </div>
+        <div class="thumb-col">
+          <img class="thumbnail" src="img/bear.gif" alt="Product">
+        </div>
+        <div class="thumb-col">
+          <img class="thumbnail" src="img/bear.gif" alt="Product">
+        </div>
+        <div class="thumb-col">
+          <img class="thumbnail" src="img/bear.gif" alt="Product">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Metrics -->
+  <div class="row">
+    <div class="columns">
+      <h5 class="mb-xs"><strong>Specifications</strong></h5>
+      <div class="row small-up-4 collapse">
+        <div class="column">
+          <h5>1.00 – 2.00 USD</h5>
+          <h6 class="subheader">Price Per Units</h6>
+        </div>
+        <div class="column">
+          <h5>Two Weeks</h5>
+          <h6 class="subheader">Lead Time</h6>
+        </div>
+        <div class="column">
+          <h5>2.00 – 3.00 USD</h5>
+          <h6 class="subheader">Price Per Units</h6>
+        </div>
+        <div class="column">
+          <h5>11 Week</h5>
+          <h6 class="subheader">Lead Time</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Shortlist / Dismiss -->
+  <div class="row align-right">
+    <div class="columns shrink">
+      <button class="secondary hollow icon button"><span class="material-icons">close</span></button>
+      <button class="secondary hollow icon button"><span class="material-icons">done</span></button>
+    </div>
+  </div>
+  <!-- Footer (Buttons) -->
+  <div class="footer">
+    <div class="row align-center">
+      <div class="small-3 columns">
+        <button class="secondary hollow small expanded button" data-close type="button">Close</button>
+      </div>
+      <div class="small-3 columns">
+        <button class="small expanded button" data-close type="button">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
 
 
 

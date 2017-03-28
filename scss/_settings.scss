@@ -303,8 +303,8 @@ $card-border-radius: $global-radius;
 $card-padding: $space-s $space;
 $card-margin: $global-margin;
 
-// // 15. Close Button
-// // ----------------
+// 15. Close Button
+// ----------------
 
 // $closebutton-position: right top;
 // $closebutton-offset-horizontal: (
@@ -414,7 +414,7 @@ $input-shadow-focus: none;
 // // ----------------
 
 // $mediaobject-margin-bottom: $global-margin;
-// $mediaobject-section-padding: $global-padding;
+$mediaobject-section-padding: $space-s;
 // $mediaobject-image-width-stacked: 100%;
 
 // // 22. Menu
@@ -507,17 +507,17 @@ $menu-item-background-active: none;
 //   widescreen: 16 by 9,
 // );
 
-// // 29. Reveal
-// // ----------
+// 29. Reveal
+// ----------
 
 // $reveal-background: $white;
 // $reveal-width: 600px;
 // $reveal-max-width: $global-width;
-// $reveal-padding: $global-padding;
-// $reveal-border: 1px solid $medium-gray;
+$reveal-padding: $space-m;
+$reveal-border: none;
 // $reveal-radius: $global-radius;
 // $reveal-zindex: 1005;
-// $reveal-overlay-background: rgba($black, 0.45);
+$reveal-overlay-background: rgba($adk-gunmetal, 0.5);
 
 // // 30. Slider
 // // ----------
@@ -592,7 +592,7 @@ $tab-content-border: none;
 // // 34. Thumbnail
 // // -------------
 
-// $thumbnail-border: solid 4px $white;
+$thumbnail-border: none;
 // $thumbnail-margin-bottom: $global-margin;
 // $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 // $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
