@@ -34,7 +34,7 @@
  );
 
  $adk-button-padding: $space-s $space;
- $adk-button-margin: 0 0 $global-margin 0;
+ $adk-button-margin: 0;
  $adk-button-fill: solid;
  $adk-button-background: $primary-color;
  $adk-button-background-hover: scale-color($adk-button-background, $lightness: -15%);
@@ -155,6 +155,9 @@
   border: 1px solid transparent;
   color: $color;
 
+  &.hollow {
+    border: 1px solid $color;
+  }
   &:hover, &:focus {
     border: 1px solid $color-hover;
     color: $color-hover;

@@ -26,7 +26,7 @@
 @include foundation-button-group;
 @include foundation-card;
 @include foundation-callout;
-@include foundation-close-button;
+// @include foundation-close-button;
 @include foundation-menu;
 @include foundation-menu-icon;
 @include foundation-drilldown-menu;
@@ -63,9 +63,11 @@
 @import 'adk-colors';
 @import 'adk-cards';
 @import 'adk-dropzone';
+@import 'adk-modals';
 @import 'adk-menu';
 @import 'adk-fonts';
 @import 'adk-forms';
+@import 'adk-img';
 @import 'adk-layout';
 @import 'adk-selectize';
 @import 'adk-spacing';

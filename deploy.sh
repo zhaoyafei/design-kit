@@ -16,6 +16,7 @@ if [ "$CIRCLE_BRANCH" = "master" ]; then
   aws s3 sync fonts s3://design-kit.arc.ht/fonts/ --delete
   aws s3 sync assets s3://design-kit.arc.ht/assets/ --delete
   aws s3 sync docs s3://design-kit.arc.ht/docs/ --delete
+  aws s3 sync templates s3://design-kit.arc.ht/templates/ --delete
   aws s3 sync . s3://design-kit.arc.ht/ --exclude "*" --include "*.html"
 
 else

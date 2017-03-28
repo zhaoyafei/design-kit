@@ -1,0 +1,43 @@
+// Modals
+
+// Full-width borders for header and footer
+@mixin full-width-border($side) {
+
+  // Add negative margins to the section 
+  margin-left: -$reveal-padding;
+  margin-right: -$reveal-padding;
+
+  // Re-add padding inside the section equal to the negative margin
+  padding-left: $reveal-padding;
+  padding-right: $reveal-padding;
+
+  // Add the border to top/bottom depending on $side
+  border-#{$side}: $global-separator;
+}
+
+.reveal {
+  .header {
+    @include full-width-border(bottom)
+
+    // Add bottom margin inside header content
+    margin-bottom: $global-margin;
+
+    // Add space between header and modal content below
+    padding-bottom: $global-padding;
+  }
+
+  .footer {
+    @include full-width-border(top)
+
+    // Add top margin inside footer content
+    margin-top: $global-margin;
+
+    // Add space between footer and modal content above
+    padding-top: $global-margin;
+  }
+}
+
+// Close button styles
+.close-button {
+  cursor: pointer;
+}
