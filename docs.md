@@ -705,11 +705,17 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
 ```
 ---
 
-## Modals 
+## Modals
 
-Building Architizer's modals is similar to building cards. The bounds of the modal supply the padding for the content inside, so you should not ever add any side padding to the contents. This is done to retain consistency across all modals. Similarly, when creating content inside of a modal, organize it by divs with the `.modal-section` class, which takes care of the vertical spacing.
+Modals are popup windows. They are based on Foundation [Reveal](http://foundation.zurb.com/sites/docs/reveal.html).
 
-Refer to the code above to structure a modal or start with the modal template in `design-kit/templates/modal.html`.
+### Modal Classes
+* `.header` - Header section for modal title
+* `.footer` - Footer section for modal buttons
+
+Use Foundation [Flex Grid](http://foundation.zurb.com/sites/docs/flex-grid.html) classes when building content inside of modals.
+
+Refer to the code below to structure a modal or start with the modal template in [`templates/modal.html`](/templates/modal.html).
 
 ### Example
 ```html_example
@@ -819,13 +825,6 @@ Refer to the code above to structure a modal or start with the modal template in
   </div>
 </div>
 ```
-
-### Modal Classes
-* `.header` - Use this class on the header div inside `.reveal` to add a full-width separator
-* `.footer` - Use this class on the header div inside `.reveal` to add a full-width separator
-* `.modal-section` - Organize modal content into chunks that are placed inside divs with this class to separate them vertically
-
-For full documentation refer to Foundation's [Reveal](http://foundation.zurb.com/sites/docs/reveal.html).
 
 
 
