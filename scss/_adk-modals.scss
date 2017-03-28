@@ -19,8 +19,7 @@
   .header {
     @include full-width-border(bottom)
 
-    // Add top/bottom margin inside header content
-    margin-top: $global-margin;
+    // Add bottom margin inside header content
     margin-bottom: $global-margin;
 
     // Add space between header and modal content below
@@ -29,6 +28,9 @@
 
   .footer {
     @include full-width-border(top)
+
+    // Add top margin inside footer content
+    margin-top: $global-margin;
 
     // Add space between footer and modal content above
     padding-top: $global-margin;
