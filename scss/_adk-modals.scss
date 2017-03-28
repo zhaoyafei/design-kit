@@ -1,31 +1,37 @@
 // Modals
-@mixin border($side) {
-    // add border to either top or bottom by pulling div to edge of modal
-    margin-left: -$reveal-padding;
-    margin-right: -$reveal-padding;
-    margin-#{$side}: $modal-section-spacing;
-    padding: 0 $reveal-padding;
-    padding-#{$side}: $space-m;
-    border-#{$side}: $global-separator;
+
+// Full-width borders for header and footer
+@mixin full-width-border($side) {
+
+  // Add negative margins to the section 
+  margin-left: -$reveal-padding;
+  margin-right: -$reveal-padding;
+
+  // Re-add padding inside the section equal to the negative margin
+  padding-left: $reveal-padding;
+  padding-right: $reveal-padding;
+
+  // Add the border to top/bottom depending on $side
+  border-#{$side}: $global-separator;
 }
 
 .reveal {
   .header {
-    @include border(bottom)
+    @include full-width-border(bottom)
+
+    // Add top/bottom margin inside header content
+    margin-top: $global-margin;
+    margin-bottom: $global-margin;
+
+    // Add space between header and modal content below
+    padding-bottom: $global-padding;
   }
+
   .footer {
-    @include border(top)
-    * {
-      margin-bottom: 0;
-    }
-  }
-  .modal-section {
-    margin-bottom: $modal-section-spacing;
-    .button {
-      margin-bottom: 0;
-      margin-left: $space-xxs;
-      float: right;
-    }
+    @include full-width-border(top)
+
+    // Add space between footer and modal content above
+    padding-top: $global-margin;
   }
 }
 
