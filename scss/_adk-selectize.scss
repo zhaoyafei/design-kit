@@ -146,7 +146,7 @@
 // }
 .selectize-input {
   border: $input-border;
-  padding: $space-micro $space-xs;
+  padding: 0 ($form-spacing / 2);
   display: inline-block;
   width: 100%;
   overflow: hidden;
@@ -166,7 +166,7 @@
   }
 }
 .selectize-control.multi .selectize-input.has-items {
-  padding: $space-micro $space-xs;
+  padding: 0 $space-xs;
 }
 .selectize-input.full {
   background-color: #ffffff;
@@ -184,7 +184,7 @@
   -webkit-border-radius: $space-xxxs $space-xxxs 0 0;
   -moz-border-radius: $space-xxxs $space-xxxs 0 0;
   border-radius: $space-xxxs $space-xxxs 0 0;
-  border-bottom: 0;
+  border-bottom: 1px solid transparent;
 }
 // .selectize-input > * {
 //   vertical-align: baseline;
@@ -258,7 +258,7 @@
   border-top: 1px solid rgba($adk-gunmetal, 0.2);
   background: #ffffff;
   margin: -1px 0 0 0;
-  padding: 0 0 $space-xxs 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -344,3 +344,42 @@
 //   opacity: 0.5;
 //   background-color: #fafafa;
 // }
+
+
+// Add spinner for loading class
+.selectize-control.loading:before {
+  @include adk-loading-spinner($space);
+
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  margin-top: -0.75rem;
+  top: 50%;
+  right: 2rem;
+  z-index: 10;
+}
+
+
+// Hide default dropdown arrow
+.selectize-control.single .selectize-input:after {
+  display: none;
+}
+
+// Use dropdown arrow styles from <select> elements
+.selectize-control.single .selectize-input {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2841, 41, 41%29'></polygon></svg>");
+  background-origin: content-box;
+  background-position: right 0 center;
+  background-repeat: no-repeat;
+  background-size: 9px 6px;
+}
+
+// Give Selectize elements the same margins as other form elements
+.selectize-control {
+  margin: 0 0 $form-spacing;
+}
+
+// Use font sizes from other input elements
+.selectize-control {
+  font-size: $input-font-size;
+}

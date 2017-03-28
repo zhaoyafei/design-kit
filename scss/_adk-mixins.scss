@@ -1,0 +1,36 @@
+/**
+ * adk-loading-spinner
+ * Loading Spinner Mixin
+ *
+ * This is designed to be used as a :before or :after element
+ *
+ * Include it like this:
+ *
+ *  .my-class-to-include-a-loader-on.loading:before {
+ *    @include adk-spinner($space);
+ *
+ *    // Position the loading spinner like this: (customize for the class you need to extend)
+ *    position: absolute;
+ *    margin-top: 0.75rem;
+ *    top: 50%;
+ *    right: 2rem;
+ *    z-index: 10;
+ *
+ *  }
+ */
+@mixin adk-loading-spinner ($size: $space) {
+  @keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+
+  $spinner-width: $size/8;
+
+  content: '';
+  box-sizing: border-box;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  border: $spinner-width solid map-get(generate-palette($adk-quicksilver), 100);
+  border-top-color: $adk-quicksilver;
+  animation: spinner .6s linear infinite;
+}
