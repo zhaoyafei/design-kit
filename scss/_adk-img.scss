@@ -15,5 +15,8 @@
     border-radius: 1px;
     margin: 0 $space-xxxs 0 0;
     max-height: $space-m;
+    &.main {
+      max-height: $space-xxxl;
+    }
   }
 }
