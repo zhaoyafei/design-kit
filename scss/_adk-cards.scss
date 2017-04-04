@@ -19,6 +19,11 @@
       color: $adk-red;
     }
   }
+  .card-footer {
+    @include card-divider;
+    border-top: $global-separator;
+    padding: $space-s 0 0 0;
+  }
   .card-button {
     @include card-divider;
     border-top: $global-separator;
