@@ -646,7 +646,7 @@ Card elements are modules that can be used across our UI, and are currently used
 **A note about card spacing:**
 Because cards are self-contained elements, the top-level `.card` class handles the spacing/gutter inside the card. Therefore the only spacing that happens on elements inside cards is margin-bottom to control vertical spacing, defined by `$card-content-margin`.
 
-- `.card` - Top level class for creating card elements. Add `.blue` to create a blue outline.
+- `.card` - Top level class for creating card elements. Add `.border-blue` utility to create a blue outline.
 - `.card-divider` - Use for card headers.
 - `.caption` - To be used inside card headers to show the status or type of a card, if it's a product. Add `.new` or `.shortlist` or `.error` to denote status (potentially deprecate use of pills/tags for status).
 - `.card-footer` - Use card footers on cards that have actions associated with them. Actions should be default buttons.
@@ -655,6 +655,7 @@ Because cards are self-contained elements, the top-level `.card` class handles t
 
 Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.  
 
+#### Product Card Examples
 ```html_example
 <div class="row small-up-2 medium-up-4">
 <div class="column">
@@ -663,16 +664,18 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
       <img src="/docs/img/table.jpg">
     </div>
     <div class="card-section">
-      <div class="card-divider">
+      <div>
         <span class="caption new">New Product</span>
+        <span class="material-icons float-right">more_horiz</span>
       </div>
       <div><strong>Pollock Executive Chair</strong></div>
       <div><span class="meta">Knoll </span><span class="architizer-glyph blue-500 fs-base">+</span></div>
     </div>
-    <div class="card-footer">
+    <div class="card-section">
       <a href="#" class="primary hollow button expanded">View Product</a>
     </div>
   </div>
+  <p> The aspect ratio of images in these full-width image-based cards should be 4:3</p>
 </div>
   <div class="column">
     <div class="card">
