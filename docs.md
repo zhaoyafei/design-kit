@@ -651,11 +651,29 @@ Because cards are self-contained elements, the top-level `.card` class handles t
 - `.caption` - To be used inside card headers to show the status or type of a card, if it's a product. Add `.new` or `.shortlist` or `.error` to denote status (potentially deprecate use of pills/tags for status).
 - `.card-footer` - Use card footers on cards that have actions associated with them. Actions should be default buttons.
 - `.card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
+- `.card-section.no-padding` - Use this on image-based cards that take the full-width of the card element.
 
 Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.  
 
 ```html_example
-<div class="row small-up-2 medium-up-3">
+<div class="row small-up-2 medium-up-4">
+<div class="column">
+  <div class="card">
+    <div class="card-section no-padding">
+      <img src="/docs/img/table.jpg">
+    </div>
+    <div class="card-section">
+      <div class="card-divider">
+        <span class="caption new">New Product</span>
+      </div>
+      <div><strong>Pollock Executive Chair</strong></div>
+      <div><span class="meta">Knoll </span><span class="architizer-glyph blue-500 fs-base">+</span></div>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="primary hollow button expanded">View Product</a>
+    </div>
+  </div>
+</div>
   <div class="column">
     <div class="card">
       <div class="card-divider">
@@ -669,7 +687,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
         <p>This card makes use of the card-divider element.</p>
       </div>
       <div class="card-footer">
-        <a href="#" class="primary hollow button">View Recommendation</a>
+        <a href="#" class="primary hollow button expanded">View Product</a>
       </div>
     </div>
   </div>

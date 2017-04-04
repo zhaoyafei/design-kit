@@ -19,10 +19,9 @@
       color: $adk-red;
     }
   }
-  .card-footer {
-    @include card-divider;
-    border-top: $global-separator;
-    padding: $space-s 0 0 0;
+  .card-image {
+    padding: 0;
+    width: 100
   }
   .card-button {
     @include card-divider;
@@ -47,7 +46,15 @@
   &.right {
     text-align: right;
   }
-  //Overrwite grid spacing
+  &.no-padding {
+    margin-left: -$space;
+    margin-right: -$space;
+    margin-top: -$space-s;
+    img {
+      border-radius: 0;
+    }
+  }
+  //Overwrite grid spacing
   .row, * {
     margin: 0;
   }
