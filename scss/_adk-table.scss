@@ -43,6 +43,9 @@ table {
   tbody > .inactive {
     opacity: 0.3;
   }
+  &:hover {
+    opacity: 1;
+  }
 }
 
 // Make tables scroll on mobile small screens
