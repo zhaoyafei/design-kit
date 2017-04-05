@@ -388,43 +388,43 @@ Foundation comes the following classes for button colors:
 <div class="row small-up-2 medium-up-5">
   <!-- .primary -->
   <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded primary button">.primary</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded primary-light button">.primary-light</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled primary button">.primary .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow primary button">.primary .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled primary button">.primary .hollow .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded primary button">.primary</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded primary-light button">.primary-light</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded disabled primary button">.primary .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow primary button">.primary .hollow</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow disabled primary button">.primary .hollow .disabled</a></div></div>
   </div>
   <!-- .secondary -->
   <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded secondary button">.secondary</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded secondary-light button">.secondary-light</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled secondary button">.secondary .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow secondary button">.secondary .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled secondary button">.secondary .hollow .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded secondary button">.secondary</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded secondary-light button">.secondary-light</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded disabled secondary button">.secondary .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow secondary button">.secondary .hollow</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow disabled secondary button">.secondary .hollow .disabled</a></div></div>
   </div>
   <!-- .alert -->
   <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded alert button">.alert</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded alert-light button">.alert-light</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled alert button">.alert .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow alert button">.alert .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled alert button">.alert .hollow .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded alert button">.alert</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded alert-light button">.alert-light</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded disabled alert button">.alert .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow alert button">.alert .hollow</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow disabled alert button">.alert .hollow .disabled</a></div></div>
   </div>
   <!-- .warning -->
   <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded warning button">.warning</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded warning-light button">.warning-light</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled warning button">.warning .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow warning button">.warning .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled warning button">.warning .hollow .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded warning button">.warning</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded warning-light button">.warning-light</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded disabled warning button">.warning .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow warning button">.warning .hollow</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow disabled warning button">.warning .hollow .disabled</a></div></div>
   </div>
   <!-- .success -->
   <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded success button">.success</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded success-light button">.success-light</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled success button">.success .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow success button">.success .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled success button">.success .hollow .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded success button">.success</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded success-light button">.success-light</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded disabled success button">.success .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow success button">.success .hollow</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow disabled success button">.success .hollow .disabled</a></div></div>
   </div>
 </div>
 
@@ -646,37 +646,85 @@ Card elements are modules that can be used across our UI, and are currently used
 **A note about card spacing:**
 Because cards are self-contained elements, the top-level `.card` class handles the spacing/gutter inside the card. Therefore the only spacing that happens on elements inside cards is margin-bottom to control vertical spacing, defined by `$card-content-margin`.
 
-- `.card` - Top level class for creating card elements. Add `.blue` to create a blue outline.
-- `.card-divider` - Use for card headers.
-- `.caption` - To be used inside card headers to show the status or type of a card, if it's a product. Add `.new` or `.shortlist` or `.error` to denote status (potentially deprecate use of pills/tags for status).
-- `.card-footer` - Use card footers on cards that have actions associated with them. Actions should be default buttons.
+- `.card` - Top level class for creating card elements. Add `.border-blue` utility class to create a blue outline.
+- `.caption` - To be used inside card headers to show the status or type of a card, if it's a product.
 - `.card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
 
-Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.  
+Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.
 
+#### Product Card Examples
 ```html_example
-<div class="row small-up-2 medium-up-3">
+<div class="row small-up-2 medium-up-4">
   <div class="column">
     <div class="card">
-      <div class="card-divider">
-        <span class="caption">Product Card</span>
-      </div>
+      <!-- Card Image -->
+      <div class="card-section card-image card-image-no-margin"
+           style="background-image: url('/docs/img/table.jpg')"></div>
+      <!-- Card Content -->
       <div class="card-section">
-        <img src="/docs/img/table.jpg">
+        <!-- Response Marking and Dropdown Menu-->
+        <div class="row">
+          <!-- Response Marking -->
+          <div class="columns shrink">
+            <span class="caption blue">New Product</span>
+          </div>
+          <!-- Middle Spacing -->
+          <div class="columns"></div>
+          <!-- Dropdown Menu -->
+          <div class="columns shrink">
+            <ul class="dropdown menu"
+                data-dropdown-menu
+                data-alignment="right"
+                data-click-open="true"
+                data-disable-hover="true">
+              <li>
+                <span class=>
+                  <i class="material-icons" 
+                     style="cursor:pointer; width:1rem;">more_horiz2</i>
+                </span>
+                <ul class="menu">
+                  <li>
+                    <a>Shortlist</a>
+                  </li>
+                  <li>
+                    <a>Dismiss</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Product Name -->
+        <div class="row">
+          <strong>Pollock Executive Chair</strong>
+        </div>
+        <!-- Brand Name -->
+        <div class="row align-middle">
+          <div class="columns shrink meta pr-0">
+            <a href="#"
+               target="_blank" 
+               class="underline">Knoll</a>
+          </div>
+          <!-- If Verified -->
+          <div class="columns shrink ml-xxs pl-0">
+            <span class="architizer-glyph blue-500">+</span>
+          </div>
+        </div>
       </div>
+      <!-- View Product Button -->
       <div class="card-section">
-        <strong>Product Title</strong>
-        <p>This card makes use of the card-divider element.</p>
-      </div>
-      <div class="card-footer">
-        <a href="#" class="primary hollow button">View Recommendation</a>
+        <a class="primary hollow button expanded">View Product</a>
       </div>
     </div>
   </div>
   <div class="column">
     <div class="card">
-      <div class="card-divider">
-        <span class="caption new">New Product</span>
+      <div class="card-section">
+        <div class="row">
+          <div class="columns">
+            <span class="caption blue">New Product</span>
+          </div>
+        </div>
       </div>
       <div class="card-section">
         <div class="row">
