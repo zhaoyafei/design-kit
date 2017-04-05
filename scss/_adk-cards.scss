@@ -9,20 +9,6 @@
     font-weight: $global-weight-bold;
     line-height: 1;
     color: $adk-quicksilver;
-    &.new {
-      color: $adk-blue;
-    }
-    &.shortlist {
-      color: $adk-green;
-    }
-    &.error {
-      color: $adk-red;
-    }
-  }
-  .card-footer {
-    @include card-divider;
-    border-top: $global-separator;
-    padding: $space-s 0 0 0;
   }
   .card-button {
     @include card-divider;
@@ -37,20 +23,9 @@
   .row {
     // margin: 0;
     margin: $card-content-margin;
-    &.no-padding {
-      margin-left: -$space;
-      margin-right: -$space;
-      margin-top: -$space-s;
-      img {
-        border-radius: 0;
-      }
-    }
   }
   .columns, * {
     padding: 0;
-    &.right {
-      text-align: right;
-    }
   }
 }
 
