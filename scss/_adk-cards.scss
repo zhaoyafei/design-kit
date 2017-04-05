@@ -25,9 +25,21 @@
     border-radius: $global-radius;
   }
 
-  // Overwrite margin on .rows in cards
-  .row {
+  .card-section {
     margin: $card-content-margin;
+    padding: 0;
+
+    // Overwrite padding and margin on .row/.column children of .card-section
+    .row,
+    .columns {
+      padding: 0;
+      margin: 0;
+    }
+
+    // No margin on last card section
+    &:last-of-type {
+      margin: 0;
+    }
   }
 
   // Overwrite padding on all card contents
@@ -52,7 +64,6 @@
   &.card-image-no-margin {
     margin-left: -$space;
     margin-right: -$space;
-    margin-top: -$space-s;
   }
 
   // Small breakpoint height
