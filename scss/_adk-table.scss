@@ -25,6 +25,7 @@ table {
     padding: $space $space-s;
   }
   tr {
+    transition: all .12s;
     .right {
       text-align: right;
     }
