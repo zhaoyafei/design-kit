@@ -335,10 +335,10 @@ $card-margin: $global-margin;
 // // 17. Dropdown
 // // ------------
 
-// $dropdown-padding: 1rem;
+$dropdown-padding: $space;
 // $dropdown-background: $body-background;
-// $dropdown-border: 1px solid $medium-gray;
-// $dropdown-font-size: 1rem;
+$dropdown-border: none;
+$dropdown-font-size: $font-size;
 // $dropdown-width: 300px;
 // $dropdown-radius: $global-radius;
 // $dropdown-sizes: (

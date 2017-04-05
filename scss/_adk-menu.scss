@@ -59,3 +59,9 @@ ul {
 .top-bar {
   border-bottom: $global-separator;
 }
+
+//Dropdown
+.dropdown-pane {
+  box-shadow: 0 0 12px rgba($black,.22);
+  -webkit-box-shadow: 0 0 12px rgba($black,.22);
+}

@@ -669,7 +669,10 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
         <div class="column">
         <div>
           <span class="caption new">New Product</span>
-          <span class="material-icons float-right">more_horiz</span>
+          <button class="material-icons float-right" type="button" data-toggle="dropdown">more_horiz</button>
+          <div class="dropdown-pane bottom p-base" id="dropdown" data-dropdown data-hover="true" data-hover-pane="true">
+            Just some junk that needs to be said. Or not. Your choice.
+          </div>
         </div>
         <div><strong>Pollock Executive Chair</strong></div>
         <div><span class="meta">Knoll </span><span class="architizer-glyph blue-500 fs-base">+</span></div>
