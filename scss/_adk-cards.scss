@@ -24,7 +24,9 @@
     // margin: 0;
     margin: $card-content-margin;
   }
-  .columns, * {
+
+  // Overwrite padding on all card contents
+  * {
     padding: 0;
   }
 }
