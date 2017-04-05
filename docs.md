@@ -646,10 +646,8 @@ Card elements are modules that can be used across our UI, and are currently used
 **A note about card spacing:**
 Because cards are self-contained elements, the top-level `.card` class handles the spacing/gutter inside the card. Therefore the only spacing that happens on elements inside cards is margin-bottom to control vertical spacing, defined by `$card-content-margin`.
 
-- `.card` - Top level class for creating card elements. Add `.border-blue` utility to create a blue outline.
-- `.card-divider` - Use for card headers.
-- `.caption` - To be used inside card headers to show the status or type of a card, if it's a product. Add `.new` or `.shortlist` or `.error` to denote status (potentially deprecate use of pills/tags for status).
-- `.card-footer` - Use card footers on cards that have actions associated with them. Actions should be default buttons.
+- `.card` - Top level class for creating card elements. Add `.border-blue` utility class to create a blue outline.
+- `.caption` - To be used inside card headers to show the status or type of a card, if it's a product.
 - `.card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
 - `.card-section.no-padding` - Use this on image-based cards that take the full-width of the card element.
 
@@ -660,30 +658,67 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
 <div class="row small-up-2 medium-up-4">
   <div class="column">
     <div class="card">
-      <div class="row no-padding">
-        <div class="column">
-        <img src="/docs/img/table.jpg">
+      <!-- Card Image -->
+      <div class="card-image card-image-no-margin"
+           style="background-image: url('/docs/img/table.jpg')"></div>
+      <!-- Card Content -->
+      <div class="card-section">
+        <!-- Response Marking and Dropdown Menu-->
+        <div class="row">
+          <!-- Response Marking -->
+          <div class="columns shrink">
+            <span class="caption blue">New Product</span>
+          </div>
+          <!-- Middle Spacing -->
+          <div class="columns"></div>
+          <!-- Dropdown Menu -->
+          <div class="columns shrink">
+            <ul class="dropdown menu" data-dropdown-menu data-alignment="right" data-click-open="true" data-disable-hover="true">
+              <li>
+                <span class=>
+                  <i class="material-icons" style="cursor:pointer; width:1rem;">more_horiz2</i>
+                </span>
+                <ul class="menu">
+                  <li>
+                    <a>Shortlist</a>
+                  </li>
+                  <li>
+                    <a>Dismiss</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Product Name -->
+        <div class="row">
+          <strong>Pollock Executive Chair</strong>
+        </div>
+        <!-- Brand Name -->
+        <div class="row align-middle">
+          <div class="columns shrink meta pr-0">
+            <a href="#"
+               target="_blank" 
+               class="underline">Knoll</a>
+          </div>
+          <!-- If Verified -->
+          <div class="columns shrink ml-xxs pl-0">
+            <span class="architizer-glyph blue-500">+</span>
+          </div>
         </div>
       </div>
+      <!-- View Product Button -->
+      <div class="card-section">
+        <a class="primary hollow button expanded">View Product</a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
       <div class="row">
-        <div class="column">
-        <div>
-          <span class="caption new">New Product</span>
-          <span class="material-icons float-right">more_horiz</span>
+        <div class="columns">
+          <span class="caption blue">New Product</span>
         </div>
-        <div><strong>Pollock Executive Chair</strong></div>
-        <div><span class="meta">Knoll </span><span class="architizer-glyph blue-500 fs-base">+</span></div>
-        </div>
-      </div>
-      <div class="card-section">
-        <a href="#" class="primary hollow button expanded">View Product</a>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-divider">
-        <span class="caption new">New Product</span>
       </div>
       <div class="card-section">
         <img src="/docs/img/table.jpg">
@@ -702,8 +737,10 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   </div>
   <div class="column">
     <div class="card">
-      <div class="card-divider">
-        <span class="caption new">New Product</span>
+      <div class="row">
+        <div class="columns">
+          <span class="caption blue">New Product</span>
+        </div>
       </div>
       <div class="card-section">
         <div class="row">
