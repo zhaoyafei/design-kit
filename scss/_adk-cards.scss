@@ -1,29 +1,18 @@
 // Card Types
 .card {
   padding: $card-padding;
+
   &.message {
     min-width: 360px;
   }
+
   .caption {
     font-size: $font-size-s;
     font-weight: $global-weight-bold;
     line-height: 1;
     color: $adk-quicksilver;
-    &.new {
-      color: $adk-blue;
-    }
-    &.shortlist {
-      color: $adk-green;
-    }
-    &.error {
-      color: $adk-red;
-    }
   }
-  .card-footer {
-    @include card-divider;
-    border-top: $global-separator;
-    padding: $space-s 0 0 0;
-  }
+
   .card-button {
     @include card-divider;
     border-top: $global-separator;
@@ -31,27 +20,64 @@
     margin-top: 0;
     text-align: center;
   }
+
   img {
     border-radius: $global-radius;
   }
-}
 
-// Card Content
-// Spacing/gutters in cards should come from the card itself, which has it's own padding.
-// This overrwrites default spacing on elements that exist within cards.
-// The elements inside card componenents should only have margin-bottom for vertical spacing. 
-.card-divider, 
-.card-section {
-  padding: 0;
-  margin: $card-content-margin;
-  &.right {
-    text-align: right;
+  .card-section {
+    margin: $card-content-margin;
+    padding: 0;
+
+    // Overwrite padding and margin on .row/.column children of .card-section
+    .row,
+    .columns {
+      padding: 0;
+      margin: 0;
+    }
+
+    // No margin on last card section
+    &:last-of-type {
+      margin: 0;
+    }
   }
-  //Overrwite grid spacing
-  .row, * {
-    margin: 0;
-  }
-  .columns, * {
+
+  // Overwrite padding on all card contents
+  * {
     padding: 0;
   }
+}
+
+/**
+ * Images at the top of cards
+ *
+ * Use with `style="background-image:url('/put/the/path/here')"`
+ *
+ * Add the .card-image-no-margin class to make the image extend outside the margins
+ */
+.card-image {
+  position: relative;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.card-image-no-margin {
+    margin-left: -$space;
+    margin-right: -$space;
+    margin-top: -$space;
+  }
+
+  // Small breakpoint height
+  height: 5rem;
+
+  // Medium breakpoint height
+  @include breakpoint(medium) {
+    height: 10rem;
+  }
+
+  // Large breakpoint height
+  @include breakpoint(large) {
+    height: 15rem;
+  }
+
 }
