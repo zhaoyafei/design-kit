@@ -1,15 +1,18 @@
 // Card Types
 .card {
   padding: $card-padding;
+
   &.message {
     min-width: 360px;
   }
+
   .caption {
     font-size: $font-size-s;
     font-weight: $global-weight-bold;
     line-height: 1;
     color: $adk-quicksilver;
   }
+
   .card-button {
     @include card-divider;
     border-top: $global-separator;
@@ -17,11 +20,13 @@
     margin-top: 0;
     text-align: center;
   }
+
   img {
     border-radius: $global-radius;
   }
+
+  // Overwrite margin on .rows in cards
   .row {
-    // margin: 0;
     margin: $card-content-margin;
   }
 
