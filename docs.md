@@ -388,43 +388,43 @@ Foundation comes the following classes for button colors:
 <div class="row small-up-2 medium-up-5">
   <!-- .primary -->
   <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded primary button">.primary</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded primary-light button">.primary-light</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled primary button">.primary .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow primary button">.primary .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled primary button">.primary .hollow .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded primary button">.primary</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded primary-light button">.primary-light</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded disabled primary button">.primary .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow primary button">.primary .hollow</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow disabled primary button">.primary .hollow .disabled</a></div></div>
   </div>
   <!-- .secondary -->
   <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded secondary button">.secondary</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded secondary-light button">.secondary-light</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled secondary button">.secondary .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow secondary button">.secondary .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled secondary button">.secondary .hollow .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded secondary button">.secondary</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded secondary-light button">.secondary-light</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded disabled secondary button">.secondary .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow secondary button">.secondary .hollow</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow disabled secondary button">.secondary .hollow .disabled</a></div></div>
   </div>
   <!-- .alert -->
   <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded alert button">.alert</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded alert-light button">.alert-light</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled alert button">.alert .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow alert button">.alert .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled alert button">.alert .hollow .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded alert button">.alert</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded alert-light button">.alert-light</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded disabled alert button">.alert .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow alert button">.alert .hollow</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow disabled alert button">.alert .hollow .disabled</a></div></div>
   </div>
   <!-- .warning -->
   <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded warning button">.warning</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded warning-light button">.warning-light</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled warning button">.warning .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow warning button">.warning .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled warning button">.warning .hollow .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded warning button">.warning</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded warning-light button">.warning-light</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded disabled warning button">.warning .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow warning button">.warning .hollow</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow disabled warning button">.warning .hollow .disabled</a></div></div>
   </div>
   <!-- .success -->
   <div class="columns">
-    <div class="row"><div class="columns"><a href="#" class="expanded success button">.success</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded success-light button">.success-light</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded disabled success button">.success .disabled</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow success button">.success .hollow</a></div></div>
-    <div class="row"><div class="columns"><a href="#" class="expanded hollow disabled success button">.success .hollow .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded success button">.success</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded success-light button">.success-light</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded disabled success button">.success .disabled</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow success button">.success .hollow</a></div></div>
+    <div class="row mb-s"><div class="columns"><a href="#" class="expanded hollow disabled success button">.success .hollow .disabled</a></div></div>
   </div>
 </div>
 
