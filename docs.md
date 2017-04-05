@@ -649,9 +649,8 @@ Because cards are self-contained elements, the top-level `.card` class handles t
 - `.card` - Top level class for creating card elements. Add `.border-blue` utility class to create a blue outline.
 - `.caption` - To be used inside card headers to show the status or type of a card, if it's a product.
 - `.card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
-- `.card-section.no-padding` - Use this on image-based cards that take the full-width of the card element.
 
-Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.  
+Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.
 
 #### Product Card Examples
 ```html_example
