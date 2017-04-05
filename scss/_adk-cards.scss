@@ -29,12 +29,36 @@
   }
 }
 
-// Card Content
-// Spacing/gutters in cards should come from the card itself, which has it's own padding.
-// This overrwrites default spacing on elements that exist within cards.
-// The elements inside card componenents should only have margin-bottom for vertical spacing. 
-.card-divider, 
-.card-section {
-  padding: 0;
-  margin: $card-content-margin;
+/**
+ * Images at the top of cards
+ *
+ * Use with `style="background-image:url('/put/the/path/here')"`
+ *
+ * Add the .card-image-no-margin class to make the image extend outside the margins
+ */
+.card-image {
+  position: relative;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.card-image-no-margin {
+    margin-left: -$space;
+    margin-right: -$space;
+    margin-top: -$space-s;
+  }
+
+  // Small breakpoint height
+  height: 5rem;
+
+  // Medium breakpoint height
+  @include breakpoint(medium) {
+    height: 10rem;
+  }
+
+  // Large breakpoint height
+  @include breakpoint(large) {
+    height: 15rem;
+  }
+
 }
