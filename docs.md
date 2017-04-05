@@ -658,38 +658,44 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
 #### Product Card Examples
 ```html_example
 <div class="row small-up-2 medium-up-4">
-<div class="column">
-  <div class="card">
-    <div class="card-section no-padding">
-      <img src="/docs/img/table.jpg">
-    </div>
-    <div class="card-section">
-      <div>
-        <span class="caption new">New Product</span>
-        <span class="material-icons float-right">more_horiz</span>
+  <div class="column">
+    <div class="card">
+      <div class="row no-padding">
+        <div class="column">
+        <img src="/docs/img/table.jpg">
+        </div>
       </div>
-      <div><strong>Pollock Executive Chair</strong></div>
-      <div><span class="meta">Knoll </span><span class="architizer-glyph blue-500 fs-base">+</span></div>
-    </div>
-    <div class="card-section">
-      <a href="#" class="primary hollow button expanded">View Product</a>
+      <div class="row">
+        <div class="column">
+        <div>
+          <span class="caption new">New Product</span>
+          <span class="material-icons float-right">more_horiz</span>
+        </div>
+        <div><strong>Pollock Executive Chair</strong></div>
+        <div><span class="meta">Knoll </span><span class="architizer-glyph blue-500 fs-base">+</span></div>
+        </div>
+      </div>
+      <div class="card-section">
+        <a href="#" class="primary hollow button expanded">View Product</a>
+      </div>
     </div>
   </div>
-  <p> The aspect ratio of images in these full-width image-based cards should be 4:3</p>
-</div>
   <div class="column">
     <div class="card">
       <div class="card-divider">
-        <span class="caption">Product Card</span>
+        <span class="caption new">New Product</span>
       </div>
       <div class="card-section">
         <img src="/docs/img/table.jpg">
       </div>
       <div class="card-section">
-        <strong>Product Title</strong>
-        <p>This card makes use of the card-divider element.</p>
+        <div>
+          <span class="material-icons float-right">more_horiz</span>
+        </div>
+        <div><strong>Pollock Executive Chair</strong></div>
+        <div><span class="meta">Knoll </span><span class="architizer-glyph blue-500 fs-base">+</span></div>
       </div>
-      <div class="card-footer">
+      <div class="card-section">
         <a href="#" class="primary hollow button expanded">View Product</a>
       </div>
     </div>

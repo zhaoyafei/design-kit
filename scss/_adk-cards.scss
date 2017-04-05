@@ -34,6 +34,24 @@
   img {
     border-radius: $global-radius;
   }
+  .row {
+    // margin: 0;
+    margin: $card-content-margin;
+    &.no-padding {
+      margin-left: -$space;
+      margin-right: -$space;
+      margin-top: -$space-s;
+      img {
+        border-radius: 0;
+      }
+    }
+  }
+  .columns, * {
+    padding: 0;
+    &.right {
+      text-align: right;
+    }
+  }
 }
 
 // Card Content
@@ -44,22 +62,4 @@
 .card-section {
   padding: 0;
   margin: $card-content-margin;
-  &.right {
-    text-align: right;
-  }
-  &.no-padding {
-    margin-left: -$space;
-    margin-right: -$space;
-    margin-top: -$space-s;
-    img {
-      border-radius: 0;
-    }
-  }
-  //Overwrite grid spacing
-  .row, * {
-    margin: 0;
-  }
-  .columns, * {
-    padding: 0;
-  }
 }
