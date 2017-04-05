@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="adk no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Architizer Design Kit Starter Template</title>
+    <!-- Architizer Design Kit CSS -->
+    <link rel="stylesheet" href="//localhost:8080/css/adk.css" />
+    <link href="//localhost:8080/node_modules/mfb/src/mfb.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="row"> <!-- Wrap the contents in a row so the $grid-row-width will be applied -->
+        <div class="columns">
+          <div class="top-bar-title">
+            <span data-hide-for="medium" data-responsive-toggle="responsive-menu">
+              <button type="button" data-toggle><i class="material-icons">menu</i></button>
+            </span>
+            <a href="#"><span class="architizer-glyph black">B</span></a>
+          </div>
+          <div id="responsive-menu">
+            <div class="top-bar-left">
+              <ul class="vertical medium-horizontal menu">
+                <li><a href="#">News</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">A+Awards</a></li>
+                <li class="active"><a href="#">Source</a></li>
+              </ul>
+            </div>
+            <div class="top-bar-right">
+              <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+                <li>
+                  <a href="#">Rem Koolhaas</a>
+                  <ul class="menu">
+                    <li><a href="#">Your Profile &amp; Collections</a></li>
+                    <li><a href="#"><i class="material-icons">work</i> OMA</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Sign Out</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Table -->
+    <div class="row">
+      <table class="hover">
+        <thead>
+          <tr>
+            <th width="160">Brand</th>
+            <th width="200">Product Name</th>
+            <th width="200">Attachments</th>
+            <th>Status</th>
+            <th class="center" width="100">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a class="underline">Knoll</a></td>
+            <td>Pollock Executive Chair</td>
+            <td>
+                <a><img class="thumbnail in-table" src="/docs/img/table.jpg" alt="Product"></a>
+                <a><img class="thumbnail in-table" src="/docs/img/table.jpg" alt="Product"></a>
+                <a><img class="thumbnail in-table" src="/docs/img/table.jpg" alt="Product"></a>
+                <a><img class="thumbnail in-table" src="/docs/img/table.jpg" alt="Product"></a>
+                <span class="fs-s">+2</span>
+            </td>
+            <td>Recommended</td>
+            <td class="action"><a>View</a></td>
+          </tr>
+          <tr>
+            <td><a class="underline">Herman Miller</a></td>
+            <td>Aeron Chair</td>
+            <td>
+              <a><img class="thumbnail in-table" src="/docs/img/table.jpg" alt="Product"></a>
+            </td>
+            <td>In Review</td>
+            <td class="action"><a>View</a></td>
+          </tr>
+          <tr class="inactive">
+            <td><a class="underline">Steelcase</a></td>
+            <td>Mesh Think Chair</td>
+            <td>
+              <a><img class="thumbnail in-table" src="/docs/img/table.jpg" alt="Product"></a>
+              <a><img class="thumbnail in-table" src="/docs/img/table.jpg" alt="Product"></a>
+            </td>
+            <td>Dismissed</td>
+            <td class="action"><a>View</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Page content ends here -->
+    <!-- JavaScript dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+    <script src="//localhost:8080/node_modules/mfb/src/mfb.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
