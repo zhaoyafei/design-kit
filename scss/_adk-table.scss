@@ -8,11 +8,15 @@ table {
   thead {
     border: none; // Clear default table-border while preserving the $table-border variable
   }
-  thead, 
+  thead {
+    border-bottom: $table-border;
+    background-color: $white;
+  }
   tbody tr {
     border: none; // Remove default border-bottom on tbody tr
     border-bottom: $table-border;
-    background-color: $white
+    border-color: rgba($adk-gunmetal, 0.1);
+    background-color: $white;
   }
   thead tr *, 
   tfoot tr * {
