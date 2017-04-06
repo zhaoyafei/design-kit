@@ -659,7 +659,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
 ```html_example
 <div class="row small-up-2 medium-up-4">
   <div class="column">
-    <div class="card">
+    <div class="card clickable">
       <div class="row no-padding">
         <div class="column">
         <img src="/docs/img/table.jpg">

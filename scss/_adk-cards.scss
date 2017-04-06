@@ -1,6 +1,18 @@
 // Card Types
 .card {
   padding: $card-padding;
+  &.clickable {
+    cursor: pointer;
+    box-shadow: 0 0 0 2px transparent;
+    transition: box-shadow, 0.1s;
+    &:hover {
+      box-shadow: 0 0 0 2px rgba($adk-blue, 0.8);
+      border-color: rgba($adk-blue, 0.8);
+    }
+    &:active {
+      border-color: $adk-blue;
+    }
+  }
   &.message {
     min-width: 360px;
   }
