@@ -25,6 +25,7 @@ table {
     padding: $space $space-s;
   }
   tr {
+    transition: all $row-hover-time;
     .right {
       text-align: right;
     }
