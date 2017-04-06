@@ -17,6 +17,15 @@
     min-width: 360px;
   }
 
+  // Inactive cards
+  &.inactive {
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   .caption {
     font-size: $font-size-s;
     font-weight: $global-weight-bold;
