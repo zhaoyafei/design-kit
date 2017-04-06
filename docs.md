@@ -655,10 +655,10 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
 
 #### Product Card Examples
 ```html_example
-<div class="row small-up-2 medium-up-4">
+<div class="row small-up-2 medium-up-3 large-up-4">
   <!-- Product Card 1-->
   <div class="column">
-    <div class="card clickable" onclick="cardClick()";">
+    <div class="card clickable" onclick="cardClick()">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
            style="background-image: url('/docs/img/table.jpg')"></div>
@@ -667,47 +667,20 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
         <!-- Response Marking and Dropdown Menu-->
         <div class="row">
           <!-- Response Marking -->
-          <div class="columns shrink">
+          <div class="columns">
             <span class="caption blue">New Product</span>
           </div>
-          <!-- Middle Spacing -->
-          <!-- <div class="columns"></div> -->
-          <!-- Dropdown Menu -->
-<!--           <div class="columns shrink">
-            <ul class="dropdown menu"
-                data-dropdown-menu
-                data-alignment="right"
-                data-click-open="true"
-                data-disable-hover="true">
-              <li>
-                <span class=>
-                  <i class="material-icons" 
-                     style="cursor:pointer; width:1rem;">more_horiz2</i>
-                </span>
-                <ul class="menu">
-                  <li>
-                    <a>Shortlist</a>
-                  </li>
-                  <li>
-                    <a>Dismiss</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div> -->
         </div>
         <!-- Product Name -->
         <div class="row align-middle">
-          <div class="column">
+          <div class="small-12 medium-8 columns">
             <div class="row">
-              <strong>Pollock Executive Chair</strong>
+              <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
             </div>
             <!-- Brand Name -->
             <div class="row align-middle">
               <div class="columns shrink meta">
-                <a href="#"
-                   target="_blank" 
-                   class="underline">Knoll</a>
+                <span>Knoll</span>
               </div>
               <!-- If Verified -->
               <div class="columns shrink ml-xxs pl-0">
@@ -715,7 +688,8 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
               </div>
             </div>
           </div>
-          <div class="column">
+          <!-- Shortlist / Dismiss buttons -->
+          <div class="small-12 medium-4 columns">
             <div class="float-right">
               <button class="alert icon button"><span class="material-icons">close</span></button>
               <button class="success icon button"><span class="material-icons">done</span></button>
@@ -727,7 +701,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   </div>
   <!-- Product Card 2-->
   <div class="column">
-    <div class="card clickable" onclick="cardClick()";">
+    <div class="card clickable" onclick="cardClick()">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
            style="background-image: url('/docs/img/table.jpg')"></div>
@@ -767,7 +741,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
         </div>
         <!-- Product Name -->
         <div class="row">
-          <strong>Pollock Executive Chair</strong>
+          <strong class="ellipsis">Pollock Executive Chair</strong>
         </div>
         <!-- Brand Name -->
         <div class="row align-middle">
@@ -830,7 +804,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
         </div>
         <!-- Product Name -->
         <div class="row">
-          <strong>Pollock Executive Chair</strong>
+          <strong class="ellipsis">Pollock Executive Chair</strong>
         </div>
         <!-- Brand Name -->
         <div class="row align-middle">
