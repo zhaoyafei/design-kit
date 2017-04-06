@@ -646,7 +646,8 @@ Card elements are modules that can be used across our UI, and are currently used
 **A note about card spacing:**
 Because cards are self-contained elements, the top-level `.card` class handles the spacing/gutter inside the card. Therefore the only spacing that happens on elements inside cards is margin-bottom to control vertical spacing, defined by `$card-content-margin`.
 
-- `.card` - Top level class for creating card elements. Add `.border-blue` utility class to create a blue outline.
+- `.card` - Top level class for creating card elements. Add `.border-blue` utility class to create a blue outline. 
+- `.card.clickable` - Add "clickable" to a card if it is an interactive element.
 - `.caption` - To be used inside card headers to show the status or type of a card, if it's a product.
 - `.card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
 
@@ -656,7 +657,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
 ```html_example
 <div class="row small-up-2 medium-up-4">
   <div class="column">
-    <div class="card">
+    <div class="card clickable" onclick="cardClick()";">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
            style="background-image: url('/docs/img/table.jpg')"></div>
@@ -750,6 +751,11 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
     </div>
   </div>
 </div>
+<script>
+function cardClick() {
+    alert("Open this product modal!");
+}
+</script>
 ```
 ---
 
