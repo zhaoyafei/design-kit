@@ -6,11 +6,10 @@
     box-shadow: 0 0 0 2px transparent;
     transition: box-shadow, 0.12s;
     &:hover {
-      box-shadow: 0 0 0 2px rgba($adk-blue, 0.5);
-      border-color: rgba($adk-blue, 0.5);
+      box-shadow: 0 0 10px rgba($adk-quicksilver, 1);
     }
     &:active {
-      box-shadow: 0 0 0 2px $adk-blue;
+      box-shadow: 0 0 0 2px rgba($adk-blue, 0.7);
       border-color: $adk-blue;
     }
   }
