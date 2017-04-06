@@ -655,9 +655,53 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
 
 #### Product Card Examples
 ```html_example
-<div class="row small-up-2 medium-up-4">
+<div class="row small-up-2 medium-up-3 large-up-4">
+  <!-- Product Card 1-->
   <div class="column">
-    <div class="card clickable" onclick="cardClick()";">
+    <div class="card clickable" onclick="cardClick()">
+      <!-- Card Image -->
+      <div class="card-section card-image card-image-no-margin"
+           style="background-image: url('/docs/img/table.jpg')"></div>
+      <!-- Card Content -->
+      <div class="card-section">
+        <!-- Response Marking and Dropdown Menu-->
+        <div class="row">
+          <!-- Response Marking -->
+          <div class="columns">
+            <span class="caption blue">New Product</span>
+          </div>
+        </div>
+        <!-- Product Name -->
+        <div class="row align-middle">
+          <div class="small-12 medium-8 columns">
+            <div class="row">
+              <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+            </div>
+            <!-- Brand Name -->
+            <div class="row align-middle">
+              <div class="columns shrink meta">
+                <span>Knoll</span>
+              </div>
+              <!-- If Verified -->
+              <div class="columns shrink ml-xxs pl-0">
+                <span class="architizer-glyph blue-500">+</span>
+              </div>
+            </div>
+          </div>
+          <!-- Shortlist / Dismiss buttons -->
+          <div class="small-12 medium-4 columns">
+            <div class="float-right">
+              <button class="alert icon button"><span class="material-icons">close</span></button>
+              <button class="success icon button"><span class="material-icons">done</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Product Card 2-->
+  <div class="column">
+    <div class="card clickable" onclick="cardClick()">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
            style="background-image: url('/docs/img/table.jpg')"></div>
@@ -697,7 +741,70 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
         </div>
         <!-- Product Name -->
         <div class="row">
-          <strong>Pollock Executive Chair</strong>
+          <strong class="ellipsis">Pollock Executive Chair</strong>
+        </div>
+        <!-- Brand Name -->
+        <div class="row align-middle">
+          <div class="columns shrink meta pr-0">
+            <a href="#"
+               target="_blank" 
+               class="underline">Knoll</a>
+          </div>
+          <!-- If Verified -->
+          <div class="columns shrink ml-xxs pl-0">
+            <span class="architizer-glyph blue-500">+</span>
+          </div>
+        </div>
+      </div>
+      <!-- View Product Button -->
+<!--       <div class="card-section">
+        <a class="primary hollow button expanded">View Product</a>
+      </div> -->
+    </div>
+  </div> 
+  <!-- Product Card 3-->
+  <div class="column">
+    <div class="card">
+      <!-- Card Image -->
+      <div class="card-section card-image card-image-no-margin"
+           style="background-image: url('/docs/img/table.jpg')"></div>
+      <!-- Card Content -->
+      <div class="card-section">
+        <!-- Response Marking and Dropdown Menu-->
+        <div class="row">
+          <!-- Response Marking -->
+          <div class="columns shrink">
+            <span class="caption blue">New Product</span>
+          </div>
+          <!-- Middle Spacing -->
+          <div class="columns"></div>
+          <!-- Dropdown Menu -->
+          <div class="columns shrink">
+            <ul class="dropdown menu"
+                data-dropdown-menu
+                data-alignment="right"
+                data-click-open="true"
+                data-disable-hover="true">
+              <li>
+                <span class=>
+                  <i class="material-icons" 
+                     style="cursor:pointer; width:1rem;">more_horiz2</i>
+                </span>
+                <ul class="menu">
+                  <li>
+                    <a>Shortlist</a>
+                  </li>
+                  <li>
+                    <a>Dismiss</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Product Name -->
+        <div class="row">
+          <strong class="ellipsis">Pollock Executive Chair</strong>
         </div>
         <!-- Brand Name -->
         <div class="row align-middle">

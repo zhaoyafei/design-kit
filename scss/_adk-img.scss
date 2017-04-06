@@ -6,6 +6,7 @@
 }
 
 .thumbnail {
+  cursor: pointer;
   &.brand {
     width: $space-xxl;
     margin-bottom: 0;
