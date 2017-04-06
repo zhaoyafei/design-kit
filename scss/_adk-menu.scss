@@ -61,8 +61,10 @@ ul {
 }
 
 //Dropdown
-.dropdown-pane {
+.dropdown-pane, .is-dropdown-submenu {
   box-shadow: 0 0 12px rgba($black,.22);
   -webkit-box-shadow: 0 0 12px rgba($black,.22);
+  padding: $space-xs 0;
+  background-color: $white !important;
   z-index: 1000;
 }
