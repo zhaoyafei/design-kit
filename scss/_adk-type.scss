@@ -33,6 +33,11 @@ p > a {
   }
 }
 
+// Don't add bottom padding on paragraphs that are alone
+p:only-of-type {
+  margin-bottom: 0;
+}
+
 // Override past Architizer <a> styles
 a {
   &:after {
