@@ -27,8 +27,11 @@ table {
   }
   thead th {
     padding: $space $space-s;
+    white-space: nowrap; // Don't allow table headings to wrap
   }
   tr {
+    white-space: nowrap; // Don't allow table data to wrap
+
     transition: all $row-hover-time;
     .right {
       text-align: right;
@@ -63,7 +66,7 @@ table {
 }
 @include breakpoint(medium) {
   table {
-    display: table;
-    overflow-x: hidden;
+    overflow-x: auto;
+    display: block;
   }
 }
