@@ -2,6 +2,7 @@ $table-cell: $font-size;
 $table-cell-small: $font-size-s;
 
 table {
+  margin-top: $space-xxs;
   border-collapse: collapse;
   font-size: 16px;
   tbody, 
@@ -26,7 +27,7 @@ table {
     // background-color: $white;
   }
   thead th {
-    padding: $space $space-s;
+    padding: $space-m $space-s $space $space-s;
     white-space: nowrap; // Don't allow table headings to wrap
   }
   tr {
