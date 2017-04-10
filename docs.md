@@ -546,17 +546,49 @@ When creating thumbnails in series, such as on product cards or modals, place th
 The top bar is the main header on Architizer.
 
 ```html_example
+<!-- Respopnsive Top Bar -->
+<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+  <button type="button" data-toggle><i class="material-icons white">menu</i></button>
+  <div class="title-bar-title"><span class="architizer-glyph white">C</span></div>
+</div>
 <!-- Top Bar -->
+<div class="top-bar" id="responsive-menu">
+  <div class="top-bar-left">
+    <ul class="vertical medium-horizontal menu" data-dropdown-menu>
+      <li class=""><a><object class="nav-logo" type="image/svg+xml" data="/docs/logo/source-logo.svg">Architizer Source</object></a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Brands</a></li>
+      <li class="active"><a href="#">Source</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li>
+        <a href="#" class="black">Rem Koolhaas</a>
+        <ul class="menu vertical">
+          <li><a href="#">Your Profile &amp; Collections</a></li>
+          <li><a href="#"><i class="material-icons">work</i> OMA</a></li>
+          <li><a href="#">Account Settings</a></li>
+          <li><a href="#">Sign Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Top Bar Old-->
 <div class="top-bar">
   <div class="row"> <!-- Wrap the contents in a row so the $grid-row-width will be applied -->
     <div class="columns">
       <div class="top-bar-title">
-        <span data-hide-for="medium" data-responsive-toggle="responsive-menu">
+        <span data-hide-for="medium" data-responsive-toggle="responsive-menu-old">
           <button type="button" data-toggle><i class="material-icons">menu</i></button>
         </span>
-        <a href="#"><img class="nav-logo" src="/docs/logo/source-logo.svg"></a>
+        <a href="#"><span class="architizer-glyph black">B</span></a>
       </div>
-      <div id="responsive-menu">
+      <div id="responsive-menu-old">
         <div class="top-bar-left">
           <ul class="vertical medium-horizontal menu">
             <li><a href="#">News</a></li>
@@ -582,38 +614,6 @@ The top bar is the main header on Architizer.
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- Respopnsive Top Bar -->
-<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-  <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-  <div class="title-bar-title">Menu</div>
-</div>
-<!-- Top Bar -->
-<div class="top-bar" id="responsive-menu">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class=""><a><object class="nav-logo" type="image/svg+xml" data="/docs/logo/source-logo.svg">Architizer Source</object></a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">Brands</a></li>
-      <li class="active"><a href="#">Source</a></li>
-    </ul>
-  </div>
-  <div class="top-bar-right">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li>
-        <a href="#">Rem Koolhaas</a>
-        <ul class="menu vertical">
-          <li><a href="#">Your Profile &amp; Collections</a></li>
-          <li><a href="#"><i class="material-icons">work</i> OMA</a></li>
-          <li><a href="#">Account Settings</a></li>
-          <li><a href="#">Sign Out</a></li>
-        </ul>
-      </li>
-    </ul>
   </div>
 </div>
 ```
