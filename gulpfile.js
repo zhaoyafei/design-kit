@@ -46,7 +46,13 @@ gulp.task('webserver', function() {
       port: 8080,
       open: true,
       livereload: false,
+      middleware: [cors],
     }));
+
+  function cors (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  }
 });
 
 // Default task
