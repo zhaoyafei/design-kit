@@ -922,7 +922,7 @@ Refer to the code below to structure a modal or start with the modal template in
     <div class="row">
       <!-- Modal Title -->
       <div class="columns">
-        <h4>Awesome Product.</h4>
+        <h4><strong>Product Name</strong></h4>
       </div>
       <!-- Close Button -->
       <div class="columns shrink">
@@ -932,13 +932,31 @@ Refer to the code below to structure a modal or start with the modal template in
       </div>
     </div>
   </div>
+  <!-- Attachments -->
+  <div class="row">
+    <div class="columns">
+      <div class="thumbnails-up-4">
+        <div class="thumb-col">
+          <img class="thumbnail" src="/docs/img/bear.gif" alt="Product">
+        </div>
+        <div class="thumb-col">
+          <img class="thumbnail" src="/docs/img/bear.gif" alt="Product">
+        </div>
+        <div class="thumb-col">
+          <img class="thumbnail" src="/docs/img/bear.gif" alt="Product">
+        </div>
+        <div class="thumb-col">
+          <img class="thumbnail" src="/docs/img/bear.gif" alt="Product">
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Brand -->
   <div class="row">
     <div class="columns">
-      <h5 class="mb-xs"><strong>Brand</strong></h5>
       <div class="media-object">
         <div class="media-object-section middle">
-          <img class="thumbnail brand" src="img/bear.gif" alt="Product">
+          <img class="thumbnail brand" src="/docs/img/bear.gif" alt="Product">
         </div>
         <div class="media-object-section main-section">
           <h5>Cubby Bear Manufacturing</h5>
@@ -954,30 +972,10 @@ Refer to the code below to structure a modal or start with the modal template in
       <p>I'm really just a wonderful product inside of an even cooler modal. Puppy kitty ipsum dolor sit good dog roll over carrier tuxedo fish lol catz puppy kisses pet supplies meow scooby snacks meow mittens. Fido Rover lol catz yawn drool wag tail Fido food pet gate purr warm behavior kibble litter box ID tag. Roll Over house train chirp pet supplies shake polydactyl wet nose harness tabby biscuit gimme five Rover vaccine roll over licks nap parrot lol catz. Wins!</p>
     </div>
   </div>
-  <!-- Attachments -->
-  <div class="row">
-    <div class="columns">
-      <h5 class="mb-xs"><strong>Attachments</strong></h5>
-      <div class="thumbnails-up-4">
-        <div class="thumb-col">
-          <img class="thumbnail" src="img/bear.gif" alt="Product">
-        </div>
-        <div class="thumb-col">
-          <img class="thumbnail" src="img/bear.gif" alt="Product">
-        </div>
-        <div class="thumb-col">
-          <img class="thumbnail" src="img/bear.gif" alt="Product">
-        </div>
-        <div class="thumb-col">
-          <img class="thumbnail" src="img/bear.gif" alt="Product">
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- Metrics -->
-  <div class="row">
+  <div class="row mb-xxs">
     <div class="columns">
-      <h5 class="mb-xs"><strong>Specifications</strong></h5>
+      <h5 class="mb-xs"><strong>Details</strong></h5>
       <div class="row small-up-4 collapse">
         <div class="column">
           <h5>1.00 – 2.00 USD</h5>
@@ -987,22 +985,12 @@ Refer to the code below to structure a modal or start with the modal template in
           <h5>Two Weeks</h5>
           <h6 class="subheader">Lead Time</h6>
         </div>
-        <div class="column">
-          <h5>2.00 – 3.00 USD</h5>
-          <h6 class="subheader">Price Per Units</h6>
-        </div>
-        <div class="column">
-          <h5>11 Week</h5>
-          <h6 class="subheader">Lead Time</h6>
-        </div>
       </div>
     </div>
   </div>
-  <!-- Shortlist / Dismiss -->
-  <div class="row align-right">
-    <div class="columns shrink">
-      <button class="secondary hollow icon button"><span class="material-icons">close</span></button>
-      <button class="secondary hollow icon button"><span class="material-icons">done</span></button>
+  <div class="row">
+    <div class="columns">
+      <a class="">View product on manufacturer's site</a>
     </div>
   </div>
   <!-- Footer (Buttons) -->
