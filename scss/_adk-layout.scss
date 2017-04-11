@@ -36,6 +36,12 @@
   }
 }
 
+// Nav
+.nav-bar {
+  background-color: $topbar-background;
+  border-bottom: $global-separator;
+}
+
 // Logos
 .nav-logo {
   width: 120px;
