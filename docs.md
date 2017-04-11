@@ -585,63 +585,61 @@ The top bar is the main header on Architizer.
 Action Bars are title bars with other functionality inside them.
 
 ```html_example
-<div class="separator">
-  <div class="row actionbar">
-    <!-- Left: Data -->
-    <div class="small-12 large-expand columns">
-      <!-- Breadcrumbs -->
-      <div class="row">
-        <div class="columns">
-          <ul class="breadcrumbs">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Journal Squared</a></li>
-            <li>
-              <!-- Current View Title -->
-              <span class="inline-block">14 Ergonomic Office Chairs</span>
-              <!-- Dropdown "..." Menu -->
-              <span class="inline-block">
-                <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
-                  <li>
-                    <span><i class="material-icons">more_horiz</i></span>
-                    <ul class="menu">
-                      <li><a href="#">Details</a></li>
-                      <li><a href="#">Edit</a></li>
-                      <li><a href="#">Preview</a></li>
-                      <li><a class="disabled" href="#">Download CSV</a></li>
-                      <li><a class="red" href="#">Delete</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- Current View Title -->
-      <div class="row">
-        <div class="columns">
-          <h3>Products</h3>
-        </div>
+<div class="row actionbar">
+  <!-- Left: Data -->
+  <div class="small-12 large-expand columns">
+    <!-- Breadcrumbs -->
+    <div class="row">
+      <div class="columns">
+        <ul class="breadcrumbs">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Journal Squared</a></li>
+          <li>
+            <!-- Current View Title -->
+            <span class="inline-block">14 Ergonomic Office Chairs</span>
+            <!-- Dropdown "..." Menu -->
+            <span class="inline-block">
+              <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+                <li>
+                  <span><i class="material-icons">more_horiz</i></span>
+                  <ul class="menu">
+                    <li><a href="#">Details</a></li>
+                    <li><a href="#">Edit</a></li>
+                    <li><a href="#">Preview</a></li>
+                    <li><a class="disabled" href="#">Download CSV</a></li>
+                    <li><a class="red" href="#">Delete</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </span>
+          </li>
+        </ul>
       </div>
     </div>
-    <!-- Right: Buttons -->
-    <div class="columns shrink">
-      <a class="light-gray mr-l">Searches</a>
-      <a class="light-gray mr-l">Messages</a>
-      <a class="primary button">New Search</a>
+    <!-- Current View Title -->
+    <div class="row">
+      <div class="columns">
+        <h3>Products</h3>
+      </div>
     </div>
+  </div>
+  <!-- Right: Buttons -->
+  <div class="columns shrink">
+    <a class="light-gray mr-l">Searches</a>
+    <a class="light-gray mr-l">Messages</a>
+    <a class="primary button">New Search</a>
   </div>
 </div>
 ```
 ---
 
-## Cards 
-Card elements are modules that can be used across our UI, and are currently used for the most part in our conversation feed. In these feeds cards can be basic messages, product activity/status cards, recommended products and more, but across the UI we should think of anything as being able to be a "card" that is reused across the system, e.g. product search criteria, so that we don't need to rebuild the same content over and over again when it appears in different places. Card componenets let us copy, paste and reuse. 
+## Cards
+Card elements are modules that can be used across our UI, and are currently used for the most part in our conversation feed. In these feeds cards can be basic messages, product activity/status cards, recommended products and more, but across the UI we should think of anything as being able to be a "card" that is reused across the system, e.g. product search criteria, so that we don't need to rebuild the same content over and over again when it appears in different places. Card componenets let us copy, paste and reuse.
 
 **A note about card spacing:**
 Because cards are self-contained elements, the top-level `.card` class handles the spacing/gutter inside the card. Therefore the only spacing that happens on elements inside cards is margin-bottom to control vertical spacing, defined by `$card-content-margin`.
 
-- `.card` - Top level class for creating card elements. Add `.border-blue` utility class to create a blue outline. 
+- `.card` - Top level class for creating card elements. Add `.border-blue` utility class to create a blue outline.
 - `.card.clickable` - Add "clickable" to a card if it is an interactive element.
 - `.caption` - To be used inside card headers to show the status or type of a card, if it's a product.
 - `.card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
@@ -970,9 +968,6 @@ Refer to the code below to structure a modal or start with the modal template in
 </div>
 ```
 ---
-
-## Utilities
-`.separator` - Use this class on a div to add border-bottom to separate between sections/elements.
 
 
 

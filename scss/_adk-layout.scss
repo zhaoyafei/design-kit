@@ -38,11 +38,3 @@
 .nav-logo {
   width: 120px;
 }
-
-// Utilities
-.separator {
-  border-bottom: $global-separator;
-  &.dark {
-    border-bottom: $global-outline;
-  }
-}
