@@ -11,46 +11,265 @@
 
   </head>
   <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-      <div class="row"> <!-- Wrap the contents in a row so the $grid-row-width will be applied -->
-        <div class="columns">
-          <div class="top-bar-title">
-            <span data-hide-for="medium" data-responsive-toggle="responsive-menu">
-              <button type="button" data-toggle><i class="material-icons">menu</i></button>
-            </span>
-            <a href="#"><span class="architizer-glyph black">B</span></a>
+  <!-- Respopnsive Top Bar -->
+  <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+    <button type="button" data-toggle><i class="material-icons white">menu</i></button>
+    <div class="title-bar-title"><span class="architizer-glyph white">C</span></div>
+  </div>
+  <!-- Top Bar -->
+  <div class="separator">
+    <div class="row">
+      <div class="columns">
+        <div class="top-bar" id="responsive-menu">
+          <div class="top-bar-left">
+            <ul class="vertical medium-horizontal menu" data-dropdown-menu>
+              <li class=""><a><object class="nav-logo" type="image/svg+xml" data="/docs/logo/source-logo.svg">Architizer Source</object></a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Brands</a></li>
+              <li class="active"><a href="#">Source</a></li>
+            </ul>
           </div>
-          <div id="responsive-menu">
-            <div class="top-bar-left">
-              <ul class="vertical medium-horizontal menu">
-                <li><a href="#">News</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">A+Awards</a></li>
-                <li class="active"><a href="#">Source</a></li>
-              </ul>
-            </div>
-            <div class="top-bar-right">
-              <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
-                <li>
-                  <a href="#">Rem Koolhaas</a>
-                  <ul class="menu">
-                    <li><a href="#">Your Profile &amp; Collections</a></li>
-                    <li><a href="#"><i class="material-icons">work</i> OMA</a></li>
-                    <li><a href="#">Account Settings</a></li>
-                    <li><a href="#">Sign Out</a></li>
+          <div class="top-bar-right">
+            <ul class="dropdown menu" data-dropdown-menu>
+              <li>
+                <a href="#" class="black">Rem Koolhaas</a>
+                <ul class="menu vertical">
+                  <li><a href="#">Your Profile &amp; Collections</a></li>
+                  <li><a href="#"><i class="material-icons">work</i> OMA</a></li>
+                  <li><a href="#">Account Settings</a></li>
+                  <li><a href="#">Sign Out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Actionbar -->
+  <div class="separator mb-l">
+    <div class="row actionbar">
+      <!-- Left: Data -->
+      <div class="small-12 large-expand columns">
+        <!-- Breadcrumbs -->
+        <div class="row">
+          <div class="columns">
+            <ul class="breadcrumbs">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Journal Squared</a></li>
+              <li>
+                <!-- Current View Title -->
+                <span class="inline-block">14 Ergonomic Office Chairs</span>
+                <!-- Dropdown "..." Menu -->
+                <span class="inline-block">
+                  <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+                    <li>
+                      <span><i class="material-icons">more_horiz</i></span>
+                      <ul class="menu">
+                        <li><a href="#">Details</a></li>
+                        <li><a href="#">Edit</a></li>
+                        <li><a href="#">Preview</a></li>
+                        <li><a class="disabled" href="#">Download CSV</a></li>
+                        <li><a class="red" href="#">Delete</a></li>
+                      </ul>
+                    </li>
                   </ul>
-                </li>
-              </ul>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Current View Title -->
+        <div class="row">
+          <div class="columns">
+            <h3>Products</h3>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Buttons -->
+      <div class="columns shrink">
+        <a class="light-gray mr-l">Searches</a>
+        <a class="light-gray mr-l">Messages</a>
+        <a class="primary button">New Search</a>
+      </div>
+    </div>
+  </div>
+    <!-- Cards -->
+    <div class="row small-up-2 medium-up-3 large-up-4">
+      <!-- Product Card -->
+      <div class="column">
+        <div class="card clickable" onclick="cardClick()">
+          <!-- Card Image -->
+          <div class="card-section card-image card-image-no-margin"
+               style="background-image: url('/docs/img/table.jpg')"></div>
+          <!-- Card Content -->
+          <div class="card-section">
+            <!-- Response Marking and Dropdown Menu-->
+            <div class="row">
+              <!-- Response Marking -->
+              <div class="columns">
+                <span class="caption blue">New Product</span>
+              </div>
+            </div>
+            <!-- Product Name -->
+            <div class="row align-middle">
+              <div class="small-12 medium-8 columns">
+                <div class="row">
+                  <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+                </div>
+                <!-- Brand Name -->
+                <div class="row align-middle">
+                  <div class="columns shrink meta">
+                    <span>Knoll</span>
+                  </div>
+                  <!-- If Verified -->
+                  <div class="columns shrink ml-xxs pl-0">
+                    <span class="architizer-glyph blue-500">+</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Shortlist / Dismiss buttons -->
+              <div class="small-12 medium-4 columns">
+                <div class="float-right">
+                  <button class="alert icon button"><span class="material-icons">close</span></button>
+                  <button class="success icon button"><span class="material-icons">done</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      <!-- Product Card -->
+      <div class="column">
+        <div class="card clickable" onclick="cardClick()">
+          <!-- Card Image -->
+          <div class="card-section card-image card-image-no-margin"
+               style="background-image: url('/docs/img/table.jpg')"></div>
+          <!-- Card Content -->
+          <div class="card-section">
+            <!-- Response Marking and Dropdown Menu-->
+            <div class="row">
+              <!-- Response Marking -->
+              <div class="columns">
+                <span class="caption blue">New Product</span>
+              </div>
+            </div>
+            <!-- Product Name -->
+            <div class="row align-middle">
+              <div class="small-12 medium-8 columns">
+                <div class="row">
+                  <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+                </div>
+                <!-- Brand Name -->
+                <div class="row align-middle">
+                  <div class="columns shrink meta">
+                    <span>Knoll</span>
+                  </div>
+                  <!-- If Verified -->
+                  <div class="columns shrink ml-xxs pl-0">
+                    <span class="architizer-glyph blue-500">+</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Shortlist / Dismiss buttons -->
+              <div class="small-12 medium-4 columns">
+                <div class="float-right">
+                  <button class="alert icon button"><span class="material-icons">close</span></button>
+                  <button class="success icon button"><span class="material-icons">done</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      <!-- Product Card -->
+      <div class="column">
+        <div class="card clickable" onclick="cardClick()">
+          <!-- Card Image -->
+          <div class="card-section card-image card-image-no-margin"
+               style="background-image: url('/docs/img/table.jpg')"></div>
+          <!-- Card Content -->
+          <div class="card-section">
+            <!-- Response Marking and Dropdown Menu-->
+            <div class="row">
+              <!-- Response Marking -->
+              <div class="columns">
+                <span class="caption blue">New Product</span>
+              </div>
+            </div>
+            <!-- Product Name -->
+            <div class="row align-middle">
+              <div class="small-12 medium-8 columns">
+                <div class="row">
+                  <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+                </div>
+                <!-- Brand Name -->
+                <div class="row align-middle">
+                  <div class="columns shrink meta">
+                    <span>Knoll</span>
+                  </div>
+                  <!-- If Verified -->
+                  <div class="columns shrink ml-xxs pl-0">
+                    <span class="architizer-glyph blue-500">+</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Shortlist / Dismiss buttons -->
+              <div class="small-12 medium-4 columns">
+                <div class="float-right">
+                  <button class="alert icon button"><span class="material-icons">close</span></button>
+                  <button class="success icon button"><span class="material-icons">done</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      <!-- Product Card -->
+      <div class="column">
+        <div class="card clickable" onclick="cardClick()">
+          <!-- Card Image -->
+          <div class="card-section card-image card-image-no-margin"
+               style="background-image: url('/docs/img/table.jpg')"></div>
+          <!-- Card Content -->
+          <div class="card-section">
+            <!-- Response Marking and Dropdown Menu-->
+            <div class="row">
+              <!-- Response Marking -->
+              <div class="columns">
+                <span class="caption blue">New Product</span>
+              </div>
+            </div>
+            <!-- Product Name -->
+            <div class="row align-middle">
+              <div class="small-12 medium-8 columns">
+                <div class="row">
+                  <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+                </div>
+                <!-- Brand Name -->
+                <div class="row align-middle">
+                  <div class="columns shrink meta">
+                    <span>Knoll</span>
+                  </div>
+                  <!-- If Verified -->
+                  <div class="columns shrink ml-xxs pl-0">
+                    <span class="architizer-glyph blue-500">+</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Shortlist / Dismiss buttons -->
+              <div class="small-12 medium-4 columns">
+                <div class="float-right">
+                  <button class="alert icon button"><span class="material-icons">close</span></button>
+                  <button class="success icon button"><span class="material-icons">done</span></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Table -->
-    <div class="row">
+<!--     <div class="row">
       <table class="hover">
         <thead>
           <tr>
@@ -96,7 +315,7 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
     <!-- Page content ends here -->
     <!-- JavaScript dependencies -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

@@ -11,7 +11,6 @@
   @include flex-align(null, middle);
 
   padding: $space-s 0;
-  border-bottom: $global-separator;
   background-color: $white;
 }
 
@@ -40,4 +39,12 @@
 // Logos
 .nav-logo {
   width: 120px;
+}
+
+// Utilities
+.separator {
+  border-bottom: $global-separator;
+  &.dark {
+    border-bottom: $global-outline;
+  }
 }
