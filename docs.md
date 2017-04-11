@@ -555,7 +555,7 @@ The top bar is the main header on Architizer.
 <div class="top-bar" id="responsive-menu">
   <div class="top-bar-left">
     <ul class="vertical medium-horizontal menu" data-dropdown-menu>
-      <li class=""><a><object class="nav-logo" type="image/svg+xml" data="/docs/logo/source-logo.svg">Architizer Source</object></a></li>
+      <li class="hide-for-small-only"><a><object class="nav-logo" type="image/svg+xml" data="/docs/logo/source-logo.svg">Architizer Source</object></a></li>
       <li><a href="#">News</a></li>
       <li><a href="#">Projects</a></li>
       <li><a href="#">Products</a></li>
