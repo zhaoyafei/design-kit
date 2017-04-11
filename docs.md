@@ -577,45 +577,6 @@ The top bar is the main header on Architizer.
     </ul>
   </div>
 </div>
-
-<!-- Top Bar Old-->
-<div class="top-bar">
-  <div class="row"> <!-- Wrap the contents in a row so the $grid-row-width will be applied -->
-    <div class="columns">
-      <div class="top-bar-title">
-        <span data-hide-for="medium" data-responsive-toggle="responsive-menu-old">
-          <button type="button" data-toggle><i class="material-icons">menu</i></button>
-        </span>
-        <a href="#"><span class="architizer-glyph black">B</span></a>
-      </div>
-      <div id="responsive-menu-old">
-        <div class="top-bar-left">
-          <ul class="vertical medium-horizontal menu">
-            <li><a href="#">News</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Brands</a></li>
-            <li><a href="#">A+Awards</a></li>
-            <li class="active"><a href="#">Source</a></li>
-          </ul>
-        </div>
-        <div class="top-bar-right">
-          <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
-            <li>
-              <a href="#">Rem Koolhaas</a>
-              <ul class="menu">
-                <li><a href="#">Your Profile &amp; Collections</a></li>
-                <li><a href="#"><i class="material-icons">work</i> OMA</a></li>
-                <li><a href="#">Account Settings</a></li>
-                <li><a href="#">Sign Out</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 ```
 ---
 
