@@ -9,7 +9,7 @@
 // Action Bar
 .actionbar {
   @include flex-align(null, middle);
-  @extend .mb-l;
+  margin-bottom: $space-l;
   width: 100%;
   padding: $space-s 0;
   background-color: $white;
