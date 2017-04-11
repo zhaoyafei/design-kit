@@ -11,6 +11,7 @@
   @include flex-align(null, middle);
   padding: $space-s 0;
   background-color: $white;
+  border-bottom: $global-separator;
 }
 
 // Breadcrumbs (Overrides)
