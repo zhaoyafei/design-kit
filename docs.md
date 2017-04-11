@@ -587,7 +587,7 @@ Action Bars are title bars with other functionality inside them.
 ```html_example
 <div class="actionbar">
   <!-- Left: Data -->
-  <div class="row">
+  <div class="row align-middle">
     <div class="small-12 large-expand columns">
       <!-- Breadcrumbs -->
       <div class="row">
