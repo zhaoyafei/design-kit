@@ -46,7 +46,7 @@
  $adk-button-background-hover-lightness: -20%;
  $adk-button-hollow-hover-lightness: -50%;
  $adk-button-icon-hover-lightness: -20%;
- $adk-button-transition: background-color 0.15s ease-out, color 0.15s ease-out;
+ $adk-button-transition: all 0.12s ease-out;
 
 
 // TODO: Document button-base() mixin

@@ -58,6 +58,19 @@ ul {
 // Top Bar to be used as action/nav bars
 .top-bar {
   border-bottom: $global-separator;
+
+  & .top-bar-left > ul > li {
+    padding: $menu-item-padding;
+
+    &:first-of-type {
+      padding-left: 0;
+      padding-right: $space-xs;
+    }
+
+    & > a {
+      padding: 0;
+    }
+  }
 }
 
 //Dropdown
