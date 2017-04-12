@@ -42,12 +42,12 @@ span.input-group-label {
   $background-lighten: 10%
 ) {
   &:not(:focus) {
-    border-color: $background;
+    border-color: get-color(alert);
     background-color: mix($background, $white, $background-lighten);
-    color: $background; // Make the text match the border
+    color: get-color(alert); // Make the text match the border
 
     &::placeholder {
-      color: $background;
+      color: get-color(alert);
     }
   }
 }
@@ -57,12 +57,12 @@ span.input-group-label {
   $background-lighten: 10%
 ) {
   &:not(.focus) {
-    border-color: $background;
+    border-color: get-color(alert);
     background-color: mix($background, $white, $background-lighten);
-    color: $background; // Make the text match the border
+    color: get-color(alert); // Make the text match the border
 
     input::placeholder {
-      color: $background;
+      color: get-color(alert);
     }
   }
 }

@@ -194,7 +194,7 @@ $hr-border: $global-separator;
 
 // $abide-inputs: true;
 // $abide-labels: true;
-// $input-background-invalid: get-color(alert);
+$input-background-invalid: $white;
 // $form-label-color-invalid: get-color(alert);
 // $input-error-color: get-color(alert);
 // $input-error-font-size: rem-calc(12);
