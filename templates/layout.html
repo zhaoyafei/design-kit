@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Architizer Design Kit Starter Template</title>
     <!-- Architizer Design Kit CSS -->
-    <link rel="stylesheet" href="//localhost:8080/css/adk.css" />
-    <link href="//localhost:8080/node_modules/mfb/src/mfb.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/adk.css" />
 
   </head>
   <body>
@@ -45,10 +44,10 @@
       </div>
     </div>
   </div>
-    <!-- Actionbar -->
-  <div class="separator mb-l">
-    <div class="row actionbar">
-      <!-- Left: Data -->
+  <!-- Actionbar -->
+  <div class="actionbar">
+    <!-- Left: Data -->
+    <div class="row align-middle">
       <div class="small-12 large-expand columns">
         <!-- Breadcrumbs -->
         <div class="row">
@@ -93,350 +92,363 @@
       </div>
     </div>
   </div>
-    <!-- Cards -->
-    <div class="row small-up-1 medium-up-3 large-up-4">
-      <!-- Product Card -->
-      <div class="column">
-        <div class="card clickable" onclick="cardClick()">
-          <!-- Card Image -->
-          <div class="card-section card-image card-image-no-margin"
-               style="background-image: url('/docs/img/table.jpg')"></div>
-          <!-- Card Content -->
-          <div class="card-section">
-            <!-- Response Marking and Dropdown Menu-->
-            <div class="row">
-              <!-- Response Marking -->
-              <div class="columns">
-                <span class="caption blue">New Product</span>
-              </div>
-            </div>
-            <!-- Product Name -->
-            <div class="row align-middle">
-              <div class="small-12 medium-8 columns">
-                <div class="row">
-                  <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
-                </div>
-                <!-- Brand Name -->
-                <div class="row align-middle">
-                  <div class="columns shrink meta">
-                    <span>Knoll</span>
-                  </div>
-                  <!-- If Verified -->
-                  <div class="columns shrink ml-xxs pl-0">
-                    <span class="architizer-glyph blue-500">+</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Shortlist / Dismiss buttons -->
-              <div class="small-12 medium-4 columns">
-                <div class="float-right">
-                  <button class="alert icon button"><span class="material-icons">close</span></button>
-                  <button class="success icon button"><span class="material-icons">done</span></button>
-                </div>
-              </div>
+  <!-- Cards -->
+  <div class="row small-up-1 medium-up-3 large-up-4">
+    <!-- Product Card -->
+    <div class="column">
+      <div class="card clickable"
+        onclick="cardClick()">
+        <!-- Card Image -->
+        <div class="card-section card-image card-image-no-margin"
+          style="background-image: url('/docs/img/table.jpg')"></div>
+        <!-- Card Content -->
+        <div class="card-section">
+          <!-- Response Marking and Dropdown Menu-->
+          <div class="row">
+            <!-- Response Marking -->
+            <div class="columns">
+              <span class="caption blue">New Product</span>
             </div>
           </div>
-        </div>
-      </div>      <!-- Product Card -->
-      <div class="column">
-        <div class="card clickable" onclick="cardClick()">
-          <!-- Card Image -->
-          <div class="card-section card-image card-image-no-margin"
-               style="background-image: url('/docs/img/table.jpg')"></div>
-          <!-- Card Content -->
-          <div class="card-section">
-            <!-- Response Marking and Dropdown Menu-->
-            <div class="row">
-              <!-- Response Marking -->
-              <div class="columns">
-                <span class="caption blue">New Product</span>
+          <!-- Product Name -->
+          <div class="row align-middle">
+            <div class="small-12 medium-8 columns">
+              <div class="row">
+                <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
               </div>
-            </div>
-            <!-- Product Name -->
-            <div class="row align-middle">
-              <div class="small-12 medium-8 columns">
-                <div class="row">
-                  <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+              <!-- Brand Name -->
+              <div class="row align-middle">
+                <div class="columns shrink meta">
+                  <span>Knoll</span>
                 </div>
-                <!-- Brand Name -->
-                <div class="row align-middle">
-                  <div class="columns shrink meta">
-                    <span>Knoll</span>
-                  </div>
-                  <!-- If Verified -->
-                  <div class="columns shrink ml-xxs pl-0">
-                    <span class="architizer-glyph blue-500">+</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Shortlist / Dismiss buttons -->
-              <div class="small-12 medium-4 columns">
-                <div class="float-right">
-                  <button class="alert icon button"><span class="material-icons">close</span></button>
-                  <button class="success icon button"><span class="material-icons">done</span></button>
+                <!-- If Verified -->
+                <div class="columns shrink ml-xxs pl-0">
+                  <span class="architizer-glyph blue-500">+</span>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>      
-      <!-- Product Card -->
-      <div class="column">
-        <div class="card clickable" onclick="cardClick()">
-          <!-- Card Image -->
-          <div class="card-section card-image card-image-no-margin"
-               style="background-image: url('/docs/img/table.jpg')"></div>
-          <!-- Card Content -->
-          <div class="card-section">
-            <!-- Response Marking and Dropdown Menu-->
-            <div class="row">
-              <!-- Response Marking -->
-              <div class="columns">
-                <span class="caption blue">New Product</span>
-              </div>
-            </div>
-            <!-- Product Name -->
-            <div class="row align-middle">
-              <div class="small-12 medium-8 columns">
-                <div class="row">
-                  <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
-                </div>
-                <!-- Brand Name -->
-                <div class="row align-middle">
-                  <div class="columns shrink meta">
-                    <span>Knoll</span>
-                  </div>
-                  <!-- If Verified -->
-                  <div class="columns shrink ml-xxs pl-0">
-                    <span class="architizer-glyph blue-500">+</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Shortlist / Dismiss buttons -->
-              <div class="small-12 medium-4 columns">
-                <div class="float-right">
-                  <button class="alert icon button"><span class="material-icons">close</span></button>
-                  <button class="success icon button"><span class="material-icons">done</span></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>      
-      <!-- Product Card -->
-      <div class="column">
-        <div class="card clickable" onclick="cardClick()">
-          <!-- Card Image -->
-          <div class="card-section card-image card-image-no-margin"
-               style="background-image: url('/docs/img/table.jpg')"></div>
-          <!-- Card Content -->
-          <div class="card-section">
-            <!-- Response Marking and Dropdown Menu-->
-            <div class="row">
-              <!-- Response Marking -->
-              <div class="columns">
-                <span class="caption blue">New Product</span>
-              </div>
-            </div>
-            <!-- Product Name -->
-            <div class="row align-middle">
-              <div class="small-12 medium-8 columns">
-                <div class="row">
-                  <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
-                </div>
-                <!-- Brand Name -->
-                <div class="row align-middle">
-                  <div class="columns shrink meta">
-                    <span>Knoll</span>
-                  </div>
-                  <!-- If Verified -->
-                  <div class="columns shrink ml-xxs pl-0">
-                    <span class="architizer-glyph blue-500">+</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Shortlist / Dismiss buttons -->
-              <div class="small-12 medium-4 columns">
-                <div class="float-right">
-                  <button class="alert icon button"><span class="material-icons">close</span></button>
-                  <button class="success icon button"><span class="material-icons">done</span></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>      <!-- Product Card -->
-      <div class="column">
-        <div class="card clickable" onclick="cardClick()">
-          <!-- Card Image -->
-          <div class="card-section card-image card-image-no-margin"
-               style="background-image: url('/docs/img/table.jpg')"></div>
-          <!-- Card Content -->
-          <div class="card-section">
-            <!-- Response Marking and Dropdown Menu-->
-            <div class="row">
-              <!-- Response Marking -->
-              <div class="columns">
-                <span class="caption blue">New Product</span>
-              </div>
-            </div>
-            <!-- Product Name -->
-            <div class="row align-middle">
-              <div class="small-12 medium-8 columns">
-                <div class="row">
-                  <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
-                </div>
-                <!-- Brand Name -->
-                <div class="row align-middle">
-                  <div class="columns shrink meta">
-                    <span>Knoll</span>
-                  </div>
-                  <!-- If Verified -->
-                  <div class="columns shrink ml-xxs pl-0">
-                    <span class="architizer-glyph blue-500">+</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Shortlist / Dismiss buttons -->
-              <div class="small-12 medium-4 columns">
-                <div class="float-right">
-                  <button class="alert icon button"><span class="material-icons">close</span></button>
-                  <button class="success icon button"><span class="material-icons">done</span></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>      <!-- Product Card -->
-      <div class="column">
-        <div class="card clickable" onclick="cardClick()">
-          <!-- Card Image -->
-          <div class="card-section card-image card-image-no-margin"
-               style="background-image: url('/docs/img/table.jpg')"></div>
-          <!-- Card Content -->
-          <div class="card-section">
-            <!-- Response Marking and Dropdown Menu-->
-            <div class="row">
-              <!-- Response Marking -->
-              <div class="columns">
-                <span class="caption blue">New Product</span>
-              </div>
-            </div>
-            <!-- Product Name -->
-            <div class="row align-middle">
-              <div class="small-12 medium-8 columns">
-                <div class="row">
-                  <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
-                </div>
-                <!-- Brand Name -->
-                <div class="row align-middle">
-                  <div class="columns shrink meta">
-                    <span>Knoll</span>
-                  </div>
-                  <!-- If Verified -->
-                  <div class="columns shrink ml-xxs pl-0">
-                    <span class="architizer-glyph blue-500">+</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Shortlist / Dismiss buttons -->
-              <div class="small-12 medium-4 columns">
-                <div class="float-right">
-                  <button class="alert icon button"><span class="material-icons">close</span></button>
-                  <button class="success icon button"><span class="material-icons">done</span></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>      <!-- Product Card -->
-      <div class="column">
-        <div class="card clickable" onclick="cardClick()">
-          <!-- Card Image -->
-          <div class="card-section card-image card-image-no-margin"
-               style="background-image: url('/docs/img/table.jpg')"></div>
-          <!-- Card Content -->
-          <div class="card-section">
-            <!-- Response Marking and Dropdown Menu-->
-            <div class="row">
-              <!-- Response Marking -->
-              <div class="columns">
-                <span class="caption blue">New Product</span>
-              </div>
-            </div>
-            <!-- Product Name -->
-            <div class="row align-middle">
-              <div class="small-12 medium-8 columns">
-                <div class="row">
-                  <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
-                </div>
-                <!-- Brand Name -->
-                <div class="row align-middle">
-                  <div class="columns shrink meta">
-                    <span>Knoll</span>
-                  </div>
-                  <!-- If Verified -->
-                  <div class="columns shrink ml-xxs pl-0">
-                    <span class="architizer-glyph blue-500">+</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Shortlist / Dismiss buttons -->
-              <div class="small-12 medium-4 columns">
-                <div class="float-right">
-                  <button class="alert icon button"><span class="material-icons">close</span></button>
-                  <button class="success icon button"><span class="material-icons">done</span></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>      <!-- Product Card -->
-      <div class="column">
-        <div class="card clickable" onclick="cardClick()">
-          <!-- Card Image -->
-          <div class="card-section card-image card-image-no-margin"
-               style="background-image: url('/docs/img/table.jpg')"></div>
-          <!-- Card Content -->
-          <div class="card-section">
-            <!-- Response Marking and Dropdown Menu-->
-            <div class="row">
-              <!-- Response Marking -->
-              <div class="columns">
-                <span class="caption blue">New Product</span>
-              </div>
-            </div>
-            <!-- Product Name -->
-            <div class="row align-middle">
-              <div class="small-12 medium-8 columns">
-                <div class="row">
-                  <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
-                </div>
-                <!-- Brand Name -->
-                <div class="row align-middle">
-                  <div class="columns shrink meta">
-                    <span>Knoll</span>
-                  </div>
-                  <!-- If Verified -->
-                  <div class="columns shrink ml-xxs pl-0">
-                    <span class="architizer-glyph blue-500">+</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Shortlist / Dismiss buttons -->
-              <div class="small-12 medium-4 columns">
-                <div class="float-right">
-                  <button class="alert icon button"><span class="material-icons">close</span></button>
-                  <button class="success icon button"><span class="material-icons">done</span></button>
-                </div>
+            <!-- Shortlist / Dismiss buttons -->
+            <div class="small-12 medium-4 columns">
+              <div class="float-right">
+                <button class="alert icon button"><span class="material-icons">close</span></button>
+                <button class="success icon button"><span class="material-icons">done</span></button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Table -->
-<!--     <div class="row">
+    <!-- Product Card -->
+    <div class="column">
+      <div class="card clickable"
+        onclick="cardClick()">
+        <!-- Card Image -->
+        <div class="card-section card-image card-image-no-margin"
+          style="background-image: url('/docs/img/table.jpg')"></div>
+        <!-- Card Content -->
+        <div class="card-section">
+          <!-- Response Marking and Dropdown Menu-->
+          <div class="row">
+            <!-- Response Marking -->
+            <div class="columns">
+              <span class="caption blue">New Product</span>
+            </div>
+          </div>
+          <!-- Product Name -->
+          <div class="row align-middle">
+            <div class="small-12 medium-8 columns">
+              <div class="row">
+                <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+              </div>
+              <!-- Brand Name -->
+              <div class="row align-middle">
+                <div class="columns shrink meta">
+                  <span>Knoll</span>
+                </div>
+                <!-- If Verified -->
+                <div class="columns shrink ml-xxs pl-0">
+                  <span class="architizer-glyph blue-500">+</span>
+                </div>
+              </div>
+            </div>
+            <!-- Shortlist / Dismiss buttons -->
+            <div class="small-12 medium-4 columns">
+              <div class="float-right">
+                <button class="alert icon button"><span class="material-icons">close</span></button>
+                <button class="success icon button"><span class="material-icons">done</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product Card -->
+    <div class="column">
+      <div class="card clickable"
+        onclick="cardClick()">
+        <!-- Card Image -->
+        <div class="card-section card-image card-image-no-margin"
+          style="background-image: url('/docs/img/table.jpg')"></div>
+        <!-- Card Content -->
+        <div class="card-section">
+          <!-- Response Marking and Dropdown Menu-->
+          <div class="row">
+            <!-- Response Marking -->
+            <div class="columns">
+              <span class="caption blue">New Product</span>
+            </div>
+          </div>
+          <!-- Product Name -->
+          <div class="row align-middle">
+            <div class="small-12 medium-8 columns">
+              <div class="row">
+                <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+              </div>
+              <!-- Brand Name -->
+              <div class="row align-middle">
+                <div class="columns shrink meta">
+                  <span>Knoll</span>
+                </div>
+                <!-- If Verified -->
+                <div class="columns shrink ml-xxs pl-0">
+                  <span class="architizer-glyph blue-500">+</span>
+                </div>
+              </div>
+            </div>
+            <!-- Shortlist / Dismiss buttons -->
+            <div class="small-12 medium-4 columns">
+              <div class="float-right">
+                <button class="alert icon button"><span class="material-icons">close</span></button>
+                <button class="success icon button"><span class="material-icons">done</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product Card -->
+    <div class="column">
+      <div class="card clickable"
+        onclick="cardClick()">
+        <!-- Card Image -->
+        <div class="card-section card-image card-image-no-margin"
+          style="background-image: url('/docs/img/table.jpg')"></div>
+        <!-- Card Content -->
+        <div class="card-section">
+          <!-- Response Marking and Dropdown Menu-->
+          <div class="row">
+            <!-- Response Marking -->
+            <div class="columns">
+              <span class="caption blue">New Product</span>
+            </div>
+          </div>
+          <!-- Product Name -->
+          <div class="row align-middle">
+            <div class="small-12 medium-8 columns">
+              <div class="row">
+                <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+              </div>
+              <!-- Brand Name -->
+              <div class="row align-middle">
+                <div class="columns shrink meta">
+                  <span>Knoll</span>
+                </div>
+                <!-- If Verified -->
+                <div class="columns shrink ml-xxs pl-0">
+                  <span class="architizer-glyph blue-500">+</span>
+                </div>
+              </div>
+            </div>
+            <!-- Shortlist / Dismiss buttons -->
+            <div class="small-12 medium-4 columns">
+              <div class="float-right">
+                <button class="alert icon button"><span class="material-icons">close</span></button>
+                <button class="success icon button"><span class="material-icons">done</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product Card -->
+    <div class="column">
+      <div class="card clickable"
+        onclick="cardClick()">
+        <!-- Card Image -->
+        <div class="card-section card-image card-image-no-margin"
+          style="background-image: url('/docs/img/table.jpg')"></div>
+        <!-- Card Content -->
+        <div class="card-section">
+          <!-- Response Marking and Dropdown Menu-->
+          <div class="row">
+            <!-- Response Marking -->
+            <div class="columns">
+              <span class="caption blue">New Product</span>
+            </div>
+          </div>
+          <!-- Product Name -->
+          <div class="row align-middle">
+            <div class="small-12 medium-8 columns">
+              <div class="row">
+                <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+              </div>
+              <!-- Brand Name -->
+              <div class="row align-middle">
+                <div class="columns shrink meta">
+                  <span>Knoll</span>
+                </div>
+                <!-- If Verified -->
+                <div class="columns shrink ml-xxs pl-0">
+                  <span class="architizer-glyph blue-500">+</span>
+                </div>
+              </div>
+            </div>
+            <!-- Shortlist / Dismiss buttons -->
+            <div class="small-12 medium-4 columns">
+              <div class="float-right">
+                <button class="alert icon button"><span class="material-icons">close</span></button>
+                <button class="success icon button"><span class="material-icons">done</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product Card -->
+    <div class="column">
+      <div class="card clickable"
+        onclick="cardClick()">
+        <!-- Card Image -->
+        <div class="card-section card-image card-image-no-margin"
+          style="background-image: url('/docs/img/table.jpg')"></div>
+        <!-- Card Content -->
+        <div class="card-section">
+          <!-- Response Marking and Dropdown Menu-->
+          <div class="row">
+            <!-- Response Marking -->
+            <div class="columns">
+              <span class="caption blue">New Product</span>
+            </div>
+          </div>
+          <!-- Product Name -->
+          <div class="row align-middle">
+            <div class="small-12 medium-8 columns">
+              <div class="row">
+                <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+              </div>
+              <!-- Brand Name -->
+              <div class="row align-middle">
+                <div class="columns shrink meta">
+                  <span>Knoll</span>
+                </div>
+                <!-- If Verified -->
+                <div class="columns shrink ml-xxs pl-0">
+                  <span class="architizer-glyph blue-500">+</span>
+                </div>
+              </div>
+            </div>
+            <!-- Shortlist / Dismiss buttons -->
+            <div class="small-12 medium-4 columns">
+              <div class="float-right">
+                <button class="alert icon button"><span class="material-icons">close</span></button>
+                <button class="success icon button"><span class="material-icons">done</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product Card -->
+    <div class="column">
+      <div class="card clickable"
+        onclick="cardClick()">
+        <!-- Card Image -->
+        <div class="card-section card-image card-image-no-margin"
+          style="background-image: url('/docs/img/table.jpg')"></div>
+        <!-- Card Content -->
+        <div class="card-section">
+          <!-- Response Marking and Dropdown Menu-->
+          <div class="row">
+            <!-- Response Marking -->
+            <div class="columns">
+              <span class="caption blue">New Product</span>
+            </div>
+          </div>
+          <!-- Product Name -->
+          <div class="row align-middle">
+            <div class="small-12 medium-8 columns">
+              <div class="row">
+                <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+              </div>
+              <!-- Brand Name -->
+              <div class="row align-middle">
+                <div class="columns shrink meta">
+                  <span>Knoll</span>
+                </div>
+                <!-- If Verified -->
+                <div class="columns shrink ml-xxs pl-0">
+                  <span class="architizer-glyph blue-500">+</span>
+                </div>
+              </div>
+            </div>
+            <!-- Shortlist / Dismiss buttons -->
+            <div class="small-12 medium-4 columns">
+              <div class="float-right">
+                <button class="alert icon button"><span class="material-icons">close</span></button>
+                <button class="success icon button"><span class="material-icons">done</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product Card -->
+    <div class="column">
+      <div class="card clickable"
+        onclick="cardClick()">
+        <!-- Card Image -->
+        <div class="card-section card-image card-image-no-margin"
+          style="background-image: url('/docs/img/table.jpg')"></div>
+        <!-- Card Content -->
+        <div class="card-section">
+          <!-- Response Marking and Dropdown Menu-->
+          <div class="row">
+            <!-- Response Marking -->
+            <div class="columns">
+              <span class="caption blue">New Product</span>
+            </div>
+          </div>
+          <!-- Product Name -->
+          <div class="row align-middle">
+            <div class="small-12 medium-8 columns">
+              <div class="row">
+                <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+              </div>
+              <!-- Brand Name -->
+              <div class="row align-middle">
+                <div class="columns shrink meta">
+                  <span>Knoll</span>
+                </div>
+                <!-- If Verified -->
+                <div class="columns shrink ml-xxs pl-0">
+                  <span class="architizer-glyph blue-500">+</span>
+                </div>
+              </div>
+            </div>
+            <!-- Shortlist / Dismiss buttons -->
+            <div class="small-12 medium-4 columns">
+              <div class="float-right">
+                <button class="alert icon button"><span class="material-icons">close</span></button>
+                <button class="success icon button"><span class="material-icons">done</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Table -->
+  <!--     <div class="row">
       <table class="hover">
         <thead>
           <tr>
@@ -488,7 +500,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
-    <script src="//localhost:8080/node_modules/mfb/src/mfb.js"></script>
     <script>
       $(document).foundation();
     </script>
