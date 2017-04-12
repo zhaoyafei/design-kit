@@ -52,9 +52,28 @@ span.input-group-label {
   }
 }
 
+@mixin adk-selectize-error(
+  $background: $input-background-invalid,
+  $background-lighten: 10%
+) {
+  &:not(.focus) {
+    border-color: $background;
+    background-color: mix($background, $white, $background-lighten);
+    color: $background; // Make the text match the border
+
+    input::placeholder {
+      color: $background;
+    }
+  }
+}
+
 // Add form input error styles for Angular validator classes
 input.ng-invalid,
 select.ng-invalid,
 textarea.ng-invalid {
   @include adk-form-input-error;
+}
+
+.selectize-input.ng-invalid {
+  @include adk-selectize-error;
 }
