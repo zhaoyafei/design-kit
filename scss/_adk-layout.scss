@@ -9,10 +9,11 @@
 // Action Bar
 .actionbar {
   @include flex-align(null, middle);
-
+  margin-bottom: $space-l;
+  width: 100%;
   padding: $space-s 0;
-  border-bottom: $global-separator;
   background-color: $white;
+  border-bottom: $global-separator;
 }
 
 // Breadcrumbs (Overrides)
@@ -29,7 +30,6 @@
       position: relative;
       margin: 0 $breadcrumbs-item-margin;
       font-size: $font-size-s;
-
       opacity: 1;
       content: '\203A'; // Override Foundation default $slash with "›"
       color: $light-gray;

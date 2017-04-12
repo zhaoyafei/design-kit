@@ -555,7 +555,7 @@ The top bar is the main header on Architizer.
 <div class="top-bar" id="responsive-menu">
   <div class="top-bar-left">
     <ul class="vertical medium-horizontal menu" data-dropdown-menu>
-      <li class=""><a><object class="nav-logo" type="image/svg+xml" data="/docs/logo/source-logo.svg">Architizer Source</object></a></li>
+      <li class="hide-for-small-only"><a><object class="nav-logo" type="image/svg+xml" data="/docs/logo/source-logo.svg">Architizer Source</object></a></li>
       <li><a href="#">News</a></li>
       <li><a href="#">Projects</a></li>
       <li><a href="#">Products</a></li>
@@ -577,45 +577,6 @@ The top bar is the main header on Architizer.
     </ul>
   </div>
 </div>
-
-<!-- Top Bar Old-->
-<div class="top-bar">
-  <div class="row"> <!-- Wrap the contents in a row so the $grid-row-width will be applied -->
-    <div class="columns">
-      <div class="top-bar-title">
-        <span data-hide-for="medium" data-responsive-toggle="responsive-menu-old">
-          <button type="button" data-toggle><i class="material-icons">menu</i></button>
-        </span>
-        <a href="#"><span class="architizer-glyph black">B</span></a>
-      </div>
-      <div id="responsive-menu-old">
-        <div class="top-bar-left">
-          <ul class="vertical medium-horizontal menu">
-            <li><a href="#">News</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Brands</a></li>
-            <li><a href="#">A+Awards</a></li>
-            <li class="active"><a href="#">Source</a></li>
-          </ul>
-        </div>
-        <div class="top-bar-right">
-          <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
-            <li>
-              <a href="#">Rem Koolhaas</a>
-              <ul class="menu">
-                <li><a href="#">Your Profile &amp; Collections</a></li>
-                <li><a href="#"><i class="material-icons">work</i> OMA</a></li>
-                <li><a href="#">Account Settings</a></li>
-                <li><a href="#">Sign Out</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 ```
 ---
 
@@ -624,61 +585,65 @@ The top bar is the main header on Architizer.
 Action Bars are title bars with other functionality inside them.
 
 ```html_example
-<div class="row actionbar">
+<div class="actionbar">
   <!-- Left: Data -->
-  <div class="small-12 large-expand columns">
-    <!-- Breadcrumbs -->
-    <div class="row">
-      <div class="columns">
-        <ul class="breadcrumbs">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Journal Squared</a></li>
-          <li>
-            <!-- Current View Title -->
-            <span class="inline-block">14 Ergonomic Office Chairs</span>
-            <!-- Dropdown "..." Menu -->
-            <span class="inline-block">
+  <div class="row align-middle">
+    <div class="small-12 large-expand columns">
+      <!-- Breadcrumbs -->
+      <div class="row">
+        <div class="columns">
+          <ul class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Journal Squared</a></li>
+            <li>
+              <!-- Current View Title -->
+              <span class="inline-block">14 Ergonomic Office Chairs</span>
+              <!-- Dropdown "..." Menu -->
+              <span class="inline-block">
               <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
                 <li>
                   <span><i class="material-icons">more_horiz</i></span>
-                  <ul class="menu">
-                    <li><a href="#">Details</a></li>
-                    <li><a href="#">Edit</a></li>
-                    <li><a href="#">Preview</a></li>
-                    <li><a class="disabled" href="#">Download CSV</a></li>
-                    <li><a class="red" href="#">Delete</a></li>
-                  </ul>
-                </li>
+              <ul class="menu">
+                <li><a href="#">Details</a></li>
+                <li><a href="#">Edit</a></li>
+                <li><a href="#">Preview</a></li>
+                <li><a class="disabled"
+                    href="#">Download CSV</a></li>
+                <li><a class="red"
+                    href="#">Delete</a></li>
               </ul>
-            </span>
+            </li>
+          </ul>
+          </span>
           </li>
-        </ul>
+          </ul>
+        </div>
+      </div>
+      <!-- Current View Title -->
+      <div class="row">
+        <div class="columns">
+          <h3>Products</h3>
+        </div>
       </div>
     </div>
-    <!-- Current View Title -->
-    <div class="row">
-      <div class="columns">
-        <h3>Products</h3>
-      </div>
+    <!-- Right: Buttons -->
+    <div class="columns shrink">
+      <a class="light-gray mr-l">Searches</a>
+      <a class="light-gray mr-l">Messages</a>
+      <a class="primary button">New Search</a>
     </div>
-  </div>
-  <!-- Right: Buttons -->
-  <div class="columns shrink">
-    <a class="light-gray mr-l">Searches</a>
-    <a class="light-gray mr-l">Messages</a>
-    <a class="primary button">New Search</a>
   </div>
 </div>
 ```
 ---
 
-## Cards 
-Card elements are modules that can be used across our UI, and are currently used for the most part in our conversation feed. In these feeds cards can be basic messages, product activity/status cards, recommended products and more, but across the UI we should think of anything as being able to be a "card" that is reused across the system, e.g. product search criteria, so that we don't need to rebuild the same content over and over again when it appears in different places. Card componenets let us copy, paste and reuse. 
+## Cards
+Card elements are modules that can be used across our UI, and are currently used for the most part in our conversation feed. In these feeds cards can be basic messages, product activity/status cards, recommended products and more, but across the UI we should think of anything as being able to be a "card" that is reused across the system, e.g. product search criteria, so that we don't need to rebuild the same content over and over again when it appears in different places. Card componenets let us copy, paste and reuse.
 
 **A note about card spacing:**
 Because cards are self-contained elements, the top-level `.card` class handles the spacing/gutter inside the card. Therefore the only spacing that happens on elements inside cards is margin-bottom to control vertical spacing, defined by `$card-content-margin`.
 
-- `.card` - Top level class for creating card elements. Add `.border-blue` utility class to create a blue outline. 
+- `.card` - Top level class for creating card elements. Add `.border-blue` utility class to create a blue outline.
 - `.card.clickable` - Add "clickable" to a card if it is an interactive element.
 - `.caption` - To be used inside card headers to show the status or type of a card, if it's a product.
 - `.card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
@@ -1006,7 +971,7 @@ Refer to the code below to structure a modal or start with the modal template in
   </div>
 </div>
 ```
-
+---
 
 
 
