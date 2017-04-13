@@ -1,0 +1,25 @@
+// Orbit / Gallery Overrides
+
+.orbit.callout {
+  padding: 0 0 $space-xs;
+}
+
+
+.orbit-bullets {
+  padding: 0 $space-xs;
+  button {
+    cursor: pointer;
+  }
+  &.right {
+    text-align: right;
+  }
+  &.left {
+    text-align: left;
+  }
+}
+
+.orbit-caption {
+  &.center {
+    text-align: center;
+  }
+}
