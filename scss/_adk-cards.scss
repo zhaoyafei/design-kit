@@ -34,12 +34,10 @@
   .badge {
     position: absolute;
     z-index: 1;
-    font-size: 0;
+    line-height: 2;
     background: $adk-red;
-    top: -$space-xxs;
-    left: -$space-xxs;
-    height: $space-s !important;
-    width: $space-s !important;
+    top: -$space-xs;
+    left: -$space-xs;
   }
 
   .caption {
