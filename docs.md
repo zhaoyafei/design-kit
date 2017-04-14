@@ -643,21 +643,22 @@ Card elements are modules that can be used across our UI, and are currently used
 **A note about card spacing:**
 Because cards are self-contained elements, the top-level `.card` class handles the spacing/gutter inside the card. Therefore the only spacing that happens on elements inside cards is margin-bottom to control vertical spacing, defined by `$card-content-margin`.
 
-- `.card` - Top level class for creating card elements. Add `.border-blue` utility class to create a blue outline.
+### Usage
+The top level class for creating card elements is `.card`.
+- `.card.border-blue` - Class to create a blue outline.
 - `.card.clickable` - Add "clickable" to a card if it is an interactive element.
-- `.caption` - To be used inside card headers to show the status or type of a card, if it's a product.
-- `.card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
-- `.card .badge` – Using Foundation's badge class, this notification dot is placed as a child of `.card`, and must contain at least one character (`&nbsp;` for a blank dot).
+- `.card.has-notification-dot` – A red notification dot is added to the top left corner of the card.
+- `.card .caption` - To be used inside card headers to show the status or type of a card, if it's a product.
+- `.card .card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
 
 Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.
 
-#### Product Card Examples
+### Examples
 ```html_example
 <div class="row small-up-2 medium-up-3 large-up-4">
   <!-- Product Card 1-->
   <div class="column">
-    <div class="card clickable" onclick="cardClick()">
-      <span class="badge">&nbsp;</span>
+    <div class="card clickable has-notification-dot" onclick="cardClick()">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
            style="background-image: url('/docs/img/table.jpg')"></div>
@@ -1090,15 +1091,18 @@ Tables are simple. We've got a few classes applied to set the styling and alignm
 
 Table cells may have plain text, links, buttons, and actions.
 
-## Actions
-"Actions" in tables should be used when doing something within the current view, such as opening a modal. They look like small links. To create one, apply `.action` to the cell's `<td>` tag.
+## Usage
+Build a table using the `<table>` element. The following modifiers exist for table cells (`<td>`s).
+- `td.action` - "Actions" in tables should be used when doing something within the current view, such as opening a modal. They look like small links. To create one, apply `.action` to the cell's `<td>` tag.
+- `td.has-notification-dot` - A red notification dot is added to the center of the table cell.
+
 ```html
 <td class="action"><a>Send Email</a></td>
 ```
 
 When building tables, try to keep the action/button columns hugging the right side of the table. This improves readability when scanning tables with sparse data.
 
-## Alignment
+### Alignment
 In columns:
 
 - Buttons and actions should be centered
@@ -1111,12 +1115,13 @@ Add `.inactive` to make a row appear inactive, such as on product rows that have
 
 Add `.underline` to links that direct the user to external pages to keep these distinct from in-app links. 
 
-## Example
+### Example
 ```html_example
 <div class="row expanded">
   <table class="hover">
     <thead>
       <tr>
+        <th>&nbsp;</th>
         <th width="140">Brand</th>
         <th width="200">Product Name</th>
         <th>Status</th>
@@ -1126,6 +1131,7 @@ Add `.underline` to links that direct the user to external pages to keep these d
     </thead>
     <tbody>
       <tr>
+        <td class="has-notification-dot"></td>
         <td><a class="underline">Knoll</a></td>
         <td>Pollock Executive Chair</td>
         <td>Recommended</td>
@@ -1133,6 +1139,7 @@ Add `.underline` to links that direct the user to external pages to keep these d
         <td class="action"><a>View</a></td>
       </tr>
       <tr>
+        <td>&nbsp;</td>
         <td><a class="underline">Herman Miller</a></td>
         <td>Aeron Chair</td>
         <td>In Review</td>
@@ -1140,6 +1147,7 @@ Add `.underline` to links that direct the user to external pages to keep these d
         <td class="action"><a>View</a></td>
       </tr>
       <tr class="inactive">
+        <td>&nbsp;</td>
         <td><a class="underline">Steelcase</a></td>
         <td>Mesh Think Chair</td>
         <td>Dismissed</td>
