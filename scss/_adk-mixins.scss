@@ -34,3 +34,32 @@
   border-top-color: $adk-quicksilver;
   animation: spinner .6s linear infinite;
 }
+
+/**
+ * notificationt-dot
+ * Notification Dot Mixin
+ *
+ * This is designed to be used as a :before or :after element
+ *
+ * Include it like this:
+ *
+ * .my-class-to-include-a-notification-dot-on:before {
+ *    @include notification-dot;
+ *
+ *    // Position the notification dot like this: (customize for the class you need to extend)
+ *    position: absolute;
+ *    z-index: 1;
+ *    top: -$space-xxs;
+ *    left: -$space-xxs;
+ *
+ * }
+ */
+
+@mixin notification-dot {
+  content: "\00A0";
+  width: $space-s;
+  height: $space-s;
+  background: $adk-red;
+  border-radius: 50%;
+  display: block;
+}
