@@ -22,6 +22,11 @@ span.input-group-label {
   resize: horizontal;
 }
 
+// Set <select> "placeholder" color via .ng-empty
+select.ng-empty {
+  color: $input-placeholder-color;
+}
+
 /**
  * Form Errors
  *
