@@ -2,6 +2,7 @@
 .card {
   padding: $card-padding;
   overflow: initial;
+  position: relative;
 
   &.clickable {
     cursor: pointer;
@@ -27,6 +28,18 @@
     &:hover {
       opacity: 1;
     }
+  }
+
+  // Notification badge on cards
+  .badge {
+    position: absolute;
+    z-index: 1;
+    font-size: 0;
+    background: $adk-red;
+    top: -$space-xxs;
+    left: -$space-xxs;
+    height: $space-s !important;
+    width: $space-s !important;
   }
 
   .caption {
