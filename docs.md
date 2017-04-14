@@ -647,6 +647,7 @@ Because cards are self-contained elements, the top-level `.card` class handles t
 - `.card.clickable` - Add "clickable" to a card if it is an interactive element.
 - `.caption` - To be used inside card headers to show the status or type of a card, if it's a product.
 - `.card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
+- `.card .badge` – Using Foundation's badge class, this notification dot is placed as a child of `.card`, and must contain at least one character (`&nbsp;` for a blank dot).
 
 Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.
 
@@ -656,6 +657,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   <!-- Product Card 1-->
   <div class="column">
     <div class="card clickable" onclick="cardClick()">
+      <span class="badge">&nbsp;</span>
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
            style="background-image: url('/docs/img/table.jpg')"></div>
