@@ -30,14 +30,13 @@
     }
   }
 
-  // Notification badge on cards
-  .badge {
+  // Style cards with notification dots
+  &.has-notification-dot:before {
+    @include notification-dot;
     position: absolute;
     z-index: 1;
-    line-height: 2;
-    background: $adk-red;
-    top: -$space-xs;
-    left: -$space-xs;
+    top: -$space-xxs;
+    left: -$space-xxs;
   }
 
   .caption {
