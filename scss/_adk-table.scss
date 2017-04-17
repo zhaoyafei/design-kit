@@ -5,7 +5,7 @@ table {
   margin-top: $space-xxs;
   border-collapse: collapse;
   font-size: 16px;
-  tbody, 
+  tbody,
   thead {
     border: none; // Clear default table-border while preserving the $table-border variable
   }
@@ -19,7 +19,7 @@ table {
     border-color: rgba($adk-gunmetal, 0.1);
     background-color: $white;
   }
-  thead tr *, 
+  thead tr *,
   tfoot tr * {
     color: $black;
     font-weight: $global-weight-bold;
@@ -48,6 +48,11 @@ table {
       color: $adk-blue !important;
       text-align: center !important;
     }
+  }
+  // Style table cells with notification dots
+  td.has-notification-dot:before {
+    @include notification-dot;
+    position: relative;
   }
   tbody > .inactive {
     opacity: 0.3;
