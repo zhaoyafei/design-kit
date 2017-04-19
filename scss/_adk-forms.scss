@@ -75,6 +75,7 @@ select.ng-empty {
 // Add form input error styles for Angular validator classes
 input.ng-invalid,
 select.ng-invalid,
+input[type="checkbox"].ng-invalid + label,
 textarea.ng-invalid {
   @include adk-form-input-error;
 }
