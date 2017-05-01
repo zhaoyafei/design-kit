@@ -21,3 +21,65 @@ span.input-group-label {
 .no-v-resize {
   resize: horizontal;
 }
+
+// Set <select> "placeholder" color via .ng-empty
+select.ng-empty {
+  color: $input-placeholder-color;
+}
+
+/**
+ * Form Errors
+ *
+ * This is forked from /scss/forms/_error.scss in Foundation for Sites.
+ *
+ * We have copied Foundation's mixins and prefixed them with `adk-` so we can control all the aspects of form input errors explicitly.
+ *
+ * The original Foundation _error.scss file includes default variable values.
+ * We omitted the defaults in this file because they can still be overwritten in scss/_settings.scss if needed.
+ */
+
+/// Styles the background and border of an input field to have an error state.
+///
+/// @param {Color} $background [$alert-color] - Color to use for the background and border.
+/// @param {Number} $background-lighten [10%] - Lightness level of the background color.
+@mixin adk-form-input-error(
+  $background: $input-background-invalid,
+  $background-lighten: 10%
+) {
+  &:not(:focus) {
+    border-color: get-color(alert);
+    background-color: mix($background, $white, $background-lighten);
+    color: get-color(alert); // Make the text match the border
+
+    &::placeholder {
+      color: get-color(alert);
+    }
+  }
+}
+
+@mixin adk-selectize-error(
+  $background: $input-background-invalid,
+  $background-lighten: 10%
+) {
+  &:not(.focus) {
+    border-color: get-color(alert);
+    background-color: mix($background, $white, $background-lighten);
+    color: get-color(alert); // Make the text match the border
+
+    input::placeholder {
+      color: get-color(alert);
+    }
+  }
+}
+
+// Add form input error styles for Angular validator classes
+input.ng-invalid,
+select.ng-invalid,
+input[type="checkbox"].ng-invalid + label,
+textarea.ng-invalid {
+  @include adk-form-input-error;
+}
+
+.selectize-input.ng-invalid {
+  @include adk-selectize-error;
+}

@@ -194,7 +194,7 @@ $hr-border: $global-separator;
 
 // $abide-inputs: true;
 // $abide-labels: true;
-// $input-background-invalid: get-color(alert);
+$input-background-invalid: $white;
 // $form-label-color-invalid: get-color(alert);
 // $input-error-color: get-color(alert);
 // $input-error-font-size: rem-calc(12);
@@ -617,7 +617,7 @@ $thumbnail-border: none;
 // $has-tip-border-bottom: dotted 1px $dark-gray;
 // $tooltip-background-color: $black;
 // $tooltip-color: $white;
-// $tooltip-padding: 0.75rem;
+$tooltip-padding: $space-xs;
 // $tooltip-font-size: $small-font-size;
 // $tooltip-pip-width: 0.75rem;
 // $tooltip-pip-height: $tooltip-pip-width * 0.866;
