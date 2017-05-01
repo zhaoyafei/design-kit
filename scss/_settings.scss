@@ -67,7 +67,7 @@ $global-weight-light: 300; //added
 $global-weight-bold: 800;
 $global-radius: $space-xxxs;
 $global-outline: 1px solid $adk-gunmetal;
-$global-separator: 1px solid rgba($adk-gunmetal, 0.3);
+$global-separator: 1px solid rgba($adk-quicksilver, 0.3);
 // $global-text-direction: ltr;
 // $global-flexbox: false;
 // $print-transparent-backgrounds: true;
@@ -459,15 +459,15 @@ $menu-item-background-active: none;
 // // 25. Orbit
 // // ---------
 
-// $orbit-bullet-background: $medium-gray;
-// $orbit-bullet-background-active: $dark-gray;
-// $orbit-bullet-diameter: 1.2rem;
+$orbit-bullet-background: $adk-gunmetal;
+$orbit-bullet-background-active: $adk-quicksilver;
+$orbit-bullet-diameter: $space-xs;
 // $orbit-bullet-margin: 0.1rem;
-// $orbit-bullet-margin-top: 0.8rem;
-// $orbit-bullet-margin-bottom: 0.8rem;
-// $orbit-caption-background: rgba($black, 0.5);
-// $orbit-caption-padding: 1rem;
-// $orbit-control-background-hover: rgba($black, 0.5);
+$orbit-bullet-margin-top: $space-xs;
+$orbit-bullet-margin-bottom: $space-xs;
+$orbit-caption-background: rgba($white, 0.9);
+$orbit-caption-padding: $space-xs;
+$orbit-control-background-hover: rgba($adk-quicksilver, 0.5);
 // $orbit-control-padding: 1rem;
 // $orbit-control-zindex: 10;
 

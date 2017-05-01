@@ -536,6 +536,53 @@ When creating thumbnails in series, such as on product cards or modals, place th
   </div>
 </div>
 ```
+---
+## Orbit Galleries
+[Foundation's Orbit](http://foundation.zurb.com/sites/docs/orbit.html) should be used to build image galleries.
+
+*Note:* When building orbit galleries inside modals, only ever feed images that have the same height so that the modal does not resize. Use Imgix. 
+
+**Helper Classes**  
+`.orbit-bullets.right` - Position bullets on right (centered by default)  
+`.orbit-bullets.right` - Position bullets on left (centered by default)  
+`.orbit-caption.center` - Center the caption text (left by default)  
+
+```html_example
+<!-- Gallery -->
+<div class="row">
+  <div class="small-4 small-centered columns">
+    <div class="orbit callout" role="region" aria-label="Product Images" data-orbit data-auto-play=false>
+      <ul class="orbit-container">
+        <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+        <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+        <li class="is-active orbit-slide">
+          <img class="orbit-image" src="/docs/img/placeholder-4:3.png" alt="Space">
+          <figcaption class="orbit-caption"><a href="#">Download</a></figcaption>
+        </li>
+        <li class="orbit-slide">
+          <img class="orbit-image" src="/docs/img/placeholder-16:9.png" alt="Space"><a>
+         </a> <figcaption class="orbit-caption"><a href="#">Download</a></figcaption>
+        </li>
+        <li class="orbit-slide">
+          <img class="orbit-image" src="/docs/img/placeholder-4:3.png" alt="Space">
+          <figcaption class="orbit-caption"><a href="#">Download</a></figcaption>
+        </li>
+        <li class="orbit-slide">
+          <img class="orbit-image" src="/docs/img/placeholder-4:3.png" alt="Space">
+          <figcaption class="orbit-caption"><a href="#">Download</a></figcaption>
+        </li>
+      </ul>
+      <nav class="orbit-bullets left">
+        <!-- Bullets -->
+        <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+        <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+        <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+        <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+      </nav>
+    </div>
+  </div>
+</div>
+```
 
 
 
