@@ -90,7 +90,7 @@ $breakpoints: (
   xlarge: 1200px,
   xxlarge: 1600px,
 );
-$global-width: rem-calc(map-get($breakpoints, xxlarge));
+$global-width: 100%;
 
 // $print-breakpoint: large;
 // $breakpoint-classes: (small medium large);
