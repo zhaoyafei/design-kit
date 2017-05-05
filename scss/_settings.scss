@@ -93,7 +93,7 @@ $breakpoints: (
 $global-width: 100%;
 
 // $print-breakpoint: large;
-// $breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large xlarge xxlarge);
 
 // // 3. The Grid
 // // -----------
@@ -103,6 +103,7 @@ $grid-row-width: $global-width;
 $grid-column-gutter: (
   small: $space-m,
   medium: $space-l,
+  large: $space-xl,
 );
 // $grid-column-align-edge: true;
 // $block-grid-max: 8;
