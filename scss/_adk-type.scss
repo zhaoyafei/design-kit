@@ -34,6 +34,10 @@ p > a {
   }
 }
 
+p {
+  word-wrap: break-word;
+}
+
 // Override past Architizer <a> styles
 a {
   &:after {
