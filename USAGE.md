@@ -15,7 +15,7 @@ Next, include the JavaScript dependencies (jQuery, [what-input](https://github.c
 <!-- JavaScript dependencies -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
 <!-- Initialize Foundation -->
 <script>$(document).foundation();</script>
 ```
@@ -53,7 +53,7 @@ If you don't want to (or can't) include Architizer Design Kit globally on a whol
     <!-- JavaScript dependencies -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
     <script>
       $(document).foundation();
     </script>
