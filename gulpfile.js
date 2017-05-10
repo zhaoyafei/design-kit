@@ -44,7 +44,7 @@ gulp.task('webserver', function() {
     .pipe($.webserver({
       path: '/',
       port: 8080,
-      open: true,
+      open: false,
       livereload: false,
       middleware: [cors],
     }));
