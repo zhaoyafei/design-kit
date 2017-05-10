@@ -44,7 +44,7 @@ gulp.task('webserver', function() {
     .pipe($.webserver({
       path: '/',
       port: 8080,
-      open: true,
+      open: false,
       livereload: false,
       middleware: [cors],
     }));
@@ -58,5 +58,5 @@ gulp.task('webserver', function() {
 // Default task
 gulp.task('default', ['sass', 'docs', 'webserver'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
-  gulp.watch(['docs/**/*', 'docs.md'], ['docs']);
+  gulp.watch(['docs/**/*', 'docs.md', 'docs.hbs'], ['docs']);
 });
