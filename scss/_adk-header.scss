@@ -1,0 +1,39 @@
+#Header, #header {
+  #dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  #dropdown-content {
+    // hidden by default
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 47px;
+    width: 220px;
+  }
+
+  ul.menu a {
+    color: #bcbcbc;
+  }
+
+  ul.menu a:hover {
+    color: #FFF;
+  }
+
+  ul.menu a:active {
+    color: #FFF;
+  }
+
+  a {
+    color: #bcbcbc;
+  }
+
+  a:hover {
+    color: #FFF;
+  }
+
+  a:active {
+    color: #FFF;
+  }
+}
