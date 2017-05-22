@@ -21,10 +21,6 @@
     color: #FFF;
   }
 
-  ul.menu a:active {
-    color: #FFF;
-  }
-
   a {
     color: #bcbcbc;
   }
@@ -33,7 +29,7 @@
     color: #FFF;
   }
 
-  a:active {
+  .menu .active > a {
     color: #FFF;
   }
 }
