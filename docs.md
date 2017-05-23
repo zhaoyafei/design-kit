@@ -118,6 +118,11 @@ These colors are surfaced as utility classes in the format below:
 * `.bg-{color}` sets the `background-color` CSS property
 * `.border-{color}` sets the `border-color` CSS property
 
+Or to set `:hover` colors:
+* `.hover-{color}` sets the `color` CSS property on hover
+* `.hover-bg-{color}` sets the `background-color` CSS property on hover
+* `.hover-border-{color}` sets the `border-color` CSS property on hover
+
 where:
 * `{color}` is the name of the color
 
@@ -147,6 +152,12 @@ These colors are surfaced as utility classes in the format below:
 * `.{color}-{shade}` sets the `color` CSS property  (to specify the shade)
 * `.bg-{color}-{shade}` sets the `background-color` CSS property
 * `.border-{color}-{shade}` sets the `border-color` CSS property
+
+Or to set `:hover` colors:
+* `.hover-{color}` sets the `color` CSS property on hover (uses the *500* shade for this color)
+* `.hover-{color}-{shade}` sets the `color` CSS property on hover
+* `.hover-bg-{color}-{shade}` sets the `background-color` CSS property on hover
+* `.hover-border-{color}-{shade}` sets the `border-color` CSS property on hover
 
 where:
 * `{color}` is the name of the color
