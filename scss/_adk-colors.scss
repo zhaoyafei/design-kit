@@ -26,19 +26,19 @@
     .#{$name}-#{$shade} {
       color: $value !important;
     }
-    .hover-#{$name}-#{$shade} {
+    .hover-#{$name}-#{$shade}:hover {
       color: $value !important;
     }
     .bg-#{$name}-#{$shade} {
       background-color: $value !important;
     }
-    .hover-bg-#{$name}-#{$shade} {
+    .hover-bg-#{$name}-#{$shade}:hover {
       background-color: $value !important;
     }
     .border-#{$name}-#{$shade} {
       border-color: $value !important;
     }
-    .hover-border-#{$name}-#{$shade} {
+    .hover-border-#{$name}-#{$shade}:hover {
       border-color: $value !important;
     }
   }
