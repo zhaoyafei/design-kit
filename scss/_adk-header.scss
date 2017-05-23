@@ -2,6 +2,9 @@
   #dropdown {
     position: relative;
     display: inline-block;
+    .active > a {
+      color: #FFF;
+    }
   }
 
   #dropdown-content {
@@ -11,6 +14,22 @@
     right: 0px;
     top: 47px;
     width: 220px;
+  }
+
+  #nav-dropdown-content {
+    // hidden by default
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 50%;
+    height: 100vh;
+  }
+
+  #nav-dropdown-links {
+    .active > a {
+      color: #FFF;
+    }
   }
 
   ul.menu a {
@@ -26,10 +45,6 @@
   }
 
   a:hover {
-    color: #FFF;
-  }
-
-  .menu .active > a {
     color: #FFF;
   }
 }
