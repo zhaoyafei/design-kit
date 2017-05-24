@@ -4,10 +4,19 @@
   .#{$name} {
     color: $color !important;
   }
+  .hover-#{$name}:hover {
+    color: $color !important;
+  }
   .bg-#{$name} {
     background-color: $color !important;
   }
+  .hover-bg-#{$name}:hover {
+    background-color: $color !important;
+  }
   .border-#{$name} {
+    border-color: $color !important;
+  }
+  .hover-border-#{$name}:hover {
     border-color: $color !important;
   }
 
@@ -17,10 +26,19 @@
     .#{$name}-#{$shade} {
       color: $value !important;
     }
+    .hover-#{$name}-#{$shade}:hover {
+      color: $value !important;
+    }
     .bg-#{$name}-#{$shade} {
       background-color: $value !important;
     }
+    .hover-bg-#{$name}-#{$shade}:hover {
+      background-color: $value !important;
+    }
     .border-#{$name}-#{$shade} {
+      border-color: $value !important;
+    }
+    .hover-border-#{$name}-#{$shade}:hover {
       border-color: $value !important;
     }
   }
@@ -31,10 +49,19 @@
   .#{$name} {
     color: $color !important;
   }
+  .hover-#{$name}:hover {
+    color: $color !important;
+  }
   .bg-#{$name} {
     background-color: $color !important;
   }
+  .hover-bg-#{$name}:hover {
+    background-color: $color !important;
+  }
   .border-#{$name} {
+    border-color: $color !important;
+  }
+  .hover-border-#{$name}:hover {
     border-color: $color !important;
   }
 }

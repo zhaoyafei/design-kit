@@ -67,7 +67,7 @@ $global-weight-light: 300; //added
 $global-weight-bold: 800;
 $global-radius: $space-xxxs;
 $global-outline: 1px solid $adk-gunmetal;
-$global-separator: 1px solid rgba($adk-quicksilver, 0.3);
+$global-separator: $adk-global-separator;
 // $global-text-direction: ltr;
 // $global-flexbox: false;
 // $print-transparent-backgrounds: true;
