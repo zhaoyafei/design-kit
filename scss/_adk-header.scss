@@ -1,0 +1,56 @@
+#Header, #header {
+  #dropdown {
+    position: relative;
+    display: inline-block;
+    .active > a {
+      color: #FFF;
+    }
+  }
+
+  #dropdown-content {
+    // hidden by default
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    width: 220px;
+    z-index: 10000000;
+  }
+
+  #sidebar-content {
+    // hidden by default
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 50%;
+    height: 100vh;
+    z-index: 10000000;
+  }
+
+  #sidebar-links {
+    .active > a {
+      color: #FFF;
+    }
+  }
+
+  ul.menu a {
+    color: #bcbcbc;
+  }
+
+  ul.menu a:hover {
+    color: #FFF;
+  }
+
+ .menu .active > a {
+    color: #FFF;
+  }
+
+  a {
+    color: #bcbcbc;
+  }
+
+  a:hover {
+    color: #FFF;
+  }
+}
