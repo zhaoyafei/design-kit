@@ -9,9 +9,15 @@ input[type="radio"] + label,  {
   color: $black;
 }
 
+// Input groups
 span.input-group-label {
   background: transparent;
   border-radius: 0 $global-radius $global-radius 0;
+}
+
+span.input-group-label + input.input-group-field:last-child {
+  border-top-right-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
 }
 
 //Utility classes for `.no-resize` on textareas
