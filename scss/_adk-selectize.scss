@@ -197,12 +197,13 @@
   cursor: pointer;
   margin: 0 3px 3px 0;
   padding: $space-micro $space-xs;
-  background: $adk-blue;
-  color: $white;
+  background: rgba($adk-gunmetal, 0.25); // Derived from .secondary-light in button styles
+  color: $black;
   border-radius: $global-radius;
 }
 .selectize-control.multi .selectize-input > div:hover {
-  background: darken($adk-blue, 10);
+  background: $adk-gunmetal; // Derived from .secondary-light in button styles
+  color: $white;
 }
 // .selectize-control.multi .selectize-input > div.active {
 //   background: #e8e8e8;
