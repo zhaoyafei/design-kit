@@ -493,12 +493,18 @@ These are ADK Avatars
 `.avatar.float-right` - Changes  spacing from right side to left  
 
 ```html_example
-<div class="row">
+<div class="row mb-s">
   <div class="shrink columns">
     <img class="avatar small" src="https://architizer-prod.imgix.net/media/1466174102182parsa-headshot-sat.JPG?auto=format,compress&cs=strip&fit=crop&q=60&w=200">
     <img class="avatar" src="https://architizer-prod.imgix.net/media/1466174102182parsa-headshot-sat.JPG?auto=format,compress&cs=strip&fit=crop&q=60&w=200">
     <img class="avatar large" src="https://architizer-prod.imgix.net/media/1466174102182parsa-headshot-sat.JPG?auto=format,compress&cs=strip&fit=crop&q=60&w=200">
   </div>
+</div>
+<div class="row mb-s">
+  <div class="shrink columns">
+    <div class="avatar small"><span class="initials">PK</span></div>
+    <div class="avatar"><span class="initials">PK</span></div>
+    <div class="avatar large"><span class="initials">PK</span></div>
 </div>
 ```
 ---
