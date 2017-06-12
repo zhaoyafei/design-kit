@@ -2,11 +2,11 @@
 /***** Search Hover Effect *****/
 /*-----------------------------*/
 
-// Refrerence: https://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/
+// Reference: https://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/
 
 figure.search-hover .overlay {
   position: absolute;
-  background-color: $dark-gray;
+  background-color: $adk-quicksilver;
   border-radius: $space-xxxs $space-xxxs 0 0;
   width: 100%;
   height: 100%;
@@ -16,7 +16,7 @@ figure.search-hover .overlay {
 }
 
 figure.search-hover figcaption {
-  padding: $space;
+  padding: $space-l $space;
   text-align: left;
   color: $white;
 }
@@ -34,7 +34,7 @@ figure.search-hover .search-info {
 }
 
 .card:hover .overlay, {
-  opacity: 0.6;
+  opacity: 0.75;
 }
 
 .card:hover .search-info {
