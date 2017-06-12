@@ -484,6 +484,25 @@ Use `.fill` to set the background color.
 
 
 # Images
+## Avatars
+These are ADK Avatars  
+
+`.avatar` - Standard avatar  
+`.avatar.small`  
+`.avatar.large`  
+`.avatar.float-right` - Changes  spacing from right side to left  
+
+```html_example
+<div class="row">
+  <div class="shrink columns">
+    <img class="avatar small" src="https://architizer-prod.imgix.net/media/1466174102182parsa-headshot-sat.JPG?auto=format,compress&cs=strip&fit=crop&q=60&w=200">
+    <img class="avatar" src="https://architizer-prod.imgix.net/media/1466174102182parsa-headshot-sat.JPG?auto=format,compress&cs=strip&fit=crop&q=60&w=200">
+    <img class="avatar large" src="https://architizer-prod.imgix.net/media/1466174102182parsa-headshot-sat.JPG?auto=format,compress&cs=strip&fit=crop&q=60&w=200">
+  </div>
+</div>
+```
+---
+## Thumbnails
 When creating thumbnails in series, such as on product cards or modals, place the images inside thumbnail rows instead of the regular grid rows.
 
 `thumbnails-up-[n]` - Add this class to what will be the row of the thumbnails. It follows the normal grid's naming convention for how many columns should be inside of it. `n` can be a number from 2-6; you shouldn't ever need any more than 6 thumbnails in series, and try to use an even number of columns. 

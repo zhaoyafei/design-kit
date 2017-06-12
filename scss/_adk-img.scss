@@ -21,3 +21,27 @@
     }
   }
 }
+
+.avatar {
+  width: $space-xxl;
+  height: $space-xxl;
+  margin: 0 $space-s 0 0;
+  background-color: $adk-gunmetal;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  &.small {
+    width: $space-l;
+    height: $space-l;
+  }
+  &.large {
+    width: $space-xxxl;
+    height: $space-xxxl;
+  }
+  &.float-right {
+    margin: 0 0 0 $space-s;
+  }
+}
