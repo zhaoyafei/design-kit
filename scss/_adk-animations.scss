@@ -4,15 +4,15 @@
 
 // Refrerence: https://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/
 
-figure.search-hover .hover-overlay {
-  max-width: none;
-  width: -webkit-calc(100% + 50px);
-  width: calc(100% + 50px);
-  opacity: 0.7;
+
+
+figure.search-hover .overlay {
+  background-color: $dark-gray;
+  width: 100%;
+  height: 100%;
+  opacity: 0.0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(-40px,0, 0);
-  transform: translate3d(-40px,0,0);
 }
 
 figure.search-hover figcaption {
@@ -40,27 +40,29 @@ figure.search-hover h2 {
 }
 
 figure.search-hover p {
-  color: rgba(255,255,255,0.8);
+  color: $white;
   opacity: 0;
   -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
   transition: opacity 0.2s, transform 0.35s;
 }
 
-figure.search-hover:hover img,
-figure.search-hover:hover p {
+.card:hover .overlay, {
+  opacity: 0.6;
+}
+
+.card:hover p {
   opacity: 1;
 }
 
-figure.search-hover:hover img,
-figure.search-hover:hover h2,
-figure.search-hover:hover p {
+
+.card:hover .overlay,
+.card:hover h2,
+.card:hover p {
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
 
-figure.search-hover:hover p {
-  -webkit-transition-delay: 0.05s;
-  transition-delay: 0.05s;
+.card:hover p {
   -webkit-transition-duration: 0.35s;
   transition-duration: 0.35s;
 }
