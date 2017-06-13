@@ -3,6 +3,8 @@
   padding: $card-padding;
   overflow: initial;
   position: relative;
+  display: inline-block;
+  margin-right: $space-xs;
 
   // Small breakpoint width
   width: $card-size-small;
@@ -15,6 +17,8 @@
   // Use flex class to overide fixed width and use the grid to size the card instead
   &.flex {
     width: inherit;
+    display: block;
+    margin-right: 0px;
   }
 
   &.clickable {
