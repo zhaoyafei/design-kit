@@ -3,24 +3,33 @@
   padding: $card-padding;
   overflow: initial;
   position: relative;
-  display: inline-block;
-  float: left;
-  margin-right: $space-s;
 
-  // Small breakpoint width
-  width: $card-size-small;
-
-  // Medium breakpoint width
-  @include breakpoint(medium) {
+  &.masonry {
+    float: left;
+    margin-right: $space-xs;
+    display: inline-block;
+    // Small breakpoint width
     width: $card-size-base;
+
+    // Medium breakpoint width
+    @include breakpoint(medium) {
+      width: $card-size-base;
+    }
+    .card-image {
+      height: $card-size-base / 1.33;  //4:3 by default
+      &.ratio-16-9 {
+        height: $card-size-base / 1.77;
+        width: inherit;
+      }
+    }
   }
 
-  // Use flex class to overide fixed width and use the grid to size the card instead
-  &.flex {
-    width: inherit;
-    display: block;
-    margin-right: 0px;
-  }
+  // // Use flex class to overide fixed width and use the grid to size the card instead
+  // &.flex {
+  //   width: inherit;
+  //   display: block;
+  //   margin-right: 0px;
+  // }
 
   &.clickable {
     cursor: pointer;
@@ -105,7 +114,7 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: $card-size-small / 1.33;  //4:3 by default
+  // height: $card-size-small / 1.33;  //4:3 by default
   width: inherit;
 
   &.card-image-no-margin {
@@ -114,10 +123,10 @@
     margin-top: -$space;
   }
 
-  &.ratio-16-9 {
-    height: $card-size-small / 1.77;
-    width: inherit;
-  }
+  // &.ratio-16-9 {
+  //   height: $card-size-small / 1.77;
+  //   width: inherit;
+  // }
 
   // Medium breakpoint height
   @include breakpoint(medium) {
