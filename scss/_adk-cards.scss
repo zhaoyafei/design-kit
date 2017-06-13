@@ -90,6 +90,8 @@
  * Use with `style="background-image:url('/put/the/path/here')"`
  *
  * Add the .card-image-no-margin class to make the image extend outside the margins
+ * 
+ * Add the .ratio-16-9 to change the aspect ratio from 4:3 to 16:9
  */
 .card-image {
   position: relative;
@@ -114,7 +116,7 @@
   // Medium breakpoint height
   @include breakpoint(medium) {
     height: $card-size-base / 1.33;
-    
+
     &.ratio-16-9 {
       height: $card-size-base / 1.77;
       width: inherit;
