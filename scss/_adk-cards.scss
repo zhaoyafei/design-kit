@@ -4,6 +4,14 @@
   overflow: initial;
   position: relative;
 
+  // Small breakpoint width
+  width: $card-size-small;
+
+  // Medium breakpoint width
+  @include breakpoint(medium) {
+    width: $card-size-base;
+  }
+
   &.clickable {
     cursor: pointer;
     box-shadow: 0 0 0 2px transparent;
@@ -18,7 +26,7 @@
   }
 
   &.message {
-    min-width: 360px;
+    min-width: $card-size-base;
   }
 
   // Inactive cards
@@ -85,9 +93,12 @@
  */
 .card-image {
   position: relative;
+  border-radius: $space-xxxs $space-xxxs 0 0;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  height: $card-size-small / 1.33;  //4:3 by default
+  width: inherit;
 
   &.card-image-no-margin {
     margin-left: -$space;
@@ -95,17 +106,24 @@
     margin-top: -$space;
   }
 
-  // Small breakpoint height
-  height: 5rem;
+  &.ratio-16-9 {
+    height: $card-size-small / 1.77;
+    width: inherit;
+  }
 
   // Medium breakpoint height
   @include breakpoint(medium) {
-    height: 10rem;
+    height: $card-size-base / 1.33;
+    
+    &.ratio-16-9 {
+      height: $card-size-base / 1.77;
+      width: inherit;
+    }
   }
 
-  // Large breakpoint height
-  @include breakpoint(large) {
-    height: 15rem;
-  }
+  // // Large breakpoint height
+  // @include breakpoint(large) {
+  //   height: 15rem;
+  // }
 
 }
