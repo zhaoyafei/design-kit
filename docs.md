@@ -505,6 +505,7 @@ These are ADK Avatars
     <div class="avatar small"><span class="initials">PK</span></div>
     <div class="avatar"><span class="initials">PK</span></div>
     <div class="avatar large"><span class="initials">PK</span></div>
+  </div>
 </div>
 ```
 ---
