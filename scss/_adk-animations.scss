@@ -21,8 +21,8 @@
 
   .info {
     position: absolute;
-    // height: 90%;
-    width: inherit;
+    height: 100%;
+    width: 100%;
     padding: $space-l $space;
     opacity: 0.0;
     -ms-transform: scale(0.85); /* IE 9 */
@@ -30,6 +30,9 @@
     transform: scale(0.85);
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
+    // .row {
+    //     height: 100%;
+    //   }
   }
 }
 
