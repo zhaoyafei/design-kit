@@ -742,7 +742,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
 <div class="row small-up-2 medium-up-3 large-up-4">
   <!-- Product Card 1-->
   <div class="column">
-    <div class="card clickable has-notification-dot" onclick="cardClick()">
+    <div class="card flex clickable has-notification-dot" onclick="cardClick()">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
            style="background-image: url('/docs/img/table.jpg')"></div>
@@ -785,7 +785,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   </div>
   <!-- Product Card 2-->
   <div class="column">
-    <div class="card clickable" onclick="cardClick()">
+    <div class="card flex">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
            style="background-image: url('/docs/img/table.jpg')"></div>
@@ -799,92 +799,6 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
           </div>
           <!-- Middle Spacing -->
           <div class="columns"></div>
-          <!-- Dropdown Menu -->
-          <div class="columns shrink">
-            <ul class="dropdown menu"
-                data-dropdown-menu
-                data-alignment="right"
-                data-click-open="true"
-                data-disable-hover="true">
-              <li>
-                <span class=>
-                  <i class="material-icons" 
-                     style="cursor:pointer; width:1rem;">more_horiz2</i>
-                </span>
-                <ul class="menu">
-                  <li>
-                    <a>Shortlist</a>
-                  </li>
-                  <li>
-                    <a>Dismiss</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Product Name -->
-        <div class="row">
-          <strong class="ellipsis">Pollock Executive Chair</strong>
-        </div>
-        <!-- Brand Name -->
-        <div class="row align-middle">
-          <div class="columns shrink meta pr-0">
-            <a href="#"
-               target="_blank" 
-               class="underline">Knoll</a>
-          </div>
-          <!-- If Verified -->
-          <div class="columns shrink ml-xxs pl-0">
-            <span class="architizer-glyph blue-500">+</span>
-          </div>
-        </div>
-      </div>
-      <!-- View Product Button -->
-<!--       <div class="card-section">
-        <a class="primary hollow button expanded">View Product</a>
-      </div> -->
-    </div>
-  </div> 
-  <!-- Product Card 3-->
-  <div class="column">
-    <div class="card">
-      <!-- Card Image -->
-      <div class="card-section card-image card-image-no-margin"
-           style="background-image: url('/docs/img/table.jpg')"></div>
-      <!-- Card Content -->
-      <div class="card-section">
-        <!-- Response Marking and Dropdown Menu-->
-        <div class="row">
-          <!-- Response Marking -->
-          <div class="columns shrink">
-            <span class="caption blue">New Product</span>
-          </div>
-          <!-- Middle Spacing -->
-          <div class="columns"></div>
-          <!-- Dropdown Menu -->
-          <div class="columns shrink">
-            <ul class="dropdown menu"
-                data-dropdown-menu
-                data-alignment="right"
-                data-click-open="true"
-                data-disable-hover="true">
-              <li>
-                <span class=>
-                  <i class="material-icons" 
-                     style="cursor:pointer; width:1rem;">more_horiz2</i>
-                </span>
-                <ul class="menu">
-                  <li>
-                    <a>Shortlist</a>
-                  </li>
-                  <li>
-                    <a>Dismiss</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
         </div>
         <!-- Product Name -->
         <div class="row">
@@ -910,32 +824,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
     </div>
   </div>
   <div class="column">
-    <div class="card">
-      <div class="card-section">
-        <div class="row">
-          <div class="columns">
-            <span class="caption blue">New Product</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-section">
-        <div class="row">
-          <div class="medium-8 columns">
-            <strong>Product Title</strong>
-            <p>This card is a new product with our old button.</p>
-          </div>
-          <div class="columns">
-            <img src="/docs/img/table.jpg">
-          </div>
-        </div>
-      </div>
-      <div class="card-button">
-        <a href="#">View Product</a>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card border-blue">
+    <div class="card flex border-blue">
       <div class="card-section">
       <p>A basic message with a blue outline</p>
       </div>
