@@ -12,6 +12,11 @@
     width: $card-size-base;
   }
 
+  // Use flex class to overide fixed width and use the grid to size the card instead
+  &.flex {
+    width: inherit;
+  }
+
   &.clickable {
     cursor: pointer;
     box-shadow: 0 0 0 2px transparent;
