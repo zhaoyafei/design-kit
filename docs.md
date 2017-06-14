@@ -694,27 +694,29 @@ Action Bars are title bars with other functionality inside them.
 ---
 
 ## Cards
-Card elements are modules that can be used across our UI, and are currently used for the most part in our conversation feed. In these feeds cards can be basic messages, product activity/status cards, recommended products and more, but across the UI we should think of anything as being able to be a "card" that is reused across the system, e.g. product search criteria, so that we don't need to rebuild the same content over and over again when it appears in different places. Card componenets let us copy, paste and reuse.
+Card elements are modules that can be used across our UI, and are currently used for the most part in our conversation feed. 
 
-**A note about card spacing:**
-Because cards are self-contained elements, the top-level `.card` class handles the spacing/gutter inside the card. Therefore the only spacing that happens on elements inside cards is margin-bottom to control vertical spacing, defined by `$card-content-margin`.
+By default `.card` is sized according to the flex grid. To make the cards have a fixed width, add `.masonry`, which is to be used in masonry grids and not the flex grid.  
+`.masonry` cards are sized according to the `.card-image` inside of it, which by default has an aspect ratio of 4:3. To change the aspect ratio from 4:3 to 16:9, use `.card-image.ratio-16-9` on the masonry cards. 
 
-### Usage
+
+### Classes and Usage
 The top level class for creating card elements is `.card`.
-- `.card.border-blue` - Class to create a blue outline.
 - `.card.clickable` - Add "clickable" to a card if it is an interactive element.
 - `.card.has-notification-dot` – A red notification dot is added to the top left corner of the card.
+- `.card .card-button` - This is our old style card action, which was a button embedded into the card itself. Used when cards are not in the context of a grid and are not clickable, eg. in the message thread.
 - `.card .caption` - To be used inside card headers to show the status or type of a card, if it's a product.
-- `.card .card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
+- `.card.border-blue` - Class to create a blue outline.
 
 Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.
 
 ### Examples
+The following are examples of `.flex` cards:  
 ```html_example
 <div class="row small-up-2 medium-up-3 large-up-4">
   <!-- Product Card 1-->
   <div class="column">
-    <div class="card clickable has-notification-dot" onclick="cardClick()">
+    <div class="card flex clickable has-notification-dot" onclick="cardClick()">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
            style="background-image: url('/docs/img/table.jpg')"></div>
@@ -757,7 +759,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
   </div>
   <!-- Product Card 2-->
   <div class="column">
-    <div class="card clickable" onclick="cardClick()">
+    <div class="card flex">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
            style="background-image: url('/docs/img/table.jpg')"></div>
@@ -771,92 +773,6 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
           </div>
           <!-- Middle Spacing -->
           <div class="columns"></div>
-          <!-- Dropdown Menu -->
-          <div class="columns shrink">
-            <ul class="dropdown menu"
-                data-dropdown-menu
-                data-alignment="right"
-                data-click-open="true"
-                data-disable-hover="true">
-              <li>
-                <span class=>
-                  <i class="material-icons" 
-                     style="cursor:pointer; width:1rem;">more_horiz2</i>
-                </span>
-                <ul class="menu">
-                  <li>
-                    <a>Shortlist</a>
-                  </li>
-                  <li>
-                    <a>Dismiss</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Product Name -->
-        <div class="row">
-          <strong class="ellipsis">Pollock Executive Chair</strong>
-        </div>
-        <!-- Brand Name -->
-        <div class="row align-middle">
-          <div class="columns shrink meta pr-0">
-            <a href="#"
-               target="_blank" 
-               class="underline">Knoll</a>
-          </div>
-          <!-- If Verified -->
-          <div class="columns shrink ml-xxs pl-0">
-            <span class="architizer-glyph blue-500">+</span>
-          </div>
-        </div>
-      </div>
-      <!-- View Product Button -->
-<!--       <div class="card-section">
-        <a class="primary hollow button expanded">View Product</a>
-      </div> -->
-    </div>
-  </div> 
-  <!-- Product Card 3-->
-  <div class="column">
-    <div class="card">
-      <!-- Card Image -->
-      <div class="card-section card-image card-image-no-margin"
-           style="background-image: url('/docs/img/table.jpg')"></div>
-      <!-- Card Content -->
-      <div class="card-section">
-        <!-- Response Marking and Dropdown Menu-->
-        <div class="row">
-          <!-- Response Marking -->
-          <div class="columns shrink">
-            <span class="caption blue">New Product</span>
-          </div>
-          <!-- Middle Spacing -->
-          <div class="columns"></div>
-          <!-- Dropdown Menu -->
-          <div class="columns shrink">
-            <ul class="dropdown menu"
-                data-dropdown-menu
-                data-alignment="right"
-                data-click-open="true"
-                data-disable-hover="true">
-              <li>
-                <span class=>
-                  <i class="material-icons" 
-                     style="cursor:pointer; width:1rem;">more_horiz2</i>
-                </span>
-                <ul class="menu">
-                  <li>
-                    <a>Shortlist</a>
-                  </li>
-                  <li>
-                    <a>Dismiss</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
         </div>
         <!-- Product Name -->
         <div class="row">
@@ -882,32 +798,7 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
     </div>
   </div>
   <div class="column">
-    <div class="card">
-      <div class="card-section">
-        <div class="row">
-          <div class="columns">
-            <span class="caption blue">New Product</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-section">
-        <div class="row">
-          <div class="medium-8 columns">
-            <strong>Product Title</strong>
-            <p>This card is a new product with our old button.</p>
-          </div>
-          <div class="columns">
-            <img src="/docs/img/table.jpg">
-          </div>
-        </div>
-      </div>
-      <div class="card-button">
-        <a href="#">View Product</a>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card border-blue">
+    <div class="card flex border-blue">
       <div class="card-section">
       <p>A basic message with a blue outline</p>
       </div>
@@ -920,6 +811,113 @@ function cardClick() {
 }
 </script>
 ```
+
+### Card Overlays
+To overlay information over card images, `.image-overlay-info` to the `.card-image`.  
+Then simply add an empty `.overlay` div inside the image, as well as a `.info` div with the content to be overlayed.  
+This is currently used on Project cards to show more information about what's happening inside of it.
+
+```html_example
+<div class="row">
+  <div class="column">
+    <!-- Card 1 -->
+    <div class="card clickable">
+    <!-- Image -->
+      <div class="card-section">
+        <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/mediadata/projects/042013/cd7346ba.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+          <div class="overlay"></div>
+          <div class="info">
+            <div class="row align-middle collapse" style="height: 100%;">
+              <div class="column">
+                <div class="row column">
+                  <h5>An Education Center in UK</h5>
+                </div>
+                <div class="row mt-s mb-base">
+                  <div class="small-4 columns">
+                    <h2><strong>48</strong></h2>
+                    <h4>Products</h4>
+                  </div>
+                  <div class="small-4 columns">
+                    <h2><strong>22</strong></h2>
+                    <h4>Searches</h4>
+                  </div>
+                  <div class="small-4 columns">
+                    <h2><strong>61</strong></h2>
+                    <h4>Messages</h4>
+                  </div>
+                </div>
+                <!-- Team -->
+                <div class="row column">
+                  <img class="avatar small" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
+                  <div class="avatar small bg-blue-300"><span class="initials">P</span></div>
+                  <div class="avatar small bg-green-300"><span class="initials">S</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Info -->
+      <div class="card-section">
+        <div class="row align-middle mt-s">
+          <div class="columns">
+            <h3 class="ellipsis">Hogwarts IV</h3>
+            <span class="fs-s">Construction Documents</span>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <!-- Card 2 -->
+    <div class="card clickable">
+    <!-- Image -->
+      <div class="card-section">
+        <div class="card-image card-image-no-margin image-overlay-info ratio-16-9" style="background-image: url('https://architizer-prod.imgix.net/mediadata/projects/042013/cd7346ba.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+          <div class="overlay"></div>
+          <div class="info">
+            <div class="row align-middle collapse" style="height: 100%;">
+              <div class="column">
+                <div class="row column">
+                  <h5>An Education Center in UK</h5>
+                </div>
+                <div class="row mt-s mb-base">
+                  <div class="small-4 columns">
+                    <h2><strong>48</strong></h2>
+                    <h4>Products</h4>
+                  </div>
+                  <div class="small-4 columns">
+                    <h2><strong>22</strong></h2>
+                    <h4>Searches</h4>
+                  </div>
+                  <div class="small-4 columns">
+                    <h2><strong>61</strong></h2>
+                    <h4>Messages</h4>
+                  </div>
+                </div>
+                <!-- Team -->
+                <div class="row column">
+                  <img class="avatar small" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
+                  <div class="avatar small bg-blue-300"><span class="initials">P</span></div>
+                  <div class="avatar small bg-green-300"><span class="initials">S</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Info -->
+      <div class="card-section">
+        <div class="row align-middle mt-s">
+          <div class="columns">
+            <h3 class="ellipsis">Hogwarts IV</h3>
+            <span class="fs-s">Construction Documents</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
 ---
 
 ## Modals

@@ -4,6 +4,41 @@
   overflow: initial;
   position: relative;
 
+  &.masonry {
+    float: left;
+    margin-right: $space-xs;
+    display: inline-block;
+    // Small breakpoint width
+    width: $card-size-small;
+
+    .card-image {
+      height: $card-size-small / 1.33;  //4:3 by default
+      &.ratio-16-9 {
+        height: $card-size-small / 1.77;
+        width: inherit;
+      }
+    }
+
+    // Medium breakpoint width
+    @include breakpoint(medium) {
+      width: $card-size-base;
+      .card-image {
+        height: $card-size-base / 1.33;
+        &.ratio-16-9 {
+          height: $card-size-base / 1.77;
+          width: inherit;
+        }
+      }
+    }
+  }
+
+  // // Use flex class to overide fixed width and use the grid to size the card instead
+  // &.flex {
+  //   width: inherit;
+  //   display: block;
+  //   margin-right: 0px;
+  // }
+
   &.clickable {
     cursor: pointer;
     box-shadow: 0 0 0 2px transparent;
@@ -18,7 +53,7 @@
   }
 
   &.message {
-    min-width: 360px;
+    min-width: $card-size-base;
   }
 
   // Inactive cards
@@ -54,10 +89,6 @@
     text-align: center;
   }
 
-  img {
-    border-radius: $global-radius;
-  }
-
   .card-section {
     margin: $card-content-margin;
     padding: 0;
@@ -82,12 +113,17 @@
  * Use with `style="background-image:url('/put/the/path/here')"`
  *
  * Add the .card-image-no-margin class to make the image extend outside the margins
+ * 
+ * Add the .ratio-16-9 to change the aspect ratio from 4:3 to 16:9
  */
 .card-image {
   position: relative;
+  border-radius: $space-xxxs $space-xxxs 0 0;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  // height: $card-size-small / 1.33;  //4:3 by default
+  width: inherit;
 
   &.card-image-no-margin {
     margin-left: -$space;
@@ -107,5 +143,5 @@
   @include breakpoint(large) {
     height: 15rem;
   }
-
 }
+
