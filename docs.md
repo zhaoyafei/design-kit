@@ -696,9 +696,8 @@ Action Bars are title bars with other functionality inside them.
 ## Cards
 Card elements are modules that can be used across our UI, and are currently used for the most part in our conversation feed. 
 
-By default `.card` has a fixed width and `.card-image` has an aspect ratio of 4:3.  
-Use `.card.flex` to have a card be sized by the grid rather than a fixed width.  
-To change the aspect ratio from 4:3 to 16:9, use `.card-image.ratio-16-9`  
+By default `.card` is sized according to the flex grid. To make the cards have a fixed width, add `.masonry`, which is to be used in masonry grids and not the flex grid.  
+`.masonry` cards are sized according to the `.card-image` inside of it, which by default has an aspect ratio of 4:3. To change the aspect ratio from 4:3 to 16:9, use `.card-image.ratio-16-9` on the masonry cards. 
 
 
 ### Classes and Usage
