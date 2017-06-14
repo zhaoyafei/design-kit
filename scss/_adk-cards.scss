@@ -9,17 +9,25 @@
     margin-right: $space-xs;
     display: inline-block;
     // Small breakpoint width
-    width: $card-size-base;
+    width: $card-size-small;
+
+    .card-image {
+      height: $card-size-small / 1.33;  //4:3 by default
+      &.ratio-16-9 {
+        height: $card-size-small / 1.77;
+        width: inherit;
+      }
+    }
 
     // Medium breakpoint width
     @include breakpoint(medium) {
       width: $card-size-base;
-    }
-    .card-image {
-      height: $card-size-base / 1.33;  //4:3 by default
-      &.ratio-16-9 {
-        height: $card-size-base / 1.77;
-        width: inherit;
+      .card-image {
+        height: $card-size-base / 1.33;
+        &.ratio-16-9 {
+          height: $card-size-base / 1.77;
+          width: inherit;
+        }
       }
     }
   }
@@ -123,24 +131,17 @@
     margin-top: -$space;
   }
 
-  // &.ratio-16-9 {
-  //   height: $card-size-small / 1.77;
-  //   width: inherit;
-  // }
+  // Small breakpoint height
+  height: 5rem;
 
   // Medium breakpoint height
   @include breakpoint(medium) {
-    height: $card-size-base / 1.33;
-
-    &.ratio-16-9 {
-      height: $card-size-base / 1.77;
-      width: inherit;
-    }
+    height: 10rem;
   }
 
-  // // Large breakpoint height
-  // @include breakpoint(large) {
-  //   height: 15rem;
-  // }
-
+  // Large breakpoint height
+  @include breakpoint(large) {
+    height: 15rem;
+  }
 }
+
