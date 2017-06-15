@@ -703,15 +703,17 @@ By default `.card` is sized according to the flex grid. To make the cards have a
 ### Classes and Usage
 The top level class for creating card elements is `.card`.
 - `.card.clickable` - Add "clickable" to a card if it is an interactive element.
+- `.card.masonry` - Create a fixed width, floating card.
 - `.card.has-notification-dot` – A red notification dot is added to the top left corner of the card.
 - `.card .card-button` - This is our old style card action, which was a button embedded into the card itself. Used when cards are not in the context of a grid and are not clickable, eg. in the message thread.
 - `.card .caption` - To be used inside card headers to show the status or type of a card, if it's a product.
 - `.card.border-blue` - Class to create a blue outline.
+- `.card-image.ratio-16-9` - Change the aspect ratio of the card image from default 4:3 to 16:9.
 
 Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.
 
 ### Examples
-The following are examples of `.flex` cards:  
+The following are examples of default cards which follow the flex grid:  
 ```html_example
 <div class="row small-up-2 medium-up-3 large-up-4">
   <!-- Product Card 1-->
@@ -815,13 +817,14 @@ function cardClick() {
 ### Card Overlays
 To overlay information over card images, `.image-overlay-info` to the `.card-image`.  
 Then simply add an empty `.overlay` div inside the image, as well as a `.info` div with the content to be overlayed.  
-This is currently used on Project cards to show more information about what's happening inside of it.
+This is currently used on Project cards to show more information about what's happening inside of it.  
+The examples below are `.masonry` cards with fixed width.
 
 ```html_example
 <div class="row">
   <div class="column">
     <!-- Card 1 -->
-    <div class="card clickable">
+    <div class="card clickable masonry">
     <!-- Image -->
       <div class="card-section">
         <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/mediadata/projects/042013/cd7346ba.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
@@ -868,7 +871,7 @@ This is currently used on Project cards to show more information about what's ha
       </div>
     </div>    
     <!-- Card 2 -->
-    <div class="card clickable">
+    <div class="card clickable masonry">
     <!-- Image -->
       <div class="card-section">
         <div class="card-image card-image-no-margin image-overlay-info ratio-16-9" style="background-image: url('https://architizer-prod.imgix.net/mediadata/projects/042013/cd7346ba.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
