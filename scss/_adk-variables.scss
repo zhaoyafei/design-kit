@@ -119,6 +119,7 @@ $adk-red: #ff4b1f;
 $adk-yellow: #ffcd00;
 $adk-quicksilver: #859DAF;
 $adk-gunmetal: #b8c8d1;
+$adk-gray: $medium-gray;
 
 $adk-global-separator-color: rgba($adk-quicksilver, 0.3);
 $adk-global-separator: 1px solid $adk-global-separator-color;
@@ -130,7 +131,7 @@ $adk-palette-colors: (
   yellow: $adk-yellow,
   quicksilver: $adk-quicksilver,
   gunmetal: $adk-gunmetal,
-  gray: $medium-gray,
+  gray: $adk-gray,
   global-separator: $adk-global-separator-color,
 );
 
