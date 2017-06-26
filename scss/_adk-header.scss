@@ -1,56 +1,81 @@
-#Header, #header {
-  #dropdown {
-    position: relative;
-    display: inline-block;
-    .active > a {
-      color: #FFF;
+ #Header {
+  z-index: 1000;
+  font-size: map-get($adk-font-sizes, base);
+
+  // Disable text selection
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+
+  // Links
+  a {
+    color: map-get(generate-palette($adk-gray), 50);
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  #small-screen-header,
+  #large-screen-header {
+    height: 3rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  #dropdown-content,
+  #sidebar-content {
+    z-index: 10000;
+    display: none;
+    position: absolute;
+    right: 0;
+    overflow: auto;
+
+    // Scrollbars
+    &::-webkit-scrollbar-track {
+      background-color: map-get(generate-palette($adk-gray), 900);
+    }
+
+    &::-webkit-scrollbar {
+      width: $space-xs;
+      background-color: $adk-gray; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border: 0;
+      background-color: $adk-gray;
     }
   }
 
   #dropdown-content {
-    // hidden by default
-    display: none;
-    position: absolute;
-    right: 0px;
-    top: 50px;
-    width: 220px;
-    z-index: 10000000;
+    top: 3rem;
+    width: 250px;
+    max-height: 80vh;
   }
 
   #sidebar-content {
-    // hidden by default
-    display: none;
-    position: absolute;
-    right: 0px;
-    top: 0px;
+    top: 0;
     width: 50%;
     height: 100vh;
-    z-index: 10000000;
   }
 
-  #sidebar-links {
-    .active > a {
-      color: #FFF;
-    }
+  .searchbar-input {
+    border: none;
+    border-radius: 0;
+    height: 3rem;
   }
 
-  ul.menu a {
-    color: #bcbcbc;
+  #sidebar-content-avatar {
+    border-radius: 50%;
+    height: 1.25rem;
+    width: 1.25rem;
   }
 
-  ul.menu a:hover {
-    color: #FFF;
-  }
-
- .menu .active > a {
-    color: #FFF;
-  }
-
-  a {
-    color: #bcbcbc;
-  }
-
-  a:hover {
-    color: #FFF;
+  #dropdown-link-avatar {
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
   }
 }
