@@ -823,7 +823,7 @@ The examples below are the three main image-based card types on Source. They are
 
 **Project Cards** - Displays project title and phase with edit button. 16:9 fixed width card-image ratio w/ information on hover.  
 **Search Cards** - Displays search title and # of products inside. Mosaic of floating product images as card content.  
-**Product Cards** - Displays product and brand names (note smaller type size) with product action button. 4:3 fixed width card-image ratio displaying product image.  
+**Product Cards** - Displays product and brand names (note smaller type size) with product action button. 4:3 fixed width card-image ratio displaying product image and creator info on hover overlay.  
 
 ```html_example
 <div class="row">
@@ -879,7 +879,7 @@ The examples below are the three main image-based card types on Source. They are
     <div class="card clickable masonry">
     <!-- Image -->
       <div class="card-section">
-        <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/mediadata/projects/042013/cd7346ba.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+        <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1488471796239-b340149386bb55af4b84186b72af4d8f.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
           <!-- <div class="overlay"></div> -->
 <!--           <div class="info">
             <div class="row align-middle collapse" style="height: 100%;">
@@ -915,9 +915,20 @@ The examples below are the three main image-based card types on Source. They are
       <!-- Info -->
       <div class="card-section">
         <div class="row align-middle mt-s">
-          <div class="columns">
-            <h3 class="ellipsis">Hogwarts IV</h3>
-            <span class="fs-s">Construction Documents</span>
+          <div class="small-10 columns">
+            <!-- Request Name -->
+            <div class="row">
+              <h3 class="ellipsis">Coating for Slurried Brick for Pre-existing or New Applications</h3>
+            </div>
+            <div class="row align-middle">
+              <div class="columns shrink fs-s pr-0">
+                <!-- Number of shortlisted + unreviewed product responses --> 
+                <strong>4</strong> Products
+              </div>
+            </div>
+          </div>
+          <div class="small-2 columns text-right">
+            <a class="secondary icon hollow button"><i class="material-icons">edit</i></a>
           </div>
         </div>
       </div>
@@ -928,31 +939,31 @@ The examples below are the three main image-based card types on Source. They are
       <div class="card-section">
         <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
           <div class="overlay"></div>
-          <div class="info">
+          <div class="info" style="text-align: center;">
             <div class="row align-middle collapse" style="height: 100%;">
               <div class="column">
-                <div class="row column">
-                  <h5>An Education Center in UK</h5>
-                </div>
-                <div class="row mt-s mb-base">
-                  <div class="small-4 columns">
-                    <h2><strong>48</strong></h2>
-                    <h4>Products</h4>
-                  </div>
-                  <div class="small-4 columns">
-                    <h2><strong>22</strong></h2>
-                    <h4>Searches</h4>
-                  </div>
-                  <div class="small-4 columns">
-                    <h2><strong>61</strong></h2>
-                    <h4>Messages</h4>
+                <div class="row mb-xs">
+                  <div class="column">
+                    <h5>Added by</h5>
                   </div>
                 </div>
-                <!-- Team -->
-                <div class="row column">
-                  <img class="avatar small" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
-                  <div class="avatar small bg-blue-300"><span class="initials">P</span></div>
-                  <div class="avatar small bg-green-300"><span class="initials">S</span></div>
+                <!-- Avatar -->
+                <div class="row mb-xs">
+                  <div class="column">
+                    <img class="avatar large" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
+                  </div>
+                </div>
+                <!-- User Name -->
+                <div class="row">
+                  <div class="columns align-center">
+                    <h4><strong>Thomas Tachibana</strong></h4>
+                  </div>
+                </div>
+                <!-- User Role -->
+                <div class="row">
+                  <div class="columns align-center">
+                    <h5>Project Team Member</h5>
+                  </div>
                 </div>
               </div>
             </div>
