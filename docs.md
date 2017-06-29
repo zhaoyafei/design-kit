@@ -712,108 +712,6 @@ The top level class for creating card elements is `.card`.
 
 Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.
 
-### Examples
-The following are examples of default cards which follow the flex grid:  
-```html_example
-<div class="row small-up-2 medium-up-3 large-up-4">
-  <!-- Product Card 1-->
-  <div class="column">
-    <div class="card flex clickable has-notification-dot" onclick="cardClick()">
-      <!-- Card Image -->
-      <div class="card-section card-image card-image-no-margin"
-           style="background-image: url('/docs/img/table.jpg')"></div>
-      <!-- Card Content -->
-      <div class="card-section">
-        <!-- Response Marking and Dropdown Menu-->
-        <div class="row">
-          <!-- Response Marking -->
-          <div class="columns">
-            <span class="caption blue">New Product</span>
-          </div>
-        </div>
-        <!-- Product Name -->
-        <div class="row align-middle">
-          <div class="small-12 medium-8 columns">
-            <div class="row">
-              <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
-            </div>
-            <!-- Brand Name -->
-            <div class="row align-middle">
-              <div class="columns shrink meta">
-                <span>Knoll</span>
-              </div>
-              <!-- If Verified -->
-              <div class="columns shrink ml-xxs pl-0">
-                <span class="architizer-glyph blue-500">+</span>
-              </div>
-            </div>
-          </div>
-          <!-- Shortlist / Dismiss buttons -->
-          <div class="small-12 medium-4 columns">
-            <div class="float-right">
-              <button class="alert icon button"><span class="material-icons">close</span></button>
-              <button class="success icon button"><span class="material-icons">done</span></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Product Card 2-->
-  <div class="column">
-    <div class="card flex">
-      <!-- Card Image -->
-      <div class="card-section card-image card-image-no-margin"
-           style="background-image: url('/docs/img/table.jpg')"></div>
-      <!-- Card Content -->
-      <div class="card-section">
-        <!-- Response Marking and Dropdown Menu-->
-        <div class="row">
-          <!-- Response Marking -->
-          <div class="columns shrink">
-            <span class="caption blue">New Product</span>
-          </div>
-          <!-- Middle Spacing -->
-          <div class="columns"></div>
-        </div>
-        <!-- Product Name -->
-        <div class="row">
-          <strong class="ellipsis">Pollock Executive Chair</strong>
-        </div>
-        <!-- Brand Name -->
-        <div class="row align-middle">
-          <div class="columns shrink meta pr-0">
-            <a href="#"
-               target="_blank" 
-               class="underline">Knoll</a>
-          </div>
-          <!-- If Verified -->
-          <div class="columns shrink ml-xxs pl-0">
-            <span class="architizer-glyph blue-500">+</span>
-          </div>
-        </div>
-      </div>
-      <!-- View Product Button -->
-      <div class="card-section">
-        <a class="primary hollow button expanded">View Product</a>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card flex border-blue">
-      <div class="card-section">
-      <p>A basic message with a blue outline</p>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-function cardClick() {
-    alert("Open this product modal!");
-}
-</script>
-```
-
 ### Card Types and Overlays
 To overlay information over card images, `.image-overlay-info` to the `.card-image`.  
 Then simply add an empty `.overlay` div inside the image, as well as a `.info` div with the content to be overlayed.  
@@ -824,6 +722,7 @@ The examples below are the three main image-based card types on Source. They are
 **Project Cards** - Displays project title and phase with edit button. 16:9 fixed width card-image ratio w/ information on hover.  
 **Search Cards** - Displays search title and # of products inside. Mosaic of floating product images as card content.  
 **Product Cards** - Displays product and brand names (note smaller type size) with product action button. 4:3 fixed width card-image ratio displaying product image and creator info on hover overlay.  
+**Product Cards, not clickable** - Product cards that are not in the context of a mosaic grid, such as cards in a message thread, are not clickable objects. Therefore these cards must have a dedicated "View Product" button.
 
 ```html_example
 <div class="row">
@@ -880,36 +779,6 @@ The examples below are the three main image-based card types on Source. They are
     <!-- Image -->
       <div class="card-section">
         <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1488471796239-b340149386bb55af4b84186b72af4d8f.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
-          <!-- <div class="overlay"></div> -->
-<!--           <div class="info">
-            <div class="row align-middle collapse" style="height: 100%;">
-              <div class="column">
-                <div class="row column">
-                  <h5>An Education Center in UK</h5>
-                </div>
-                <div class="row mt-s mb-base">
-                  <div class="small-4 columns">
-                    <h2><strong>48</strong></h2>
-                    <h4>Products</h4>
-                  </div>
-                  <div class="small-4 columns">
-                    <h2><strong>22</strong></h2>
-                    <h4>Searches</h4>
-                  </div>
-                  <div class="small-4 columns">
-                    <h2><strong>61</strong></h2>
-                    <h4>Messages</h4>
-                  </div>
-                </div> -->
-                <!-- Team -->
-<!--                 <div class="row column">
-                  <img class="avatar small" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
-                  <div class="avatar small bg-blue-300"><span class="initials">P</span></div>
-                  <div class="avatar small bg-green-300"><span class="initials">S</span></div>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
       <!-- Info -->
@@ -1003,6 +872,48 @@ The examples below are the three main image-based card types on Source. They are
         </div>
       </div>
     </div>    
+  </div>
+</div>
+<div class="row small-up-2 medium-up-3 large-up-4">
+  <!-- Product Card Flex-->
+  <div class="column">
+    <div class="card flex">
+      <!-- Card Image -->
+      <div class="card-section card-image card-image-no-margin"
+           style="background-image: url('/docs/img/table.jpg')"></div>
+      <!-- Card Content -->
+      <div class="card-section">
+        <!-- Response Marking and Dropdown Menu-->
+        <div class="row">
+          <!-- Response Marking -->
+          <div class="columns shrink">
+            <span class="caption blue">New Product</span>
+          </div>
+          <!-- Middle Spacing -->
+          <div class="columns"></div>
+        </div>
+        <!-- Product Name -->
+        <div class="row">
+          <strong class="ellipsis">Pollock Executive Chair</strong>
+        </div>
+        <!-- Brand Name -->
+        <div class="row align-middle">
+          <div class="columns shrink meta pr-0">
+            <a href="#"
+               target="_blank" 
+               class="underline">Knoll</a>
+          </div>
+          <!-- If Verified -->
+          <div class="columns shrink ml-xxs pl-0">
+            <span class="architizer-glyph blue-500">+</span>
+          </div>
+        </div>
+      </div>
+      <!-- View Product Button -->
+      <div class="card-section">
+        <a class="primary hollow button expanded">View Product</a>
+      </div>
+    </div>
   </div>
 </div>
 ```
