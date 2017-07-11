@@ -874,9 +874,9 @@ The examples below are the three main image-based card types on Source. They are
     </div>    
   </div>
 </div>
-<div class="row small-up-2 medium-up-3 large-up-4">
+<div class="row">
   <!-- Product Card Flex-->
-  <div class="column">
+  <div class="column small-2 medium-3 large-4">
     <div class="card flex">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
