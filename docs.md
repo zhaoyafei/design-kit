@@ -725,7 +725,7 @@ The examples below are the three main image-based card types on Source. They are
 **Product Cards, not clickable** - Product cards that are not in the context of a mosaic grid, such as cards in a message thread, are not clickable objects. Therefore these cards must have a dedicated "View Product" button.
 
 ```html_example
-<div class="row">
+<div class="row small-up-1 medium-up-2 large-up-3">
   <div class="column">
     <!-- Card 1 - Project Card -->
     <div class="card clickable masonry">
@@ -774,6 +774,8 @@ The examples below are the three main image-based card types on Source. They are
         </div>
       </div>
     </div>
+  </div>
+  <div class="column">
     <!-- Card 2 - Search Card-->
     <div class="card clickable masonry">
     <!-- Image -->
@@ -802,6 +804,8 @@ The examples below are the three main image-based card types on Source. They are
         </div>
       </div>
     </div>
+  </div>
+  <div class="column">
     <!-- Card 3 - Product Card-->
     <div class="card clickable masonry">
     <!-- Image -->
@@ -874,9 +878,9 @@ The examples below are the three main image-based card types on Source. They are
     </div>    
   </div>
 </div>
-<div class="row">
-  <!-- Product Card Flex-->
-  <div class="column small-2 medium-3 large-4">
+<div class="row small-up-1 medium-up-2 large-up-3">
+  <div class="column">
+    <!-- Product Card Flex-->
     <div class="card flex">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
