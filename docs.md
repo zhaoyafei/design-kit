@@ -915,6 +915,90 @@ The examples below are the three main image-based card types on Source. They are
       </div>
     </div>
   </div>
+  <div class="column">
+    <!-- Card 4 - Multi Image Card -->
+    <div class="card multi-image clickable masonry">
+    <!-- Image -->
+      <div class="card-section">
+        <div class="card-image card-image-no-margin image-overlay-info">
+          <div class="image-items-container">
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+            </div>
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+            </div>
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+            </div>
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+            </div>
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+            </div>
+          </div>
+          <div class="overlay"></div>
+          <div class="info" style="text-align: center;">
+            <div class="row align-middle collapse" style="height: 100%;">
+              <div class="column">
+                <div class="row mb-xs">
+                  <div class="column">
+                    <h5>Added by</h5>
+                  </div>
+                </div>
+                <!-- Avatar -->
+                <div class="row mb-xs">
+                  <div class="column">
+                    <img class="avatar large" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
+                  </div>
+                </div>
+                <!-- User Name -->
+                <div class="row">
+                  <div class="columns align-center">
+                    <h4><strong>Thomas Tachibana</strong></h4>
+                  </div>
+                </div>
+                <!-- User Role -->
+                <div class="row">
+                  <div class="columns align-center">
+                    <h5>Project Team Member</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Info -->
+      <div class="card-section">
+        <div class="row">
+          <!-- Response Marking -->
+          <div class="columns shrink">
+            <span class="caption red">In Review</span>
+          </div>
+        </div>
+        <div class="row align-middle">
+          <div class="small-10 columns pr-s">
+            <!-- Product Name -->
+            <div class="row">
+              <strong class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</strong>
+            </div>
+            <!-- Brand Name -->
+            <div class="row align-middle">
+              <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                <p class="mb-0 ellipsis" title="Bend Goods">Bend Goods</p>
+              </div>
+              <div class="columns pl-xxs">
+                <span class="architizer-glyph blue-500 pl-0">&nbsp;</span>
+              </div>
+            </div>
+          </div>
+          <!-- Shortlist -->
+          <div class="small-2 columns" style="white-space: nowrap">
+            <div class="float-right">
+              <a class="button tiny secondary-light hover-bg-green-500""><span class="material-icons fs-base">done</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 ```
 

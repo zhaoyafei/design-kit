@@ -4,6 +4,49 @@
   overflow: initial;
   position: relative;
 
+  &.multi-image {
+    .image-items-container {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      padding: 10px 0 10px 10px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .image-item {
+      width: 31%;
+      margin: 0;
+      padding: 0;
+
+      &:nth-child(1) {
+        height: 100%;
+      }
+
+      &:nth-child(2) {
+        margin: 0 0 10px 0;
+      }
+    
+      &:nth-child(2),
+      &:nth-child(5) {
+        height: calc(35% - 5px); 
+      }
+    
+      &:nth-child(3),
+      &:nth-child(4) {
+        height: calc(65% - 5px);
+      }
+    
+      &:nth-child(4) {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
   &.masonry {
     float: left;
     margin-right: $space-xs;
@@ -144,4 +187,3 @@
     height: 15rem;
   }
 }
-
