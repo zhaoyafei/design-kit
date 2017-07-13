@@ -21,8 +21,12 @@
       max-height: $space-xxxl;
     }
   }
+  &.can-hero {
+    opacity: 0.5;
+  }
   &.is-hero {
     box-shadow: $thumbnail-shadow-hero;
+    opacity: 1;
   }
 }
 
