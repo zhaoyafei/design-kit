@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="adk no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Kit Modal</title>
+    <!-- Architizer Design Kit CSS -->
+    <link rel="stylesheet" href="/css/adk.css" />
+  </head>
+  <body class="">
+
+    <!-- Page content begins here -->
+    <div class="row align-center mt-xxl">
+      <div class="small-3 columns">
+        <form>
+          <div class="row">
+            <div class="columns">
+              <div class="minimal-floating">
+                <input type="text" class="minimal-field">
+                <label>What are you looking for?
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns">
+              <div class="minimal-floating">
+                  <input type="text" class="minimal-field">
+                <label>Category
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns">
+              <div class="minimal-floating">
+                  <input type="text" class="minimal-field">
+                <label>Category
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Page content ends here -->
+
+
+    <!-- JavaScript dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
+    <script>
+    $(document).foundation();
+    </script>
+
+    <script>
+      //jquery
+      $(document).ready(function() {
+        $(".minimal-field").on("focus", function(){
+          $(this).siblings().addClass("is-focused");
+          $(this).on("focusout", function(){
+            $(this).siblings().removeClass("is-focused");
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

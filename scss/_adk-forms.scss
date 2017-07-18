@@ -1,7 +1,10 @@
 // Text Inputs - get rid of box shadow
 textarea, input {
-  &:hover {
-    border: $input-border-hover;
+  padding: 0;
+  border: 0;
+  border-bottom: $adk-global-separator;
+  &:focus {
+    border-bottom: $thick-underline-hover;
   }
 }
 input[type="checkbox"] + label,
@@ -88,4 +91,68 @@ textarea.ng-invalid {
 
 .selectize-input.ng-invalid {
   @include adk-selectize-error;
+}
+
+
+//Minimal Fields
+// Written based on Material Design Lite
+// https://getmdl.io/components/index.html#textfields-section
+
+// Animations
+@mixin minimal-animation-default($duration:0.2s) {
+  transition-duration: $duration;
+  transition-timing-function: $animation-curve-default;
+}
+
+/* ANIMATION */
+$animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1) !default;
+$animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1) !default;
+
+$animation-curve-default: $animation-curve-fast-out-slow-in !default;
+
+
+// Underlined Minimal Form Fields
+textarea.miminal-field, input.minimal-field {
+  @include minimal-animation-default();
+  border: none;
+  border-bottom: $input-border;
+  border-radius: 0;
+  background-color: none;
+  box-shadow: none;
+  padding-left: 0;
+  &:focus {
+    border: none;
+    border-bottom: $thick-underline-hover;
+    box-shadow: none;
+  }
+}
+
+// Floating Label Container
+.minimal-floating {
+  position: relative;
+  font-size: $input-font-size;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 $space 0;
+
+  label {
+    @include minimal-animation-default();
+    bottom: 0;
+    top: ($space-xxs);
+    position: absolute;
+    display: block;
+    font-size: $input-font-size;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+    &.is-focused {
+      color: $adk-blue;
+      font-size: $space-s;
+      top: -$space;
+      visibility: visible;
+    }
+  }
 }
