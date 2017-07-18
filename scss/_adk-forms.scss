@@ -112,24 +112,8 @@ $animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1) !default;
 $animation-curve-default: $animation-curve-fast-out-slow-in !default;
 
 
-// Underlined Minimal Form Fields
-textarea.miminal-field, input.minimal-field {
-  @include minimal-animation-default();
-  border: none;
-  border-bottom: $input-border;
-  border-radius: 0;
-  background-color: none;
-  box-shadow: none;
-  padding-left: 0;
-  &:focus {
-    border: none;
-    border-bottom: $thick-underline-hover;
-    box-shadow: none;
-  }
-}
-
 // Floating Label Container
-.minimal-floating {
+.minimal-form {
   position: relative;
   font-size: $input-font-size;
   display: inline-block;
@@ -138,21 +122,41 @@ textarea.miminal-field, input.minimal-field {
   margin: 0;
   padding: 0 0 $space 0;
 
-  label {
+  // Underlined Minimal Form Fields
+  textarea.miminal-field, input.minimal-field {
     @include minimal-animation-default();
-    bottom: 0;
-    top: ($space-xxs);
-    position: absolute;
-    display: block;
-    font-size: $input-font-size;
-    overflow: hidden;
-    white-space: nowrap;
-    pointer-events: none;
-    &.is-focused {
-      color: $adk-blue;
-      font-size: $space-s;
-      top: -$space;
-      visibility: visible;
+    border: none;
+    border-bottom: $input-border;
+    border-radius: 0;
+    background-color: none;
+    box-shadow: none;
+    padding-left: 0;
+    &:focus {
+      border: none;
+      border-bottom: $thick-underline-hover;
+      box-shadow: none;
     }
+  }
+
+  &.floating-label {
+    label {
+      @include minimal-animation-default();
+      bottom: 0;
+      top: ($space-xxs);
+      position: absolute;
+      display: block;
+      font-size: $input-font-size;
+      overflow: hidden;
+      white-space: nowrap;
+      pointer-events: none;
+      &.is-focused {
+        color: $adk-blue;
+        font-size: $space-s;
+        font-weight: $global-weight-bold;
+        top: -$space;
+        visibility: visible;
+      }
+    }
+    
   }
 }
