@@ -11,13 +11,13 @@
   <body>
 
     <!-- Page content begins here -->
-    <div class="row align-center mt-xxl">
+    <div class="row align-center align-middle" style="height: 100vh;">
       <div class="small-3 columns">
         <form>
           <div class="row">
             <div class="columns">
-              <div class="minimal-form floating-label">
-                <input type="text" class="minimal-field">
+              <div class="minimal-field floating-label">
+                <input type="text" class="">
                 <label>What are you looking for?
                 </label>
               </div>
@@ -25,8 +25,8 @@
           </div>
           <div class="row">
             <div class="columns">
-              <div class="minimal-form floating-label">
-                  <input type="text" class="minimal-field">
+              <div class="minimal-field floating-label">
+                  <input type="text" class="">
                 <label>Category
                 </label>
               </div>
@@ -34,9 +34,9 @@
           </div>
           <div class="row">
             <div class="columns">
-              <div class="minimal-form floating-label">
-                  <input type="text" class="minimal-field">
-                <label>Category
+              <div class="minimal-field floating-label">
+                  <input type="text" class="">
+                <label>How many?
                 </label>
               </div>
             </div>
@@ -59,10 +59,10 @@
     <script>
       //jquery
       $(document).ready(function() {
-        $(".minimal-field").on("focus", function(){
-          $(this).siblings().addClass("is-focused");
-          $(this).on("focusout", function(){
-            $(this).siblings().removeClass("is-focused");
+        $("input").on("focus", function(){
+          $(this).parent().addClass("is-focused");
+          $(this).blur(function(){
+            $(this).parent().removeClass("is-focused");
           });
         });
       });
