@@ -150,13 +150,22 @@ $animation-curve-default: $animation-curve-fast-out-slow-in !default;
       white-space: nowrap;
       pointer-events: none;
     }
-    &.is-focused {
+    &.is-focused, &.is-dirty {
       label {
-        color: $adk-blue;
         font-size: $space-s;
         font-weight: $global-weight-bold;
         top: -$space;
         visibility: visible;
+      }
+    }
+    &.is-focused {
+      label {
+        color: $adk-blue;
+      }
+    }
+    &.is-dirty {
+      label {
+        color: $adk-quicksilver;
       }
     }
   }

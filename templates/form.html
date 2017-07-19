@@ -59,10 +59,16 @@
     <script>
       //jquery
       $(document).ready(function() {
-        $("input").on("focus", function(){
+        $("input").focus(function(){
           $(this).parent().addClass("is-focused");
-          $(this).blur(function(){
+          $(this).focusout(function(){
             $(this).parent().removeClass("is-focused");
+            if ($(this).val().length > 0){
+              $(this).parent().addClass("is-dirty");
+            }
+            if ($(this).val().length == 0){
+              $(this).parent().removeClass("is-dirty");
+            }
           });
         });
       });
