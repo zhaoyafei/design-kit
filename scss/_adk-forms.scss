@@ -122,6 +122,15 @@ $animation-curve-default: $animation-curve-fast-out-slow-in !default;
   margin: 0;
   padding: 0 0 $space 0;
 
+  &.is-wrong, &.is-wrong.is-focused {
+    textarea, input {
+      border-bottom: 2px solid $adk-red;
+    }
+    label {
+      color: $adk-red;
+    }
+  }
+
   // Underlined Minimal Form Fields
   textarea, input {
     @include minimal-animation-default();
@@ -137,6 +146,7 @@ $animation-curve-default: $animation-curve-fast-out-slow-in !default;
       box-shadow: none;
     }
   }
+
 
   &.floating-label {
     label {
@@ -161,6 +171,11 @@ $animation-curve-default: $animation-curve-fast-out-slow-in !default;
     &.is-dirty {
       label {
         color: $adk-quicksilver;
+      }
+    }
+    &.is-wrong.is-focused {
+      label {
+        color: $adk-red;
       }
     }
     &.is-focused {
