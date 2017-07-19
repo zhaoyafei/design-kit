@@ -17,7 +17,7 @@
           <div class="row">
             <div class="columns">
               <div class="minimal-field floating-label">
-                <input type="text" class="">
+                <input type="text">
                 <label>What are you looking for?
                 </label>
               </div>
@@ -26,7 +26,7 @@
           <div class="row">
             <div class="columns">
               <div class="minimal-field floating-label">
-                  <input type="text" class="">
+                 <input type="text">
                 <label>Category
                 </label>
               </div>
@@ -35,8 +35,22 @@
           <div class="row">
             <div class="columns">
               <div class="minimal-field floating-label">
-                  <input type="text" class="">
-                <label>How many?
+                <textarea type="text"></textarea>
+                <label>Describe what you're looking for.
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns">
+              <div class="minimal-field floating-label">
+                <select>
+                  <option value=""></option>
+                  <option value="value">Starbuck</option>
+                  <option value="value">Hot Dog</option>
+                  <option value="value">Apollo</option>
+                </select>
+                <label>Select a category
                 </label>
               </div>
             </div>
@@ -44,7 +58,7 @@
           <div class="row">
             <div class="columns">
               <div class="minimal-field is-wrong floating-label">
-                  <input type="text" class="">
+                <input type="text">
                 <label>This field threw an error.
                 </label>
               </div>
@@ -68,7 +82,7 @@
     <script>
       //jquery
       $(document).ready(function() {
-        $("input").focus(function(){
+        $("input, textarea, select").focus(function(){
           $(this).parent().addClass("is-focused");
           $(this).focusout(function(){
             $(this).parent().removeClass("is-focused");
