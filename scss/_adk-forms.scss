@@ -12,6 +12,15 @@ input[type="radio"] + label,  {
   color: $black;
 }
 
+input[type="text"]:focus {
+  background-color: transparent;
+}
+
+label {
+  font-size: .8rem;
+  font-weight: bold;
+}
+
 // Input groups
 span.input-group-label {
   background: transparent;
@@ -134,6 +143,14 @@ $animation-curve-default: $animation-curve-fast-out-slow-in !default;
     }
   }
 
+  label {
+    font-weight: normal;
+  }
+
+  textarea {
+    min-height: 20px;
+  }
+
   // Underlined Minimal Form Fields
   textarea, 
   input,
@@ -146,6 +163,7 @@ $animation-curve-default: $animation-curve-fast-out-slow-in !default;
     background-color: transparent;
     box-shadow: none;
     padding-left: 0;
+    resize: vertical;
     &:focus {
       border: none;
       border-bottom: $thick-underline-hover;
