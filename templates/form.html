@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design Kit Modal</title>
+    <title>ADK Minimal Form</title>
     <!-- Architizer Design Kit CSS -->
     <link rel="stylesheet" href="/css/adk.css" />
   </head>
@@ -12,8 +12,18 @@
 
     <!-- Page content begins here -->
     <div class="row align-center align-middle" style="height: 100vh;">
-      <div class="small-3 columns">
-        <form>
+      <div class="small-6 large-3 columns">
+        <div class="row">
+          <div class="columns">
+            <h2><strong>Enrich your Search</strong></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns">
+            <p><strong>Add additional details so we can route your search to the best of 1,340 manufacturers in this category.</strong></p>
+          </div>
+        </div>
+        <form class="mt-s">
           <div class="row">
             <div class="columns">
               <div class="minimal-field floating-label">
@@ -26,8 +36,13 @@
           <div class="row">
             <div class="columns">
               <div class="minimal-field floating-label">
-                 <input type="text">
-                <label>Category
+                <select>
+                  <option value=""></option>
+                  <option value="value">Starbuck</option>
+                  <option value="value">Hot Dog</option>
+                  <option value="value">Apollo</option>
+                </select>
+                <label>What kind of product is this?
                 </label>
               </div>
             </div>
@@ -42,20 +57,36 @@
             </div>
           </div>
           <div class="row">
-            <div class="columns">
+            <div class="columns small-6">
+              <div class="minimal-field floating-label">
+                <input type="text"></input>
+                <label>How many do you need?
+                </label>
+              </div>
+            </div>
+            <div class="columns small-6">
               <div class="minimal-field floating-label">
                 <select>
                   <option value=""></option>
                   <option value="value">Starbuck</option>
-                  <option value="value">Hot Dog</option>
+                  <option value="value">Dogs</option>
                   <option value="value">Apollo</option>
                 </select>
-                <label>Select a category
+                <label>Select Units
                 </label>
               </div>
             </div>
           </div>
           <div class="row">
+            <div class="columns">
+              <div class="minimal-field floating-label">
+                <div id="dropzoneExample" action="file/" class="dropzone dz-clickable">
+                  <div class="dz-default dz-message"><span>Drag attachments here or click to browse</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--           <div class="row">
             <div class="columns">
               <div class="minimal-field is-wrong floating-label">
                 <input type="text">
@@ -63,7 +94,7 @@
                 </label>
               </div>
             </div>
-          </div>
+          </div> -->
         </form>
       </div>
     </div>
