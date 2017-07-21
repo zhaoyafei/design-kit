@@ -66,6 +66,7 @@
   font-weight: normal;
   font-style: normal;
   font-size: 20px;  /* Preferred icon size */
+  background-color: transparent; /* IE does not render transparent bg by default. */
   display: inline-block;
   line-height: 1;
   vertical-align: middle;
