@@ -1,3 +1,41 @@
+// mui-slide()
+// Creates a sliding transition by translating the element horizontally or vertically.
+// https://github.com/zurb/motion-ui/blob/master/docs/transitions.md#mui-slide
+
+.adk-slide-up {
+  @include mui-slide(
+    $state: in,
+    $direction: top,
+    $fade: true,
+    $duration: 0.3s,
+    $timing: cubic-bezier(.59,.18,.49,.97)
+  );
+}
+.adk-slide-down {
+  @include mui-slide(
+    $state: out,
+    $direction: down,
+    $fade: true,
+    $duration: 0.3s,
+    $timing: cubic-bezier(.59,.18,.49,.97)
+  );
+}
+
+.adk-fade-in {
+  @include mui-fade(
+    $state: in,
+    $duration: 0.2s,
+    $timing: easeInOut
+  );
+}
+.adk-fade-out {
+  @include mui-fade(
+    $state: out,
+    $duration: 0.25s,
+    $timing: easeInOut
+  );
+}
+
 /*-----------------------------*/
 /***** Search Hover Effect *****/
 /*-----------------------------*/
