@@ -31,8 +31,27 @@
 .adk-fade-out {
   @include mui-fade(
     $state: out,
-    $duration: 0.25s,
+    $duration: 0.2s,
     $timing: easeInOut
+  );
+}
+
+.adk-zoom-in {
+  @include mui-zoom(
+    $state: in,
+    $from: 0.6,
+    $to: 1,
+    $duration: 0.3s,
+    $timing: cubic-bezier(.59,.18,.49,.97)
+  );
+}
+.adk-zoom-out {
+  @include mui-zoom(
+    $state: out,
+    $from: 1,
+    $to: 0.6,
+    $duration: 0.3s,
+    $timing: cubic-bezier(.59,.18,.49,.97)
   );
 }
 
