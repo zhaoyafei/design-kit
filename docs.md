@@ -1225,6 +1225,55 @@ Form elements in Foundation are styled based on their type attribute rather than
   </div>
 </form>
 ```
+---
+
+## Minimal Forms  
+"Minimal Fields" is the new styling for fields/forms that ADK is transitioning to. It was written based on [Material Design Fields](https://getmdl.io/components/index.html#textfields-section).
+
+To use it, wrap every field/label element in `.minimal-fields`. Add `.floating-label` to have the label animate out of the field on focus.  
+
+See the [Minimal Fields Template](/templates/form.html) for a larger scale example.
+
+```html_example
+<div class="row align-left align-middle">
+  <div class="small-12 medium-8 large-6 xlarge-4 columns">
+    <form class="mt-s">
+      <div class="row">
+        <div class="columns">
+          <div class="minimal-field floating-label">
+            <label>What are you looking for?
+            </label>
+            <input type="text">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns">
+          <div class="minimal-field floating-label">
+            <label>What kind of product is this?
+            </label>
+            <select>
+              <option value=""></option>
+              <option value="value">Starbuck</option>
+              <option value="value">Hot Dog</option>
+              <option value="value">Apollo</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns">
+          <div class="minimal-field is-wrong floating-label">
+            <input type="text">
+            <label>This field threw an error.
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+```
 
 
 

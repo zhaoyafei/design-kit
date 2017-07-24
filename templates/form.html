@@ -1,0 +1,226 @@
+<!doctype html>
+<html class="adk no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADK Minimal Form</title>
+    <!-- Architizer Design Kit CSS -->
+    <link rel="stylesheet" href="/css/adk.css" />
+  </head>
+  <body>
+
+    <!-- Page content begins here -->
+    <div class="row align-center align-middle" style="height: 100vh;background-color: #F7F9FA">
+      <div class="small-12 medium-8 large-6 xlarge-3 columns">
+        <div class="row mb-xxs">
+          <div class="columns">
+            <h2><strong>New Search</strong></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns">
+            <!-- <p><strong>Add additional details so we can route your search to the best of 1,340 manufacturers in this category.</strong></p> -->
+          </div>
+        </div>
+        <form class="mt-s">
+          <div class="row">
+            <div class="columns">
+              <div class="minimal-field floating-label">
+                <input type="text">
+                <label>What are you looking for?
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns">
+              <div class="minimal-field floating-label">
+                <select>
+                  <option value=""></option>
+                  <option value="value">Starbuck</option>
+                  <option value="value">Hot Dog</option>
+                  <option value="value">Apollo</option>
+                </select>
+                <label>What kind of product is this?
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row align-right">
+            <div class="columns shrink">
+              <a href="#" class="secondary button" data-toggle="newModal">Save & Add Another</a>
+              <a href="#" class="primary button" data-toggle="fullscreen">Save & Continue</a>
+            </div>
+          </div>
+<!--           <div class="row">
+            <div class="columns">
+              <div class="minimal-field is-wrong floating-label">
+                <input type="text">
+                <label>This field threw an error.
+                </label>
+              </div>
+            </div>
+          </div> -->
+        </form>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <div class="reveal" id="newModal" data-reveal data-animation-in="adk-zoom-in" data-animation-out="adk-zoom-out">
+      <button class="close-button" data-close aria-label="Close reveal" type="button" style="float: right;">
+        <span aria-hidden="true" class="fs-l">&times;</span>
+      </button>
+      <div class="row align-center align-middle collapse">
+        <div class="columns">
+          <div class="row mb-xxs collapse">
+            <div class="columns">
+              <h2><strong>New Search</strong></h2>
+            </div>
+          </div>
+          <form class="mt-s">
+            <div class="row">
+              <div class="columns">
+                <div class="minimal-field floating-label">
+                  <input type="text">
+                  <label>What are you looking for?
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns">
+                <div class="minimal-field floating-label">
+                  <select>
+                    <option value=""></option>
+                    <option value="value">Starbuck</option>
+                    <option value="value">Hot Dog</option>
+                    <option value="value">Apollo</option>
+                  </select>
+                  <label>What kind of product is this?
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row align-right">
+              <div class="columns shrink">
+                <a href="#" class="secondary button" data-toggle="fullscreen">Save & Add Another</a>
+                <a href="#" class="primary button" data-toggle="fullscreen">Save & Continue</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- fullscreen modal -->
+    <div class="full reveal" id="fullscreen" data-reveal data-animation-in="adk-slide-up" data-animation-out="adk-slide-down">
+      <div class="row align-center align-middle" style="height: 100vh;">
+        <div class="small-12 medium-8 large-6 xlarge-3 columns">
+          <div class="row">
+            <div class="columns">
+              <h2 style="display: inline-block;"><strong>Enrich your Search</strong></h2>
+              <button class="close-button" data-close aria-label="Close reveal" type="button" style="float: right;">
+                <span aria-hidden="true" class="fs-l">&times;</span>
+              </button>
+            </div>
+          </div>
+          <div class="row mb-xxs">
+            <div class="columns">
+              <p><strong>Add additional details so we can route your search to the best of 1,340 manufacturers in this category.</strong></p>
+            </div>
+          </div>
+          <form class="mt-s">
+            <div class="row">
+              <div class="columns">
+                <div class="minimal-field floating-label">
+                  <textarea type="text"></textarea>
+                  <label>Describe what you're looking for.
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns small-6">
+                <div class="minimal-field floating-label">
+                  <input type="text"></input>
+                  <label>How many do you need?
+                  </label>
+                </div>
+              </div>
+              <div class="columns small-6">
+                <div class="minimal-field floating-label">
+                  <select>
+                    <option value=""></option>
+                    <option value="value">Starbuck</option>
+                    <option value="value">Dogs</option>
+                    <option value="value">Apollo</option>
+                  </select>
+                  <label>Select Units
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns">
+                <div class="minimal-field floating-label">
+                  <label>What Price Range?
+                  </label>
+                  <select>
+                    <option value=""></option>
+                    <option value="value">$</option>
+                    <option value="value">$$</option>
+                    <option value="value">$$$</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns">
+                <div class="minimal-field floating-label">
+                  <div id="dropzoneExample" action="file/" class="dropzone dz-clickable">
+                    <div class="dz-default dz-message"><span>Drag attachments here or click to browse</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row align-middle">
+              <div class="columns">
+                <a href="#" class="primary expanded button" data-toggle="fullscreen">Save Search</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Page content ends here -->
+
+
+    <!-- JavaScript dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script>
+    $(document).foundation();
+    </script>
+
+    <script>
+      //jquery for minimal fields
+      $(document).ready(function() {
+        $("input, textarea, select").focus(function(){
+          $(this).parent().addClass("is-focused");
+          $(this).focusout(function(){
+            $(this).parent().removeClass("is-focused");
+            if ($(this).val().length > 0){
+              $(this).parent().addClass("is-dirty");
+            }
+            if ($(this).val().length == 0){
+              $(this).parent().removeClass("is-dirty");
+            }
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>
