@@ -169,6 +169,9 @@ $animation-curve-default: $animation-curve-fast-out-slow-in !default;
     }
   }
 
+  label{
+    font-weight: $global-weight-bold;
+  }
 
   &.floating-label {
     label {
@@ -181,6 +184,7 @@ $animation-curve-default: $animation-curve-fast-out-slow-in !default;
       overflow: hidden;
       white-space: nowrap;
       pointer-events: none;
+      font-weight: $global-weight-normal;
     }
     &.is-focused, 
     &.is-dirty {
