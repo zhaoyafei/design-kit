@@ -1,8 +1,5 @@
 // Text Inputs - get rid of box shadow
 textarea, input {
-  padding: 0;
-  border: 0;
-  border-bottom: $adk-global-separator;
   &:focus {
     border-bottom: $thick-underline-hover;
   }
@@ -17,8 +14,7 @@ input[type="text"]:focus {
 }
 
 label {
-  font-size: .8rem;
-  font-weight: bold;
+  font-weight: $global-weight-bold;
 }
 
 // Input groups
@@ -130,6 +126,8 @@ $animation-curve-default: $animation-curve-fast-out-slow-in !default;
   width: 100%;
   margin: 0;
   padding: 0 0 $space 0;
+  // border: 0;
+  // border-bottom: $adk-global-separator;
 
   &.is-wrong, 
   &.is-wrong.is-focused {
