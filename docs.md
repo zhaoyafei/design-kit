@@ -4,7 +4,7 @@ Architizer Design Kit is a system of styles and interface elements based on [Fou
 
 <a class="primary hollow button" target="_blank" href="https://github.com/Architizer/design-kit">View on GitHub</a>
 
-## Starter Template
+### Starter Template
 ```html
 <!doctype html>
 <html class="adk no-js" lang="en">
@@ -1467,3 +1467,12 @@ This is a [Dropzone.js](http://dropzonejs.com) element.
 There are classes in `scss/_adk-dropzone.scss` that affect the styling of this element.
 
 We extend the default [`dropzone.scss`](https://github.com/enyo/dropzone/blob/master/src/dropzone.scss) with our `/scss/_adk-dropzone.scss` file to overwrite default styles.
+
+
+
+# Templates
+
+[Template 1](/docs/index.html)  
+[Template 2](/docs/index.html)  
+[Template 3](/docs/index.html)  
+
