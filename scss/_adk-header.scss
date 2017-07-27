@@ -11,7 +11,7 @@
 
   // Links
   a {
-    color: map-get(generate-palette($adk-gray), 50);
+    color: $light-gray;
 
     &:hover {
       color: $white;
