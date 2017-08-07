@@ -43,7 +43,7 @@ select.ng-empty {
 
 .suggestion-list {
   li {
-    color: black;
+    color: $black;
   }
   li:hover {
     background-color: rgba(125, 168, 208, 0.2);
