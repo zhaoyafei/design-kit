@@ -41,6 +41,18 @@ select.ng-empty {
   color: $input-placeholder-color;
 }
 
+.suggestion-list {
+  li {
+    color: $black;
+  }
+  li:hover {
+    background-color: $adk-typeahead-select;
+  }
+  li.selected {
+    background-color: $adk-typeahead-select;
+  }
+}
+
 /**
  * Form Errors
  *
