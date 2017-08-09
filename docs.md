@@ -1230,48 +1230,108 @@ Form elements in Foundation are styled based on their type attribute rather than
 ## Minimal Forms  
 "Minimal Fields" is the new styling for fields/forms that ADK is transitioning to. It was written based on [Material Design Fields](https://getmdl.io/components/index.html#textfields-section).
 
-To use it, wrap every field/label element in `.minimal-fields`. Add `.floating-label` to have the label animate out of the field on focus.  
+### Example
 
-See the [Minimal Fields Template](/templates/form.html) for a larger scale example.
-
-```html_example
-<div class="row align-left align-middle">
+<div class="row align-left">
   <div class="small-12 medium-8 large-6 xlarge-4 columns">
-    <form class="mt-s">
+    <form class="callout">
       <div class="row">
         <div class="columns">
           <div class="minimal-field floating-label">
-            <label>What are you looking for?
-            </label>
-            <input type="text">
+            <input type="text" class="ng-empty">
+            <label>What are you looking for?</label>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="columns">
           <div class="minimal-field floating-label">
-            <label>What kind of product is this?
-            </label>
-            <select>
+            <select class="ng-empty">
               <option value=""></option>
               <option value="value">Starbuck</option>
               <option value="value">Hot Dog</option>
               <option value="value">Apollo</option>
             </select>
+            <label>What kind of product is this?</label>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="columns">
-          <div class="minimal-field is-wrong floating-label">
-            <input type="text">
-            <label>This field threw an error.
-            </label>
+          <div class="minimal-field floating-label">
+            <textarea class="ng-empty" rows="4"></textarea>
+            <label>What other information can you provide?</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns">
+          <div class="minimal-field floating-label">
+            <input type="text" class="ng-invalid ng-empty" />
+            <label>What does an error look like?</label>
+            <span ng-messages=""><span>This is what an error looks like.</span></span>
           </div>
         </div>
       </div>
     </form>
   </div>
+</div>
+
+### Usage
+
+Add the classes `.minimal-field` and `.floating-label` to the parent element.
+
+**The HTML within the parent element must be structured in the following order:**
+1. Field (the input, select, or textarea element)
+1. Label (a label element)
+1. Errors (a span element with the ng-messages attribute set)
+
+See the following examples below:
+
+**Input**
+```html
+<div class="minimal-field floating-label">
+  <!-- Field -->
+  <input type="text" name="name" />
+  <!-- Label -->
+  <label>What are you looking for?</label>
+  <!-- Errors -->
+  <span ng-messages="YourCtrl.form['name'].$error">
+    <span ng-message="required">Required</span>
+    <span ng-message="maxlength">Please enter less than 60 characters</span>
+  </span>
+</div>
+```
+
+**Select**
+```html
+<div class="minimal-field floating-label">
+  <!-- Select -->
+  <select name="productType">
+    <option value="Starbuck">Starbuck</option>
+    <option value="Hot Dog">Hot Dog</option>
+    <option value="Apollo">Apollo</option>
+  </select>
+  <!-- Label -->
+  <label>What kind of product is this?</label>
+  <!-- Errors -->
+  <span ng-messages="YourCtrl.form['productType'].$error">
+    <span ng-message="required">Required</span>
+  </span>
+</div>
+```
+
+**Textarea**
+```html
+<div class="minimal-field floating-label">
+  <!-- Textarea -->
+  <textarea rows="4" name="description"></textarea>
+  <!-- Label -->
+  <label>What other information can you provide?</label>
+  <!-- Errors -->
+  <span ng-messages="YourCtrl.form['description'].$error">
+    <span ng-message="required">Required</span>
+  </span>
 </div>
 ```
 
