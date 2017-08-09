@@ -109,107 +109,93 @@ textarea.ng-invalid {
   transition-timing-function: $animation-curve-default;
 }
 
-/* ANIMATION */
 $animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
 $animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1) !default;
 $animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1) !default;
-
 $animation-curve-default: $animation-curve-fast-out-slow-in !default;
 
+// Borders
+$minimal-field-input-border: $input-border;
+$minimal-field-input-border-focus: $thick-underline-hover;
+$minimal-field-input-border-error: 2px solid $adk-red;
 
-// Floating Label Container
 .minimal-field {
   position: relative;
-  font-size: $input-font-size;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0;
-  padding: 0 0 $space 0;
-  // border: 0;
-  // border-bottom: $adk-global-separator;
+  margin: $space 0;
 
-  &.is-wrong, 
-  &.is-wrong.is-focused {
-    textarea, 
-    input,
-    select {
-      border-bottom: 2px solid $adk-red;
-    }
-    label {
-      color: $adk-red;
-    }
-  }
-
-  label {
-    font-weight: normal;
-  }
-
-  textarea {
-    min-height: 20px;
-  }
-
-  // Underlined Minimal Form Fields
-  textarea, 
+  // Field
   input,
-  select {
+  select,
+  textarea {
     @include minimal-animation-default();
     border: none;
-    border-bottom: $input-border;
-    // border-bottom: 1px solid rgba($adk-gunmetal, 0.0);
+    border-bottom: $minimal-field-input-border;
     border-radius: 0;
     background-color: transparent;
     box-shadow: none;
+    margin: 0;
     padding-left: 0;
-    resize: vertical;
+
     &:focus {
-      border: none;
-      border-bottom: $thick-underline-hover;
-      box-shadow: none;
+      border: 0;
+      border-bottom: $minimal-field-input-border-focus;
+    }
+
+    // Field errors
+    &.ng-invalid {
+      margin-bottom: 0;
+      border-bottom: $minimal-field-input-border-error;
+
+      // Red label
+      & + label {
+        color: $adk-red;
+      }
+
+      // Red error messages
+      & ~ span[ng-messages] {
+        color: $adk-red;
+        font-size: $font-size-s;
+      }
     }
   }
 
-  label{
-    font-weight: $global-weight-bold;
-  }
-
+  // Label
   &.floating-label {
     label {
       @include minimal-animation-default();
-      bottom: 0;
-      top: ($space-xxs);
       position: absolute;
       display: block;
+
+      bottom: 0;
+      top: $space-xxs;
+
       font-size: $input-font-size;
-      overflow: hidden;
-      white-space: nowrap;
-      pointer-events: none;
       font-weight: $global-weight-normal;
+
+      pointer-events: none;
     }
-    &.is-focused, 
-    &.is-dirty {
-      label {
-        font-size: $space-s;
-        font-weight: $global-weight-bold;
-        top: -$space;
-        visibility: visible;
+
+    // Focused/filled fields
+    input,
+    select,
+    textarea {
+
+      // Position label above field
+      &:focus,
+      &:not(.ng-empty) {
+        & + label {
+          top: -$space;
+          font-size: $font-size-s;
+          font-weight: $global-weight-bold;
+        }
       }
-    }
-    &.is-dirty {
-      label {
-        color: $adk-quicksilver;
-      }
-    }
-    &.is-wrong.is-focused {
-      label {
-        color: $adk-red;
-      }
-    }
-    &.is-focused {
-      label {
-        color: $adk-blue;
+
+      // Blue label when valid
+      &:focus:not(.ng-invalid) {
+        & + label {
+          color: $adk-blue;
+        }
       }
     }
   }
-
 }
