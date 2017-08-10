@@ -36,6 +36,10 @@ span.input-group-label + input.input-group-field:last-child {
   border-bottom-right-radius: $global-radius;
 }
 
+span.input-group-label.icon + input.input-group-field:last-child {
+  border-left: none;
+}
+
 //Utility classes for `.no-resize` on textareas
 .no-h-resize {
   resize: vertical;
