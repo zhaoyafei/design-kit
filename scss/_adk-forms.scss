@@ -22,8 +22,11 @@ span.input-group-label {
   background: transparent;
   border-radius: 0 $global-radius $global-radius 0;
   &.icon {
-    background: $white;
-    padding: 0 0 0 $space-xs;
+    position: relative;
+    left: $space-xs;
+    width: 0;
+    padding: 0;
+    border: none;
     color: $input-placeholder-color;
     &.material-icons {
       font-size: $space-xxs;
@@ -37,7 +40,9 @@ span.input-group-label + input.input-group-field:last-child {
 }
 
 span.input-group-label.icon + input.input-group-field:last-child {
-  border-left: none;
+  border-top-left-radius: $global-radius;
+  border-bottom-left-radius: $global-radius;
+  padding-left: $space-xl;
 }
 
 //Utility classes for `.no-resize` on textareas

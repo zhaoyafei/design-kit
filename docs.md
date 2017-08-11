@@ -1199,8 +1199,8 @@ Form elements in Foundation are styled based on their type attribute rather than
     <div class="large-6 columns">
       <label>Label</label>
       <div class="input-group">
-        <span class="input-group-label icon"><span class="material-icons">search</span></span>
-        <input class="input-group-field" type="text" placeholder="placeholder">
+          <span class="input-group-label icon"><span class="material-icons">search</span></span>
+        <input class="input-group-field" type="text" placeholder="Search...">
       </div>
     </div>
     <div class="large-6 columns">
@@ -1208,7 +1208,7 @@ Form elements in Foundation are styled based on their type attribute rather than
         <label>Label</label>
         <div class="input-group">
           <span class="input-group-label icon"><span class="material-icons">location_on</span></span>
-          <input class="input-group-field" type="text" placeholder="placeholder">
+          <input class="input-group-field" type="text" placeholder="Enter your location">
         </div>
       </div>
     </div>
