@@ -119,57 +119,107 @@ $minimal-field-input-border: $input-border;
 $minimal-field-input-border-focus: $thick-underline-hover;
 $minimal-field-input-border-error: 2px solid $adk-red;
 
+// Regular field styles for minimal fields
+@mixin minimal-field-element {
+  @include minimal-animation-default();
+  @include minimal-field-label;
+
+  border: none;
+  border-bottom: $minimal-field-input-border;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  margin: 0;
+  padding-left: 0;
+
+  &:hover {
+    border: 0;
+    border-bottom: $input-border-hover;
+  }
+
+  &:focus {
+    border: 0;
+    border-bottom: $minimal-field-input-border-focus;
+  }
+}
+
+@mixin minimal-field-label {
+  // Blue label when focused
+  &:focus:not(.ng-invalid),
+  &.focus:not(.ng-invalid) {
+    & + label {
+      color: $adk-blue;
+    }
+  }
+}
+
+// Error styles for minimal fields
+@mixin minimal-field-element-errors {
+  // Field errors
+  &.ng-invalid {
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: $minimal-field-input-border-error;
+
+    // Red label
+    & + label {
+      color: $adk-red;
+    }
+
+  }
+  // Red error messages
+  & ~ span[ng-messages] {
+    position: absolute;
+    color: $adk-red;
+    font-size: $font-size-s;
+  }
+}
+
+// Styles when a floating-label input is focused or filled
+@mixin minimal-field-filled-focused {
+  // Position label above field
+  & + label {
+    top: -$space;
+    font-size: $font-size-s;
+    font-weight: $global-weight-bold;
+  }
+}
+
+
 .minimal-field {
   position: relative;
-  margin: $space 0;
+  margin-top: $space;       // Top margin so the label has a place to go when it floats
+  margin-bottom: $space-m;  // Bottom margin so that error messages don't bump into labels on consecutive fields
+  margin-left: 0;
+  margin-right: 0;
 
-  // Field
+  // Regular elements
   input,
+  input:not(.selectize-input),
   select,
   textarea {
-    @include minimal-animation-default();
-    border: none;
-    border-bottom: $minimal-field-input-border;
-    border-radius: 0;
-    background-color: transparent;
-    box-shadow: none;
+    @include minimal-field-element;
+    @include minimal-field-element-errors;
+  }
+
+  // Selectize-specific
+  .selectize-control .selectize-input {
+    @include minimal-field-element;
+    @include minimal-field-element-errors;
+
     margin: 0;
-    padding-left: 0;
+  }
 
-    &:hover {
-      border: 0;
-      border-bottom: $input-border-hover;
-    }
+  .selectize-control {
+    @include minimal-field-label;
+  }
 
-    &:focus {
-      border: 0;
-      border-bottom: $minimal-field-input-border-focus;
-    }
+  .selectize-control.focus {
+    border-bottom: $minimal-field-input-border-focus;
+  }
 
-    // Blue label when focused
-    &:focus:not(.ng-invalid) {
-      & + label {
-        color: $adk-blue;
-      }
-    }
-
-    // Field errors
-    &.ng-invalid {
-      margin-bottom: 0;
-      background-color: transparent;
-      border-bottom: $minimal-field-input-border-error;
-
-      // Red label
-      & + label {
-        color: $adk-red;
-      }
-
-      // Red error messages
-      & ~ span[ng-messages] {
-        color: $adk-red;
-        font-size: $font-size-s;
-      }
-    }
+  .selectize-control .selectize-input.has-items {
+    padding: 0;
   }
 
   // Label
@@ -187,18 +237,26 @@ $minimal-field-input-border-error: 2px solid $adk-red;
 
     // Focused/filled fields
     input,
-    select,
     textarea {
-
-      // Position label above field
       &:focus,
       &:not(.ng-empty) {
-        & + label {
-          top: -$space;
-          font-size: $font-size-s;
-          font-weight: $global-weight-bold;
-        }
+        @include minimal-field-filled-focused;
       }
     }
+
+    select {
+      &:not(.ng-empty) {
+        @include minimal-field-filled-focused;
+      }
+    }
+
+    // Selectize-specific
+    .selectize-control {
+      &.focus,
+      &:not(.ng-empty) {
+        @include minimal-field-filled-focused;
+      }
+    }
+
   }
 }
