@@ -22,6 +22,7 @@ span.input-group-label {
   background: transparent;
   border-radius: 0 $global-radius $global-radius 0;
   &.icon {
+    display: inline-flex;
     position: relative;
     left: $space-xs;
     width: 0;
@@ -40,6 +41,7 @@ span.input-group-label + input.input-group-field:last-child {
 }
 
 span.input-group-label.icon + input.input-group-field:last-child {
+  display: inline-flex;
   border-top-left-radius: $global-radius;
   border-bottom-left-radius: $global-radius;
   padding-left: $space-xl;
