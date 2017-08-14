@@ -1,7 +1,10 @@
 // Text Inputs - get rid of box shadow
 textarea, input {
+  &:hover {
+    border: $input-border-hover;
+  }
   &:focus {
-    border-bottom: $thick-underline-hover;
+    border: $input-border-focus;
   }
 }
 input[type="checkbox"] + label,
