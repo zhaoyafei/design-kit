@@ -1,7 +1,10 @@
 // Text Inputs - get rid of box shadow
 textarea, input {
+  &:hover {
+    border: $input-border-hover;
+  }
   &:focus {
-    border-bottom: $thick-underline-hover;
+    border: $input-border-focus;
   }
 }
 input[type="checkbox"] + label,
@@ -140,107 +143,147 @@ textarea.ng-invalid {
   transition-timing-function: $animation-curve-default;
 }
 
-/* ANIMATION */
 $animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
 $animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1) !default;
 $animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1) !default;
-
 $animation-curve-default: $animation-curve-fast-out-slow-in !default;
 
+// Borders
+$minimal-field-input-border: $input-border;
+$minimal-field-input-border-focus: $thick-underline-hover;
+$minimal-field-input-border-error: 2px solid $adk-red;
 
-// Floating Label Container
-.minimal-field {
-  position: relative;
-  font-size: $input-font-size;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 100%;
+// Regular field styles for minimal fields
+@mixin minimal-field-element {
+  @include minimal-animation-default();
+
+  border: none;
+  border-bottom: $minimal-field-input-border;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
   margin: 0;
-  padding: 0 0 $space 0;
-  // border: 0;
-  // border-bottom: $adk-global-separator;
+  padding-left: 0;
 
-  &.is-wrong, 
-  &.is-wrong.is-focused {
-    textarea, 
-    input,
-    select {
-      border-bottom: 2px solid $adk-red;
+  &:hover {
+    border: 0;
+    border-bottom: $input-border-hover;
+  }
+
+  &:focus {
+    border: 0;
+    border-bottom: $minimal-field-input-border-focus;
+  }
+}
+
+@mixin minimal-field-label {
+  // Blue label when focused
+  &:focus:not(.ng-invalid),
+  &.focus:not(.ng-invalid) {
+    & + label {
+      color: $adk-blue;
     }
-    label {
+  }
+}
+
+// Error styles for minimal fields
+@mixin minimal-field-element-errors {
+  // Field errors
+  &.ng-invalid {
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: $minimal-field-input-border-error;
+
+    // Red label
+    & + label {
       color: $adk-red;
     }
-  }
 
-  label {
-    font-weight: normal;
   }
-
-  textarea {
-    min-height: 20px;
+  // Red error messages
+  & ~ span[ng-messages] {
+    position: absolute;
+    color: $adk-red;
+    font-size: $font-size-s;
   }
+}
 
-  // Underlined Minimal Form Fields
-  textarea, 
+// Styles when a floating-label input is focused or filled
+@mixin minimal-field-filled-focused {
+  // Position label above field
+  & + label {
+    top: -$space;
+    font-size: $font-size-s;
+    font-weight: $global-weight-bold;
+  }
+}
+
+
+.minimal-field {
+  position: relative;
+  margin-top: $space;       // Top margin so the label has a place to go when it floats up
+  margin-bottom: $space-m;  // Bottom margin so that error messages don't bump into labels on consecutive fields
+  margin-left: 0;
+  margin-right: 0;
+
+  // Regular elements
   input,
-  select {
-    @include minimal-animation-default();
-    border: none;
-    border-bottom: $input-border;
-    // border-bottom: 1px solid rgba($adk-gunmetal, 0.0);
-    border-radius: 0;
-    background-color: transparent;
-    box-shadow: none;
-    padding-left: 0;
-    resize: vertical;
-    &:focus {
-      border: none;
-      border-bottom: $thick-underline-hover;
-      box-shadow: none;
+  select,
+  textarea {
+    @include minimal-field-label;
+    @include minimal-field-element;
+    @include minimal-field-element-errors;
+  }
+
+  // Selectize-specific
+  .selectize-control {
+    @include minimal-field-label; // <label> is a sibling of .selectize-control (not .selectize-input) so we have to specify this here
+
+    .selectize-input {
+      @include minimal-field-element;
+      @include minimal-field-element-errors;
+      margin: 0;
+
+      &.has-items {
+        padding: 0 !important; // !important because the regular Selectize styles get compiled later in the output CSS file, so they overwrite this rule without !important
+      }
     }
   }
 
-  label{
-    font-weight: $global-weight-bold;
+  .selectize-dropdown {
+    border-top: $minimal-field-input-border-focus;
   }
 
+  // Label
   &.floating-label {
     label {
       @include minimal-animation-default();
-      bottom: 0;
-      top: ($space-xxs);
       position: absolute;
       display: block;
+      bottom: 0;
+      top: $space-xxs;
       font-size: $input-font-size;
-      overflow: hidden;
-      white-space: nowrap;
-      pointer-events: none;
       font-weight: $global-weight-normal;
+      pointer-events: none;
     }
-    &.is-focused, 
-    &.is-dirty {
-      label {
-        font-size: $space-s;
-        font-weight: $global-weight-bold;
-        top: -$space;
-        visibility: visible;
-      }
-    }
-    &.is-dirty {
-      label {
-        color: $adk-quicksilver;
-      }
-    }
-    &.is-wrong.is-focused {
-      label {
-        color: $adk-red;
-      }
-    }
-    &.is-focused {
-      label {
-        color: $adk-blue;
-      }
-    }
-  }
 
+    // Filled/focused: Input/textarea
+    input,
+    select,
+    textarea {
+      &:focus,
+      &:not(.ng-empty) {
+        @include minimal-field-filled-focused;
+      }
+    }
+
+    // Filled/focused: Selectize
+    .selectize-control {
+      &.focus, // .focus class is added/removed by the Selectize directive when the 'focus'/'blur' Selectize events are fired
+      &:not(.ng-empty) {
+        @include minimal-field-filled-focused;
+      }
+    }
+
+  }
 }
