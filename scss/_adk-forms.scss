@@ -219,14 +219,13 @@ $minimal-field-input-border-error: 2px solid $adk-red;
 
 .minimal-field {
   position: relative;
-  margin-top: $space;       // Top margin so the label has a place to go when it floats
+  margin-top: $space;       // Top margin so the label has a place to go when it floats up
   margin-bottom: $space-m;  // Bottom margin so that error messages don't bump into labels on consecutive fields
   margin-left: 0;
   margin-right: 0;
 
   // Regular elements
   input,
-  input:not(.selectize-input),
   select,
   textarea {
     @include minimal-field-element;
@@ -234,23 +233,23 @@ $minimal-field-input-border-error: 2px solid $adk-red;
   }
 
   // Selectize-specific
-  .selectize-control .selectize-input {
-    @include minimal-field-element;
-    @include minimal-field-element-errors;
-
-    margin: 0;
-  }
-
   .selectize-control {
     @include minimal-field-label;
+
+    .selectize-input {
+      @include minimal-field-element;
+      @include minimal-field-element-errors;
+      margin: 0;
+
+      &.has-items {
+        padding: 0 !important; // !important because the regular Selectize styles get compiled later in the output CSS file, so they overwrite this rule without !important
+      }
+    }
+    
   }
 
-  .selectize-control.focus {
-    border-bottom: $minimal-field-input-border-focus;
-  }
-
-  .selectize-control .selectize-input.has-items {
-    padding: 0;
+  .selectize-dropdown {
+    border-top: $minimal-field-input-border-focus;
   }
 
   // Label
@@ -266,7 +265,7 @@ $minimal-field-input-border-error: 2px solid $adk-red;
       pointer-events: none;
     }
 
-    // Focused/filled fields
+    // Filled/focused: Input/textarea
     input,
     textarea {
       &:focus,
@@ -275,15 +274,17 @@ $minimal-field-input-border-error: 2px solid $adk-red;
       }
     }
 
+    // Filled/focused: Select
     select {
+      // Can't use :focus here because the label will still move up when the element is clicked even though it doesn't have a value yet
       &:not(.ng-empty) {
         @include minimal-field-filled-focused;
       }
     }
 
-    // Selectize-specific
+    // Filled/focused: Selectize
     .selectize-control {
-      &.focus,
+      &.focus, // .focus class is added/removed by the Selectize directive when the 'focus'/'blur' Selectize events are fired
       &:not(.ng-empty) {
         @include minimal-field-filled-focused;
       }
