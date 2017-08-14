@@ -156,7 +156,6 @@ $minimal-field-input-border-error: 2px solid $adk-red;
 // Regular field styles for minimal fields
 @mixin minimal-field-element {
   @include minimal-animation-default();
-  @include minimal-field-label;
 
   border: none;
   border-bottom: $minimal-field-input-border;
@@ -231,13 +230,14 @@ $minimal-field-input-border-error: 2px solid $adk-red;
   input,
   select,
   textarea {
+    @include minimal-field-label;
     @include minimal-field-element;
     @include minimal-field-element-errors;
   }
 
   // Selectize-specific
   .selectize-control {
-    @include minimal-field-label;
+    @include minimal-field-label; // <label> is a sibling of .selectize-control (not .selectize-input) so we have to specify this here
 
     .selectize-input {
       @include minimal-field-element;
@@ -248,7 +248,6 @@ $minimal-field-input-border-error: 2px solid $adk-red;
         padding: 0 !important; // !important because the regular Selectize styles get compiled later in the output CSS file, so they overwrite this rule without !important
       }
     }
-    
   }
 
   .selectize-dropdown {
@@ -270,16 +269,9 @@ $minimal-field-input-border-error: 2px solid $adk-red;
 
     // Filled/focused: Input/textarea
     input,
+    select,
     textarea {
       &:focus,
-      &:not(.ng-empty) {
-        @include minimal-field-filled-focused;
-      }
-    }
-
-    // Filled/focused: Select
-    select {
-      // Can't use :focus here because the label will still move up when the element is clicked even though it doesn't have a value yet
       &:not(.ng-empty) {
         @include minimal-field-filled-focused;
       }
