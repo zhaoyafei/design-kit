@@ -1,6 +1,17 @@
 // Initialize Foundation
 $(document).foundation();
 
+// Add fake `.ng-empty` classes to empty .minimal-field fields
+$(document).ready(function() {
+  $(".minimal-field input, .minimal-field select, .minimal-field textarea").focusout(function(){
+    if ($(this).val().length > 0){
+      $(this).removeClass("ng-empty");
+    } else if ($(this).val().length === 0) {
+      $(this).addClass("ng-empty");
+    }
+  });
+});
+
 // Initialize Selectize
 $('.selectize').selectize(selectizeOptions());
 

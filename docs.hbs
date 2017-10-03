@@ -16,36 +16,40 @@
     
     <!-- Other documentation site CSS -->
     <link rel="stylesheet" href="docs.css">
+
+    <!-- Style guide-specific CSS goes here. -->
+    <style>
+    /* This styles the vertical tabs used for the table of contents. */
+    .tabs-title {
+      width: 100%;
+      max-width: 100%;
+    }
+    /* This styles code blocks used for examples. */
+    .ss-code code {
+      background-color: white;
+      border-radius: 3px;
+    }
+    </style>
+
   </head>
-  <body>
+  <body class="bg-extra-light-gray">
 
-    <div class="top-bar pl-0 pr-0">
-      <div class="row">
-        <div class="small-12 columns">
-          <div class="top-bar-left ml-base">
-            <h4 class="mb-0"><a href="/" class="black"><span class="architizer-glyph">B</span><span>Design</span></a></h4>
-          </div>
-        </div>
+    <div class="row align-center mt-l" style="width: 90rem;">
+      <!-- navigation -->
+      <div class="small-3 columns">
+        <h3 class="mb-s mt-x"><a href="/" class="black"><span class="architizer-glyph">B</span><span>DesignKit</span></a></h3>
+        <ul class="tabs vertical bg-extra-light-gray" id="tabs-navigation" data-tabs>
+          {{#each pages}}
+            <dd class="tabs-title {{#if @first}}is-active{{/if}}"><a href="#{{ anchor }}" style="padding-left: 0;">{{ title }}</a></dd>
+          {{/each}}
+        </ul>
       </div>
-    </div>
 
-    <div class="top-bar tabs-container expanded p-0">
-      <div class="row">
-        <div class="small-12 columns">
-          <ul class="tabs" id="tabs-navigation" data-tabs>
-            {{#each pages}}
-              <li class="tabs-title {{#if @first}}is-active{{/if}}"><a href="#{{ anchor }}">{{ title }}</a></li>
-            {{/each}}
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-
-      <div class="small-12 xxlarge-9 columns">
+      <!-- content -->
+      <div class="small-9 columns">
         <div class="tabs-content vertical" data-tabs-content="tabs-navigation">
           {{#each pages}}
-            <div class="tabs-panel {{#if @first}}is-active{{/if}} content" id="{{ anchor }}">
+            <div class="tabs-panel {{#if @first}}is-active{{/if}} content bg-extra-light-gray" id="{{ anchor }}" style="padding:0;">
               {{ body }}
             </div>
           {{/each}}

@@ -4,7 +4,7 @@ Architizer Design Kit is a system of styles and interface elements based on [Fou
 
 <a class="primary hollow button" target="_blank" href="https://github.com/Architizer/design-kit">View on GitHub</a>
 
-## Starter Template
+### Starter Template
 ```html
 <!doctype html>
 <html class="adk no-js" lang="en">
@@ -673,48 +673,20 @@ Action Bars are title bars with other functionality inside them.
   <!-- Left: Data -->
   <div class="row align-middle">
     <div class="small-12 large-expand columns">
-      <!-- Breadcrumbs -->
-      <div class="row">
-        <div class="columns">
-          <ul class="breadcrumbs">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Journal Squared</a></li>
-            <li>
-              <!-- Current View Title -->
-              <span class="inline-block">14 Ergonomic Office Chairs</span>
-              <!-- Dropdown "..." Menu -->
-              <span class="inline-block">
-              <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
-                <li>
-                  <span><i class="material-icons">more_horiz</i></span>
-              <ul class="menu">
-                <li><a href="#">Details</a></li>
-                <li><a href="#">Edit</a></li>
-                <li><a href="#">Preview</a></li>
-                <li><a class="disabled"
-                    href="#">Download CSV</a></li>
-                <li><a class="red"
-                    href="#">Delete</a></li>
-              </ul>
-            </li>
-          </ul>
-          </span>
-          </li>
-          </ul>
-        </div>
-      </div>
       <!-- Current View Title -->
       <div class="row">
         <div class="columns">
-          <h3>Products</h3>
+          <h3>Project Title</h3>
         </div>
       </div>
     </div>
     <!-- Right: Buttons -->
     <div class="columns shrink">
-      <a class="light-gray mr-l">Searches</a>
-      <a class="light-gray mr-l">Messages</a>
-      <a class="primary button">New Search</a>
+      <ul class="menu">
+        <li><a>Searches</a></li>
+        <li class="active"><a>Messages</a></li>
+        <li><a>Details</a></li>
+      </ul>
     </div>
   </div>
 </div>
@@ -722,70 +694,194 @@ Action Bars are title bars with other functionality inside them.
 ---
 
 ## Cards
-Card elements are modules that can be used across our UI, and are currently used for the most part in our conversation feed. In these feeds cards can be basic messages, product activity/status cards, recommended products and more, but across the UI we should think of anything as being able to be a "card" that is reused across the system, e.g. product search criteria, so that we don't need to rebuild the same content over and over again when it appears in different places. Card componenets let us copy, paste and reuse.
+Card elements are modules that can be used across our UI, and are currently used for the most part in our conversation feed. 
 
-**A note about card spacing:**
-Because cards are self-contained elements, the top-level `.card` class handles the spacing/gutter inside the card. Therefore the only spacing that happens on elements inside cards is margin-bottom to control vertical spacing, defined by `$card-content-margin`.
+By default `.card` is sized according to the flex grid. To make the cards have a fixed width, add `.masonry`, which is to be used in masonry grids and not the flex grid.  
+`.masonry` cards are sized according to the `.card-image` inside of it, which by default has an aspect ratio of 4:3. To change the aspect ratio from 4:3 to 16:9, use `.card-image.ratio-16-9` on the masonry cards. 
 
-### Usage
+
+### Classes and Usage
 The top level class for creating card elements is `.card`.
-- `.card.border-blue` - Class to create a blue outline.
 - `.card.clickable` - Add "clickable" to a card if it is an interactive element.
+- `.card.masonry` - Create a fixed width, floating card.
 - `.card.has-notification-dot` – A red notification dot is added to the top left corner of the card.
+- `.card .card-button` - This is our old style card action, which was a button embedded into the card itself. Used when cards are not in the context of a grid and are not clickable, eg. in the message thread.
 - `.card .caption` - To be used inside card headers to show the status or type of a card, if it's a product.
-- `.card .card-button` - This is our old style card action, which was a button embedded into the card itself. Potentially deprecated.
+- `.card.border-blue` - Class to create a blue outline.
+- `.card-image.ratio-16-9` - Change the aspect ratio of the card image from default 4:3 to 16:9.
 
 Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.
 
-### Examples
+### Card Types and Overlays
+To overlay information over card images, `.image-overlay-info` to the `.card-image`.  
+Then simply add an empty `.overlay` div inside the image, as well as a `.info` div with the content to be overlayed.  
+This is currently used on Project cards to show more information about what's happening inside of it.  
+  
+The examples below are the three main image-based card types on Source. They are`.masonry` cards with fixed width.  
+
+**Project Cards** - Displays project title and phase with edit button. 16:9 fixed width card-image ratio w/ information on hover.  
+**Search Cards** - Displays search title and # of products inside. Mosaic of floating product images as card content.  
+**Product Cards** - Displays product and brand names (note smaller type size) with product action button. 4:3 fixed width card-image ratio displaying product image and creator info on hover overlay.  
+**Product Cards, not clickable** - Product cards that are not in the context of a mosaic grid, such as cards in a message thread, are not clickable objects. Therefore these cards must have a dedicated "View Product" button.
+
 ```html_example
-<div class="row small-up-2 medium-up-3 large-up-4">
-  <!-- Product Card 1-->
+<div class="row small-up-1 medium-up-2 large-up-3">
   <div class="column">
-    <div class="card clickable has-notification-dot" onclick="cardClick()">
-      <!-- Card Image -->
-      <div class="card-section card-image card-image-no-margin"
-           style="background-image: url('/docs/img/table.jpg')"></div>
-      <!-- Card Content -->
+    <!-- Card 1 - Project Card -->
+    <div class="card clickable masonry">
+    <!-- Image -->
       <div class="card-section">
-        <!-- Response Marking and Dropdown Menu-->
-        <div class="row">
-          <!-- Response Marking -->
-          <div class="columns">
-            <span class="caption blue">New Product</span>
+        <div class="card-image card-image-no-margin image-overlay-info ratio-16-9" style="background-image: url('https://architizer-prod.imgix.net/media/1494960959876-Dig-Inn-171646-1.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+          <div class="overlay"></div>
+          <div class="info">
+            <div class="row align-middle collapse" style="height: 100%;">
+              <div class="column">
+                <div class="row column">
+                  <h5>An Education Center in UK</h5>
+                </div>
+                <div class="row mt-s mb-base">
+                  <div class="small-4 columns">
+                    <h2><strong>48</strong></h2>
+                    <h4>Products</h4>
+                  </div>
+                  <div class="small-4 columns">
+                    <h2><strong>22</strong></h2>
+                    <h4>Searches</h4>
+                  </div>
+                  <div class="small-4 columns">
+                    <h2><strong>61</strong></h2>
+                    <h4>Messages</h4>
+                  </div>
+                </div>
+                <!-- Team -->
+                <div class="row column">
+                  <img class="avatar small" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
+                  <div class="avatar small bg-blue-300"><span class="initials">P</span></div>
+                  <div class="avatar small bg-green-300"><span class="initials">S</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Product Name -->
-        <div class="row align-middle">
-          <div class="small-12 medium-8 columns">
+      </div>
+      <!-- Info -->
+      <div class="card-section">
+        <div class="row align-middle mt-s">
+          <div class="columns">
+            <h3 class="ellipsis">Dig In</h3>
+            <span class="fs-s">Construction Documents</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <!-- Card 2 - Search Card-->
+    <div class="card clickable masonry">
+    <!-- Image -->
+      <div class="card-section">
+        <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1488471796239-b340149386bb55af4b84186b72af4d8f.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+        </div>
+      </div>
+      <!-- Info -->
+      <div class="card-section">
+        <div class="row align-middle mt-s">
+          <div class="small-10 columns">
+            <!-- Request Name -->
             <div class="row">
-              <strong class="ellipsis">Pollock Executive Chair (Long Name Edition, what happens when the name is too long?!)</strong>
+              <h3 class="ellipsis">Coating for Slurried Brick for Pre-existing or New Applications</h3>
+            </div>
+            <div class="row align-middle">
+              <div class="columns shrink fs-s pr-0">
+                <!-- Number of shortlisted + unreviewed product responses --> 
+                <strong>4</strong> Products
+              </div>
+            </div>
+          </div>
+          <div class="small-2 columns text-right">
+            <a class="secondary icon hollow button"><i class="material-icons">edit</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <!-- Card 3 - Product Card-->
+    <div class="card clickable masonry">
+    <!-- Image -->
+      <div class="card-section">
+        <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+          <div class="overlay"></div>
+          <div class="info" style="text-align: center;">
+            <div class="row align-middle collapse" style="height: 100%;">
+              <div class="column">
+                <div class="row mb-xs">
+                  <div class="column">
+                    <h5>Added by</h5>
+                  </div>
+                </div>
+                <!-- Avatar -->
+                <div class="row mb-xs">
+                  <div class="column">
+                    <img class="avatar large" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
+                  </div>
+                </div>
+                <!-- User Name -->
+                <div class="row">
+                  <div class="columns align-center">
+                    <h4><strong>Thomas Tachibana</strong></h4>
+                  </div>
+                </div>
+                <!-- User Role -->
+                <div class="row">
+                  <div class="columns align-center">
+                    <h5>Project Team Member</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Info -->
+      <div class="card-section">
+        <div class="row">
+          <!-- Response Marking -->
+          <div class="columns shrink">
+            <span class="caption red">In Review</span>
+          </div>
+        </div>
+        <div class="row align-middle">
+          <div class="small-10 columns pr-s">
+            <!-- Product Name -->
+            <div class="row">
+              <strong class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</strong>
             </div>
             <!-- Brand Name -->
             <div class="row align-middle">
-              <div class="columns shrink meta">
-                <span>Knoll</span>
+              <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                <p class="mb-0 ellipsis" title="Bend Goods">Bend Goods</p>
               </div>
-              <!-- If Verified -->
-              <div class="columns shrink ml-xxs pl-0">
-                <span class="architizer-glyph blue-500">+</span>
+              <div class="columns pl-xxs">
+                <span class="architizer-glyph blue-500 pl-0">&nbsp;</span>
               </div>
             </div>
           </div>
-          <!-- Shortlist / Dismiss buttons -->
-          <div class="small-12 medium-4 columns">
+          <!-- Shortlist -->
+          <div class="small-2 columns" style="white-space: nowrap">
             <div class="float-right">
-              <button class="alert icon button"><span class="material-icons">close</span></button>
-              <button class="success icon button"><span class="material-icons">done</span></button>
+              <a class="button tiny secondary-light hover-bg-green-500""><span class="material-icons fs-base">done</span></a>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div>    
   </div>
-  <!-- Product Card 2-->
+</div>
+<div class="row small-up-1 medium-up-2 large-up-3">
   <div class="column">
-    <div class="card clickable" onclick="cardClick()">
+    <!-- Product Card Flex-->
+    <div class="card flex">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
            style="background-image: url('/docs/img/table.jpg')"></div>
@@ -799,92 +895,6 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
           </div>
           <!-- Middle Spacing -->
           <div class="columns"></div>
-          <!-- Dropdown Menu -->
-          <div class="columns shrink">
-            <ul class="dropdown menu"
-                data-dropdown-menu
-                data-alignment="right"
-                data-click-open="true"
-                data-disable-hover="true">
-              <li>
-                <span class=>
-                  <i class="material-icons" 
-                     style="cursor:pointer; width:1rem;">more_horiz2</i>
-                </span>
-                <ul class="menu">
-                  <li>
-                    <a>Shortlist</a>
-                  </li>
-                  <li>
-                    <a>Dismiss</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Product Name -->
-        <div class="row">
-          <strong class="ellipsis">Pollock Executive Chair</strong>
-        </div>
-        <!-- Brand Name -->
-        <div class="row align-middle">
-          <div class="columns shrink meta pr-0">
-            <a href="#"
-               target="_blank" 
-               class="underline">Knoll</a>
-          </div>
-          <!-- If Verified -->
-          <div class="columns shrink ml-xxs pl-0">
-            <span class="architizer-glyph blue-500">+</span>
-          </div>
-        </div>
-      </div>
-      <!-- View Product Button -->
-<!--       <div class="card-section">
-        <a class="primary hollow button expanded">View Product</a>
-      </div> -->
-    </div>
-  </div> 
-  <!-- Product Card 3-->
-  <div class="column">
-    <div class="card">
-      <!-- Card Image -->
-      <div class="card-section card-image card-image-no-margin"
-           style="background-image: url('/docs/img/table.jpg')"></div>
-      <!-- Card Content -->
-      <div class="card-section">
-        <!-- Response Marking and Dropdown Menu-->
-        <div class="row">
-          <!-- Response Marking -->
-          <div class="columns shrink">
-            <span class="caption blue">New Product</span>
-          </div>
-          <!-- Middle Spacing -->
-          <div class="columns"></div>
-          <!-- Dropdown Menu -->
-          <div class="columns shrink">
-            <ul class="dropdown menu"
-                data-dropdown-menu
-                data-alignment="right"
-                data-click-open="true"
-                data-disable-hover="true">
-              <li>
-                <span class=>
-                  <i class="material-icons" 
-                     style="cursor:pointer; width:1rem;">more_horiz2</i>
-                </span>
-                <ul class="menu">
-                  <li>
-                    <a>Shortlist</a>
-                  </li>
-                  <li>
-                    <a>Dismiss</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
         </div>
         <!-- Product Name -->
         <div class="row">
@@ -910,44 +920,92 @@ Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs
     </div>
   </div>
   <div class="column">
-    <div class="card">
+    <!-- Card 4 - Multi Image Card -->
+    <div class="card multi-image clickable masonry">
+    <!-- Image -->
       <div class="card-section">
-        <div class="row">
-          <div class="columns">
-            <span class="caption blue">New Product</span>
+        <div class="card-image card-image-no-margin image-overlay-info">
+          <div class="image-items-container">
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+            </div>
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+            </div>
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+            </div>
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+            </div>
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+            </div>
+          </div>
+          <div class="overlay"></div>
+          <div class="info" style="text-align: center;">
+            <div class="row align-middle collapse" style="height: 100%;">
+              <div class="column">
+                <div class="row mb-xs">
+                  <div class="column">
+                    <h5>Added by</h5>
+                  </div>
+                </div>
+                <!-- Avatar -->
+                <div class="row mb-xs">
+                  <div class="column">
+                    <img class="avatar large" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
+                  </div>
+                </div>
+                <!-- User Name -->
+                <div class="row">
+                  <div class="columns align-center">
+                    <h4><strong>Thomas Tachibana</strong></h4>
+                  </div>
+                </div>
+                <!-- User Role -->
+                <div class="row">
+                  <div class="columns align-center">
+                    <h5>Project Team Member</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <!-- Info -->
       <div class="card-section">
         <div class="row">
-          <div class="medium-8 columns">
-            <strong>Product Title</strong>
-            <p>This card is a new product with our old button.</p>
-          </div>
-          <div class="columns">
-            <img src="/docs/img/table.jpg">
+          <!-- Response Marking -->
+          <div class="columns shrink">
+            <span class="caption red">In Review</span>
           </div>
         </div>
-      </div>
-      <div class="card-button">
-        <a href="#">View Product</a>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card border-blue">
-      <div class="card-section">
-      <p>A basic message with a blue outline</p>
+        <div class="row align-middle">
+          <div class="small-10 columns pr-s">
+            <!-- Product Name -->
+            <div class="row">
+              <strong class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</strong>
+            </div>
+            <!-- Brand Name -->
+            <div class="row align-middle">
+              <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                <p class="mb-0 ellipsis" title="Bend Goods">Bend Goods</p>
+              </div>
+              <div class="columns pl-xxs">
+                <span class="architizer-glyph blue-500 pl-0">&nbsp;</span>
+              </div>
+            </div>
+          </div>
+          <!-- Shortlist -->
+          <div class="small-2 columns" style="white-space: nowrap">
+            <div class="float-right">
+              <a class="button tiny secondary-light hover-bg-green-500""><span class="material-icons fs-base">done</span></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<script>
-function cardClick() {
-    alert("Open this product modal!");
-}
-</script>
 ```
+
 ---
 
 ## Modals
@@ -1138,6 +1196,24 @@ Form elements in Foundation are styled based on their type attribute rather than
     </div>
   </div>
   <div class="row">
+    <div class="large-6 columns">
+      <label>Label</label>
+      <div class="input-group">
+          <span class="input-group-label icon"><span class="material-icons">search</span></span>
+        <input class="input-group-field" type="text" placeholder="Search...">
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="row collapse">
+        <label>Label</label>
+        <div class="input-group">
+          <span class="input-group-label icon"><span class="material-icons">location_on</span></span>
+          <input class="input-group-field" type="text" placeholder="Enter your location">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <div class="large-12 columns">
       <label>Select Box</label>
       <select>
@@ -1166,6 +1242,115 @@ Form elements in Foundation are styled based on their type attribute rather than
     </div>
   </div>
 </form>
+```
+---
+
+## Minimal Forms  
+"Minimal Fields" is the new styling for fields/forms that ADK is transitioning to. It was written based on [Material Design Fields](https://getmdl.io/components/index.html#textfields-section).
+
+### Example
+
+<div class="row align-left">
+  <div class="small-12 medium-8 large-6 xlarge-4 columns">
+    <form class="callout">
+      <div class="row">
+        <div class="columns">
+          <div class="minimal-field floating-label">
+            <input type="text" class="ng-empty">
+            <label>What are you looking for?</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns">
+          <div class="minimal-field floating-label">
+            <select class="ng-empty">
+              <option value=""></option>
+              <option value="value">Starbuck</option>
+              <option value="value">Hot Dog</option>
+              <option value="value">Apollo</option>
+            </select>
+            <label>What kind of product is this?</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns">
+          <div class="minimal-field floating-label">
+            <textarea class="ng-empty" rows="4"></textarea>
+            <label>What other information can you provide?</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns">
+          <div class="minimal-field floating-label">
+            <input type="text" class="ng-invalid ng-empty" />
+            <label>What does an error look like?</label>
+            <span ng-messages=""><span>This is what an error looks like.</span></span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+### Usage
+
+Add the classes `.minimal-field` and `.floating-label` to the parent element.
+
+**The HTML within the parent element must be structured in the following order:**
+1. Field (the input, select, or textarea element)
+1. Label (a label element)
+1. Errors (a span element with the ng-messages attribute set)
+
+See the following examples below:
+
+**Input**
+```html
+<div class="minimal-field floating-label">
+  <!-- Field -->
+  <input type="text" name="name" />
+  <!-- Label -->
+  <label>What are you looking for?</label>
+  <!-- Errors -->
+  <span ng-messages="YourCtrl.form['name'].$error">
+    <span ng-message="required">Required</span>
+    <span ng-message="maxlength">Please enter less than 60 characters</span>
+  </span>
+</div>
+```
+
+**Select**
+```html
+<div class="minimal-field floating-label">
+  <!-- Select -->
+  <select name="productType">
+    <option value="Starbuck">Starbuck</option>
+    <option value="Hot Dog">Hot Dog</option>
+    <option value="Apollo">Apollo</option>
+  </select>
+  <!-- Label -->
+  <label>What kind of product is this?</label>
+  <!-- Errors -->
+  <span ng-messages="YourCtrl.form['productType'].$error">
+    <span ng-message="required">Required</span>
+  </span>
+</div>
+```
+
+**Textarea**
+```html
+<div class="minimal-field floating-label">
+  <!-- Textarea -->
+  <textarea rows="4" name="description"></textarea>
+  <!-- Label -->
+  <label>What other information can you provide?</label>
+  <!-- Errors -->
+  <span ng-messages="YourCtrl.form['description'].$error">
+    <span ng-message="required">Required</span>
+  </span>
+</div>
 ```
 
 
@@ -1360,3 +1545,12 @@ This is a [Dropzone.js](http://dropzonejs.com) element.
 There are classes in `scss/_adk-dropzone.scss` that affect the styling of this element.
 
 We extend the default [`dropzone.scss`](https://github.com/enyo/dropzone/blob/master/src/dropzone.scss) with our `/scss/_adk-dropzone.scss` file to overwrite default styles.
+
+
+
+# Templates
+
+[Template 1](/docs/index.html)  
+[Template 2](/docs/index.html)  
+[Template 3](/docs/index.html)  
+

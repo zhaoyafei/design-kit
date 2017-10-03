@@ -100,6 +100,7 @@
 
   &:hover {
     border: $input-border-hover;
+    color: $adk-quicksilver;
   }
 
   &.dz-clickable {
@@ -117,10 +118,11 @@
 
   min-height: $space-xxl;
   border-radius: $global-radius;
-  border: $card-border;
+  border: 1px solid transparent;
   background: $extra-light-gray;
   padding: $space;
   margin: 0 0 $space-m 0;
+  transition: all 0.2s;
 
   &.dz-started {
     .dz-message {
@@ -133,17 +135,14 @@
     border-style: solid;
     border: $input-border-focus;
     .dz-message {
-     color: $adk-gunmetal;
+     color: $adk-quicksilver;
     }
   }
   .dz-message {
     text-align: center;
     margin: $space-l 0;
-    color: $adk-quicksilver;
-
+    color: $adk-gunmetal;
   }
-
-
 
   .dz-preview {
     position: relative;

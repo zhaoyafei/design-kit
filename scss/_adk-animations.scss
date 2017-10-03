@@ -1,0 +1,107 @@
+// mui-slide()
+// Creates a sliding transition by translating the element horizontally or vertically.
+// https://github.com/zurb/motion-ui/blob/master/docs/transitions.md#mui-slide
+
+.adk-slide-up {
+  @include mui-slide(
+    $state: in,
+    $direction: top,
+    $fade: true,
+    $duration: 0.3s,
+    $timing: cubic-bezier(.59,.18,.49,.97)
+  );
+}
+.adk-slide-down {
+  @include mui-slide(
+    $state: out,
+    $direction: down,
+    $fade: true,
+    $duration: 0.3s,
+    $timing: cubic-bezier(.59,.18,.49,.97)
+  );
+}
+
+.adk-fade-in {
+  @include mui-fade(
+    $state: in,
+    $duration: 0.2s,
+    $timing: easeInOut
+  );
+}
+.adk-fade-out {
+  @include mui-fade(
+    $state: out,
+    $duration: 0.2s,
+    $timing: easeInOut
+  );
+}
+
+.adk-zoom-in {
+  @include mui-zoom(
+    $state: in,
+    $from: 0.6,
+    $to: 1,
+    $duration: 0.3s,
+    $timing: cubic-bezier(.59,.18,.49,.97)
+  );
+}
+.adk-zoom-out {
+  @include mui-zoom(
+    $state: out,
+    $from: 1,
+    $to: 0.6,
+    $duration: 0.3s,
+    $timing: cubic-bezier(.59,.18,.49,.97)
+  );
+}
+
+/*-----------------------------*/
+/***** Search Hover Effect *****/
+/*-----------------------------*/
+
+// Reference: https://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/
+
+.image-overlay-info {
+  text-align: left;
+  color: $white;
+
+  .overlay {
+    position: absolute;
+    background-color: $dark-gray;
+    border-radius: $space-xxxs $space-xxxs 0 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.0;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+  }
+
+  .info {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: $space-l $space;
+    opacity: 0.0;
+    -ms-transform: scale(0.85); /* IE 9 */
+    -webkit-transform: scale(0.85); /* Safari */
+    transform: scale(0.85);
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    // .row {
+    //     height: 100%;
+    //   }
+  }
+}
+
+.card:hover {
+  .overlay, {
+  opacity: 0.7;
+  }
+  
+  .info {
+    opacity: 1.0;
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari */
+    transform: scale(1);
+  }
+}
