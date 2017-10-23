@@ -14,7 +14,7 @@
         max-width: 1600px;
       }
       .project-hero {
-        height: 90vh;
+        height: 85vh;
         background-image: url("/docs/img/placeholder-4:3.png");
       }
       .product-cards > .column > .card {
@@ -25,6 +25,9 @@
       .product-cards > .column > .card > .card-section.card-image {
         /*height: 180px;*/
       }
+      .logo {
+
+      }
     </style>
 
   </head>
@@ -33,22 +36,35 @@
 
     <!-- Project Hero -->
     <div class="project-hero p-xxl" >
+
       <div class="row columns p-xxl">
         <div class="row align-center">
-          <h1>Find Architectural Products. Faster.</h1>
+          <h1><strong>Find Architectural Products. Faster.</strong></h1>
         </div>
-        <div class="row align-center">
+        <div class="row align-center mb-base">
           <p>Architizer connects actively specifying architects with the building products they need.</p>
         </div>
         <div class="row align-center gray" style="font-variant: small-caps;">
           <h5>trusted by over 300 firms</h5>
         </div>
-        <div class="row align-center mt-l">
+        <!-- Firm Logos -->
+        <div class="row align-center mb-base" style="opacity:0.5">
+          <div class="flex-container align-justify">
+            <img class="logo p-s" src="/docs/img/logos/logo-shop.png" style="width: 68px; height:68px;">
+            <img class="logo p-s" src="/docs/img/logos/logo-shop.png" style="width: 68px; height:68px;">
+            <img class="logo p-s" src="/docs/img/logos/logo-shop.png" style="width: 68px; height:68px;">
+            <img class="logo p-s" src="/docs/img/logos/logo-shop.png" style="width: 68px; height:68px;">
+            <img class="logo p-s" src="/docs/img/logos/logo-shop.png" style="width: 68px; height:68px;">
+            <img class="logo p-s" src="/docs/img/logos/logo-shop.png" style="width: 68px; height:68px;">
+          </div>
+        </div>
+        <div class="row align-center">
           <button class="button p-base">Join Now</button>
         </div>
       </div>
-      
+
     </div>
+
     <!-- Product Cards -->
     <div class="product-cards row small-up-1 medium-up-3 large-up-5 align-center" style="margin-top:-200px; max-width: 1600px;">
       <!-- Card -->
@@ -56,7 +72,7 @@
         <div class="card ">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
-            <h4><strong>Norwegian Pine</strong></h4>
+            <h4 class="ellipsis"><strong>Norwegian Pine</strong></h4>
             <p>Nordic Lumbar</p>
           </div>
         </div>
@@ -66,7 +82,7 @@
         <div class="card ">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
-            <h4><strong>Matte Pendant Light</strong></h4>
+            <h4 class="ellipsis"><strong>Matte Pendant Light</strong></h4>
             <p>Knoll Lighting</p>
           </div>
         </div>
@@ -76,7 +92,7 @@
         <div class="card ">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
-            <h4><strong>Barcelona Chair</strong></h4>
+            <h4 class="ellipsis"><strong>Barcelona Chair</strong></h4>
             <p>Mies Van der Rohe</p>
           </div>
         </div>
@@ -86,7 +102,7 @@
         <div class="card ">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
-            <h4><strong>RT-90 Curtain Walls</strong></h4>
+            <h4 class="ellipsis"><strong>RT-90 Curtain Walls</strong></h4>
             <p>DORMA Glass</p>
           </div>
         </div>
@@ -96,7 +112,7 @@
         <div class="card ">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
-            <h4><strong>Granite Boulders</strong></h4>
+            <h4 class="ellipsis"<strong>Granite Boulders</strong></h4>
             <p>PMI Stone</p>
           </div>
         </div>
