@@ -11,7 +11,7 @@
     <!-- Homepage styles -->
     <style type="text/css">
       .row {
-        max-width: 1600px;
+        max-width: 1440px;
       }
       .project-hero {
         height: 75vh;
@@ -38,7 +38,7 @@
         top:-2px;
       }
       .product-cards > .column > .card > .card-section.card-image {
-        /*height: 180px;*/
+        height: 200px;
       }
       .journal {
         cursor: pointer;
@@ -69,6 +69,39 @@
   </head>
   <body>
     <!-- Page content starts here -->
+
+    <!-- Header -->
+    <!-- Respopnsive Top Bar -->
+    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button type="button" data-toggle><i class="material-icons white">menu</i></button>
+      <div class="title-bar-title"><span class="architizer-glyph white">C</span></div>
+    </div>
+    <!-- Top Bar -->
+    <div class="top-bar" id="responsive-menu">
+      <div class="top-bar-left">
+        <ul class="vertical medium-horizontal menu" data-dropdown-menu>
+          <li class="hide-for-small-only"><a><object class="nav-logo" type="image/svg+xml" data="/docs/logo/source-logo.svg">Architizer Source</object></a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Brands</a></li>
+          <li class="active"><a href="#">Source</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li>
+            <a href="#" class="black">Rem Koolhaas</a>
+            <ul class="menu vertical">
+              <li><a href="#">Your Profile &amp; Collections</a></li>
+              <li><a href="#"><i class="material-icons">work</i> OMA</a></li>
+              <li><a href="#">Account Settings</a></li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!-- Project Hero -->
     <div class="project-hero p-xxl" >
@@ -102,7 +135,7 @@
     </div>
 
     <!-- Product Cards -->
-    <div class="product-cards row small-up-1 medium-up-3 large-up-5 align-center" style="margin-top:-200px; max-width: 1600px;">
+    <div class="product-cards row small-up-1 medium-up-3 large-up-5 align-center" style="margin-top:-200px; max-width: 1440px;">
       <!-- Card -->
       <div class="column">
         <div class="card ">
@@ -158,7 +191,7 @@
 
     <!-- Value Prop -->
     <div id="value" class="pt-xxl mb-xxl">
-      <div class="row small-up-1 medium-up-2 align-middle" style="max-width: 1600px;">
+      <div class="row small-up-1 medium-up-2 align-middle" style="max-width: 1440px;">
         <div class="column">
           <h2 class="mb-xl"><strong>A new approach to finding products.</strong></h2>
           <div class="row small-up-1 medium-up-2 mb-base">
@@ -198,11 +231,11 @@
     <div id="searches" class="pt-l mb-xxl">
       <div class="row align-center">
         <div class="column shrink">
-          <h2 class="mb-base"><strong>Product Solutions. Simplified.</strong></h2>
+          <h2 class="mb-m"><strong>Product Solutions. Simplified.</strong></h2>
         </div>
       </div>
       <!-- Search Cards -->
-      <div class="row align-center" style="max-width: 1600px;">
+      <div class="row align-center" style="max-width: 1440px;">
         <div class="column">
           <div class="row small-up-1 medium-up-2 large-up-4" >
             <!-- Multi Image Card 1-->
@@ -491,10 +524,10 @@
     <div id="journal" class="pt-l mb-xxl">
       <div class="row align-center">
         <div class="column shrink">
-          <h2 class="mb-base"><strong>Architizer Journal</strong></h2>
+          <h2 class="mb-m"><strong>Architizer Journal</strong></h2>
         </div>
       </div>
-      <div class="row small-up-1 medium-up-3 large-up-6" style="max-width: 1600px;">
+      <div class="row small-up-1 medium-up-3 large-up-6" style="max-width: 1440px;">
         <!-- Journal Article -->
         <div class="column mb-base">
           <div class="journal">
@@ -545,11 +578,11 @@
     <div id="projects" class="pt-l mb-xxl">
       <div class="row align-center">
         <div class="column shrink">
-          <h2 class="mb-base"><strong>Featured Projects</strong></h2>
+          <h2 class="mb-m"><strong>Featured Projects</strong></h2>
         </div>
       </div>
       <!-- Project Cards -->
-      <div class="row align-center" style="max-width: 1600px;">
+      <div class="row align-center" style="max-width: 1440px;">
         <div class="column">
           <div class="row small-up-1 medium-up-2 large-up-4" >
             <!-- Project Card 1-->
@@ -638,11 +671,11 @@
     <div id="brands" class="pt-l mb-xxl">
       <div class="row align-center">
         <div class="column shrink">
-          <h2 class="mb-base"><strong>Featured Brands</strong></h2>
+          <h2 class="mb-m"><strong>Featured Brands</strong></h2>
         </div>
       </div>
       <!-- Brand Cards -->
-      <div class="row align-center" style="max-width: 1600px;">
+      <div class="row align-center" style="max-width: 1440px;">
         <div class="column">
           <div class="row small-up-1 medium-up-2 large-up-4" >
             <!-- Brand Card 1-->
