@@ -7,14 +7,36 @@
     <title>Architizer Home</title>
     <!-- Architizer Design Kit CSS -->
     <link rel="stylesheet" href="/css/adk.css" />
+    <!-- Neue Haas -->
+    <link rel="stylesheet" type="text/css" href="/fonts/neue/Neue_Haas_-_Homepage.css">
 
     <!-- Homepage styles -->
     <style type="text/css">
+      .adk body{ 
+        font-family: NeueHaasUnicaPro-Regular; 
+      }
+      .adk h1 {
+        font-family: NeueHaasUnicaPro-Bold; 
+      }
+      .adk h2 {
+        font-family: NeueHaasUnicaPro-Bold; 
+      }
+      .adk h3 {
+        font-family: NeueHaasUnicaPro-Medium; 
+      }
+      .adk h4 {
+        font-family: NeueHaasUnicaPro-Medium; 
+      }
+      .adk h5 {
+        font-family: NeueHaasUnicaPro-Medium; 
+        letter-spacing: 1px;
+        font-variant: small-caps;
+      }
       .row {
         max-width: 1440px;
       }
       .project-hero {
-        height: 75vh;
+        height: 80vh;
         background-image: url("https://architizer-prod.imgix.net/media/1446057025402ManshausenW.jpg?q=60&auto=format,compress&cs=strip&w=1680");
         background-size: cover;
         background-position: 0% -15 %; 
@@ -53,8 +75,8 @@
       }
       .journal-title {
         font-size: 14px;
-        font-weight: 600;
         line-height: 1;
+        transition: all 100ms cubic-bezier(0.215, 0.61, 0.355, 1);
       }
       .journal-title:hover {
         box-shadow: 0 2px 0 0 #9dcee7;
@@ -103,13 +125,13 @@
       <!-- Copy -->
       <div class="row columns p-xxl">
         <div class="row align-center">
-          <h1 class="text-center"><strong>Find Architectural Products. Faster.</strong></h1>
+          <h1 class="text-center">Find Architectural Products. Faster.</h1>
         </div>
         <div class="row align-center mb-xs">
-          <p class="text-center">Architizer connects actively specifying architects with the building products they need.</p>
+          <p class="text-center">Be inspired, find solutions, and realize your designs.</p>
         </div>
         <div class="row align-center gray" style="font-variant: small-caps;">
-          <h5 class="text-center">trusted by over 300 firms</h5>
+          <h5 class="text-center">trusted by</h5>
         </div>
         <!-- Firm Logos -->
         <div class="row align-center mb-xxs" style="opacity:0.5">
@@ -136,7 +158,7 @@
         <div class="card ">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
-            <h4 class="ellipsis"><strong>Norwegian Pine</strong></h4>
+            <h4 class="ellipsis">Norwegian Pine</h4>
             <p>Nordic Lumbar</p>
           </div>
         </div>
@@ -146,7 +168,7 @@
         <div class="card ">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
-            <h4 class="ellipsis"><strong>Matte Pendant Light</strong></h4>
+            <h4 class="ellipsis">Matte Pendant Light</h4>
             <p>Knoll Lighting</p>
           </div>
         </div>
@@ -156,7 +178,7 @@
         <div class="card ">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
-            <h4 class="ellipsis"><strong>Barcelona Chair</strong></h4>
+            <h4 class="ellipsis">Barcelona Chair</h4>
             <p>Mies Van der Rohe</p>
           </div>
         </div>
@@ -166,7 +188,7 @@
         <div class="card ">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
-            <h4 class="ellipsis"><strong>RT-90 Curtain Walls</strong></h4>
+            <h4 class="ellipsis">RT-90 Curtain Walls</h4>
             <p>DORMA Glass</p>
           </div>
         </div>
@@ -176,7 +198,7 @@
         <div class="card ">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
-            <h4 class="ellipsis"><strong>Granite Boulders</strong></h4>
+            <h4 class="ellipsis">Granite Boulders</h4>
             <p>PMI Stone</p>
           </div>
         </div>
@@ -188,28 +210,28 @@
     <div id="value" class="pt-xxl mb-xxl">
       <div class="row small-up-1 medium-up-2 align-middle" style="max-width: 1440px;">
         <div class="column">
-          <h2 class="mb-xl"><strong>A new approach to finding products.</strong></h2>
+          <h2 class="mb-xl">A new approach to finding products.</h2>
           <div class="row small-up-1 medium-up-2 mb-base">
             <div class="column">
               <img class="mb-xxs" src="/docs/img/homepage/alarm.png" style="height: 24px;">
-              <h4><strong>Save Time</strong></h4>
+              <h4>Save Time</h4>
               <p class="gray">Submit a search and let manufacturers find you, in real-time.</p>
             </div>
             <div class="column">
               <img class="mb-xxs" src="/docs/img/homepage/lightbulb.png" style="height: 24px;">
-              <h4><strong>Informed Decisions</strong></h4>
+              <h4>Informed Decisions</h4>
               <p class="gray">Discover new brands, compare solutions and make more informed decisions.</p>
             </div>
           </div>
           <div class="row small-up-1 medium-up-2 mb-base">
             <div class="column">
               <img class="mb-xxs" src="/docs/img/homepage/cloud.png" style="height: 24px;">
-              <h4><strong>System of Record</strong></h4>
+              <h4>System of Record</h4>
               <p class="gray">Share information and create an online resource for your firm.</p>
             </div>
             <div class="column">
               <img class="mb-xxs" src="/docs/img/homepage/free.png" style="height: 24px;">
-              <h4><strong>Free, For Architects</strong></h4>
+              <h4>Free, For Architects</h4>
               <p class="gray">Source is 100% free for architects. 
               Get access today.</p>
             </div>
@@ -226,7 +248,7 @@
     <div id="searches" class="pt-l mb-xxl">
       <div class="row align-center">
         <div class="column shrink">
-          <h2 class="mb-m"><strong>Product Solutions. Simplified.</strong></h2>
+          <h2 class="mb-m">Product Solutions. Simplified.</h2>
         </div>
       </div>
       <!-- Search Cards -->
@@ -257,7 +279,7 @@
                         <div class="column">
                           <div class="row mb-xs">
                             <div class="column">
-                              <h5>Added by</h5>
+                              <h5>added by</h5>
                             </div>
                           </div>
                           <!-- Avatar -->
@@ -269,13 +291,13 @@
                           <!-- User Name -->
                           <div class="row">
                             <div class="columns align-center">
-                              <h4><strong>Mies van der Rohe</strong></h4>
+                              <h4>Mies van der Rohe</h4>
                             </div>
                           </div>
                           <!-- User Role -->
                           <div class="row">
                             <div class="columns align-center">
-                              <h5>Project Team Member</h5>
+                              <h5>project team member</h5>
                             </div>
                           </div>
                         </div>
@@ -289,7 +311,7 @@
                     <div class="small-10 columns pr-s">
                       <!-- Product Name -->
                       <div class="row">
-                        <strong class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</strong>
+                        <span class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</span>
                       </div>
                       <!-- Brand Name -->
                       <div class="row align-middle">
@@ -326,7 +348,7 @@
                         <div class="column">
                           <div class="row mb-xs">
                             <div class="column">
-                              <h5>Added by</h5>
+                              <h5>added by</h5>
                             </div>
                           </div>
                           <!-- Avatar -->
@@ -338,13 +360,13 @@
                           <!-- User Name -->
                           <div class="row">
                             <div class="columns align-center">
-                              <h4><strong>Mies van der Rohe</strong></h4>
+                              <h4>Mies van der Rohe</h4>
                             </div>
                           </div>
                           <!-- User Role -->
                           <div class="row">
                             <div class="columns align-center">
-                              <h5>Project Team Member</h5>
+                              <h5>project team member</h5>
                             </div>
                           </div>
                         </div>
@@ -358,7 +380,7 @@
                     <div class="small-10 columns pr-s">
                       <!-- Product Name -->
                       <div class="row">
-                        <strong class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</strong>
+                        <span class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</span>
                       </div>
                       <!-- Brand Name -->
                       <div class="row align-middle">
@@ -395,7 +417,7 @@
                         <div class="column">
                           <div class="row mb-xs">
                             <div class="column">
-                              <h5>Added by</h5>
+                              <h5>added by</h5>
                             </div>
                           </div>
                           <!-- Avatar -->
@@ -407,13 +429,13 @@
                           <!-- User Name -->
                           <div class="row">
                             <div class="columns align-center">
-                              <h4><strong>Mies van der Rohe</strong></h4>
+                              <h4>Mies van der Rohe</h4>
                             </div>
                           </div>
                           <!-- User Role -->
                           <div class="row">
                             <div class="columns align-center">
-                              <h5>Project Team Member</h5>
+                              <h5>project team member</h5>
                             </div>
                           </div>
                         </div>
@@ -427,7 +449,7 @@
                     <div class="small-10 columns pr-s">
                       <!-- Product Name -->
                       <div class="row">
-                        <strong class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</strong>
+                        <span class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</span>
                       </div>
                       <!-- Brand Name -->
                       <div class="row align-middle">
@@ -464,7 +486,7 @@
                         <div class="column">
                           <div class="row mb-xs">
                             <div class="column">
-                              <h5>Added by</h5>
+                              <h5>added by</h5>
                             </div>
                           </div>
                           <!-- Avatar -->
@@ -476,13 +498,13 @@
                           <!-- User Name -->
                           <div class="row">
                             <div class="columns align-center">
-                              <h4><strong>Mies van der Rohe</strong></h4>
+                              <h4>Mies van der Rohe</h4>
                             </div>
                           </div>
                           <!-- User Role -->
                           <div class="row">
                             <div class="columns align-center">
-                              <h5>Project Team Member</h5>
+                              <h5>project team member</h5>
                             </div>
                           </div>
                         </div>
@@ -496,7 +518,7 @@
                     <div class="small-10 columns pr-s">
                       <!-- Product Name -->
                       <div class="row">
-                        <strong class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</strong>
+                        <span class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</span>
                       </div>
                       <!-- Brand Name -->
                       <div class="row align-middle">
@@ -519,7 +541,7 @@
     <div id="journal" class="pt-l mb-xxl">
       <div class="row align-center">
         <div class="column shrink">
-          <h2 class="mb-m"><strong>Architizer Journal</strong></h2>
+          <h2 class="mb-m">Architizer Journal</h2>
         </div>
       </div>
       <div class="row small-up-1 medium-up-3 large-up-6" style="max-width: 1440px;">
@@ -573,7 +595,7 @@
     <div id="projects" class="pt-l mb-xxl">
       <div class="row align-center">
         <div class="column shrink">
-          <h2 class="mb-m"><strong>Featured Projects</strong></h2>
+          <h2 class="mb-m">Featured Projects</h2>
         </div>
       </div>
       <!-- Project Cards -->
@@ -592,7 +614,7 @@
                 <div class="card-section">
                   <div class="row align-middle mt-s">
                     <div class="columns">
-                      <h4 class="ellipsis"><strong>Barclays Center</strong></h4>
+                      <h4 class="ellipsis">Barclays Center</h4>
                       <span>SHoP Architects</span>
                     </div>
                   </div>
@@ -611,7 +633,7 @@
                 <div class="card-section">
                   <div class="row align-middle mt-s">
                     <div class="columns">
-                      <h4 class="ellipsis"><strong>Barclays Center</strong></h4>
+                      <h4 class="ellipsis">Barclays Center</h4>
                       <span>SHoP Architects</span>
                     </div>
                   </div>
@@ -630,7 +652,7 @@
                 <div class="card-section">
                   <div class="row align-middle mt-s">
                     <div class="columns">
-                      <h4 class="ellipsis"><strong>Barclays Center</strong></h4>
+                      <h4 class="ellipsis">Barclays Center</h4>
                       <span>SHoP Architects</span>
                     </div>
                   </div>
@@ -649,7 +671,7 @@
                 <div class="card-section">
                   <div class="row align-middle mt-s">
                     <div class="columns">
-                      <h4 class="ellipsis"><strong>Barclays Center</strong></h4>
+                      <h4 class="ellipsis">Barclays Center</h4>
                       <span>SHoP Architects</span>
                     </div>
                   </div>
@@ -666,7 +688,7 @@
     <div id="brands" class="pt-l mb-xxl">
       <div class="row align-center">
         <div class="column shrink">
-          <h2 class="mb-m"><strong>Featured Brands</strong></h2>
+          <h2 class="mb-m">Featured Brands</h2>
         </div>
       </div>
       <!-- Brand Cards -->
@@ -686,7 +708,7 @@
                   <div class="flex-container align-middle mt-s">
                     <div style="background-image: url('https://architizer-prod.imgix.net/media/mediadata/uploads/1508182952brands.brand.128.jpg?q=60&amp;auto=format,compress&amp;cs=strip&amp;w=100');background-position:center; margin-right: 0.5rem;" class="brand-avatar"></div>
                     <div class="brand-info">
-                      <h4 class="ellipsis"><strong>Duravit</strong></h4>
+                      <h4 class="ellipsis">Duravit</h4>
                       <span class="gray">140 Projects</span>
                     </div>
                   </div>
@@ -706,7 +728,7 @@
                   <div class="flex-container align-middle mt-s">
                     <div style="background-image: url('https://architizer-prod.imgix.net/media/mediadata/uploads/1508182952brands.brand.128.jpg?q=60&amp;auto=format,compress&amp;cs=strip&amp;w=100');background-position:center; margin-right: 0.5rem;" class="brand-avatar"></div>
                     <div class="brand-info">
-                      <h4 class="ellipsis"><strong>Duravit</strong></h4>
+                      <h4 class="ellipsis">Duravit</h4>
                       <span class="gray">140 Projects</span>
                     </div>
                   </div>
@@ -726,7 +748,7 @@
                   <div class="flex-container align-middle mt-s">
                     <div style="background-image: url('https://architizer-prod.imgix.net/media/mediadata/uploads/1508182952brands.brand.128.jpg?q=60&amp;auto=format,compress&amp;cs=strip&amp;w=100');background-position:center; margin-right: 0.5rem;" class="brand-avatar"></div>
                     <div class="brand-info">
-                      <h4 class="ellipsis"><strong>Duravit</strong></h4>
+                      <h4 class="ellipsis">Duravit</h4>
                       <span class="gray">140 Projects</span>
                     </div>
                   </div>
@@ -746,7 +768,7 @@
                   <div class="flex-container align-middle mt-s">
                     <div style="background-image: url('https://architizer-prod.imgix.net/media/mediadata/uploads/1508182952brands.brand.128.jpg?q=60&amp;auto=format,compress&amp;cs=strip&amp;w=100');background-position:center; margin-right: 0.5rem;" class="brand-avatar"></div>
                     <div class="brand-info">
-                      <h4 class="ellipsis"><strong>Duravit</strong></h4>
+                      <h4 class="ellipsis">Duravit</h4>
                       <span class="gray">140 Projects</span>
                     </div>
                   </div>
@@ -763,12 +785,12 @@
     <div id="ticker" class="pt-l mb-xxl">
       <div class="row align-center">
         <div class="column shrink">
-          <h2 class="mb-s" style="letter-spacing: 12px;"><strong>$6,064,412,002</strong></h2>
+          <h2 class="mb-s" style="letter-spacing: 12px;">$6,064,412,002</h2>
         </div>
       </div>
       <div class="row align-center">
         <div class="large-5 columns">
-          <p class="text-center">That’s the construction value that Architizer has helped bring to life. The average search is worth $100k and the average project is worth $3.2m.  Join Architizer to get your brand in front of actively specifying architects.</p>
+          <p class="text-center">That’s the construction value that Architizer has helped bring to life. The average search is worth <b>$100k</b> and the average project is worth <b>$3.2m.</b>  Join Architizer to get your brand in front of actively specifying architects.</p>
         </div>
       </div>
       <div class="row align-center">
