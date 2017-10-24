@@ -91,6 +91,15 @@
         background: transparent;
         border:none;
       }
+      .adk ul.menu a {
+        color: #292929;
+        transition: all 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        font-variant: small-caps;
+        letter-spacing: 0.3px;
+      }
+      .adk ul.menu a:hover {
+        color: #2AA5F9;
+      }
     </style>
 
   </head>
@@ -100,7 +109,7 @@
     <!-- Project Hero -->
     <div class="project-hero" >
       <!-- Respopnsive Top Bar -->
-      <div class="row align-center">
+      <div class="row collapse align-center">
         <div class="xlarge-10 columns">
           <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
             <button type="button" data-toggle><i class="material-icons white">menu</i></button>
@@ -110,10 +119,13 @@
           <div class="flex-container clear align-middle align-justify pt-m pl-l pr-l mb-xl" id="responsive-menu">
             <div class="top-bar-left">
               <ul class="vertical medium-horizontal menu" style="background: transparent;" data-dropdown-menu>
-                <li class="hide-for-medium"><span class="black"><a href="">Sign In</a></span></li>
-                <li class="hide-for-medium p-0"><span class="blue"><a href="">Join Now</a></span></li>
+                <li class="title-bar-title hide-for-small-only"><a><span class="architizer-glyph black fs-m">B</span></a></li>
+                <li class="hide-for-medium"><a href="">sign in</a></span></li>
+                <li class="hide-for-medium"><a href="">join now</a></span></li>
+                <li class=""><a href="">brands</a></li>
+                <li class=""><a href="">portfolios</a></li>
+                <li class=""><a href="">journal</a></li>
               </ul>
-              <a><div class="title-bar-title hide-for-small-only"><span class="architizer-glyph black fs-m">B</span></div></a>
             </div>
             <div class="top-bar-right">
               <span class="hide-for-small-only mr-base"><a href="">Sign In</a></span>
@@ -145,7 +157,7 @@
           </div>
         </div>
         <div class="row align-center">
-          <button class="button p-base">Join Now</button>
+          <button class="button pt-s pb-s">Join Now</button>
         </div>
       </div>
 
