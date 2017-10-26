@@ -61,6 +61,9 @@
       .product-cards > .column > .card > .card-section.card-image {
         height: 200px;
       }
+      .product-cards > .column > .card > .card-section.card-image.small {
+        height: 100px;
+      }
       .journal {
         cursor: pointer;
         transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -261,8 +264,68 @@
             </div>
           </div>
         </div>
-        <div class="column">
-          <img src="/docs/img/homepage/window-graphic.png">
+        <!-- Graphic + Cards-->
+        <div class="column hide-for-small-only" style="position: relative;">
+          <img src="/docs/img/homepage/window-graphic.png" style="position: relative;">
+        <!-- <div class="column" style="position: relative; background-image: url('/docs/img/homepage/window-graphic.png'); background-size:100% auto; background-repeat: no-repeat;"> -->
+          <div class="row" style="margin-top:-60%; position: absolute;">
+            <div class="small-4 columns"></div>
+            <div class="small-8 columns pl-xl pr-xl">
+              <!-- Product Cards -->
+              <div class="product-cards row small-up-3" style="">
+                <!-- Card Small-->
+                <div class="column pr-xs pl-xs">
+                  <div class="card ">
+                    <div class="card-section card-image card-image small card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png');"></div>
+                    <div class="card-section">
+                      <h4 class="fs-base ellipsis">Norwegian Pine</h4>
+                      <p class="fs-s ellipsis">Nordic Lumbar</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Small-->
+                <div class="column pr-xs pl-xs">
+                  <div class="card">
+                    <div class="card-section card-image card-image small card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png');"></div>
+                    <div class="card-section">
+                      <h4 class="fs-base ellipsis">Matte Pendant Light</h4>
+                      <p class="fs-s ellipsis">Knoll Lighting</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Small-->
+                <div class="column pr-xs pl-xs">
+                  <div class="card">
+                    <div class="card-section card-image card-image small card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png');"></div>
+                    <div class="card-section">
+                      <h4 class="fs-base ellipsis">Barcelona Chair</h4>
+                      <p class="fs-s ellipsis">Mies Van der Rohe</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Small-->
+                <div class="column pr-xs pl-xs">
+                  <div class="card">
+                    <div class="card-section card-image card-image small card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png');"></div>
+                    <div class="card-section">
+                      <h4 class="fs-base ellipsis">RT-90 Curtain Walls</h4>
+                      <p class="fs-s ellipsis">DORMA Glass</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Small-->
+                <div class="column pr-xs pl-xs">
+                  <div class="card">
+                    <div class="card-section card-image card-image small card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png');"></div>
+                    <div class="card-section">
+                      <h4 class="fs-base ellipsis">Granite Boulders</h4>
+                      <p class="fs-s ellipsis">PMI Stone</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
