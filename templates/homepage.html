@@ -47,6 +47,7 @@
         box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
         top: 0;
         transition: all 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        opacity: 1
       }
       .card.hover:hover{
         cursor: pointer;
@@ -55,8 +56,33 @@
       .card.hover:active{
         box-shadow: 0 0 2px 2px #9ECEE6;
       }
-      .product-cards > .column > .card:hover {
-        top:-2px;
+      .card.product {
+        top: 0;
+        left: 0;
+        transition-duration: 500ms;
+      }
+      .card.product.off{
+        opacity: 0;
+        top: 150px;
+        left: 120px;
+        transform: scale(0.5);
+        -ms-transform: scale(0.5); /* IE 9 */
+        -webkit-transform: scale(0.5); /* Safari */
+      }
+      .card.product.small{
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.05);
+        top: -100px;
+        opacity: 0;
+        transform: scale(0.6);
+        -ms-transform: scale(0.6); /* IE 9 */
+        -webkit-transform: scale(0.6); /* Safari */
+      }
+      .card.product.small.on{
+        top: 0;
+        opacity: 1;
+        transform: scale(1);
+        -ms-transform: scale(1); /* IE 9 */
+        -webkit-transform: scale(1); /* Safari */
       }
       .product-cards > .column > .card > .card-section.card-image {
         height: 200px;
@@ -183,7 +209,7 @@
     <div class="product-cards row small-up-1 medium-up-3 large-up-5 align-center hide-for-small-only" style="margin-top:-200px; max-width: 1440px;">
       <!-- Card -->
       <div class="column">
-        <div class="card ">
+        <div class="card product" id="card1">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
             <h4 class="ellipsis">Norwegian Pine</h4>
@@ -192,8 +218,8 @@
         </div>
       </div>
       <!-- Card -->
-      <div class="column hide-for-small-only">
-        <div class="card">
+      <div class="column">
+        <div class="card product" id="card2" data-sr="wait 2.5s and then ease-in-out 100px">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
             <h4 class="ellipsis">Matte Pendant Light</h4>
@@ -202,8 +228,8 @@
         </div>
       </div>
       <!-- Card -->
-      <div class="column hide-for-small-only">
-        <div class="card">
+      <div class="column">
+        <div class="card product" id="card3">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
             <h4 class="ellipsis">Barcelona Chair</h4>
@@ -212,8 +238,8 @@
         </div>
       </div>
       <!-- Card -->
-      <div class="column hide-for-small-only">
-        <div class="card">
+      <div class="column">
+        <div class="card product" id="card4">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
             <h4 class="ellipsis">RT-90 Curtain Walls</h4>
@@ -222,8 +248,8 @@
         </div>
       </div>
       <!-- Card -->
-      <div class="column hide-for-small-only">
-        <div class="card">
+      <div class="column">
+        <div class="card product" id="card5">
           <div class="card-section card-image card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png')"></div>
           <div class="card-section">
             <h4 class="ellipsis">Granite Boulders</h4>
@@ -275,50 +301,50 @@
               <div class="product-cards row small-up-3" style="">
                 <!-- Card Small-->
                 <div class="column pr-xs pl-xs">
-                  <div class="card ">
+                  <div class="card product small" id="small1">
                     <div class="card-section card-image card-image small card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png');"></div>
                     <div class="card-section">
-                      <h4 class="fs-base ellipsis">Norwegian Pine</h4>
+                      <h4 class="fs-s ellipsis">Norwegian Pine</h4>
                       <p class="fs-s ellipsis">Nordic Lumbar</p>
                     </div>
                   </div>
                 </div>
                 <!-- Card Small-->
                 <div class="column pr-xs pl-xs">
-                  <div class="card">
+                  <div class="card product small" id="small2">
                     <div class="card-section card-image card-image small card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png');"></div>
                     <div class="card-section">
-                      <h4 class="fs-base ellipsis">Matte Pendant Light</h4>
+                      <h4 class="fs-s ellipsis">Matte Pendant Light</h4>
                       <p class="fs-s ellipsis">Knoll Lighting</p>
                     </div>
                   </div>
                 </div>
                 <!-- Card Small-->
                 <div class="column pr-xs pl-xs">
-                  <div class="card">
+                  <div class="card product small" id="small3">
                     <div class="card-section card-image card-image small card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png');"></div>
                     <div class="card-section">
-                      <h4 class="fs-base ellipsis">Barcelona Chair</h4>
+                      <h4 class="fs-s ellipsis">Barcelona Chair</h4>
                       <p class="fs-s ellipsis">Mies Van der Rohe</p>
                     </div>
                   </div>
                 </div>
                 <!-- Card Small-->
                 <div class="column pr-xs pl-xs">
-                  <div class="card">
+                  <div class="card product small" id="small4">
                     <div class="card-section card-image card-image small card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png');"></div>
                     <div class="card-section">
-                      <h4 class="fs-base ellipsis">RT-90 Curtain Walls</h4>
+                      <h4 class="fs-s ellipsis">RT-90 Curtain Walls</h4>
                       <p class="fs-s ellipsis">DORMA Glass</p>
                     </div>
                   </div>
                 </div>
                 <!-- Card Small-->
                 <div class="column pr-xs pl-xs">
-                  <div class="card">
+                  <div class="card product small" id="small5">
                     <div class="card-section card-image card-image small card-image-no-margin" style="background-image: url('/docs/img/placeholder-4:3.png');"></div>
                     <div class="card-section">
-                      <h4 class="fs-base ellipsis">Granite Boulders</h4>
+                      <h4 class="fs-s ellipsis">Granite Boulders</h4>
                       <p class="fs-s ellipsis">PMI Stone</p>
                     </div>
                   </div>
@@ -833,11 +859,56 @@
     <!-- Page content ends here -->
 
     <!-- JavaScript dependencies -->
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
     <script>
       $(document).foundation();
     </script>
+
+    <!-- Animate Hero Product Cards -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(window).scroll(function(){
+          var scrollPointOn = 400;
+          var delay = 100;
+          var largeCards = [ $('#card1'), $('#card2'), $('#card3'), $('#card4'), $('#card5') ];
+          var smallCards = [ $('#small1'), $('#small2'), $('#small3'), $('#small4'), $('#small5') ];
+
+          if ($(window).scrollTop() > scrollPointOn){
+            $.each(largeCards, function( index ) {
+             var $el = $(this);
+             setTimeout(function () {
+                 $el.addClass('off');
+             }, delay * index);
+            });
+            $.each(smallCards, function( index ) {
+             var $el = $(this);
+             setTimeout(function () {
+                 $el.addClass('on');
+             }, delay * index);
+            });
+          }
+
+          // Better if this is reversed...largeCards.reverse() is glitchy
+          if ($(window).scrollTop() < scrollPointOn){
+            $.each(largeCards, function( index ) {
+             var $el = $(this);
+             setTimeout(function () {
+                 $el.removeClass('off');
+             }, delay * index);
+            });
+            $.each(smallCards, function( index ) {
+             var $el = $(this);
+             setTimeout(function () {
+                 $el.removeClass('on');
+             }, delay * index);
+            });
+          };
+        });
+      });
+    </script>
+
   </body>
 </html>
