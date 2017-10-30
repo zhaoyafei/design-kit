@@ -850,7 +850,6 @@
       </div>
     </div>
 
-
     <!-- Page content ends here -->
 
     <!-- JavaScript dependencies -->
@@ -869,17 +868,16 @@
           var scrollPointOn = 400;
           var delay = 100;
           var largeCards = [ $('#card1'), $('#card2'), $('#card3'), $('#card4'), $('#card5') ];
-          var largeCardsBack = [ $('#card5'), $('#card4'), $('#card3'), $('#card2'), $('#card1') ];
           var smallCards = [ $('#small1'), $('#small2'), $('#small3'), $('#small4'), $('#small5') ];
 
           if ($(window).scrollTop() > scrollPointOn){
-            $.each(largeCards, function( index ) {
+            $.each(largeCards.reverse(), function( index ) {
              var $el = $(this);
              setTimeout(function () {
                  $el.addClass('off');
              }, delay * index);
             });
-            $.each(smallCards, function( index ) {
+            $.each(smallCards.reverse(), function( index ) {
              var $el = $(this);
              setTimeout(function () {
                  $el.addClass('on');
@@ -889,13 +887,13 @@
 
           // Better if this is reversed...largeCards.reverse() is glitchy
           if ($(window).scrollTop() < scrollPointOn){
-            $.each(largeCards, function( index ) {
+            $.each(largeCards.reverse(), function( index ) {
              var $el = $(this);
              setTimeout(function () {
                  $el.removeClass('off');
              }, delay * index);
             });
-            $.each(smallCards, function( index ) {
+            $.each(smallCards.reverse(), function( index ) {
              var $el = $(this);
              setTimeout(function () {
                  $el.removeClass('on');
