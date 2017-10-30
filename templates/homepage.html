@@ -737,7 +737,6 @@
       </div>
     </div>
 
-
     <!-- Featured Brands -->
     <div id="brands" class="pt-l mb-xxl">
       <div class="row align-center">
@@ -835,7 +834,7 @@
     </div>
 
     <!-- Ticker -->
-    <div id="ticker" class="pt-l mb-xxl">
+    <div id="ticker" class="pt-l" style="margin-bottom: 5rem">
       <div class="row align-center">
         <div class="column shrink">
           <h2 class="mb-s" style="letter-spacing: 12px;">$6,064,412,002</h2>
@@ -870,6 +869,7 @@
           var scrollPointOn = 400;
           var delay = 100;
           var largeCards = [ $('#card1'), $('#card2'), $('#card3'), $('#card4'), $('#card5') ];
+          var largeCardsBack = [ $('#card5'), $('#card4'), $('#card3'), $('#card2'), $('#card1') ];
           var smallCards = [ $('#small1'), $('#small2'), $('#small3'), $('#small4'), $('#small5') ];
 
           if ($(window).scrollTop() > scrollPointOn){
