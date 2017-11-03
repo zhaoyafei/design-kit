@@ -48,6 +48,14 @@
  $adk-button-icon-hover-lightness: -20%;
  $adk-button-transition: all 0.12s ease-out;
 
+ // Button Font Colours
+ $adk-button-font-colors: (
+   primary: $adk-button-color,
+   secondary: $adk-button-color-alt,
+   success: $adk-button-color,
+   warning: $adk-button-color,
+   alert: $adk-button-color,
+ );
 
 // TODO: Document button-base() mixin
 /// This mixin creates the default button distinct from the rest of the buttons in the button-paddings/button-font-sizes maps
