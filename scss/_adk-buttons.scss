@@ -101,7 +101,8 @@
   $background: $adk-button-background,
   $background-hover: $adk-button-background-hover,
   $color: $adk-button-color,
-  $background-hover-lightness: $adk-button-background-hover-lightness
+  $background-hover-lightness: $adk-button-background-hover-lightness,
+  $name: 'primary'
 ) {
   @if $color == auto {
     $color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
@@ -156,7 +157,8 @@
 
 @mixin adk-button-icon-style(
   $color: $primary-color,
-  $hover-lightness: $adk-button-icon-hover-lightness
+  $hover-lightness: $adk-button-icon-hover-lightness,
+  $name: 'primary'
 ) {
   $color-hover: scale-color($color, $lightness: $hover-lightness);
 
