@@ -16,10 +16,10 @@
  // Button Paddings
  $adk-button-paddings: (
    pill: $space-xxs,
-   tiny: $space-xs,
-   small: $space-s $space-xs,
-   default: $space-s $space,
-   large: $space $space-m,
+   tiny: $space-xxs,
+   small: $space-xs $space-xs,
+   default: $space-xs $space-xs,
+   large: $space-s $space-s,
    icon: $space-xxs,
  );
 
