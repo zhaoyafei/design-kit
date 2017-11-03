@@ -104,20 +104,17 @@
   $background-hover-lightness: $adk-button-background-hover-lightness,
   $name: 'primary'
 ) {
-  @if $color == auto {
-    $color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
-  }
 
   @if $background-hover == auto {
     $background-hover: scale-color($background, $lightness: $background-hover-lightness);
   }
 
+  color: map-get($adk-button-font-colors, $name);
   background-color: $background;
-  color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
 
   &:hover, &:focus {
+    color: map-get($adk-button-font-colors, $name);
     background-color: $background-hover;
-    color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
   }
 }
 
@@ -173,7 +170,7 @@
     color: $color-hover;
   }
   &.fill {
-    color: color-pick-contrast($color, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
+    color: map-get($adk-button-font-colors, $name);
     border: 1px solid transparent;
     background-color: $color;
     &:hover, &:focus {
@@ -276,13 +273,10 @@
     @each $name, $color in $adk-button-palette {
       @if $adk-button-fill != hollow {
         &.#{$name} {
-          @include adk-button-style($color, auto, auto);
+          @include adk-button-style($color, auto, $name: $name);
         }
         &.#{$name}-light {
-          @include adk-button-style(rgba($color, 0.25), $color, $color);
-          &:hover, &:focus {
-            color: $white;
-          }
+          @include adk-button-style(rgba($color, 0.25), $color, $color, $name: $name);
         }
       }
       @else {
@@ -323,7 +317,7 @@
 
         @each $name, $color in $adk-button-palette {
           &.#{$name} {
-            @include adk-button-icon-style($color);
+            @include adk-button-icon-style($color, $name: $name);
           }
         }
       }
