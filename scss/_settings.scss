@@ -51,10 +51,10 @@
 // $global-lineheight: 1.5;
 $foundation-palette: (
   primary: $adk-blue,
-  secondary: $adk-gunmetal,
-  success: $adk-green,
-  warning: $adk-yellow,
-  alert: $adk-red,
+  secondary: map-get(generate-palette($adk-quicksilver), 100),
+  success: map-get(generate-palette($adk-green), 600),
+  warning: map-get(generate-palette($adk-yellow), 600),
+  alert: map-get(generate-palette($adk-red), 700),
 );
 // $body-background: $white;
 $body-font-color: $dark-gray;
