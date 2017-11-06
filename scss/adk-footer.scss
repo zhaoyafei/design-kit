@@ -5,8 +5,9 @@
   left: 0;
   bottom: 0;
   background-color: $black;
-  &.white {
-    background-color: $white;
+
+  .row {
+    max-width: 1440px;
   }
 
   * {
@@ -16,10 +17,30 @@
         color: $white;
       }
     }
+    h5 {
+      color: $medium-gray;
+    }
+    span {
+      color: $medium-gray;
+    }
   }
 
-  .row {
-    max-width: 1440px;
+  &.white {
+    background-color: $white;
+    * {
+      a {
+        color: $medium-gray;
+        &:hover{
+          color: $black;
+        }
+      }
+      h5 {
+        color: $light-gray;
+      }
+      span {
+        color: $light-gray;
+      }
+    }
   }
 
 }
