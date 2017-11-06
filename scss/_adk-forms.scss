@@ -127,24 +127,17 @@ select.ng-empty {
 
 // Add form input error styles for Angular validator classes
 input.ng-invalid,
-select.ng-invalid,
-input[type="checkbox"].ng-invalid + label,
-textarea.ng-invalid {
-  @include adk-form-input-error;
-}
-
-.selectize-input.ng-invalid {
-  @include adk-selectize-error;
-}
-
-// Add form input error styles for non-angular implementations
 input.invalid,
+select.ng-invalid,
 select.invalid,
+input[type="checkbox"].ng-invalid + label,
 input[type="checkbox"].invalid + label,
+textarea.ng-invalid,
 textarea.invalid {
   @include adk-form-input-error;
 }
 
+.selectize-input.ng-invalid,
 .selectize-input.invalid {
   @include adk-selectize-error;
 }
@@ -194,7 +187,7 @@ $minimal-field-input-border-error: 2px solid $adk-red;
 
 @mixin minimal-field-label {
   // Blue label when focused
-  &:focus:not(.ng-invalid),
+  &:focus:not(.invalid),
   &.focus:not(.ng-invalid) {
     & + label {
       color: $adk-blue;
