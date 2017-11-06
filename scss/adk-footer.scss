@@ -3,7 +3,10 @@
   right: 0;
   left: 0;
   bottom: 0;
-  height: 12rem;
+  background-color: $black;
+  &.white {
+    background-color: $white;
+  }
 
   .row {
     max-width: 1440px;
