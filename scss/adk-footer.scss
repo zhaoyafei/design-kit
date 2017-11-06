@@ -23,6 +23,10 @@
     span {
       color: $medium-gray;
     }
+    ul {
+      margin-left: 0;
+      list-style-type: none;
+    }
   }
 
   &.white {
@@ -43,9 +47,4 @@
     }
   }
 
-}
-
-.footer-list {
-  margin-left: 0;
-  list-style-type: none;
 }
