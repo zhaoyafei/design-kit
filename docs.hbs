@@ -28,21 +28,26 @@
     .ss-code code {
       background-color: white;
       border-radius: 3px;
+      border: none;
     }
     </style>
 
   </head>
   <body class="bg-extra-light-gray">
 
-    <div class="row align-center mt-l" style="width: 90rem;">
+    <div class="row align-center mt-l" style="width: 100%; max-width: 90rem;">
       <!-- navigation -->
       <div class="small-3 columns">
-        <h3 class="mb-s mt-x"><a href="/" class="black"><span class="architizer-glyph">B</span><span>DesignKit</span></a></h3>
-        <ul class="tabs vertical bg-extra-light-gray" id="tabs-navigation" data-tabs>
-          {{#each pages}}
-            <dd class="tabs-title {{#if @first}}is-active{{/if}}"><a href="#{{ anchor }}" style="padding-left: 0;">{{ title }}</a></dd>
-          {{/each}}
-        </ul>
+        <div data-sticky-container>
+          <div data-sticky>
+            <h3 class="mb-s mt-x"><a href="/" class="black"><span class="architizer-glyph">B</span><span>DesignKit</span></a></h3>
+            <ul class="tabs vertical bg-extra-light-gray" id="tabs-navigation" data-tabs>
+              {{#each pages}}
+                <dd class="tabs-title {{#if @first}}is-active{{/if}}"><a href="#{{ anchor }}" style="padding-left: 0;">{{ title }}</a></dd>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
       </div>
 
       <!-- content -->

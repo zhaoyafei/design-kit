@@ -1,0 +1,123 @@
+<!doctype html>
+<html class="adk no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <!-- Architizer Design Kit CSS -->
+    <link rel="stylesheet" href="/css/adk.css" />
+  </head>
+
+  <body class="bg-extra-light-gray">
+    <!-- Page content starts here -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="row collapse">
+        <!-- Left Column -->
+        <div class="small-12 medium-8 large-6 columns">
+          <div class="row collapse">
+            <!-- About -->
+            <div class="column">
+              <h5 class="mb-xxs" style="font-variant: small-caps;"><strong>about</strong></h5>
+              <ul>
+                <li class="fs-s"><a href="http://go.architizer.com/about" title="About us">About us</a></li>
+                <li class="fs-s"><a href="http://awards.architizer.com/?utm_source=architizer" target="_blank" title="A+Awards">A+Awards</a></li>
+                <li class="fs-s"><a href="https://architizer.com/team/" title="Team">Team</a></li>
+                <li class="fs-s"><a href="https://architizer.com/careers/" title="Careers">Careers</a></li>
+                <li class="fs-s"><a href="https://support.architizer.com/" target="_blank" title="Help Center">Help Center</a></li>
+              </ul>
+            </div>
+            <!-- Connect -->
+            <div class="column hide-for-small-only">
+              <h5 class="mb-xxs" style="font-variant: small-caps;"><strong>connect</strong></h5>
+              <ul>
+                <li class="fs-s"><a href="http://www.facebook.com/Architizer?utm_source=architizer" target="_blank" title="Facebook"><div class="small-social-icons" data-include="assets/social-icons/facebook.svg"></div> Facebook</a></li>
+                <li class="fs-s"><a href="http://twitter.com/Architizer?utm_source=architizer" target="_blank" title="Twitter"><div class="small-social-icons" data-include="assets/social-icons/twitter.svg"></div> Twitter</a></li>
+                <li class="fs-s"><a href="http://pinterest.com/architizer/?utm_source=architizer" target="_blank" title="Pinterest"><div class="small-social-icons" data-include="assets/social-icons/pinterest.svg"></div> Pinterest</a></li>
+                <li class="fs-s"><a href="http://instagram.com/architizer/?utm_source=architizer" target="_blank" title="Instagram"><div class="small-social-icons" data-include="assets/social-icons/instagram.svg"></div> Instagram</a></li>
+              </ul>
+            </div>
+            <!-- Join Today -->
+            <div class="column">
+              <h5 class="mb-xxs" style="font-variant: small-caps;"><strong>join today</strong></h5>
+              <ul>
+                <li class="fs-s"><a href="http://go.architizer.com/architect_join" title="Join as an Architect">Join as an Architect</a></li>
+                <li class="fs-s"><a href="http://go.architizer.com/manufacturer_join" title="Join as an Brand">Join as a Brand</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Social Links -->
+        <div class="small-12 columns show-for-small-only mb-s">
+          <div class="row align-left collapse">
+            <div class="column"><a href="http://www.facebook.com/Architizer?utm_source=architizer" title="Facebook" target="_blank"><div class="large-social-icons" data-include="assets/social-icons/facebook.svg"></div></a></div>
+            <div class="column"><a href="http://twitter.com/Architizer?utm_source=architizer" title="Twitter" target="_blank"><div class="large-social-icons" data-include="assets/social-icons/twitter.svg"></div></a></div>
+            <div class="column"><a href="http://pinterest.com/architizer/?utm_source=architizer" title="Pinterest" target="_blank"><div class="large-social-icons" data-include="assets/social-icons/pinterest.svg"></div></a></div>
+            <div class="column"><a href="http://instagram.com/architizer/?utm_source=architizer" title="Instagram" target="_blank"><div class="large-social-icons" data-include="assets/social-icons/instagram.svg"></div></a></div>
+          </div>
+        </div>
+        <!-- Right Column -->
+        <div class="small-12 medium-4 large-offset-2 columns mb-s">
+          <!-- Logo SVG -->
+          <div class="mb-xxxs"><a href="https://architizer.com/"><div class="architizer-logo" data-include="assets/logo.svg"></div></a></div>
+          <!-- Tagline -->
+          <span class="fs-s">Architizer is how architects find building products.</span>
+          <!-- Made in NY -->
+          <div class="hide-for-small-only mt-xs"><a href="http://www.digital.nyc/startup-collection/we-are-made-ny?utm_source=architizer"><div class="made-in-ny-icon" data-include="assets/social-icons/made-in-ny.svg"></div></a></div>
+        </div>
+        <!-- Copyright -->
+        <div class="row collapse">
+          <div class="columns">
+            <span class="fs-s">Copyright &copy; 2017 Architizer, Inc. All rights reserved. <a href="https://architizer.com/privacy-policy">Privacy.</a> <a href="https://architizer.com/terms-of-use">Terms of Use.</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Page content ends here -->
+    <!-- JavaScript dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+
+    <!-- This is only for the purposes of demonstration on this page - The icon sizes are handled in Django with variables in the SVG template snippets -->
+    <style>
+      * [data-include] {
+        display: inline-block;
+      }
+      .small-social-icons {
+        height: 10px;
+        width: 10px;
+      }
+      .large-social-icons {
+        height: 24px;
+        width: 24px;
+      }
+      .made-in-ny-icon {
+        height: 40px;
+        width: 40px;
+      }
+      .architizer-logo {
+
+      }
+    </style>
+    <script>
+      // This is just so we can include inline SVGs on this page - we handle this in Django with template snippets
+      $(function () {
+        var includes = $('[data-include]');
+        $.each(includes, function(){
+          var file = '/' + $(this).data('include');
+          $(this).load(file);
+        });
+      });
+    </script>
+  </body>
+
+</html>
