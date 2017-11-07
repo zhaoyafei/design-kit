@@ -16,24 +16,39 @@
 }
 
 .reveal {
+
+  .header, .footer {
+    background-color: transparent;
+  }
+
   .header {
     @include full-width-border(bottom)
+
+    // Allows for the header to span the full width of parent
+    width: auto;
 
     // Add bottom margin inside header content
     margin-bottom: $global-margin;
 
     // Add space between header and modal content below
     padding-bottom: $global-padding;
+
+    padding-top: 0;
   }
 
   .footer {
     @include full-width-border(top)
+
+    // Allows for the footer to span the full width of parent
+    width: auto;
 
     // Add top margin inside footer content
     margin-top: $global-margin;
 
     // Add space between footer and modal content above
     padding-top: $global-margin;
+
+    padding-bottom: 0;
   }
 }
 
