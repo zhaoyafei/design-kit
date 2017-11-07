@@ -31,10 +31,10 @@
             <div class="column hide-for-small-only">
               <h5 class="mb-xxs" style="font-variant: small-caps;"><strong>connect</strong></h5>
               <ul>
-                <li class="fs-s"><a href="http://www.facebook.com/Architizer?utm_source=architizer" target="_blank" title="Facebook"><span class="architizer-glyph">f</span> Facebook</a></li>
-                <li class="fs-s"><a href="http://twitter.com/Architizer?utm_source=architizer" target="_blank" title="Twitter"><span class="architizer-glyph">g</span> Twitter</a></li>
-                <li class="fs-s"><a href="http://pinterest.com/architizer/?utm_source=architizer" target="_blank" title="Pinterest"><span class="architizer-glyph">k</span> Pinterest</a></li>
-                <li class="fs-s"><a href="http://instagram.com/architizer/?utm_source=architizer" target="_blank" title="Instagram"><span class="architizer-glyph">j</span> Instagram</a></li>
+                <li class="fs-s"><a href="http://www.facebook.com/Architizer?utm_source=architizer" target="_blank" title="Facebook"><div class="small-social-icons" data-include="assets/social-icons/facebook.svg"></div> Facebook</a></li>
+                <li class="fs-s"><a href="http://twitter.com/Architizer?utm_source=architizer" target="_blank" title="Twitter"><div class="small-social-icons" data-include="assets/social-icons/twitter.svg"></div> Twitter</a></li>
+                <li class="fs-s"><a href="http://pinterest.com/architizer/?utm_source=architizer" target="_blank" title="Pinterest"><div class="small-social-icons" data-include="assets/social-icons/pinterest.svg"></div> Pinterest</a></li>
+                <li class="fs-s"><a href="http://instagram.com/architizer/?utm_source=architizer" target="_blank" title="Instagram"><div class="small-social-icons" data-include="assets/social-icons/instagram.svg"></div> Instagram</a></li>
               </ul>
             </div>
             <div class="column">
@@ -56,26 +56,27 @@
           <div class="row small-up-2 collapse">
             <div class="column">
               <div class="row align-justify collapse">
-                <div class="column"><a href="http://www.facebook.com/Architizer?utm_source=architizer" class="architizer-glyph fs-l" title="Facebook" target="_blank">f</a></div>
-                <div class="column"><a href="http://twitter.com/Architizer?utm_source=architizer" class="architizer-glyph fs-l" title="Twitter" target="_blank">g</a></div>
-                <div class="column"><a href="http://pinterest.com/architizer/?utm_source=architizer" class="architizer-glyph fs-l" title="Pinterest" target="_blank">k</a></div>
-                <div class="column"><a href="http://instagram.com/architizer/?utm_source=architizer" class="architizer-glyph fs-l" title="Instagram" target="_blank">j</a></div>
+                <div class="column"><a href="http://www.facebook.com/Architizer?utm_source=architizer" title="Facebook" target="_blank"><div class="large-social-icons" data-include="assets/social-icons/facebook.svg"></div></a></div>
+                <div class="column"><a href="http://twitter.com/Architizer?utm_source=architizer" title="Twitter" target="_blank"><div class="large-social-icons" data-include="assets/social-icons/twitter.svg"></div></a></div>
+                <div class="column"><a href="http://pinterest.com/architizer/?utm_source=architizer" title="Pinterest" target="_blank"><div class="large-social-icons" data-include="assets/social-icons/pinterest.svg"></div></a></div>
+                <div class="column"><a href="http://instagram.com/architizer/?utm_source=architizer" title="Instagram" target="_blank"><div class="large-social-icons" data-include="assets/social-icons/instagram.svg"></div></a></div>
               </div>
             </div>
           </div>
         </div>
 
         <div class="column mb-s">
-          <div class="architizer-glyph fs-m"><a href="https://architizer.com/">B</a></div>
+          <div><a href="https://architizer.com/"><div class="architizer-logo" data-include="assets/logo.svg"></div></a></div>
           <span class="fs-s">Architizer is how architects find building products.</span>
           <!-- Made in NY -->
-          <div class="architizer-glyph hide-for-small-only" style="font-size:3rem;line-height:1"><a href="http://www.digital.nyc/startup-collection/we-are-made-ny?utm_source=architizer">/</a></div>
+          <div class="hide-for-small-only"><a href="http://www.digital.nyc/startup-collection/we-are-made-ny?utm_source=architizer"><div class="made-in-ny-icon" data-include="assets/social-icons/made-in-ny.svg"></div></a></div>
         </div>
         
-        <span class="fs-s">Copyright © 2017 Architizer, Inc. All rights reserved. <a>Privacy. </a> <a>Terms of Use.</a></span>
+        <span class="fs-s">Copyright &copy; 2017 Architizer, Inc. All rights reserved. <a>Privacy.</a> <a>Terms of Use.</a></span>
         
       </div>
     </div>
+
 
     <!-- Page content ends here -->
     <!-- JavaScript dependencies -->
@@ -84,6 +85,39 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
     <script>
       $(document).foundation();
+    </script>
+
+
+    <!-- This is only for the purposes of demonstration on this page - The icon sizes are handled in Django with variables in the SVG template snippets -->
+    <style>
+      * [data-include] {
+        display: inline-block;
+      }
+      .small-social-icons {
+        height: 10px;
+        width: 10px;
+      }
+      .large-social-icons {
+        height: 24px;
+        width: 24px;
+      }
+      .made-in-ny-icon {
+        height: 48px;
+        width: 48px;
+      }
+      .architizer-logo {
+
+      }
+    </style>
+    <script>
+      // This is just so we can include inline SVGs on this page - we handle this in Django with template snippets
+      $(function () {
+        var includes = $('[data-include]');
+        $.each(includes, function(){
+          var file = '/' + $(this).data('include');
+          $(this).load(file);
+        });
+      });
     </script>
   </body>
 

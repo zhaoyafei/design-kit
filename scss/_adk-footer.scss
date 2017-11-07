@@ -7,11 +7,18 @@
     max-width: 1440px;
   }
 
+  svg * {
+    fill: $light-gray;
+  }
+
   * {
     a {
       color: $light-gray;
       &:hover{
         color: $white;
+        svg * {
+          fill: $white;
+        }
       }
     }
     h5 {
@@ -28,11 +35,17 @@
 
   &.white {
     background-color: $white;
+    svg * {
+      fill: $medium-gray;
+    }
     * {
       a {
         color: $medium-gray;
         &:hover{
           color: $black;
+          svg * {
+            fill: $black;
+          }
         }
       }
       h5 {
