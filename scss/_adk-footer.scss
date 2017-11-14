@@ -1,0 +1,60 @@
+.footer {
+  padding: $space-l;
+  width: 100%;
+  background-color: $black;
+
+  .row {
+    max-width: 1440px;
+  }
+
+  svg * {
+    fill: $light-gray;
+  }
+
+  * {
+    a {
+      color: $light-gray;
+      &:hover{
+        color: $white;
+        svg * {
+          fill: $white;
+        }
+      }
+    }
+    h5 {
+      color: $medium-gray;
+    }
+    span {
+      color: $medium-gray;
+    }
+    ul {
+      margin-left: 0;
+      list-style-type: none;
+    }
+  }
+
+  &.white {
+    background-color: $white;
+    svg * {
+      fill: $medium-gray;
+    }
+    * {
+      a {
+        color: $medium-gray;
+        &:hover{
+          color: $black;
+          svg * {
+            fill: $black;
+          }
+        }
+      }
+      h5 {
+        color: $light-gray;
+      }
+      span {
+        color: $light-gray;
+      }
+    }
+  }
+
+}

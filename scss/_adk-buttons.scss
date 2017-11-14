@@ -16,10 +16,10 @@
  // Button Paddings
  $adk-button-paddings: (
    pill: $space-xxs,
-   tiny: $space-xs,
-   small: $space-s $space-xs,
-   default: $space-s $space,
-   large: $space $space-m,
+   tiny: $space-xxs,
+   small: $space-xs $space-xs,
+   default: $space-xs $space-xs,
+   large: $space-s $space-s,
    icon: $space-xxs,
  );
 
@@ -39,15 +39,23 @@
  $adk-button-background: $primary-color;
  $adk-button-background-hover: scale-color($adk-button-background, $lightness: -15%);
  $adk-button-color: $white;
- $adk-button-color-alt: $black;
+ $adk-button-color-alt: $dark-gray;
  $adk-button-radius: $global-radius;
  $adk-button-palette: $foundation-palette;
  $adk-button-opacity-disabled: 0.25;
- $adk-button-background-hover-lightness: -20%;
+ $adk-button-background-hover-lightness: -10%;
  $adk-button-hollow-hover-lightness: -50%;
  $adk-button-icon-hover-lightness: -20%;
  $adk-button-transition: all 0.12s ease-out;
 
+ // Button Font Colours
+ $adk-button-font-colors: (
+   primary: $adk-button-color,
+   secondary: $adk-button-color-alt,
+   success: $adk-button-color,
+   warning: $adk-button-color,
+   alert: $adk-button-color,
+ );
 
 // TODO: Document button-base() mixin
 /// This mixin creates the default button distinct from the rest of the buttons in the button-paddings/button-font-sizes maps
@@ -93,22 +101,20 @@
   $background: $adk-button-background,
   $background-hover: $adk-button-background-hover,
   $color: $adk-button-color,
-  $background-hover-lightness: $adk-button-background-hover-lightness
+  $background-hover-lightness: $adk-button-background-hover-lightness,
+  $name: 'primary'
 ) {
-  @if $color == auto {
-    $color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
-  }
 
   @if $background-hover == auto {
     $background-hover: scale-color($background, $lightness: $background-hover-lightness);
   }
 
+  color: map-get($adk-button-font-colors, $name);
   background-color: $background;
-  color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
 
   &:hover, &:focus {
+    color: map-get($adk-button-font-colors, $name);
     background-color: $background-hover;
-    color: color-pick-contrast($background, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
   }
 }
 
@@ -148,7 +154,8 @@
 
 @mixin adk-button-icon-style(
   $color: $primary-color,
-  $hover-lightness: $adk-button-icon-hover-lightness
+  $hover-lightness: $adk-button-icon-hover-lightness,
+  $name: 'primary'
 ) {
   $color-hover: scale-color($color, $lightness: $hover-lightness);
 
@@ -163,7 +170,7 @@
     color: $color-hover;
   }
   &.fill {
-    color: color-pick-contrast($color, ($adk-button-color, $adk-button-color-alt), $contrast-ratio-tolerance);
+    color: map-get($adk-button-font-colors, $name);
     border: 1px solid transparent;
     background-color: $color;
     &:hover, &:focus {
@@ -266,13 +273,10 @@
     @each $name, $color in $adk-button-palette {
       @if $adk-button-fill != hollow {
         &.#{$name} {
-          @include adk-button-style($color, auto, auto);
+          @include adk-button-style($color, auto, $name: $name);
         }
         &.#{$name}-light {
-          @include adk-button-style(rgba($color, 0.25), $color, $color);
-          &:hover, &:focus {
-            color: $white;
-          }
+          @include adk-button-style(rgba($color, 0.25), $color, $color, $name: $name);
         }
       }
       @else {
@@ -313,7 +317,7 @@
 
         @each $name, $color in $adk-button-palette {
           &.#{$name} {
-            @include adk-button-icon-style($color);
+            @include adk-button-icon-style($color, $name: $name);
           }
         }
       }

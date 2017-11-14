@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>user</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="54" height="54"></rect>
+    </defs>
+    <g id="Brand-Profile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bpm_profile_claim" transform="translate(-466.000000, -84.000000)">
+            <g id="brand_hero" transform="translate(36.000000, 83.000000)">
+                <g id="user" transform="translate(430.000000, 1.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="mask" fill="#E3EAED" xlink:href="#path-1"></use>
+                    <path d="M27.5,29.5996094 C29.2578213,29.5996094 31.0888577,29.9820925 32.9931641,30.7470703 C34.8974705,31.5120481 35.8496094,32.5130146 35.8496094,33.75 L35.8496094,35.8496094 L19.1503906,35.8496094 L19.1503906,33.75 C19.1503906,32.5130146 20.1025295,31.5120481 22.0068359,30.7470703 C23.9111423,29.9820925 25.7421787,29.5996094 27.5,29.5996094 Z M27.5,27.5 C26.3606714,27.5 25.3841187,27.093103 24.5703125,26.2792969 C23.7565063,25.4654907 23.3496094,24.488938 23.3496094,23.3496094 C23.3496094,22.2102808 23.7565063,21.2255901 24.5703125,20.3955078 C25.3841187,19.5654255 26.3606714,19.1503906 27.5,19.1503906 C28.6393286,19.1503906 29.6158813,19.5654255 30.4296875,20.3955078 C31.2434937,21.2255901 31.6503906,22.2102808 31.6503906,23.3496094 C31.6503906,24.488938 31.2434937,25.4654907 30.4296875,26.2792969 C29.6158813,27.093103 28.6393286,27.5 27.5,27.5 Z" id="person" fill="#A2B7C3" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

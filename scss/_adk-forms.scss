@@ -127,16 +127,20 @@ select.ng-empty {
 
 // Add form input error styles for Angular validator classes
 input.ng-invalid,
+input.invalid,
 select.ng-invalid,
+select.invalid,
 input[type="checkbox"].ng-invalid + label,
-textarea.ng-invalid {
+input[type="checkbox"].invalid + label,
+textarea.ng-invalid,
+textarea.invalid {
   @include adk-form-input-error;
 }
 
-.selectize-input.ng-invalid {
+.selectize-input.ng-invalid,
+.selectize-input.invalid {
   @include adk-selectize-error;
 }
-
 
 // Minimal Fields
 // Written based on Material Design Lite
@@ -183,7 +187,7 @@ $minimal-field-input-border-error: 2px solid $adk-red;
 
 @mixin minimal-field-label {
   // Blue label when focused
-  &:focus:not(.ng-invalid),
+  &:focus:not(.invalid),
   &.focus:not(.ng-invalid) {
     & + label {
       color: $adk-blue;
@@ -194,7 +198,8 @@ $minimal-field-input-border-error: 2px solid $adk-red;
 // Error styles for minimal fields
 @mixin minimal-field-element-errors {
   // Field errors
-  &.ng-invalid {
+  &.ng-invalid,
+  &.invalid {
     margin-bottom: 0;
     background-color: transparent;
     border-bottom: $minimal-field-input-border-error;
@@ -203,10 +208,11 @@ $minimal-field-input-border-error: 2px solid $adk-red;
     & + label {
       color: $adk-red;
     }
-
   }
+
   // Red error messages
-  & ~ span[ng-messages] {
+  & ~ span[ng-messages],
+  & ~ span.invalid {
     position: absolute;
     color: $adk-red;
     font-size: $font-size-s;
