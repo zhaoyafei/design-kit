@@ -1,0 +1,46 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3471656, 2017-10-24T15:40:53-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: NeueHaasUnicaPro-Bold by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-haas-unica/bold/
+ * 
+ * Webfont: NeueHaasUnicaPro-Light by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-haas-unica/light/
+ * 
+ * Webfont: NeueHaasUnicaPro-Medium by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-haas-unica/medium/
+ * 
+ * Webfont: NeueHaasUnicaPro-Regular by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-haas-unica/regular/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3471656
+ * Licensed pageviews: 5,000,000
+ * Webfonts copyright: Copyright &#x00A9; 2015 Monotype Imaging Inc.  All rights reserved.
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/34f928");
+
+  
+@font-face {font-family: 'NeueHaasUnicaPro-Bold';src: url('webfonts/34F928_0_0.eot');src: url('webfonts/34F928_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34F928_0_0.woff2') format('woff2'),url('webfonts/34F928_0_0.woff') format('woff'),url('webfonts/34F928_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NeueHaasUnicaPro-Light';src: url('webfonts/34F928_1_0.eot');src: url('webfonts/34F928_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34F928_1_0.woff2') format('woff2'),url('webfonts/34F928_1_0.woff') format('woff'),url('webfonts/34F928_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NeueHaasUnicaPro-Medium';src: url('webfonts/34F928_2_0.eot');src: url('webfonts/34F928_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34F928_2_0.woff2') format('woff2'),url('webfonts/34F928_2_0.woff') format('woff'),url('webfonts/34F928_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NeueHaasUnicaPro-Regular';src: url('webfonts/34F928_3_0.eot');src: url('webfonts/34F928_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34F928_3_0.woff2') format('woff2'),url('webfonts/34F928_3_0.woff') format('woff'),url('webfonts/34F928_3_0.ttf') format('truetype');}
+ 
