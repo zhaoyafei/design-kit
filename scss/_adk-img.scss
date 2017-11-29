@@ -1,4 +1,4 @@
-@for $i from 2 through 6 {
+@for $i from 2 through 12 {
   .thumbnails-up-#{$i} {
     @include grid-layout(#{$i}, '.thumb-col', $space-xs);
     margin-bottom: $space;
