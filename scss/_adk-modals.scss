@@ -7,6 +7,9 @@
   margin-left: -$reveal-padding;
   margin-right: -$reveal-padding;
 
+  // Pad the top
+  margin-top: $space-s;
+
   // Re-add padding inside the section equal to the negative margin
   padding-left: $reveal-padding;
   padding-right: $reveal-padding;
@@ -42,8 +45,9 @@
     // Allows for the footer to span the full width of parent
     width: auto;
 
-    // Add top margin inside footer content
+    // Add margin inside footer content
     margin-top: $global-margin;
+    margin-bottom: $space-s;
 
     // Add space between footer and modal content above
     padding-top: $global-margin;
