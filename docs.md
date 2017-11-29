@@ -512,7 +512,7 @@ These are ADK Avatars
 ## Thumbnails
 When creating thumbnails in series, such as on product cards or modals, place the images inside thumbnail rows instead of the regular grid rows.
 
-`thumbnails-up-[n]` - Add this class to what will be the row of the thumbnails. It follows the normal grid's naming convention for how many columns should be inside of it. `n` can be a number from 2-6; you shouldn't ever need any more than 6 thumbnails in series, and try to use an even number of columns. 
+`row thumbnails-up-[n]` - Add this class to what will be the row of the thumbnails. It follows the normal grid's naming convention for how many columns should be inside of it. `n` can be a number from 2-6; you shouldn't ever need any more than 6 thumbnails in series, and try to use an even number of columns. 
 
 `thumb-col` - Add this class to the thumbnails column itself, and add the image inside of it.
 
@@ -520,7 +520,7 @@ When creating thumbnails in series, such as on product cards or modals, place th
 ```html_example
 <div class="row">
   <div class="small-12 medium-4 columns">
-    <div class="thumbnails-up-2">
+    <div class="row thumbnails-up-2">
       <div class="thumb-col">
         <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
       </div>
@@ -528,11 +528,7 @@ When creating thumbnails in series, such as on product cards or modals, place th
         <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
       </div>
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="small-12 medium-4 columns">
-    <div class="thumbnails-up-4">
+    <div class="row thumbnails-up-4">
       <div class="thumb-col">
         <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
       </div>
@@ -546,11 +542,7 @@ When creating thumbnails in series, such as on product cards or modals, place th
         <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
       </div>
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="small-12 medium-4 columns">
-    <div class="thumbnails-up-6">
+    <div class="row thumbnails-up-6">
       <div class="thumb-col">
         <img class="thumbnail" src="/docs/img/table.jpg" alt="Product">
       </div>
@@ -1043,22 +1035,18 @@ Refer to the code below to structure a modal or start with the modal template in
     </div>
   </div>
   <!-- Attachments -->
-  <div class="row">
-    <div class="columns">
-      <div class="thumbnails-up-4">
-        <div class="thumb-col">
-          <img class="thumbnail" src="/docs/img/bear.gif" alt="Product">
-        </div>
-        <div class="thumb-col">
-          <img class="thumbnail" src="/docs/img/bear.gif" alt="Product">
-        </div>
-        <div class="thumb-col">
-          <img class="thumbnail" src="/docs/img/bear.gif" alt="Product">
-        </div>
-        <div class="thumb-col">
-          <img class="thumbnail" src="/docs/img/bear.gif" alt="Product">
-        </div>
-      </div>
+  <div class="row thumbnails-up-4">
+    <div class="thumb-col">
+      <img class="thumbnail" src="/docs/img/bear.gif" alt="Product">
+    </div>
+    <div class="thumb-col">
+      <img class="thumbnail" src="/docs/img/bear.gif" alt="Product">
+    </div>
+    <div class="thumb-col">
+      <img class="thumbnail" src="/docs/img/bear.gif" alt="Product">
+    </div>
+    <div class="thumb-col">
+      <img class="thumbnail" src="/docs/img/bear.gif" alt="Product">
     </div>
   </div>
   <!-- Brand -->
