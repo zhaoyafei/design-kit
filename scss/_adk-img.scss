@@ -2,6 +2,8 @@
   .thumbnails-up-#{$i} {
     @include grid-layout(#{$i}, '.thumb-col', $space-xs);
     margin-bottom: $space;
+    padding-left: $space-xs;
+    padding-right: $space-xs;
   }
 }
 
