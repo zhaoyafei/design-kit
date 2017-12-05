@@ -18,6 +18,11 @@
   border-#{$side}: $global-separator;
 }
 
+.ReactModalPortal .reveal,
+.ReactModalPortal .reveal-overlay {
+  display: block;
+}
+
 .reveal {
 
   .header, .footer {
