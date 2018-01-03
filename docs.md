@@ -1030,7 +1030,12 @@ List views are simple lists that take up 100% of parent element's height and cre
 
 ### Example
 ```html_example
-<div style="height: 200px;">
+<div style="height: 500px;">
+  <div class="row list-view-header">
+    <div class="columns">
+      <h5>List View Title</h5>
+    </div>
+  </div>
   <ul class="list-view">
     <li class="list-item">
       <div class="row list-item-content align-middle">
@@ -1260,9 +1265,21 @@ List views are simple lists that take up 100% of parent element's height and cre
           </div>
         </div>
     </li>
+    <li class="list-item"></li>
+    <li class="list-item"></li>
+    <li class="list-item"></li>
+    <li class="list-item"></li>
+    <li class="list-item"></li>
+    <li class="list-item"></li>
+    <li class="list-item"></li>
+    <li class="list-item"></li>
+    <li class="list-item"></li>
+    <li class="list-item"></li>
+    <li class="list-item"></li>
   </ul>
 </div>
 ```
+
 
 ---
 
