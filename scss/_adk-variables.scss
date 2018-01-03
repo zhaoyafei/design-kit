@@ -76,6 +76,13 @@ $adk-font-sizes: (
   l: $space-l,
 );
 
+$adk-font-weights: (
+  extralight: 100,
+  light: 400,
+  normal: normal,
+  bold: 800,
+);
+
 // Header sizing follows scale
 $header-margin-bottom: $space-xs;
 $header-styles: (
