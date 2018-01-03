@@ -1016,7 +1016,7 @@ For the sake of convenience, here is the markup and css classes required to rend
   </div>
   <!--  Pro Badge -->
   <div class="columns shrink pl-0">
-    <span class="blue capitalize">PRO</span>
+    <span class="blue capitalize fs-s fw-bold">PRO</span>
   </div>
 </div>
 ```
@@ -1062,7 +1062,7 @@ List views are simple lists that take up 100% of parent element's height and cre
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize">PRO</span>
+                    <span class="blue capitalize fs-s fw-bold">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1100,7 +1100,7 @@ List views are simple lists that take up 100% of parent element's height and cre
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize">PRO</span>
+                    <span class="blue capitalize fs-s fw-bold">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1138,7 +1138,7 @@ List views are simple lists that take up 100% of parent element's height and cre
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize">PRO</span>
+                    <span class="blue capitalize fs-s fw-bold">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1176,7 +1176,7 @@ List views are simple lists that take up 100% of parent element's height and cre
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize">PRO</span>
+                    <span class="blue capitalize fs-s fw-bold">PRO</span>
                   </div>
                 </div>
               </div>

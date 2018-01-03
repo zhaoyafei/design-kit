@@ -1,3 +1,10 @@
+// ADK Font Weights
+@each $weight, $value in $adk-font-weights {
+  &.fw-#{$weight} {
+    font-weight: $value;
+  }
+}
+
 // ADK Font Sizes
 @each $size, $value in $adk-font-sizes {
   &.fs-#{$size} {
