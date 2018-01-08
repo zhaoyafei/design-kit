@@ -77,6 +77,39 @@
     }
   }
 
+  &.recommended {
+    float: left;
+    margin-right: $space-xs;
+    padding-bottom: $space-xxxs;
+    display: inline-block;
+    // Small breakpoint width
+    width: $card-size-xxsmall;
+
+    .card-image {
+      height: $card-size-xxsmall / 1.33;  //4:3 by default
+      &.ratio-16-9 {
+        height: $card-size-xxsmall / 1.77;
+        width: inherit;
+      }
+    }
+
+    .subtitle {
+      color: $light-gray;
+    }
+
+    // Medium breakpoint width
+    @include breakpoint(medium) {
+      width: $card-size-xsmall;
+      .card-image {
+        height: $card-size-xsmall / 1.33;
+        &.ratio-16-9 {
+          height: $card-size-xsmall / 1.77;
+          width: inherit;
+        }
+      }
+    }
+  }
+
   // // Use flex class to overide fixed width and use the grid to size the card instead
   // &.flex {
   //   width: inherit;
