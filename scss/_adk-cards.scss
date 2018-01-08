@@ -93,6 +93,10 @@
       }
     }
 
+    .subtitle {
+      color: $light-gray;
+    }
+
     // Medium breakpoint width
     @include breakpoint(medium) {
       width: $card-size-xsmall;
