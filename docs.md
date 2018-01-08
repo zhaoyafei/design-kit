@@ -924,12 +924,25 @@ The examples below are the three main image-based card types on Source. They are
           <div class="small-10 columns mt-xs">
             <!-- Product Name -->
             <div class="row">
-              <strong class="ellipsis">Knoll Executive Table</strong>
+              <strong class="ellipsis">Knoll Custom Teak Executive Table</strong>
             </div>
-            <!-- Brand Name -->
-            <div class="row align-middle">
-              <div class="columns shrink meta pr-0">
-                <h6 class="fs-base">Knoll</h6>
+            <div class="row">
+              <!-- Brand Name -->
+              <div class="columns shrink subtitle fs-base ellipsis pr-xs"
+                   style="max-width: calc(100% - 55px);">Knoll United States of America</div>
+              <div class="columns small-3"
+                   style="min-width: 55px;">
+                <div class="row">
+                  <!-- Verified Badge -->
+                  <div class="columns shrink pl-0 pr-xxs">
+                    <span class="architizer-glyph blue-500 fs-l"
+                          style="display:inline-block; line-height: 1;">+</span>
+                  </div>
+                  <!-- Pro Badge -->
+                  <div class="columns shrink pl-0">
+                    <span class="blue capitalize fs-s fw-bold">PRO</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
