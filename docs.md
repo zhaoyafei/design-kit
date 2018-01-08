@@ -715,7 +715,7 @@ The examples below are the three main image-based card types on Source. They are
 **Search Cards** - Displays search title and # of products inside. Mosaic of floating product images as card content.  
 **Product Cards** - Displays product and brand names (note smaller type size) with product action button. 4:3 fixed width card-image ratio displaying product image and creator info on hover overlay.  
 **Product Cards, not clickable** - Product cards that are not in the context of a mosaic grid, such as cards in a message thread, are not clickable objects. Therefore these cards must have a dedicated "View Product" button.  
-**Recommended Product Cards, clickable** - Displays recommended product and brand name (along with PRO badge if application) with an add button. 4:3 fixed width card-image ratio.
+**Recommended Product Cards, clickable** - Displays recommended product and brand name (along with PRO badge if applicable) with an add button. 4:3 fixed width card-image ratio.
 
 ```html_example
 <div class="row small-up-1 medium-up-2 large-up-3">
