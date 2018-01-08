@@ -928,10 +928,12 @@ The examples below are the three main image-based card types on Source. They are
             </div>
             <div class="row">
               <!-- Brand Name -->
+              <!-- Brand name column width needs to be calculated so that the addition of the PRO badge doesn't cause a column break -->
               <div class="columns shrink subtitle fs-base ellipsis pr-xs"
                    style="max-width: calc(100% - 55px);">Knoll United States of America</div>
               <div class="columns small-3"
                    style="min-width: 55px;">
+                <!-- PRO badge width is fixed at 55px so that brand name column can be calculated accordingly -->
                 <div class="row">
                   <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
