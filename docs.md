@@ -872,7 +872,7 @@ The examples below are the three main image-based card types on Source. They are
 </div>
 <div class="row small-up-1 medium-up-2 large-up-3">
   <div class="column">
-    <!-- Product Card Flex-->
+    <!-- Card 4 - Product Card Flex-->
     <div class="card flex">
       <!-- Card Image -->
       <div class="card-section card-image card-image-no-margin"
@@ -912,7 +912,40 @@ The examples below are the three main image-based card types on Source. They are
     </div>
   </div>
   <div class="column">
-    <!-- Card 4 - Multi Image Card -->
+    <!-- Card 5 - Recommended Product Card Fixed-->
+    <div class="card clickable recommended">
+      <!-- Card Image -->
+      <div class="card-section card-image card-image-no-margin"
+           style="background-image: url('/docs/img/table.jpg')"></div>
+      <!-- Card Content -->
+      <div class="card-section">
+        <div class="row align-middle">
+          <div class="small-10 columns mt-xs">
+            <!-- Product Name -->
+            <div class="row">
+              <strong class="ellipsis">Knoll Executive Table</strong>
+            </div>
+            <!-- Brand Name -->
+            <div class="row align-middle">
+              <div class="columns shrink meta pr-0">
+                <h6 class="fs-base">Knoll</h6>
+              </div>
+            </div>
+          </div>
+          <!-- '+' button -->
+          <div class="small-2 columns" style="white-space: nowrap;">
+            <div class="float-right">
+              <a class="button tiny">
+                <span class="material-icons fs-base">add</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <!-- Card 6 - Multi Image Card -->
     <div class="card multi-image clickable masonry">
     <!-- Image -->
       <div class="card-section">
