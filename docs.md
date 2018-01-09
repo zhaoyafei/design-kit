@@ -1084,8 +1084,9 @@ List views are simple lists that take up 100% of parent element's height and cre
 ```html_example
 <div style="height: 250px;">
   <div class="row list-view-header">
-    <div class="columns">
+    <div class="columns list-view-header-inner">
       <h5>List View Title</h5>
+      <hr>
     </div>
   </div>
   <ul class="list-view">
@@ -1106,20 +1107,20 @@ List views are simple lists that take up 100% of parent element's height and cre
           </div>
           <div class="row">
             <!-- List Item  Subtitle -->
-            <div class="columns shrink subtitle">
+            <div class="columns shrink subtitle ellipsis">
               Delta Millworks
             </div>
-            <div class="columns small-2">
+            <div class="columns small-2 pro-badge">
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
+                    <span class="architizer-glyph blue-500 fs-l pro-icon"
                           style="display:inline-block; line-height: 1;">+
                     </span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
+                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1144,20 +1145,20 @@ List views are simple lists that take up 100% of parent element's height and cre
           </div>
           <div class="row">
             <!-- List Item  Subtitle -->
-            <div class="columns shrink subtitle">
+            <div class="columns shrink subtitle ellipsis">
               Delta Millworks
             </div>
-            <div class="columns small-2">
+            <div class="columns small-2 pro-badge">
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
+                    <span class="architizer-glyph blue-500 fs-l pro-icon"
                           style="display:inline-block; line-height: 1;">+
                     </span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
+                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1182,134 +1183,20 @@ List views are simple lists that take up 100% of parent element's height and cre
           </div>
           <div class="row">
             <!-- List Item  Subtitle -->
-            <div class="columns shrink subtitle">
+            <div class="columns shrink subtitle ellipsis">
               Delta Millworks
             </div>
-            <div class="columns small-2">
+            <div class="columns small-2 pro-badge">
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
+                    <span class="architizer-glyph blue-500 fs-l pro-icon"
                           style="display:inline-block; line-height: 1;">+
                     </span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </li>
-    <li class="list-item">
-      <div class="row list-item-content align-middle">
-        <div class="columns shrink list-item-image">
-          <!-- Image is used as an inline `background-image` property -->
-          <span 
-            style="background-image:url('https://architizer-prod.imgix.net/media/mediadata/uploads/1514926429370-Barcelona_Gallery_2_EU.jpg?fit=crop&h=50&w=50')">
-          </span>
-        </div>
-        <div class="columns pl-0">
-          <div class="row">
-            <!-- List Item  Title -->
-            <div class="columns ellipsis small-12 title">
-              Exterior Siding - Accoya
-            </div>
-          </div>
-          <div class="row">
-            <!-- List Item  Subtitle -->
-            <div class="columns shrink subtitle">
-              Delta Millworks
-            </div>
-            <div class="columns small-2">
-              <div class="row">
-                <!-- Verified Badge -->
-                  <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
-                          style="display:inline-block; line-height: 1;">+
-                    </span>
-                  </div>
-                  <!--  Pro Badge -->
-                  <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </li>
-    <li class="list-item">
-      <div class="row list-item-content align-middle">
-        <div class="columns shrink list-item-image">
-          <!-- Image is used as an inline `background-image` property -->
-          <span 
-            style="background-image:url('https://architizer-prod.imgix.net/media/mediadata/uploads/1514926429370-Barcelona_Gallery_2_EU.jpg?fit=crop&h=50&w=50')">
-          </span>
-        </div>
-        <div class="columns pl-0">
-          <div class="row">
-            <!-- List Item  Title -->
-            <div class="columns ellipsis small-12 title">
-              Exterior Siding - Accoya
-            </div>
-          </div>
-          <div class="row">
-            <!-- List Item  Subtitle -->
-            <div class="columns shrink subtitle">
-              Delta Millworks
-            </div>
-            <div class="columns small-2">
-              <div class="row">
-                <!-- Verified Badge -->
-                  <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
-                          style="display:inline-block; line-height: 1;">+
-                    </span>
-                  </div>
-                  <!--  Pro Badge -->
-                  <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </li>
-    <li class="list-item">
-      <div class="row list-item-content align-middle">
-        <div class="columns shrink list-item-image">
-          <!-- Image is used as an inline `background-image` property -->
-          <span 
-            style="background-image:url('https://architizer-prod.imgix.net/media/mediadata/uploads/1514926429370-Barcelona_Gallery_2_EU.jpg?fit=crop&h=50&w=50')">
-          </span>
-        </div>
-        <div class="columns pl-0">
-          <div class="row">
-            <!-- List Item  Title -->
-            <div class="columns ellipsis small-12 title">
-              Exterior Siding - Accoya
-            </div>
-          </div>
-          <div class="row">
-            <!-- List Item  Subtitle -->
-            <div class="columns shrink subtitle">
-              Delta Millworks
-            </div>
-            <div class="columns small-2">
-              <div class="row">
-                <!-- Verified Badge -->
-                  <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
-                          style="display:inline-block; line-height: 1;">+
-                    </span>
-                  </div>
-                  <!--  Pro Badge -->
-                  <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
+                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1345,20 +1232,20 @@ Please note that if you don't include the list header `.list-view-header`, you m
           </div>
           <div class="row">
             <!-- List Item  Subtitle -->
-            <div class="columns shrink subtitle">
+            <div class="columns shrink subtitle ellipsis">
               Delta Millworks
             </div>
-            <div class="columns small-2">
+            <div class="columns small-2 pro-badge">
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
+                    <span class="architizer-glyph blue-500 fs-l pro-icon"
                           style="display:inline-block; line-height: 1;">+
                     </span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
+                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1383,20 +1270,20 @@ Please note that if you don't include the list header `.list-view-header`, you m
           </div>
           <div class="row">
             <!-- List Item  Subtitle -->
-            <div class="columns shrink subtitle">
+            <div class="columns shrink subtitle ellipsis">
               Delta Millworks
             </div>
-            <div class="columns small-2">
+            <div class="columns small-2 pro-badge">
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
+                    <span class="architizer-glyph blue-500 fs-l pro-icon"
                           style="display:inline-block; line-height: 1;">+
                     </span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
+                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1421,20 +1308,20 @@ Please note that if you don't include the list header `.list-view-header`, you m
           </div>
           <div class="row">
             <!-- List Item  Subtitle -->
-            <div class="columns shrink subtitle">
+            <div class="columns shrink subtitle ellipsis">
               Delta Millworks
             </div>
-            <div class="columns small-2">
+            <div class="columns small-2 pro-badge">
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
+                    <span class="architizer-glyph blue-500 fs-l pro-icon"
                           style="display:inline-block; line-height: 1;">+
                     </span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
+                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1459,20 +1346,20 @@ Please note that if you don't include the list header `.list-view-header`, you m
           </div>
           <div class="row">
             <!-- List Item  Subtitle -->
-            <div class="columns shrink subtitle">
+            <div class="columns shrink subtitle ellipsis">
               Delta Millworks
             </div>
-            <div class="columns small-2">
+            <div class="columns small-2 pro-badge">
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
+                    <span class="architizer-glyph blue-500 fs-l pro-icon"
                           style="display:inline-block; line-height: 1;">+
                     </span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
+                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1480,82 +1367,7 @@ Please note that if you don't include the list header `.list-view-header`, you m
           </div>
         </div>
     </li>
-    <li class="list-item">
-      <div class="row list-item-content align-middle">
-        <div class="columns shrink list-item-image">
-          <!-- Image is used as an inline `background-image` property -->
-          <span 
-            style="background-image:url('https://architizer-prod.imgix.net/media/mediadata/uploads/1514926429370-Barcelona_Gallery_2_EU.jpg?fit=crop&h=50&w=50')">
-          </span>
-        </div>
-        <div class="columns pl-0">
-          <div class="row">
-            <!-- List Item  Title -->
-            <div class="columns ellipsis small-12 title">
-              Exterior Siding - Accoya
-            </div>
-          </div>
-          <div class="row">
-            <!-- List Item  Subtitle -->
-            <div class="columns shrink subtitle">
-              Delta Millworks
-            </div>
-            <div class="columns small-2">
-              <div class="row">
-                <!-- Verified Badge -->
-                  <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
-                          style="display:inline-block; line-height: 1;">+
-                    </span>
-                  </div>
-                  <!--  Pro Badge -->
-                  <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </li>
-    <li class="list-item">
-      <div class="row list-item-content align-middle">
-        <div class="columns shrink list-item-image">
-          <!-- Image is used as an inline `background-image` property -->
-          <span 
-            style="background-image:url('https://architizer-prod.imgix.net/media/mediadata/uploads/1514926429370-Barcelona_Gallery_2_EU.jpg?fit=crop&h=50&w=50')">
-          </span>
-        </div>
-        <div class="columns pl-0">
-          <div class="row">
-            <!-- List Item  Title -->
-            <div class="columns ellipsis small-12 title">
-              Exterior Siding - Accoya
-            </div>
-          </div>
-          <div class="row">
-            <!-- List Item  Subtitle -->
-            <div class="columns shrink subtitle">
-              Delta Millworks
-            </div>
-            <div class="columns small-2">
-              <div class="row">
-                <!-- Verified Badge -->
-                  <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
-                          style="display:inline-block; line-height: 1;">+
-                    </span>
-                  </div>
-                  <!--  Pro Badge -->
-                  <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </li>
+    
   </ul>
 </div>
 ```

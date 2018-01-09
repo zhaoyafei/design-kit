@@ -1,8 +1,15 @@
 .list-view-header {
   padding: 0.5em;
-  height: 40px;
+  height: 48px;
+  .list-view-header-inner {
+    padding: 0;
+  }
   h5 {
+    padding: 0.5rem 1.2rem;
     font-weight: $global-weight-bold;
+  }
+  hr {
+    margin-top: 0;
   }
 }
 
@@ -10,17 +17,19 @@
   max-height: 100%;
   // Height equals 100% of parent height, 
   // minus height of `.list-view-header` as described above.
-  height: calc(100% - 40px); 
+  height: calc(100% - 48px); 
   overflow-y: scroll;
   overflow-x: hidden;
   list-style-type: none;
   margin: 0;
+  padding: 0;
 
   &.no-header {
     height: 100%;
   }
 
   .list-item {
+    cursor: pointer;
     min-height: 70px;
     padding: 0.5em 0;
     margin: 0 0.5em;  
@@ -28,10 +37,29 @@
     
     .subtitle {
       color: $light-gray;
+      max-width: calc(100% - 55px);
+    }
+
+    .pro-badge {
+      min-width: 55px;
+      .pro-icon {
+        display:inline-block; 
+        line-height: 1;
+      }
+      .pro-text {
+        font-size: 0.7rem;
+      }
     }
 
     .title {
       font-weight: $global-weight-bold;
+    }
+
+    &.inactive {
+      pointer-events: none;
+      .list-item-content {
+        opacity: 0.3;
+      }
     }
 
     .list-item-image {
@@ -40,8 +68,8 @@
         background-repeat: no-repeat;
         background-color: transparent;
         background-position: center;
-        width: 50px;
-        height: 50px;
+        width: 40px; 
+        height: 40px; 
         display: block;
       }
     }
