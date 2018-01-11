@@ -1,6 +1,8 @@
+@import '_adk-variables';
+
 .list-view-header {
   padding: 0.5em;
-  height: 48px;
+  height: 55px;
   .list-view-header-inner {
     padding: 0;
   }
@@ -9,7 +11,7 @@
     font-weight: $global-weight-bold;
   }
   hr {
-    margin-top: 0;
+    margin-top: $space-xs;
   }
 }
 
@@ -17,7 +19,7 @@
   max-height: 100%;
   // Height equals 100% of parent height, 
   // minus height of `.list-view-header` as described above.
-  height: calc(100% - 48px); 
+  height: calc(100% - 55px); 
   overflow-y: scroll;
   overflow-x: hidden;
   list-style-type: none;
