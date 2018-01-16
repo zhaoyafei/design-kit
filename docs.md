@@ -1074,8 +1074,8 @@ For the sake of convenience, here is the markup and css classes required to rend
 
 ## BETA Badge
 
-BETA badge is currently used in the Recommended Products Grid header description, and can also be used for other new features that we are still evaluating or testing. It has the same font height
-and weight as the Pro badge above.
+BETA badge is currently used in the Recommended Products grid header description, and can also be used for other new features that we are still evaluating or testing. It is applied as a class in conjunction with Foundation's `badge` class and has the same font height
+and weight as the Pro badge.
 For the sake of convenience, here is the markup and css classes required to render it in any given context.
 
 ### Example
@@ -1083,9 +1083,8 @@ For the sake of convenience, here is the markup and css classes required to rend
 <!-- Description -->
 <div class="row align-middle">
   <!-- BETA badge -->
-  <div class="columns shrink pl-0 pr-0 pt-0 pb-xxxs">
-    <span class="white badge capitalize fs-s fw-bold p-xs"
-          style="line-height: 0.25; height: 18px; border-radius: 15px; vertical-align: middle;">BETA</span>
+  <div class="columns shrink">
+    <span class="white beta badge capitalize fs-s fw-bold">BETA</span>
   </div>
 </div>
 ```
