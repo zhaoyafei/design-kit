@@ -1072,6 +1072,25 @@ For the sake of convenience, here is the markup and css classes required to rend
 
 ---
 
+## BETA Badge
+
+BETA badge is used in the Recommended Products Grid header description and can also be used for other feature to indicate a new feature that we are still evaluating or testing.
+For the sake of convenience, here is the markup and css classes required to render it in any given context.
+
+### Example
+```html_example
+<!-- Description -->
+<div class="row align-middle">
+  <!-- BETA badge -->
+  <div class="columns shrink pl-0 pr-0 pt-0 pb-xxxs">
+    <span class="white badge capitalize fs-s fw-bold p-xs"
+          style="line-height: 0.25; height: 18px; border-radius: 15px; vertical-align: middle;">BETA</span>
+  </div>
+</div>
+```
+
+---
+
 ## List Views & Items
 
 List views are simple lists that take up 100% of parent element's height and create a minimal scrolling container for list items. Each list item contains a thumbnail, a title and a subtitle plus an optional Pro Badge. In the example below, the outermost div with the inline style of `height: 200px;` is only used to demonstrate the scrolling behavior of the list. 
