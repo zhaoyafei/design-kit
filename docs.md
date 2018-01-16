@@ -1074,7 +1074,8 @@ For the sake of convenience, here is the markup and css classes required to rend
 
 ## BETA Badge
 
-BETA badge is used in the Recommended Products Grid header description and can also be used for other feature to indicate a new feature that we are still evaluating or testing.
+BETA badge is currently used in the Recommended Products Grid header description, and can also be used for other new features that we are still evaluating or testing. It has the same font height
+and weight as the Pro badge above.
 For the sake of convenience, here is the markup and css classes required to render it in any given context.
 
 ### Example
