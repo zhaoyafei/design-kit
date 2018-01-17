@@ -484,6 +484,35 @@ Use `.fill` to set the background color.
 
 
 # Images
+## Aspect Ratios - Responsive
+To display images that are responsize while locking their aspect ratios, use background images on divs with the following classes:
+
+`.img-square` - 1:1 aspect  
+`.img-standard` - 4:3 aspect  
+`.img-gold` - Golden ratio aspect  
+`.img-wide` - 16:9 aspect  
+`.img-half` - 2:1 aspect  
+
+```html_example
+<div class="row small-up-1 medium-up-3 large-up-5 mb-s">
+  <div class="column">
+    <div class="img-square" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+  </div>
+  <div class="column">
+    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+  </div>
+  <div class="column">
+    <div class="img-gold" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+  </div>
+  <div class="column">
+    <div class="img-wide" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+  </div>
+  <div class="column">
+    <div class="img-half" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+  </div>
+</div>
+```
+---
 ## Avatars
 These are ADK Avatars  
 
@@ -688,70 +717,63 @@ Action Bars are title bars with other functionality inside them.
 ## Cards
 Card elements are modules that can be used across our UI, and are currently used for the most part in our conversation feed. 
 
-By default `.card` is sized according to the flex grid. To make the cards have a fixed width, add `.masonry`, which is to be used in masonry grids and not the flex grid.  
-`.masonry` cards are sized according to the `.card-image` inside of it, which by default has an aspect ratio of 4:3. To change the aspect ratio from 4:3 to 16:9, use `.card-image.ratio-16-9` on the masonry cards. 
-
 
 ### Classes and Usage
 The top level class for creating card elements is `.card`.
 - `.card.clickable` - Add "clickable" to a card if it is an interactive element.
-- `.card.masonry` - Create a fixed width, floating card.
 - `.card.has-notification-dot` – A red notification dot is added to the top left corner of the card.
 - `.card .card-button` - This is our old style card action, which was a button embedded into the card itself. Used when cards are not in the context of a grid and are not clickable, eg. in the message thread.
 - `.card .caption` - To be used inside card headers to show the status or type of a card, if it's a product.
-- `.card.border-blue` - Class to create a blue outline.
-- `.card-image.ratio-16-9` - Change the aspect ratio of the card image from default 4:3 to 16:9.
+
+- `.card.responsive-image` - Add to cards built using responsive `.img-[ratio]` images to get rid of padding on `.card` and add margin on `.card-section`   
 
 Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.
 
 ### Card Types and Overlays
-To overlay information over card images, `.image-overlay-info` to the `.card-image`.  
+To overlay information over card images, `.image-overlay-info` to the `.img-[ratio]` div.  
 Then simply add an empty `.overlay` div inside the image, as well as a `.info` div with the content to be overlayed.  
 This is currently used on Project cards to show more information about what's happening inside of it.  
   
-The examples below are the three main image-based card types on Source. They are`.masonry` cards with fixed width.  
+The examples below are the main image-based card types on Architizer. 
 
-**Project Cards** - Displays project title and phase with edit button. 16:9 fixed width card-image ratio w/ information on hover.  
+**Project Cards** - Displays project title and phase with edit button. `-wide` (16:9) image ratio w/ information on hover.  
 **Search Cards** - Displays search title and # of products inside. Mosaic of floating product images as card content.  
-**Product Cards** - Displays product and brand names (note smaller type size) with product action button. 4:3 fixed width card-image ratio displaying product image and creator info on hover overlay.  
-**Product Cards, not clickable** - Product cards that are not in the context of a mosaic grid, such as cards in a message thread, are not clickable objects. Therefore these cards must have a dedicated "View Product" button.  
-**Recommended Product Cards, clickable** - Displays recommended product and brand name (along with PRO badge if applicable) with an add button. 4:3 fixed width card-image ratio.
+**Product Cards** - Displays product and brand names (note smaller type size) with product action button. `-standard` (4:3) image ratio displaying product image and creator info on hover overlay.   
+**Recommended Product Cards, clickable** - Displays recommended product and brand name (along with PRO badge if applicable) with an add button. `-standard` image ratio.
 
 ```html_example
 <div class="row small-up-1 medium-up-2 large-up-3">
   <div class="column">
     <!-- Card 1 - Project Card -->
-    <div class="card clickable masonry">
+    <div class="card clickable responsive-image">
     <!-- Image -->
-      <div class="card-section">
-        <div class="card-image card-image-no-margin image-overlay-info ratio-16-9" style="background-image: url('https://architizer-prod.imgix.net/media/1494960959876-Dig-Inn-171646-1.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
-          <div class="overlay"></div>
-          <div class="info">
-            <div class="row align-middle collapse" style="height: 100%;">
-              <div class="column">
-                <div class="row column">
-                  <h5>An Education Center in UK</h5>
+      <div class="img-wide image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1494960959876-Dig-Inn-171646-1.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+        <div class="overlay"></div>
+        <div class="info">
+          <div class="row align-middle collapse" style="height: 100%;">
+            <div class="column">
+              <div class="row column">
+                <h5>An Education Center in UK</h5>
+              </div>
+              <div class="row collapse mt-s mb-base">
+                <div class="small-4 columns">
+                  <h2><strong>48</strong></h2>
+                  <h4>Products</h4>
                 </div>
-                <div class="row mt-s mb-base">
-                  <div class="small-4 columns">
-                    <h2><strong>48</strong></h2>
-                    <h4>Products</h4>
-                  </div>
-                  <div class="small-4 columns">
-                    <h2><strong>22</strong></h2>
-                    <h4>Searches</h4>
-                  </div>
-                  <div class="small-4 columns">
-                    <h2><strong>61</strong></h2>
-                    <h4>Messages</h4>
-                  </div>
+                <div class="small-4 columns">
+                  <h2><strong>22</strong></h2>
+                  <h4>Searches</h4>
                 </div>
-                <!-- Team -->
-                <div class="row column">
-                  <img class="avatar small" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
-                  <div class="avatar small bg-blue-300"><span class="initials">P</span></div>
-                  <div class="avatar small bg-green-300"><span class="initials">S</span></div>
+                <div class="small-4 columns">
+                  <h2><strong>61</strong></h2>
+                  <h4>Messages</h4>
                 </div>
+              </div>
+              <!-- Team -->
+              <div class="row column">
+                <img class="avatar small" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
+                <div class="avatar small bg-blue-300"><span class="initials">P</span></div>
+                <div class="avatar small bg-green-300"><span class="initials">S</span></div>
               </div>
             </div>
           </div>
@@ -761,7 +783,7 @@ The examples below are the three main image-based card types on Source. They are
       <div class="card-section">
         <div class="row align-middle mt-s">
           <div class="columns">
-            <h3 class="ellipsis">Dig In</h3>
+            <h3 class="ellipsis">Project Card</h3>
             <span class="fs-s">Construction Documents</span>
           </div>
         </div>
@@ -769,28 +791,72 @@ The examples below are the three main image-based card types on Source. They are
     </div>
   </div>
   <div class="column">
-    <!-- Card 2 - Search Card-->
-    <div class="card clickable masonry">
-    <!-- Image -->
-      <div class="card-section">
-        <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1488471796239-b340149386bb55af4b84186b72af4d8f.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+    <!-- Card 2 - Multi Image Search Card -->
+    <div class="card multi-image clickable responsive-image">
+      <!-- Image -->
+      <div class="img-standard image-overlay-info">
+        <div class="image-items-container">
+          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+          </div>
+          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+          </div>
+          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+          </div>
+          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+          </div>
+          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+          </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="info" style="text-align: center;">
+          <div class="row align-middle collapse" style="height: 100%;">
+            <div class="column">
+              <div class="row mb-xs">
+                <div class="column">
+                  <h5>Added by</h5>
+                </div>
+              </div>
+              <!-- Avatar -->
+              <div class="row mb-xs">
+                <div class="column">
+                  <img class="avatar large" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
+                </div>
+              </div>
+              <!-- User Name -->
+              <div class="row">
+                <div class="columns align-center">
+                  <h4><strong>Thomas Tachibana</strong></h4>
+                </div>
+              </div>
+              <!-- User Role -->
+              <div class="row">
+                <div class="columns align-center">
+                  <h5>Project Team Member</h5>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- Info -->
       <div class="card-section">
-        <div class="row align-middle mt-s">
-          <div class="small-10 columns">
-            <!-- Request Name -->
+        <div class="row align-middle">
+          <div class="small-10 columns pr-s">
+            <!-- Product Name -->
             <div class="row">
-              <h3 class="ellipsis">Coating for Slurried Brick for Pre-existing or New Applications</h3>
+              <strong class="ellipsis" title="Custom Metal Chair">Search Card</strong>
             </div>
+            <!-- Brand Name -->
             <div class="row align-middle">
-              <div class="columns shrink fs-s pr-0">
-                <!-- Number of shortlisted + unreviewed product responses --> 
-                <strong>4</strong> Products
+              <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                <p class="mb-0 ellipsis" title="Products">5 Products</p>
+              </div>
+              <div class="columns pl-xxs">
+                <span class="architizer-glyph blue-500 pl-0">&nbsp;</span>
               </div>
             </div>
           </div>
+          <!-- Edit -->
           <div class="small-2 columns text-right">
             <a class="secondary icon hollow button"><i class="material-icons">edit</i></a>
           </div>
@@ -800,42 +866,10 @@ The examples below are the three main image-based card types on Source. They are
   </div>
   <div class="column">
     <!-- Card 3 - Product Card-->
-    <div class="card clickable masonry">
-    <!-- Image -->
-      <div class="card-section">
-        <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
-          <div class="overlay"></div>
-          <div class="info" style="text-align: center;">
-            <div class="row align-middle collapse" style="height: 100%;">
-              <div class="column">
-                <div class="row mb-xs">
-                  <div class="column">
-                    <h5>Added by</h5>
-                  </div>
-                </div>
-                <!-- Avatar -->
-                <div class="row mb-xs">
-                  <div class="column">
-                    <img class="avatar large" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
-                  </div>
-                </div>
-                <!-- User Name -->
-                <div class="row">
-                  <div class="columns align-center">
-                    <h4><strong>Thomas Tachibana</strong></h4>
-                  </div>
-                </div>
-                <!-- User Role -->
-                <div class="row">
-                  <div class="columns align-center">
-                    <h5>Project Team Member</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="card clickable responsive-image">
+      <!-- Image -->
+      <div class="img-standard image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
         </div>
-      </div>
       <!-- Info -->
       <div class="card-section">
         <div class="row">
@@ -848,7 +882,7 @@ The examples below are the three main image-based card types on Source. They are
           <div class="small-10 columns pr-s">
             <!-- Product Name -->
             <div class="row">
-              <strong class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</strong>
+              <strong class="ellipsis" title="Custom Metal Chair">Product Card</strong>
             </div>
             <!-- Brand Name -->
             <div class="row align-middle">
@@ -868,55 +902,13 @@ The examples below are the three main image-based card types on Source. They are
           </div>
         </div>
       </div>
-    </div>    
-  </div>
-</div>
-<div class="row small-up-1 medium-up-2 large-up-3">
-  <div class="column">
-    <!-- Card 4 - Product Card Flex-->
-    <div class="card flex">
-      <!-- Card Image -->
-      <div class="card-section card-image card-image-no-margin"
-           style="background-image: url('/docs/img/table.jpg')"></div>
-      <!-- Card Content -->
-      <div class="card-section">
-        <!-- Response Marking and Dropdown Menu-->
-        <div class="row">
-          <!-- Response Marking -->
-          <div class="columns shrink">
-            <span class="caption blue">New Product</span>
-          </div>
-          <!-- Middle Spacing -->
-          <div class="columns"></div>
-        </div>
-        <!-- Product Name -->
-        <div class="row">
-          <strong class="ellipsis">Pollock Executive Chair</strong>
-        </div>
-        <!-- Brand Name -->
-        <div class="row align-middle">
-          <div class="columns shrink meta pr-0">
-            <a href="#"
-               target="_blank" 
-               class="underline">Knoll</a>
-          </div>
-          <!-- If Verified -->
-          <div class="columns shrink ml-xxs pl-0">
-            <span class="architizer-glyph blue-500">+</span>
-          </div>
-        </div>
-      </div>
-      <!-- View Product Button -->
-      <div class="card-section">
-        <a class="primary hollow button expanded">View Product</a>
-      </div>
     </div>
   </div>
   <div class="column">
-    <!-- Card 5 - Recommended Product Card Fixed-->
-    <div class="card clickable recommended">
+    <!-- Card 4 - Recommended Product Card Fixed-->
+    <div class="card clickable responsive-image recommended">
       <!-- Card Image -->
-      <div class="card-section card-image card-image-no-margin"
+      <div class="img-standard"
            style="background-image: url('/docs/img/table.jpg')"></div>
       <!-- Card Content -->
       <div class="card-section">
@@ -959,91 +951,8 @@ The examples below are the three main image-based card types on Source. They are
       </div>
     </div>
   </div>
-  <div class="column">
-    <!-- Card 6 - Multi Image Card -->
-    <div class="card multi-image clickable masonry">
-    <!-- Image -->
-      <div class="card-section">
-        <div class="card-image card-image-no-margin image-overlay-info">
-          <div class="image-items-container">
-            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
-            </div>
-            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
-            </div>
-            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
-            </div>
-            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
-            </div>
-            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
-            </div>
-          </div>
-          <div class="overlay"></div>
-          <div class="info" style="text-align: center;">
-            <div class="row align-middle collapse" style="height: 100%;">
-              <div class="column">
-                <div class="row mb-xs">
-                  <div class="column">
-                    <h5>Added by</h5>
-                  </div>
-                </div>
-                <!-- Avatar -->
-                <div class="row mb-xs">
-                  <div class="column">
-                    <img class="avatar large" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
-                  </div>
-                </div>
-                <!-- User Name -->
-                <div class="row">
-                  <div class="columns align-center">
-                    <h4><strong>Thomas Tachibana</strong></h4>
-                  </div>
-                </div>
-                <!-- User Role -->
-                <div class="row">
-                  <div class="columns align-center">
-                    <h5>Project Team Member</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Info -->
-      <div class="card-section">
-        <div class="row">
-          <!-- Response Marking -->
-          <div class="columns shrink">
-            <span class="caption red">In Review</span>
-          </div>
-        </div>
-        <div class="row align-middle">
-          <div class="small-10 columns pr-s">
-            <!-- Product Name -->
-            <div class="row">
-              <strong class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</strong>
-            </div>
-            <!-- Brand Name -->
-            <div class="row align-middle">
-              <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
-                <p class="mb-0 ellipsis" title="Bend Goods">Bend Goods</p>
-              </div>
-              <div class="columns pl-xxs">
-                <span class="architizer-glyph blue-500 pl-0">&nbsp;</span>
-              </div>
-            </div>
-          </div>
-          <!-- Shortlist -->
-          <div class="small-2 columns" style="white-space: nowrap">
-            <div class="float-right">
-              <a class="button tiny secondary-light hover-bg-green-500""><span class="material-icons fs-base">done</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
+
 ```
 
 ---
