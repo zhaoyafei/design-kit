@@ -85,14 +85,6 @@
     // Small breakpoint width
     width: $card-size-xxsmall;
 
-    .card-image {
-      height: $card-size-xxsmall / 1.33;  //4:3 by default
-      &.ratio-16-9 {
-        height: $card-size-xxsmall / 1.77;
-        width: inherit;
-      }
-    }
-
     .subtitle {
       color: $light-gray;
     }
