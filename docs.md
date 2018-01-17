@@ -721,7 +721,7 @@ The examples below are the three main image-based card types on Source. They are
 <div class="row small-up-1 medium-up-2 large-up-3">
   <div class="column">
     <!-- Card 1 - Project Card -->
-    <div class="card clickable masonry">
+    <div class="card clickable">
     <!-- Image -->
       <div class="card-section">
         <div class="card-image card-image-no-margin image-overlay-info ratio-16-9" style="background-image: url('https://architizer-prod.imgix.net/media/1494960959876-Dig-Inn-171646-1.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
@@ -761,7 +761,7 @@ The examples below are the three main image-based card types on Source. They are
       <div class="card-section">
         <div class="row align-middle mt-s">
           <div class="columns">
-            <h3 class="ellipsis">Dig In</h3>
+            <h3 class="ellipsis">Project Card</h3>
             <span class="fs-s">Construction Documents</span>
           </div>
         </div>
@@ -769,200 +769,8 @@ The examples below are the three main image-based card types on Source. They are
     </div>
   </div>
   <div class="column">
-    <!-- Card 2 - Search Card-->
-    <div class="card clickable masonry">
-    <!-- Image -->
-      <div class="card-section">
-        <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1488471796239-b340149386bb55af4b84186b72af4d8f.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
-        </div>
-      </div>
-      <!-- Info -->
-      <div class="card-section">
-        <div class="row align-middle mt-s">
-          <div class="small-10 columns">
-            <!-- Request Name -->
-            <div class="row">
-              <h3 class="ellipsis">Coating for Slurried Brick for Pre-existing or New Applications</h3>
-            </div>
-            <div class="row align-middle">
-              <div class="columns shrink fs-s pr-0">
-                <!-- Number of shortlisted + unreviewed product responses --> 
-                <strong>4</strong> Products
-              </div>
-            </div>
-          </div>
-          <div class="small-2 columns text-right">
-            <a class="secondary icon hollow button"><i class="material-icons">edit</i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <!-- Card 3 - Product Card-->
-    <div class="card clickable masonry">
-    <!-- Image -->
-      <div class="card-section">
-        <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
-          <div class="overlay"></div>
-          <div class="info" style="text-align: center;">
-            <div class="row align-middle collapse" style="height: 100%;">
-              <div class="column">
-                <div class="row mb-xs">
-                  <div class="column">
-                    <h5>Added by</h5>
-                  </div>
-                </div>
-                <!-- Avatar -->
-                <div class="row mb-xs">
-                  <div class="column">
-                    <img class="avatar large" src="https://architizer-prod.imgix.net/media/1496789677388Thomas.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520">
-                  </div>
-                </div>
-                <!-- User Name -->
-                <div class="row">
-                  <div class="columns align-center">
-                    <h4><strong>Thomas Tachibana</strong></h4>
-                  </div>
-                </div>
-                <!-- User Role -->
-                <div class="row">
-                  <div class="columns align-center">
-                    <h5>Project Team Member</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Info -->
-      <div class="card-section">
-        <div class="row">
-          <!-- Response Marking -->
-          <div class="columns shrink">
-            <span class="caption red">In Review</span>
-          </div>
-        </div>
-        <div class="row align-middle">
-          <div class="small-10 columns pr-s">
-            <!-- Product Name -->
-            <div class="row">
-              <strong class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</strong>
-            </div>
-            <!-- Brand Name -->
-            <div class="row align-middle">
-              <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
-                <p class="mb-0 ellipsis" title="Bend Goods">Bend Goods</p>
-              </div>
-              <div class="columns pl-xxs">
-                <span class="architizer-glyph blue-500 pl-0">&nbsp;</span>
-              </div>
-            </div>
-          </div>
-          <!-- Shortlist -->
-          <div class="small-2 columns" style="white-space: nowrap">
-            <div class="float-right">
-              <a class="button tiny secondary-light hover-bg-green-500""><span class="material-icons fs-base">done</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>    
-  </div>
-</div>
-<div class="row small-up-1 medium-up-2 large-up-3">
-  <div class="column">
-    <!-- Card 4 - Product Card Flex-->
-    <div class="card flex">
-      <!-- Card Image -->
-      <div class="card-section card-image card-image-no-margin"
-           style="background-image: url('/docs/img/table.jpg')"></div>
-      <!-- Card Content -->
-      <div class="card-section">
-        <!-- Response Marking and Dropdown Menu-->
-        <div class="row">
-          <!-- Response Marking -->
-          <div class="columns shrink">
-            <span class="caption blue">New Product</span>
-          </div>
-          <!-- Middle Spacing -->
-          <div class="columns"></div>
-        </div>
-        <!-- Product Name -->
-        <div class="row">
-          <strong class="ellipsis">Pollock Executive Chair</strong>
-        </div>
-        <!-- Brand Name -->
-        <div class="row align-middle">
-          <div class="columns shrink meta pr-0">
-            <a href="#"
-               target="_blank" 
-               class="underline">Knoll</a>
-          </div>
-          <!-- If Verified -->
-          <div class="columns shrink ml-xxs pl-0">
-            <span class="architizer-glyph blue-500">+</span>
-          </div>
-        </div>
-      </div>
-      <!-- View Product Button -->
-      <div class="card-section">
-        <a class="primary hollow button expanded">View Product</a>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <!-- Card 5 - Recommended Product Card Fixed-->
-    <div class="card clickable recommended">
-      <!-- Card Image -->
-      <div class="card-section card-image card-image-no-margin"
-           style="background-image: url('/docs/img/table.jpg')"></div>
-      <!-- Card Content -->
-      <div class="card-section">
-        <div class="row align-middle">
-          <div class="small-10 columns mt-xs">
-            <!-- Product Name -->
-            <div class="row">
-              <strong class="ellipsis">Knoll Custom Teak Executive Table</strong>
-            </div>
-            <div class="row">
-              <!-- Brand Name -->
-              <!-- Brand name column width needs to be calculated so that the addition of the PRO badge doesn't cause a column break -->
-              <div class="columns shrink subtitle fs-base ellipsis pr-xs"
-                   style="max-width: calc(100% - 55px);">Knoll United States of America</div>
-              <div class="columns small-3"
-                   style="min-width: 55px;">
-                <!-- PRO badge width is fixed at 55px so that brand name column can be calculated accordingly -->
-                <div class="row">
-                  <!-- Verified Badge -->
-                  <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
-                          style="display:inline-block; line-height: 1;">+</span>
-                  </div>
-                  <!-- Pro Badge -->
-                  <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- '+' button -->
-          <div class="small-2 columns" style="white-space: nowrap;">
-            <div class="float-right">
-              <a class="button tiny">
-                <span class="material-icons fs-base">add</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <!-- Card 6 - Multi Image Card -->
-    <div class="card multi-image clickable masonry">
+    <!-- Card 2 - Multi Image Card -->
+    <div class="card multi-image clickable">
     <!-- Image -->
       <div class="card-section">
         <div class="card-image card-image-no-margin image-overlay-info">
@@ -1012,6 +820,40 @@ The examples below are the three main image-based card types on Source. They are
       </div>
       <!-- Info -->
       <div class="card-section">
+        <div class="row align-middle">
+          <div class="small-10 columns pr-s">
+            <!-- Product Name -->
+            <div class="row">
+              <strong class="ellipsis" title="Custom Metal Chair">Search Card</strong>
+            </div>
+            <!-- Brand Name -->
+            <div class="row align-middle">
+              <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                <p class="mb-0 ellipsis" title="Products">5 Products</p>
+              </div>
+              <div class="columns pl-xxs">
+                <span class="architizer-glyph blue-500 pl-0">&nbsp;</span>
+              </div>
+            </div>
+          </div>
+          <!-- Edit -->
+          <div class="small-2 columns text-right">
+            <a class="secondary icon hollow button"><i class="material-icons">edit</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <!-- Card 3 - Product Card-->
+    <div class="card clickable">
+    <!-- Image -->
+      <div class="card-section">
+        <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+        </div>
+      </div>
+      <!-- Info -->
+      <div class="card-section">
         <div class="row">
           <!-- Response Marking -->
           <div class="columns shrink">
@@ -1022,7 +864,7 @@ The examples below are the three main image-based card types on Source. They are
           <div class="small-10 columns pr-s">
             <!-- Product Name -->
             <div class="row">
-              <strong class="ellipsis" title="Custom Metal Chair">Custom Metal Chair</strong>
+              <strong class="ellipsis" title="Custom Metal Chair">Product Card</strong>
             </div>
             <!-- Brand Name -->
             <div class="row align-middle">
@@ -1044,7 +886,55 @@ The examples below are the three main image-based card types on Source. They are
       </div>
     </div>
   </div>
+  <div class="column">
+    <!-- Card 4 - Recommended Product Card Fixed-->
+    <div class="card clickable recommended">
+      <!-- Card Image -->
+      <div class="img-standard"
+           style="background-image: url('/docs/img/table.jpg')"></div>
+      <!-- Card Content -->
+      <div class="card-section">
+        <div class="row align-middle">
+          <div class="small-10 columns mt-xs">
+            <!-- Product Name -->
+            <div class="row">
+              <strong class="ellipsis">Knoll Custom Teak Executive Table</strong>
+            </div>
+            <div class="row">
+              <!-- Brand Name -->
+              <!-- Brand name column width needs to be calculated so that the addition of the PRO badge doesn't cause a column break -->
+              <div class="columns shrink subtitle fs-base ellipsis pr-xs"
+                   style="max-width: calc(100% - 55px);">Knoll United States of America</div>
+              <div class="columns small-3"
+                   style="min-width: 55px;">
+                <!-- PRO badge width is fixed at 55px so that brand name column can be calculated accordingly -->
+                <div class="row">
+                  <!-- Verified Badge -->
+                  <div class="columns shrink pl-0 pr-xxs">
+                    <span class="verified">+</span>
+                  </div>
+                  <!-- Pro Badge -->
+                  <div class="columns shrink pl-0">
+                    <span class="pro">PRO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- '+' button -->
+          <div class="small-2 columns" style="white-space: nowrap;">
+            <div class="float-right">
+              <a class="button tiny">
+                <span class="material-icons fs-base">add</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
 ```
 
 ---
