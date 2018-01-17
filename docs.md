@@ -484,6 +484,35 @@ Use `.fill` to set the background color.
 
 
 # Images
+## Aspect Ratios - Responsive
+To display images that are responsize while locking their aspect ratios, use background images on divs with the following classes:
+
+`.img-square` - 1:1 aspect  
+`.img-standard` - 4:3 aspect  
+`.img-gold` - Golden ratio aspect  
+`.img-wide` - 16:9 aspect  
+`.img-half` - 2:1 aspect  
+
+```html_example
+<div class="row small-up-1 medium-up-3 large-up-5 mb-s">
+  <div class="column">
+    <div class="img-square image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+  </div>
+  <div class="column">
+    <div class="img-standard image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+  </div>
+  <div class="column">
+    <div class="img-gold image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+  </div>
+  <div class="column">
+    <div class="img-wide image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+  </div>
+  <div class="column">
+    <div class="img-half image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+  </div>
+</div>
+```
+---
 ## Avatars
 These are ADK Avatars  
 
