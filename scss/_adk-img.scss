@@ -14,6 +14,15 @@
     height: 0;
     position: relative;
     background-position: center;
+
+    .info,
+    .overlay {
+      margin-top: -$percentage;
+    }
+  }
+
+  .card > .img-#{$ratio} {
+    border-radius: $space-xxxs $space-xxxs 0 0;
   }
 }
 
