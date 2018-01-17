@@ -165,6 +165,20 @@ $adk-neutral-colors: (
   @return $palette;
 };
 
+
+/**
+ * Image Variables
+ */
+
+// Width to Height
+$aspect-ratios: (
+  square: percentage(1/1),
+  half: percentage(1/2),
+  standard: percentage(3/4),
+  wide: percentage(9/16),
+  gold: percentage(1/1.618)
+);
+
 /**
  * Card Variables
  */
