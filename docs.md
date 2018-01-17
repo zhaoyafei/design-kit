@@ -692,7 +692,6 @@ Card elements are modules that can be used across our UI, and are currently used
 ### Classes and Usage
 The top level class for creating card elements is `.card`.
 - `.card.clickable` - Add "clickable" to a card if it is an interactive element.
-- `.card.masonry` - Create a fixed width, floating card.
 - `.card.has-notification-dot` – A red notification dot is added to the top left corner of the card.
 - `.card .card-button` - This is our old style card action, which was a button embedded into the card itself. Used when cards are not in the context of a grid and are not clickable, eg. in the message thread.
 - `.card .caption` - To be used inside card headers to show the status or type of a card, if it's a product.
@@ -707,10 +706,10 @@ This is currently used on Project cards to show more information about what's ha
   
 The examples below are the main image-based card types on Architizer. 
 
-**Project Cards** - Displays project title and phase with edit button. 'wide' (16:9) image ratio w/ information on hover.  
+**Project Cards** - Displays project title and phase with edit button. `-wide` (16:9) image ratio w/ information on hover.  
 **Search Cards** - Displays search title and # of products inside. Mosaic of floating product images as card content.  
-**Product Cards** - Displays product and brand names (note smaller type size) with product action button. 'standard' (4:3) image ratio displaying product image and creator info on hover overlay.   
-**Recommended Product Cards, clickable** - Displays recommended product and brand name (along with PRO badge if applicable) with an add button. 'standard' image ratio.
+**Product Cards** - Displays product and brand names (note smaller type size) with product action button. `-standard` (4:3) image ratio displaying product image and creator info on hover overlay.   
+**Recommended Product Cards, clickable** - Displays recommended product and brand name (along with PRO badge if applicable) with an add button. `-standard` image ratio.
 
 ```html_example
 <div class="row small-up-1 medium-up-2 large-up-3">
