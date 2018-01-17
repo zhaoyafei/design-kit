@@ -937,12 +937,11 @@ The examples below are the three main image-based card types on Source. They are
                 <div class="row">
                   <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l"
-                          style="display:inline-block; line-height: 1;">+</span>
+                    <span class="verified">+</span>
                   </div>
                   <!-- Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold">PRO</span>
+                    <span class="pro">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1059,13 +1058,12 @@ For the sake of convenience, here is the markup and css classes required to rend
 <div class="row">
   <!-- Verified Badge -->
   <div class="columns shrink pl-0 pr-xxs">
-    <span class="architizer-glyph blue-500 fs-l"
-          style="display:inline-block; line-height: 1;">+
+    <span class="verified">+
     </span>
   </div>
   <!--  Pro Badge -->
   <div class="columns shrink pl-0">
-    <span class="blue capitalize fs-s fw-bold">PRO</span>
+    <span class="pro">PRO</span>
   </div>
 </div>
 ```
@@ -1084,7 +1082,7 @@ For the sake of convenience, here is the markup and css classes required to rend
 <div class="row align-middle">
   <!-- BETA badge -->
   <div class="columns shrink">
-    <span class="white beta badge capitalize fs-s fw-bold">BETA</span>
+    <span class="beta badge">BETA</span>
   </div>
 </div>
 ```
