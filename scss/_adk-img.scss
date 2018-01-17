@@ -7,6 +7,16 @@
   }
 }
 
+@each $ratio, $percentage in $aspect-ratios {
+  .img-#{$ratio} {
+    padding-top: $percentage;
+    width: 100%;
+    height: 0;
+    position: relative;
+    background-position: center;
+  }
+}
+
 .thumbnail {
   cursor: pointer;
   box-shadow: none;
