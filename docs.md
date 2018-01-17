@@ -724,7 +724,8 @@ The top level class for creating card elements is `.card`.
 - `.card.has-notification-dot` – A red notification dot is added to the top left corner of the card.
 - `.card .card-button` - This is our old style card action, which was a button embedded into the card itself. Used when cards are not in the context of a grid and are not clickable, eg. in the message thread.
 - `.card .caption` - To be used inside card headers to show the status or type of a card, if it's a product.
-- `.card.border-blue` - Class to create a blue outline.
+
+- `.card.responsive-image` - Add to cards built using responsive `.img-[ratio]` images to get rid of padding on `.card` and add margin on `.card-section`   
 
 Refer to [Foundation's Card Documentation](http://foundation.zurb.com/sites/docs/card.html) for all card options.
 
@@ -744,7 +745,7 @@ The examples below are the main image-based card types on Architizer.
 <div class="row small-up-1 medium-up-2 large-up-3">
   <div class="column">
     <!-- Card 1 - Project Card -->
-    <div class="card clickable">
+    <div class="card clickable responsive-image">
     <!-- Image -->
       <div class="img-wide image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1494960959876-Dig-Inn-171646-1.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
         <div class="overlay"></div>
@@ -791,7 +792,7 @@ The examples below are the main image-based card types on Architizer.
   </div>
   <div class="column">
     <!-- Card 2 - Multi Image Search Card -->
-    <div class="card multi-image clickable">
+    <div class="card multi-image clickable responsive-image">
       <!-- Image -->
       <div class="img-standard image-overlay-info">
         <div class="image-items-container">
@@ -865,7 +866,7 @@ The examples below are the main image-based card types on Architizer.
   </div>
   <div class="column">
     <!-- Card 3 - Product Card-->
-    <div class="card clickable">
+    <div class="card clickable responsive-image">
       <!-- Image -->
       <div class="img-standard image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
         </div>
@@ -905,7 +906,7 @@ The examples below are the main image-based card types on Architizer.
   </div>
   <div class="column">
     <!-- Card 4 - Recommended Product Card Fixed-->
-    <div class="card clickable recommended">
+    <div class="card clickable responsive-image recommended">
       <!-- Card Image -->
       <div class="img-standard"
            style="background-image: url('/docs/img/table.jpg')"></div>
