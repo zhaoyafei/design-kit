@@ -949,13 +949,31 @@ For the sake of convenience, here is the markup and css classes required to rend
 <div class="row">
   <!-- Verified Badge -->
   <div class="columns shrink pl-0 pr-xxs">
-    <span class="architizer-glyph blue-500 fs-l"
-          style="display:inline-block; line-height: 1;">+
+    <span class="verified">+
     </span>
   </div>
   <!--  Pro Badge -->
   <div class="columns shrink pl-0">
-    <span class="blue capitalize fs-s fw-bold">PRO</span>
+    <span class="pro">PRO</span>
+  </div>
+</div>
+```
+
+---
+
+## BETA Badge
+
+BETA badge is currently used in the Recommended Products grid header description, and can also be used for other new features that we are still evaluating or testing. It is applied as a class in conjunction with Foundation's `badge` class and has the same font height
+and weight as the Pro badge.
+For the sake of convenience, here is the markup and css classes required to render it in any given context.
+
+### Example
+```html_example
+<!-- Description -->
+<div class="row align-middle">
+  <!-- BETA badge -->
+  <div class="columns shrink">
+    <span class="beta badge">BETA</span>
   </div>
 </div>
 ```
