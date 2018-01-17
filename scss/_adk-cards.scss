@@ -9,6 +9,9 @@
     padding: 0;
     .card-section {
       margin: $space-s $card-padding;
+      &:last-of-type {
+        margin: $space-s $card-padding;
+      }
     }
   }
 
@@ -76,8 +79,8 @@
       width: $card-size-base;
       .card-image {
         height: $card-size-base / 1.33;
-          height: $card-size-base / 1.77;
         &.ratio-16-9 {
+          height: $card-size-base / 1.77;
           width: inherit;
         }
       }
@@ -178,9 +181,9 @@
     }
 
     // No margin on last card section
-    // &:last-of-type {
-    //   margin: 0;
-    // }
+    &:last-of-type {
+      margin: 0;
+    }
   }
 }
 
