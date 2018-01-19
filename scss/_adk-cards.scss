@@ -139,7 +139,7 @@
   &.inactive {
     opacity: 0.3;
 
-    &:hover {
+    &.clickable:hover {
       opacity: 1;
     }
   }
