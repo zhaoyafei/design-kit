@@ -19,3 +19,37 @@
 .nav-logo {
   width: 120px;
 }
+
+.grid-container{
+  display: grid;
+}
+
+// Card Grid
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: $space-s;
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint(large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include breakpoint(xlarge) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    margin:0;
+  }
+}
+
+$sidebar-width: 220px;
+.sidebar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  @include breakpoint(medium) {
+    grid-template-columns: 1fr 4fr;
+    // grid-template-columns: $sidebar-width 1fr;
+  }
+}
