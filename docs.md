@@ -981,7 +981,7 @@ For the sake of convenience, here is the markup and css classes required to rend
 
 ## BETA Badge
 
-BETA badge is currently used in the Recommended Products grid header description, and can also be used for other new features that we are still evaluating or testing. It is applied as a class in conjunction with Foundation's `badge` class and has the same font height
+BETA badge is currently used in the Related Products grid header description, and can also be used for other new features that we are still evaluating or testing. It is applied as a class in conjunction with Foundation's `badge` class and has the same font height
 and weight as the Pro badge.
 For the sake of convenience, here is the markup and css classes required to render it in any given context.
 
@@ -992,6 +992,24 @@ For the sake of convenience, here is the markup and css classes required to rend
   <!-- BETA badge -->
   <div class="columns shrink">
     <span class="beta badge">BETA</span>
+  </div>
+</div>
+```
+
+---
+
+## Tags
+
+Tags are currently used in the Brand Profile sidebar and Related Products modal, and can be used for other features that require category tags. Tags are similar to pill buttons, but they do not have a border radius. For the sake of convenience, here is the markup and css classes required to render it in any given context.
+
+### Example
+```html_example
+<div class="row">
+  <div class="columns">
+    <span class="tag">metal panels</span>
+    <span class="tag">sheet panels</span>
+    <span class="tag">steel fabrication</span>
+    <span class="tag">bronze panels</span>
   </div>
 </div>
 ```
