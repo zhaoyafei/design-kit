@@ -21,6 +21,12 @@ input[type="text"]:focus {
   background-color: transparent;
 }
 
+input[type="text"]:disabled,
+input[type="text"]:disabled + label {
+  opacity: 0.3;
+  color: $black;
+}
+
 label {
   font-weight: $global-weight-bold;
 }
