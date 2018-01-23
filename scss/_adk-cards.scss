@@ -4,9 +4,9 @@
   overflow: initial;
   position: relative;
   border: 1px solid rgba($adk-gunmetal, 0.4);
-  display: block;
 
   &.responsive-image {
+    display: block;
     padding: 0;
     .card-section {
       margin: $space-s $card-padding;
