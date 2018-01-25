@@ -26,6 +26,12 @@ h6 {
   }
 }
 
+.smallcaps {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: .5px;
+}
+
 .row.actionbar > h1,h2,h3,h4,h5 {
   margin-bottom: 0;
 }
