@@ -15,13 +15,31 @@
   border-bottom: $global-separator;
 }
 
+.actionbar-dark {
+  color: $white;
+  background-color: $black;
+  min-height: 80px;
+  display: grid;
+  align-items: center;
+}
+
 // Logos
 .nav-logo {
   width: 120px;
 }
 
-.grid-container{
+// CSS Grid
+.grid-container {
   display: grid;
+  max-width: $grid-width;
+  margin: auto;
+  padding: 0 $space-m;
+  .grid-container {
+    padding: 0;
+  }
+  * {
+    margin: 0;
+  }
 }
 
 // Card Grid
@@ -29,6 +47,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: $space-s;
+  // padding-top: $space-l;
   @include breakpoint(medium) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -44,12 +63,13 @@
   }
 }
 
-$sidebar-width: 220px;
-.sidebar-grid {
+.grid-sidebar-l {
   display: grid;
+  padding-top: $space-l;
+  grid-gap: $space-s;
   grid-template-columns: 1fr;
   @include breakpoint(medium) {
-    grid-template-columns: 1fr 4fr;
-    // grid-template-columns: $sidebar-width 1fr;
+    // grid-template-columns: 1fr 4fr;
+    grid-template-columns: $sidebar-width 1fr;
   }
 }
