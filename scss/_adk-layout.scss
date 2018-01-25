@@ -69,13 +69,20 @@
   }
 }
 
-.grid-sidebar-l {
+.grid-sidebar {
   display: grid;
   padding-top: $space-l;
   grid-gap: $space-s;
   grid-template-columns: 1fr;
-  @include breakpoint(medium) {
-    // grid-template-columns: 1fr 4fr;
-    grid-template-columns: $sidebar-width 1fr;
+  &.left{
+    @include breakpoint(medium) {
+      // grid-template-columns: 1fr 4fr;
+      grid-template-columns: $sidebar-width auto;
+    }
+  }
+  &.right{
+    @include breakpoint(medium) {
+      grid-template-columns: auto $sidebar-width;
+    }
   }
 }
