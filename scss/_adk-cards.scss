@@ -113,12 +113,11 @@
     }
   }
 
-  // // Use flex class to overide fixed width and use the grid to size the card instead
-  // &.flex {
-  //   width: inherit;
-  //   display: block;
-  //   margin-right: 0px;
-  // }
+  &.add-card {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
 
   &.clickable {
     cursor: pointer;
