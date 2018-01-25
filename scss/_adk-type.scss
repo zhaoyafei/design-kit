@@ -1,9 +1,9 @@
 // ADK Font Weights
-@each $weight, $value in $adk-font-weights {
-  &.fw-#{$weight} {
-    font-weight: $value;
-  }
-}
+// @each $weight, $value in $adk-font-weights {
+//   &.fw-#{$weight} {
+//     font-weight: $value;
+//   }
+// }
 
 // ADK Font Sizes
 @each $size, $value in $adk-font-sizes {
@@ -19,11 +19,33 @@ h4,
 h5,
 h6 {
   &.bold {
-    font-weight: $global-weight-bold;
+    // font-weight: $global-weight-bold;
   }
   &.light {
-    font-weight: $global-weight-light;
+    // font-weight: $global-weight-light;
   }
+}
+
+strong {
+  font-family: 'NeueHaasUnicaPro-Medium';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fw-bold {
+  font-family: 'NeueHaasUnicaPro-Bold';
+  font-weight: normal;
+  font-style: normal;
+}
+.fw-medium {
+  font-family: 'NeueHaasUnicaPro-Medium';
+  font-weight: normal;
+  font-style: normal;
+}
+.fw-light {
+  font-family: 'NeueHaasUnicaPro-Light';
+  font-weight: normal;
+  font-style: normal;
 }
 
 .smallcaps {
