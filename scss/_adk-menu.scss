@@ -30,6 +30,18 @@ ul {
         }
       }
     }
+    &.dark {
+      a {
+        color: $light-gray;
+        border-bottom: none;
+        &:hover {
+          color: $white;
+        }
+        &:active {
+          color: $white;
+        }
+      }
+    }
   }
   &.tabs {
     border-bottom: none;
