@@ -199,10 +199,37 @@
     <div class="bg-black">
       <div class="grid-container">
         <!-- Actionbar -->
-        <div class="actionbar-dark">
+<!--         <div class="actionbar-dark">
             <div class="row align-middle align-left collapse">
                 <div class="columns shrink pr-s"><h2>Casper</h2></div>
-                <div class="columns shrink"><a class="fs-s bold smallcaps white" href="/templates/grid-all-projects.html">Hollwich Kushner</a></div>
+                <div class="columns "><a class="fs-s bold smallcaps white" href="/templates/grid-all-projects.html">Hollwich Kushner</a></div>
+                <div class="align-right">
+                    <div style="justify-self:end;">
+                        <ul class="menu">
+                            <li title="Searches" class="active"><a href="">Searches</a></li>
+                            <li title="Products"><a href="/source/a/?project=188904&amp;view=searches">Products</a></li>
+                            <li title="Messages"><a href="/source/a/?project=188904&amp;view=searches">Messages</a></li>
+                            <li title="Details"><a href="/source/a/?project=188904&amp;view=searches">Details</a></li>
+                            <li><a ng-click="$ctrl.showIntercom()" title="Need help?"><i class="material-icons">help</i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Actionbar -->
+        <div class="actionbar-dark grid-container">
+            <div class="">
+                <h2 style="display:inline-block;">Casper</h2>
+                <a class="fs-s bold smallcaps white" href="/templates/grid-all-projects.html">Hollwich Kushner</a>
+            </div>
+            <div style="justify-self:end;">
+                <ul class="menu dark">
+                    <li title="Searches" class="active"><a href="">Searches</a></li>
+                    <li title="Products"><a href="">Products</a></li>
+                    <li title="Messages"><a href="">Messages</a></li>
+                    <li title="Details"><a href="">Details</a></li>
+                    <li><a><i class="material-icons">help</i></a></li>
+                </ul>
             </div>
         </div>
       </div>
@@ -212,16 +239,27 @@
         <div class="grid-sidebar-l">
             <!-- Sidebar -->
             <div class="sidebar hide-for-small-only">
-
+                <div class="mb-xs"><strong>Categories</strong></div>
+                <ul class="vertical menu category-group" style="user-select: none">
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Accessories (0)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Building Products (0)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Equipment (1)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Finishes (6)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Furniture (9)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Lighting (3)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Plumbing (3)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Raw Materials (1)</a></li>
+                </ul>
             </div>
+
             <!-- Cards -->
             <div class="card-grid">
 
                 <!-- Add Card Grid-->
                 <div class="card add-card clickable">
                     <div>
-                        <div class="text-center">
-                            <strong><span class="material-icons blue-500 mb-xxs" style="font-size: 2rem">add_circle</span></strong>
+                        <div>
+                            <span class="material-icons blue-500 mb-xxs" style="font-size: 2rem">add_circle</span>
                         </div>
                         <strong class="blue-500">Create New Search</strong>
                     </div>
