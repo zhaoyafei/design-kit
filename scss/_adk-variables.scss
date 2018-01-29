@@ -9,12 +9,6 @@
  * abstracting it and defining it here.
  */
 
-/**
- * CSS Grid Variables
- */
-
-$grid-width: 1280px;
-$sidebar-width: 260px;
 
 /**
  * Scale and Spacing Variables
@@ -110,6 +104,14 @@ $header-styles: (
     'h6': ('font-size': $space-s),
   ),
 );
+
+/**
+ * CSS Grid Variables
+ */
+
+$grid-width: 1280px;
+$sidebar-width: 300px;
+$grid-gutter: $space-s;
 
 /**
  * Color Variables
