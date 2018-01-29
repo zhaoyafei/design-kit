@@ -61,6 +61,12 @@ span.input-group-label.icon + input.input-group-field:last-child {
   padding-left: $space-xl;
 }
 
+textarea.compose {
+  min-height: 100px;
+  border: none;
+  padding: $space-s;
+}
+
 //Utility classes for `.no-resize` on textareas
 .no-h-resize {
   resize: vertical;

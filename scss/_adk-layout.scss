@@ -117,6 +117,5 @@
 // Message Grid
 .grid-messages {
   display: grid;
-  grid-template-rows: 1fr auto;
-  grid-gap: $grid-gutter;
+  grid-template-rows: auto 1fr auto;
 }
