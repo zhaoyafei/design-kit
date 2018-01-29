@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Architizer Projects CSS Grid</title>
+    <title>Architizer Products CSS Grid</title>
     <!-- Architizer Design Kit CSS -->
     <link rel="stylesheet" href="/css/adk.css"/>
   </head>
@@ -201,14 +201,14 @@
         <!-- Actionbar -->
         <div class="actionbar-dark grid-container">
             <div class="">
-                <h2 style="display:inline-block;">Casper</h2>
-                <a class="fs-s bold smallcaps white" href="/templates/grid-all-projects.html">Hollwich Kushner</a>
+                <h2 style="display:inline-block;" class="fw-medium">Casper</h2>
+                <a class="fs-s fw-medium smallcaps white" href="/templates/grid-all-projects.html">Hollwich Kushner</a>
             </div>
             <div style="justify-self:end;">
                 <ul class="menu dark">
                     <li title="Searches" class="active"><a href="/templates/grid-all-searches.html">Searches</a></li>
                     <li title="Products"><a href="">Products</a></li>
-                    <li title="Messages"><a href="">Messages</a></li>
+                    <li title="Messages"><a href="/templates/grid-messages.html">Messages</a></li>
                     <li title="Details"><a href="">Details</a></li>
                     <li><a><i class="material-icons">help</i></a></li>
                 </ul>
@@ -218,14 +218,32 @@
     </div>
 
     <!-- Context bar -->
-    <div class="">
+    <div class="bg-white">
+        <div class="context-bar grid-container">
+            <img ng-src="https://architizer-prod.imgix.net/media/1494820737368-Screen-Shot-2017-05-14-at-115455-PM.png?fit=crop&amp;h=40&amp;w=65" style="border-radius: 2px" src="https://architizer-prod.imgix.net/media/1494861618957-Screen-Shot-2017-05-13-at-91458-PM.png?fit=crop&h=40&w=65">
+            <!-- Search Info -->
+            <div style="overflow: hidden;">
+                <h4><strong>Oversized Bulb Pendant Light</strong></h4>
+                <h5 class="ellipsis fs-s">
+                    We're looking for a pendant globe lamp resembling an oversized light bulb to be installed above vanities in the changing rooms of a spa. We currently have Form Us With Love Replica Pendant (https://www.tudoandco.com/products/modern-minimalist-pendant-light-chandelier-contemporary-form-shape-40-watt-e27) lights specified,
+                </h5>
+            </div>
+            <div>
+                <a class="secondary button p-xxxs"><i class="material-icons fs-base">edit</i></a>
+            </div>
+        </div>
     </div>
 
+    <!-- Products -->
     <div class="grid-container">
         <div class="grid-sidebar right">
 
             <!-- Cards -->
             <div class="card-grid">
+                <span>
+                    <h5>My Products</h5>
+                    <h5 class="gray-400 fs-s">Use this space to collect products. Brands and in-house experts typically respond within 24 hours.</h5>
+                </span>
 
                 <!-- Add Card Grid-->
                 <div class="card add-card clickable">
@@ -233,7 +251,7 @@
                         <div>
                             <span class="material-icons blue-500 mb-xxs" style="font-size: 2rem">add_circle</span>
                         </div>
-                        <strong class="blue-500">Add New Product</strong>
+                        <strong class="blue-500">Add a product</strong>
                     </div>
                 </div>
 
@@ -248,7 +266,7 @@
                                 <!-- Product Name -->
                                 <div class="row"><strong class="ellipsis" title="Luna Pendant Cord">Luna Pendant Cord</strong></div>
                                 <div class="row">
-                                    <div class="columns shrink subtitle fs-base ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Schoolhouse Electric">Schoolhouse Electric</div>
+                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Schoolhouse Electric">Schoolhouse Electric</div>
                                     <div class="columns small-3" style="min-width: 55px">
                                     </div>
                                 </div>
@@ -262,7 +280,7 @@
                 </div>
 
                 <!-- Product Card -->
-                <div class="card responsive-image clickable has-notification-dot">
+                <div class="card responsive-image clickable">
                     <!-- Card Image -->
                     <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495486030720-2290-P177D1.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
                     <!-- Card Content -->
@@ -272,7 +290,7 @@
                                 <!-- Product Name -->
                                 <div class="row"><strong class="ellipsis" title="The Keats">The Keats</strong></div>
                                 <div class="row">
-                                    <div class="columns shrink subtitle fs-base ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Lukas Lighting">Lukas Lighting</div>
+                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Lukas Lighting">Lukas Lighting</div>
                                     <div class="columns small-3" style="min-width: 55px">
                                     </div>
                                 </div>
@@ -286,31 +304,7 @@
                 </div>
 
                 <!-- Product Card -->
-                <div class="card responsive-image clickable has-notification-dot">
-                    <!-- Card Image -->
-                    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495486030720-2290-P177D1.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
-                    <!-- Card Content -->
-                    <div class="card-section">
-                        <div class="row align-middle">
-                            <div class="small-10 columns">
-                                <!-- Product Name -->
-                                <div class="row"><strong class="ellipsis" title="The Keats">The Keats</strong></div>
-                                <div class="row">
-                                    <div class="columns shrink subtitle fs-base ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Lukas Lighting">Lukas Lighting</div>
-                                    <div class="columns small-3" style="min-width: 55px">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Shortlist checkmark button -->
-                            <div class="small-2 columns" style="white-space: nowrap">
-                                <div class="float-right"><a class="button tiny secondary hover-bg-green-500 secondary-light shortlist-button"><span class="material-icons fs-base">check</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card -->
-                <div class="card responsive-image clickable has-notification-dot">
+                <div class="card responsive-image clickable">
                     <!-- Card Image -->
                     <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495485210546-2290-mina_pendant_black_finish_-_black_white_cord.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
                     <!-- Card Content -->
@@ -320,7 +314,7 @@
                                 <!-- Product Name -->
                                 <div class="row"><strong class="ellipsis" title="Mina Pendant">Mina Pendant</strong></div>
                                 <div class="row">
-                                    <div class="columns shrink subtitle fs-base ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Tech Lighting">Tech Lighting</div>
+                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Tech Lighting">Tech Lighting</div>
                                     <div class="columns small-3" style="min-width: 55px">
                                     </div>
                                 </div>
@@ -334,17 +328,17 @@
                 </div>
 
                 <!-- Product Card -->
-                <div class="card responsive-image clickable has-notification-dot">
+                <div class="card responsive-image clickable">
                     <!-- Card Image -->
-                    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495484758707-2290-Bulb-Fiction.png?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+                    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495486030720-2290-P177D1.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
                     <!-- Card Content -->
                     <div class="card-section">
                         <div class="row align-middle">
                             <div class="small-10 columns">
                                 <!-- Product Name -->
-                                <div class="row"><strong class="ellipsis" title="Bulb Fiction">Bulb Fiction</strong></div>
+                                <div class="row"><strong class="ellipsis" title="The Keats">The Keats</strong></div>
                                 <div class="row">
-                                    <div class="columns shrink subtitle fs-base ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Lightyears">Lightyears</div>
+                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Lukas Lighting">Lukas Lighting</div>
                                     <div class="columns small-3" style="min-width: 55px">
                                     </div>
                                 </div>
@@ -357,14 +351,94 @@
                     </div>
                 </div>
 
+                <!-- Product Card -->
+                <div class="card responsive-image clickable">
+                    <!-- Card Image -->
+                    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495484758707-2290-Bulb-Fiction.png?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+                    <!-- Card Content -->
+                    <div class="card-section">
+                        <div class="row align-middle">
+                            <div class="small-10 columns">
+                                <!-- Product Name -->
+                                <div class="row"><strong class="ellipsis" title="Bulb Fiction">Bulb Fiction</strong></div>
+                                <div class="row">
+                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Lightyears">Lightyears</div>
+                                    <div class="columns small-3" style="min-width: 55px">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Shortlist checkmark button -->
+                            <div class="small-2 columns" style="white-space: nowrap">
+                                <div class="float-right"><a class="button tiny secondary hover-bg-green-500 secondary-light shortlist-button"><span class="material-icons fs-base">check</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Products-->
+                <span class="mt-s">
+                    <h5>Related Products</h5>
+                    <h5 class="gray-400 fs-s">Add any results that match your search to My Products. Send feedback</h5>
+                </span>
+
+                <!-- Related Card -->
+                <div class="card responsive-image clickable">
+                    <!-- Card Image -->
+                    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/cHawHgohRt2ufBLJyVhC_image.png?auto=format,compress&cs=strip&fit=crop&q=60&w=520')"></div>
+                    <!-- Card Content -->
+                    <div class="card-section">
+                        <div class="row align-middle">
+                            <div class="small-10 columns">
+                                <!-- Product Name -->
+                                <div class="row"><strong class="ellipsis" title="Bulb Fiction">Grain</strong></div>
+                                <div class="row">
+                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Brendan Ravenhill Design">Brendan Ravenhill Design</div>
+                                    <div class="columns small-3" style="min-width: 55px">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add button -->
+                            <div class="small-2 columns" style="white-space: nowrap">
+                                <div class="float-right"><button class="button tiny" ng-disabled="product.saving" ng-click="ProductsCtrl.onAddToProducts(product, $event)"><span class="material-icons fs-base">add</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Sidebar -->
             <div class="sidebar hide-for-small-only">
-                <div class="mb-xs"><strong>Shortlist</strong></div>
-                <ul class="vertical menu category-group" style="user-select: none">
+                <div class="mb-xs">
+                    <h5>My Shortlist</h5>
+                    <h5 class="gray-400"></h5>
+                </div>
 
-                </ul>
+                <!-- Row Cards -->
+                <!-- Row -->
+                <div class="card clickable condensed">
+                    <span style="background-image: url('https://architizer-prod.imgix.net/media/1495486275744-2290-114946_2569_1024x1024.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=80'); background-position: center; background-size: cover;"></span>
+                    <div>
+                        <strong class="ellipsis">Luna Pendant Cord</strong>
+                        <div class="ellipsis fs-s">Schoolhouse Electric</div>
+                    </div>
+                </div>
+                <!-- Row -->
+                <div class="card clickable condensed">
+                    <span style="background-image: url('https://architizer-prod.imgix.net/media/1495485210546-2290-mina_pendant_black_finish_-_black_white_cord.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=80'); background-position: center; background-size: cover;"></span>
+                    <div>
+                        <strong class="ellipsis">Mina Pendant</strong>
+                        <div class="ellipsis fs-s">Tech Lighting</div>
+                    </div>
+                </div>
+                <!-- Row -->
+                <div class="card clickable condensed">
+                    <span style="background-image: url('https://architizer-prod.imgix.net/media/1495486030720-2290-P177D1.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=80'); background-position: center; background-size: cover;"></span>
+                    <div>
+                        <strong class="ellipsis">The Keats</strong>
+                        <div class="ellipsis fs-s">Lukas Lighting</div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
