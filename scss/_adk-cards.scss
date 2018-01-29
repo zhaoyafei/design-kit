@@ -132,6 +132,22 @@
     }
   }
 
+  &.condensed {
+    height: 64px;
+    padding: $space-xs;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 60px auto 20px;
+    grid-gap: 10px;
+    margin-bottom: $space-xs;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    input {
+      border: none;
+    }
+  }
+
   &.message {
     min-width: $card-size-base;
   }
