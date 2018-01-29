@@ -6,39 +6,17 @@
   display: inline-block !important;
 }
 
-// Action Bar
-.actionbar {
-  @include flex-align(null, middle);
-  width: 100%;
-  padding: $space-s 0;
-  background-color: $white;
-  border-bottom: $global-separator;
-}
-
-.actionbar-dark {
-  color: $white;
-  background-color: $black;
-  min-height: 80px;
-  display: grid;
-  grid-template-columns: auto;
-  align-items: center;
-  @include breakpoint(medium) {
-    grid-template-columns: repeat(2, auto);
-  }
-}
-
-// Logos
-.nav-logo {
-  width: 120px;
-}
-
 // CSS Grid
 // To be used on outmost layout element to impose fixed-width
 // Can also be used to make any container a grid
-.grid-container {
+@mixin grid-container {
   display: grid;
   max-width: $grid-width;
   margin: auto;
+  }
+
+.grid-container {
+  @include grid-container;
   padding: 0 $space-m;
   .grid-container {
     padding: 0;
@@ -48,41 +26,90 @@
   }
 }
 
+// Action Bars
+.actionbar {
+  @include flex-align(null, middle);
+  width: 100%;
+  padding: $space-s 0;
+  background-color: $white;
+  border-bottom: $global-separator;
+}
+
+.actionbar-dark {
+  display: grid;
+  min-height: 80px;
+  align-items: center;
+  color: $white;
+  background-color: $black;
+  grid-template-columns: auto;
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+.context-bar {
+  display: grid;
+  min-height: 80px;
+  align-items: center;
+  overflow: hidden;
+  grid-template-columns: 65px auto 30px;
+  grid-gap: $grid-gutter;
+}
+
 // Card Grid
 .card-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: $space-s;
+  grid-gap: $grid-gutter;
   // padding-top: $space-l;
+  span {
+    grid-column: span 1; 
+  }
   @include breakpoint(medium) {
     grid-template-columns: repeat(2, 1fr);
+    span {
+      grid-column: span 2;
+    }
   }
   @include breakpoint(large) {
     grid-template-columns: repeat(3, 1fr);
+    span {
+      grid-column: span 3;
+    }
   }
-  @include breakpoint(xlarge) {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  // @include breakpoint(xlarge) {
+  //   grid-template-columns: repeat(4, 1fr);
+  //   span {
+  //     grid-column: span 4;
+  //   }
+  // }
 
   .card {
     margin:0;
   }
 }
 
+// Sidebar-default left
 .grid-sidebar {
   display: grid;
-  padding-top: $space-l;
-  grid-gap: $space-s;
+  height: 100%;
+  padding-top: $space-m;
+  grid-gap: $grid-gutter;
   grid-template-columns: 1fr;
-  &.left{
-    @include breakpoint(medium) {
-      // grid-template-columns: 1fr 4fr;
-      grid-template-columns: $sidebar-width auto;
-    }
+  @include breakpoint(medium) {
+    // grid-template-columns: 1fr 4fr;
+    grid-template-columns: $sidebar-width auto;
   }
   &.right{
     @include breakpoint(medium) {
       grid-template-columns: auto $sidebar-width;
     }
   }
+}
+
+// Message Grid
+.grid-messages {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-gap: $grid-gutter;
 }
