@@ -149,7 +149,7 @@
   }
 
   &.message {
-    min-width: $card-size-base;
+    max-width: $card-size-base;
   }
 
   // Inactive cards
