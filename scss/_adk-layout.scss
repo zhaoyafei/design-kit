@@ -132,13 +132,11 @@
 
   .message-block {
     display: grid;
-    // grid-template-columns: auto 32px;
     grid-gap: $space-xxs;
     &.right {
       grid-template-areas: 
       "name ."
       "message avatar";
-      float: right;
       .name {
         text-align: right;
       }
@@ -151,15 +149,21 @@
     .name {
       grid-area: name;
       padding: 0 $space-s;
+      color: $adk-gunmetal;
+      font-size: $font-size-s;
     }
     .message {
       grid-area: message;
+      font-size: $font-size;
     }
     .avatar {
       grid-area: avatar;
       width: 32px; 
       height: 32px; 
       border-radius: 100px;
+      &.hidden {
+        visibility: hidden;
+      }
     }
   }
 }

@@ -231,11 +231,11 @@
                 </div>
                 
                 <!-- Message row -->
-                <div class="card clickable condensed">
+                <div class="card clickable condensed selected">
                     <span style="background-image: url('https://architizer-prod.imgix.net/media/mediadata/uploads/1508182958brands.brand.299.png?auto=format,compress&cs=strip&fit=crop&h=230&q=60&w=230'); background-position: center; background-size: cover;"></span>
                     <div>
                         <strong class="ellipsis">Vitra</strong>
-                        <div class="ellipsis fs-s">Metal Shelving System</div>
+                        <div class="ellipsis fs-s">Oversized Bulb Pendant Light</div>
                     </div>
                 </div>
                 <!-- Message Row -->
@@ -262,7 +262,7 @@
 
                 <!-- Header -->
                 <div class="card condensed" style="grid-template-columns: auto;">
-                    <div class="row align-middle">
+                    <div class="row align-middle collapse">
                        <!-- Back link (small/medium screens only) -->
                        <div class="columns shrink hide-for-large"><a ui-sref="source.app.arc.project.conversations({ project: ActionBarCtrl.productRequest.project_id, view: 'messages' })" href=""><i class="material-icons">chevron_left</i>Back</a></div>
                        <!---->
@@ -278,8 +278,8 @@
                        <!-- Search Details / Products links on right -->
                        <div class="columns shrink show-for-medium">
                           <ul class="tabs">
-                             <li class="tabs-title"><a ng-click="ActionBarCtrl.onMoreClick()" class="pt-m pb-m">Search Details</a></li>
-                             <li class="tabs-title"><a ui-sref="source.app.arc.project.request.products({ request: ActionBarCtrl.productRequest.id, view: 'products' })" class="pt-m pb-m" href="">Products</a></li>
+                             <li class="tabs-title"><a ng-click="ActionBarCtrl.onMoreClick()" class="fs-s">Search Details</a></li>
+                             <li class="tabs-title"><a ui-sref="source.app.arc.project.request.products({ request: ActionBarCtrl.productRequest.id, view: 'products' })" class="fs-s" href="/templates/grid-search-view.html">Products</a></li>
                           </ul>
                        </div>
                     </div>
@@ -288,10 +288,10 @@
                 <!-- Thread -->
                 <div class="thread">
 
-                    <!-- Message Row -->
-                    <div class="row mb-s align-left">
+                    <!-- Card Message Row -->
+                    <div class="row mb-xs align-left">
                         <div class="message-block left">
-                            <div class="name fs-s gunmetal">Architizer</div>
+                            <div class="name">Architizer</div>
                             <div class="card message responsive-image clickable">
                                 <!-- Card Image -->
                                 <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495486275744-2290-114946_2569_1024x1024.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
@@ -319,11 +319,29 @@
                     </div>
 
                     <!-- Message Row -->
-                    <div class="row mb-s align-right">
+                    <div class="row mb-xs align-right">
                         <div class="message-block right">
-                            <div class="name fs-s gunmetal">Parsa</div>
+                            <div class="name">Parsa</div>
                             <div class="card message">This message block grid is awesome.</div>
                             <img class="avatar" type="user" ng-src="http://architizer.com/images/placeholder-brand.svg" class="mt-0 mr-0" src="https://architizer-prod.imgix.net/media/1466174102182parsa-headshot-sat.JPG?auto=format,compress&cs=strip&fit=crop&q=60&w=200">
+                        </div>
+                    </div>
+
+                    <!-- Message Row -->
+                    <div class="row mb-xs align-left">
+                        <div class="message-block left">
+                            <div class="name">Architizer</div>
+                            <div class="card message">We thought you'd like it!</div>
+                            <img class="avatar" type="user" ng-src="/images/placeholder-brand.svg" class="mt-0 mr-0" style="width: 32px; height: 32px; border-radius: 100px" src="https://architizer-prod.imgix.net/media/mediadata/uploads/1508182958brands.brand.299.png?auto=format,compress&cs=strip&fit=crop&h=230&q=60&w=230">
+                        </div>
+                    </div>
+
+                    <!-- Message Row -->
+                    <div class="row mb-xs align-left">
+                        <div class="message-block left">
+                            <!-- <div class="name">Architizer</div> -->
+                            <div class="card message">Let's do another.</div>
+                            <img class="avatar hidden" type="user" ng-src="/images/placeholder-brand.svg" class="mt-0 mr-0" style="width: 32px; height: 32px; border-radius: 100px" src="https://architizer-prod.imgix.net/media/mediadata/uploads/1508182958brands.brand.299.png?auto=format,compress&cs=strip&fit=crop&h=230&q=60&w=230">
                         </div>
                     </div>
 
@@ -333,7 +351,7 @@
                 <div class="pb-base" id="compose" data-sticky-container>
                     <div data-sticky data-stick-to="bottom" style="width: 100%">
                         <div class="row collapse">
-                            <div class="columns small-12 columns">
+                            <div class="columns small-12">
                                 <textarea class="compose no-h-resize mb-s" placeholder="Type your message"></textarea>
                             </div>
                         </div>

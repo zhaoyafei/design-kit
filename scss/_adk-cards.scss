@@ -132,12 +132,16 @@
     }
   }
 
+  &.selected {
+    box-shadow: 0 0 10px rgba($adk-quicksilver, 0.4);
+  }
+
   &.condensed {
-    height: 64px;
+    height: 60px;
     padding: $space-xs;
     display: grid;
     align-content: center;
-    grid-template-columns: 60px auto 20px;
+    grid-template-columns: 48px auto 20px;
     grid-gap: 10px;
     margin-bottom: $space-xs;
     &:last-of-type {
