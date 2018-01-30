@@ -28,7 +28,8 @@ input[type="text"]:disabled + label {
 }
 
 label {
-  font-weight: $global-weight-bold;
+  // font-weight: $global-weight-bold;
+  // @extend .fw-medium;
 }
 
 // Input groups
@@ -239,7 +240,8 @@ $minimal-field-input-border-error: 2px solid $adk-red;
   & + label {
     top: -$space;
     font-size: $font-size-s;
-    font-weight: $global-weight-bold;
+    // font-weight: $global-weight-bold;
+    @extend .fw-medium;
   }
 }
 
