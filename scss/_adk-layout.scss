@@ -99,18 +99,25 @@
 // Sidebar-default left
 .grid-sidebar {
   display: grid;
-  height: 100%;
-  padding-top: $space-m;
   grid-gap: $grid-gutter;
+  padding-top: $space-m;
+  height: 100%;
   grid-template-columns: 1fr;
   @include breakpoint(medium) {
-    // grid-template-columns: 1fr 4fr;
-    grid-template-columns: $sidebar-width auto;
-  }
-  &.right{
-    @include breakpoint(medium) {
-      grid-template-columns: auto $sidebar-width;
+    &.left {
+      grid-template-columns: $sidebar-width auto;
+      grid-template-areas: "sidebar content";
     }
+    &.right {
+      grid-template-columns: auto $sidebar-width;
+      grid-template-areas: "content sidebar";
+    }
+  }
+  .sidebar {
+    grid-area: sidebar;
+  }
+  .content {
+    grid-area: content;
   }
 }
 
