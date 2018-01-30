@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Architizer Products CSS Grid</title>
+    <title>Architizer Projects CSS Grid</title>
     <!-- Architizer Design Kit CSS -->
     <link rel="stylesheet" href="/css/adk.css"/>
   </head>
@@ -207,7 +207,7 @@
             <div style="justify-self:end;">
                 <ul class="menu dark">
                     <li title="Searches" class="active"><a href="/templates/grid-all-searches.html">Searches</a></li>
-                    <li title="Products"><a href="/templates/grid-all-products.html">Products</a></li>
+                    <li title="Products"><a href="">Products</a></li>
                     <li title="Messages"><a href="/templates/grid-messages.html">Messages</a></li>
                     <li title="Details"><a href="">Details</a></li>
                     <li><a><i class="material-icons">help</i></a></li>
@@ -217,33 +217,25 @@
       </div>
     </div>
 
-    <!-- Context bar -->
-    <div class="bg-white">
-        <div class="context-bar grid-container">
-            <img ng-src="https://architizer-prod.imgix.net/media/1494820737368-Screen-Shot-2017-05-14-at-115455-PM.png?fit=crop&amp;h=40&amp;w=65" style="border-radius: 2px" src="https://architizer-prod.imgix.net/media/1494861618957-Screen-Shot-2017-05-13-at-91458-PM.png?fit=crop&h=40&w=65">
-            <!-- Search Info -->
-            <div style="overflow: hidden;">
-                <h4><strong>Oversized Bulb Pendant Light</strong></h4>
-                <h5 class="ellipsis fs-s">
-                    We're looking for a pendant globe lamp resembling an oversized light bulb to be installed above vanities in the changing rooms of a spa. We currently have Form Us With Love Replica Pendant (https://www.tudoandco.com/products/modern-minimalist-pendant-light-chandelier-contemporary-form-shape-40-watt-e27) lights specified,
-                </h5>
-            </div>
-            <div>
-                <a class="secondary button p-xxxs"><i class="material-icons fs-base">edit</i></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Products -->
     <div class="grid-container">
-        <div class="grid-sidebar right">
+        <div class="grid-sidebar left">
+            <!-- Sidebar -->
+            <div class="sidebar hide-for-small-only">
+                <div class="mb-xs"><strong>Categories</strong></div>
+                <ul class="vertical menu category-group" style="user-select: none">
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Accessories (0)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Building Products (0)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Equipment (1)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Finishes (6)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Furniture (9)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Lighting (3)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Plumbing (3)</a></li>
+                <li><a class="pl-0"><i class="material-icons fs-s mr-xs">clear</i> Raw Materials (1)</a></li>
+                </ul>
+            </div>
 
             <!-- Cards -->
             <div class="card-grid">
-                <span>
-                    <h5>My Products</h5>
-                    <h5 class="gray-400 fs-s">Use this space to collect products. Brands and in-house experts typically respond within 24 hours.</h5>
-                </span>
 
                 <!-- Add Card Grid-->
                 <div class="card add-card clickable">
@@ -251,196 +243,222 @@
                         <div>
                             <span class="material-icons blue-500 mb-xxs" style="font-size: 2rem">add_circle</span>
                         </div>
-                        <strong class="blue-500">Add a product</strong>
+                        <strong class="blue-500">Create New Search</strong>
                     </div>
                 </div>
 
-                <!-- Product Card -->
-                <div class="card responsive-image clickable has-notification-dot">
-                    <!-- Card Image -->
-                    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495486275744-2290-114946_2569_1024x1024.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
-                    <!-- Card Content -->
+                <!-- Card - Multi Image Search Card -->
+                <div class="card multi-image clickable responsive-image">
+                    <!-- Image -->
+                    <div class="img-standard image-overlay-info">
+                        <div class="image-items-container">
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                        </div>
+                    </div>
+                    <!-- Info -->
                     <div class="card-section">
                         <div class="row align-middle">
-                            <div class="small-10 columns">
-                                <!-- Product Name -->
-                                <div class="row"><strong class="ellipsis" title="Luna Pendant Cord">Luna Pendant Cord</strong></div>
+                            <div class="small-10 columns pr-s">
+                                <!-- Search Name -->
                                 <div class="row">
-                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Schoolhouse Electric">Schoolhouse Electric</div>
-                                    <div class="columns small-3" style="min-width: 55px">
+                                    <a href="/templates/grid-search-view.html" class="black"><strong class="ellipsis" title="Custom Metal Chair">Search Card</strong></a>
+                                </div>
+                                <!-- Product Num -->
+                                <div class="row align-middle">
+                                    <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                                        <p class="mb-0 ellipsis" title="Products">5 Products</p>
+                                    </div>
+                                    <div class="columns pl-xxs">
+                                        <span class="architizer-glyph blue-500 pl-0">&nbsp;</span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Shortlist checkmark button -->
-                            <div class="small-2 columns" style="white-space: nowrap">
-                                <div class="float-right"><a class="button tiny secondary hover-bg-green-500 secondary-light shortlist-button"><span class="material-icons fs-base">check</span></a></div>
+                            <!-- Edit -->
+                            <div class="small-2 columns text-right">
+                                <a class="secondary icon hollow button"><i class="material-icons">edit</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card - Multi Image Search Card -->
+                <div class="card multi-image clickable responsive-image">
+                    <!-- Image -->
+                    <div class="img-standard image-overlay-info">
+                        <div class="image-items-container">
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                        </div>
+                    </div>
+                    <!-- Info -->
+                    <div class="card-section">
+                        <div class="row align-middle">
+                            <div class="small-10 columns pr-s">
+                                <!-- Product Name -->
+                                <div class="row">
+                                    <strong class="ellipsis" title="Custom Metal Chair">Search Card</strong>
+                                </div>
+                                <!-- Brand Name -->
+                                <div class="row align-middle">
+                                    <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                                        <p class="mb-0 ellipsis" title="Products">5 Products</p>
+                                    </div>
+                                    <div class="columns pl-xxs">
+                                        <span class="architizer-glyph blue-500 pl-0">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Edit -->
+                            <div class="small-2 columns text-right">
+                                <a class="secondary icon hollow button"><i class="material-icons">edit</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card - Multi Image Search Card -->
+                <div class="card multi-image clickable responsive-image">
+                    <!-- Image -->
+                    <div class="img-standard image-overlay-info">
+                        <div class="image-items-container">
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                        </div>
+                    </div>
+                    <!-- Info -->
+                    <div class="card-section">
+                        <div class="row align-middle">
+                            <div class="small-10 columns pr-s">
+                                <!-- Product Name -->
+                                <div class="row">
+                                    <strong class="ellipsis" title="Custom Metal Chair">Search Card</strong>
+                                </div>
+                                <!-- Brand Name -->
+                                <div class="row align-middle">
+                                    <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                                        <p class="mb-0 ellipsis" title="Products">5 Products</p>
+                                    </div>
+                                    <div class="columns pl-xxs">
+                                        <span class="architizer-glyph blue-500 pl-0">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Edit -->
+                            <div class="small-2 columns text-right">
+                                <a class="secondary icon hollow button"><i class="material-icons">edit</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card - Multi Image Search Card -->
+                <div class="card multi-image clickable responsive-image">
+                    <!-- Image -->
+                    <div class="img-standard image-overlay-info">
+                        <div class="image-items-container">
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                        </div>
+                    </div>
+                    <!-- Info -->
+                    <div class="card-section">
+                        <div class="row align-middle">
+                            <div class="small-10 columns pr-s">
+                                <!-- Product Name -->
+                                <div class="row">
+                                    <strong class="ellipsis" title="Custom Metal Chair">Search Card</strong>
+                                </div>
+                                <!-- Brand Name -->
+                                <div class="row align-middle">
+                                    <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                                        <p class="mb-0 ellipsis" title="Products">5 Products</p>
+                                    </div>
+                                    <div class="columns pl-xxs">
+                                        <span class="architizer-glyph blue-500 pl-0">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Edit -->
+                            <div class="small-2 columns text-right">
+                                <a class="secondary icon hollow button"><i class="material-icons">edit</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card - Multi Image Search Card -->
+                <div class="card multi-image clickable responsive-image">
+                    <!-- Image -->
+                    <div class="img-standard image-overlay-info">
+                        <div class="image-items-container">
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                          <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1495726376799-Product_Slider_2048x2048.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=520')">
+                          </div>
+                        </div>
+                    </div>
+                    <!-- Info -->
+                    <div class="card-section">
+                        <div class="row align-middle">
+                            <div class="small-10 columns pr-s">
+                                <!-- Product Name -->
+                                <div class="row">
+                                    <strong class="ellipsis" title="Custom Metal Chair">Search Card</strong>
+                                </div>
+                                <!-- Brand Name -->
+                                <div class="row align-middle">
+                                    <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                                        <p class="mb-0 ellipsis" title="Products">5 Products</p>
+                                    </div>
+                                    <div class="columns pl-xxs">
+                                        <span class="architizer-glyph blue-500 pl-0">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Edit -->
+                            <div class="small-2 columns text-right">
+                                <a class="secondary icon hollow button"><i class="material-icons">edit</i></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product Card -->
-                <div class="card responsive-image clickable">
-                    <!-- Card Image -->
-                    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495486030720-2290-P177D1.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
-                    <!-- Card Content -->
-                    <div class="card-section">
-                        <div class="row align-middle">
-                            <div class="small-10 columns">
-                                <!-- Product Name -->
-                                <div class="row"><strong class="ellipsis" title="The Keats">The Keats</strong></div>
-                                <div class="row">
-                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Lukas Lighting">Lukas Lighting</div>
-                                    <div class="columns small-3" style="min-width: 55px">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Shortlist checkmark button -->
-                            <div class="small-2 columns" style="white-space: nowrap">
-                                <div class="float-right"><a class="button tiny secondary hover-bg-green-500 secondary-light shortlist-button"><span class="material-icons fs-base">check</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card -->
-                <div class="card responsive-image clickable">
-                    <!-- Card Image -->
-                    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495485210546-2290-mina_pendant_black_finish_-_black_white_cord.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
-                    <!-- Card Content -->
-                    <div class="card-section">
-                        <div class="row align-middle">
-                            <div class="small-10 columns">
-                                <!-- Product Name -->
-                                <div class="row"><strong class="ellipsis" title="Mina Pendant">Mina Pendant</strong></div>
-                                <div class="row">
-                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Tech Lighting">Tech Lighting</div>
-                                    <div class="columns small-3" style="min-width: 55px">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Shortlist checkmark button -->
-                            <div class="small-2 columns" style="white-space: nowrap">
-                                <div class="float-right"><a class="button tiny secondary hover-bg-green-500 secondary-light shortlist-button"><span class="material-icons fs-base">check</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card -->
-                <div class="card responsive-image clickable">
-                    <!-- Card Image -->
-                    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495486030720-2290-P177D1.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
-                    <!-- Card Content -->
-                    <div class="card-section">
-                        <div class="row align-middle">
-                            <div class="small-10 columns">
-                                <!-- Product Name -->
-                                <div class="row"><strong class="ellipsis" title="The Keats">The Keats</strong></div>
-                                <div class="row">
-                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Lukas Lighting">Lukas Lighting</div>
-                                    <div class="columns small-3" style="min-width: 55px">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Shortlist checkmark button -->
-                            <div class="small-2 columns" style="white-space: nowrap">
-                                <div class="float-right"><a class="button tiny secondary hover-bg-green-500 secondary-light shortlist-button"><span class="material-icons fs-base">check</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card -->
-                <div class="card responsive-image clickable">
-                    <!-- Card Image -->
-                    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495484758707-2290-Bulb-Fiction.png?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
-                    <!-- Card Content -->
-                    <div class="card-section">
-                        <div class="row align-middle">
-                            <div class="small-10 columns">
-                                <!-- Product Name -->
-                                <div class="row"><strong class="ellipsis" title="Bulb Fiction">Bulb Fiction</strong></div>
-                                <div class="row">
-                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Lightyears">Lightyears</div>
-                                    <div class="columns small-3" style="min-width: 55px">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Shortlist checkmark button -->
-                            <div class="small-2 columns" style="white-space: nowrap">
-                                <div class="float-right"><a class="button tiny secondary hover-bg-green-500 secondary-light shortlist-button"><span class="material-icons fs-base">check</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Related Products-->
-                <span class="mt-s">
-                    <h5>Related Products</h5>
-                    <h5 class="gray-400 fs-s">Add any results that match your search to My Products. Send feedback</h5>
-                </span>
-
-                <!-- Related Card -->
-                <div class="card responsive-image clickable">
-                    <!-- Card Image -->
-                    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/cHawHgohRt2ufBLJyVhC_image.png?auto=format,compress&cs=strip&fit=crop&q=60&w=520')"></div>
-                    <!-- Card Content -->
-                    <div class="card-section">
-                        <div class="row align-middle">
-                            <div class="small-10 columns">
-                                <!-- Product Name -->
-                                <div class="row"><strong class="ellipsis" title="Bulb Fiction">Grain</strong></div>
-                                <div class="row">
-                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Brendan Ravenhill Design">Brendan Ravenhill Design</div>
-                                    <div class="columns small-3" style="min-width: 55px">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Add button -->
-                            <div class="small-2 columns" style="white-space: nowrap">
-                                <div class="float-right"><button class="button tiny" ng-disabled="product.saving" ng-click="ProductsCtrl.onAddToProducts(product, $event)"><span class="material-icons fs-base">add</span></button></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-
-            <!-- Sidebar -->
-            <div class="sidebar hide-for-small-only">
-                <div class="mb-xs">
-                    <h5>My Shortlist</h5>
-                    <h5 class="gray-400"></h5>
-                </div>
-
-                <!-- Row Cards -->
-                <!-- Row -->
-                <div class="card clickable condensed">
-                    <span style="background-image: url('https://architizer-prod.imgix.net/media/1495486275744-2290-114946_2569_1024x1024.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=80'); background-position: center; background-size: cover;"></span>
-                    <div>
-                        <strong class="ellipsis">Luna Pendant Cord</strong>
-                        <div class="ellipsis fs-s">Schoolhouse Electric</div>
-                    </div>
-                </div>
-                <!-- Row -->
-                <div class="card clickable condensed">
-                    <span style="background-image: url('https://architizer-prod.imgix.net/media/1495485210546-2290-mina_pendant_black_finish_-_black_white_cord.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=80'); background-position: center; background-size: cover;"></span>
-                    <div>
-                        <strong class="ellipsis">Mina Pendant</strong>
-                        <div class="ellipsis fs-s">Tech Lighting</div>
-                    </div>
-                </div>
-                <!-- Row -->
-                <div class="card clickable condensed">
-                    <span style="background-image: url('https://architizer-prod.imgix.net/media/1495486030720-2290-P177D1.jpg?auto=format,compress&cs=strip&fit=crop&q=60&w=80'); background-position: center; background-size: cover;"></span>
-                    <div>
-                        <strong class="ellipsis">The Keats</strong>
-                        <div class="ellipsis fs-s">Lukas Lighting</div>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
     </div>
 
