@@ -261,18 +261,82 @@
             <div class="grid-messages">
 
                 <!-- Header -->
-                <div class="card condensed">
-                    
+                <div class="card condensed" style="grid-template-columns: auto;">
+                    <div class="row align-middle">
+                       <!-- Back link (small/medium screens only) -->
+                       <div class="columns shrink hide-for-large"><a ui-sref="source.app.arc.project.conversations({ project: ActionBarCtrl.productRequest.project_id, view: 'messages' })" href=""><i class="material-icons">chevron_left</i>Back</a></div>
+                       <!---->
+                       <div class="columns shrink" ng-if="ActionBarCtrl.conversation">
+                          <!-- BPM Avatar --> <img type="user" ng-src="/images/placeholder-brand.svg" style="width: 32px; height: 32px; border-radius: 100px" src="https://architizer-prod.imgix.net/media/mediadata/uploads/1508182958brands.brand.299.png?auto=format,compress&cs=strip&fit=crop&h=230&q=60&w=230">
+                       </div>
+                       <!----><!-- BPM first name and last name & Brand Name --><!---->
+                       <div class="p-0 columns shrink" ng-if="ActionBarCtrl.conversation">
+                          <h5>Architizer Team Member at <span class="quicksilver-600">Vitra</span></h5>
+                       </div>
+                       <!----><!-- Middle spacing -->
+                       <div class="columns"></div>
+                       <!-- Search Details / Products links on right -->
+                       <div class="columns shrink show-for-medium">
+                          <ul class="tabs">
+                             <li class="tabs-title"><a ng-click="ActionBarCtrl.onMoreClick()" class="pt-m pb-m">Search Details</a></li>
+                             <li class="tabs-title"><a ui-sref="source.app.arc.project.request.products({ request: ActionBarCtrl.productRequest.id, view: 'products' })" class="pt-m pb-m" href="">Products</a></li>
+                          </ul>
+                       </div>
+                    </div>
                 </div>
 
                 <!-- Thread -->
-                <div class="messages">
+                <div class="thread">
+
+                    <!-- Message Row -->
+                    <div class="row mb-s align-left">
+                        <div class="message-block left">
+                            <div class="name fs-s gunmetal">Architizer</div>
+                            <div class="card message responsive-image clickable">
+                                <!-- Card Image -->
+                                <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495486275744-2290-114946_2569_1024x1024.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+                                <!-- Card Content -->
+                                <div class="card-section">
+                                    <div class="row align-middle">
+                                        <div class="small-10 columns">
+                                            <!-- Product Name -->
+                                            <div class="row"><strong class="ellipsis" title="Luna Pendant Cord">Luna Pendant Cord</strong></div>
+                                            <div class="row">
+                                                <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Schoolhouse Electric">Schoolhouse Electric</div>
+                                                <div class="columns small-3" style="min-width: 55px">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Shortlist checkmark button -->
+                                        <div class="small-2 columns" style="white-space: nowrap">
+                                            <div class="float-right"><a class="button tiny secondary hover-bg-green-500 secondary-light shortlist-button"><span class="material-icons fs-base">check</span></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="avatar" type="user" ng-src="/images/placeholder-brand.svg" class="mt-0 mr-0" style="width: 32px; height: 32px; border-radius: 100px" src="https://architizer-prod.imgix.net/media/mediadata/uploads/1508182958brands.brand.299.png?auto=format,compress&cs=strip&fit=crop&h=230&q=60&w=230">
+                        </div>
+                    </div>
+
+                    <!-- Message Row -->
+                    <div class="row mb-s align-right">
+                        <div class="message-block right">
+                            <div class="name fs-s gunmetal">Parsa</div>
+                            <div class="card message">This message block grid is awesome.</div>
+                            <img class="avatar" type="user" ng-src="http://architizer.com/images/placeholder-brand.svg" class="mt-0 mr-0" src="https://architizer-prod.imgix.net/media/1466174102182parsa-headshot-sat.JPG?auto=format,compress&cs=strip&fit=crop&q=60&w=200">
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- Compose -->
-                <div class="pb-base" data-sticky-container>
+                <div class="pb-base" id="compose" data-sticky-container>
                     <div data-sticky data-stick-to="bottom" style="width: 100%">
-                        <textarea class="compose no-h-resize mb-s" placeholder="Type your message"></textarea>
+                        <div class="row collapse">
+                            <div class="columns small-12 columns">
+                                <textarea class="compose no-h-resize mb-s" placeholder="Type your message"></textarea>
+                            </div>
+                        </div>
                         <div class="row collapse">
                             <div class="columns text-right ">
                                 <button class="secondary button small fw-medium">Request Samples</button>
