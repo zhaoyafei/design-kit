@@ -55,8 +55,8 @@
 }
 
 .context-bar {
-  display: grid;
   min-height: 80px;
+  display: grid;
   align-items: center;
   overflow: hidden;
   grid-template-columns: 65px auto 30px;
@@ -118,4 +118,48 @@
 .grid-messages {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  // .thread {
+  //   overflow: scroll;
+  //   display: grid;
+  //   grid-template-columns: 60px 1fr 1fr 60px;
+  //   .message-l{
+  //     grid-column: 2 / 3;
+  //   }
+  //   .message-r{
+  //     grid-column: 3 / 4;
+  //   }
+  // }
+
+  .message-block {
+    display: grid;
+    // grid-template-columns: auto 32px;
+    grid-gap: $space-xxs;
+    &.right {
+      grid-template-areas: 
+      "name ."
+      "message avatar";
+      float: right;
+      .name {
+        text-align: right;
+      }
+    }
+    &.left {
+      grid-template-areas: 
+      ". name"
+      "avatar message";
+    }
+    .name {
+      grid-area: name;
+      padding: 0 $space-s;
+    }
+    .message {
+      grid-area: message;
+    }
+    .avatar {
+      grid-area: avatar;
+      width: 32px; 
+      height: 32px; 
+      border-radius: 100px;
+    }
+  }
 }
