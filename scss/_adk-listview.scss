@@ -19,7 +19,7 @@
   max-height: 100%;
   // Height equals 100% of parent height, 
   // minus height of `.list-view-header` as described above.
-  height: calc(100% - 55px); 
+  height: calc(100% - 55px);
   overflow-y: scroll;
   overflow-x: hidden;
   list-style-type: none;
@@ -29,52 +29,54 @@
   &.no-header {
     height: 100%;
   }
+}
 
-  .list-item {
-    cursor: pointer;
-    min-height: 70px;
-    padding: 0.5em 0;
-    margin: 0 0.5em;  
-    border-bottom: $global-separator;
-    
-    .subtitle {
-      color: $light-gray;
-      max-width: calc(100% - 55px);
+.list-item {
+  cursor: pointer;
+  min-height: 70px;
+  padding: 0.5em 0;
+  margin: 0 0.5em;  
+  border-bottom: $global-separator;
+
+  .subtitle {
+    color: $light-gray;
+    max-width: calc(100% - 55px);
+  }
+
+  .pro-badge {
+    min-width: 55px;
+    .pro-icon {
+      display:inline-block;
+      line-height: 1;
     }
-
-    .pro-badge {
-      min-width: 55px;
-      .pro-icon {
-        display:inline-block; 
-        line-height: 1;
-      }
-      .pro-text {
-        font-size: 0.7rem;
-      }
+    .pro-text {
+      font-size: 0.7rem;
     }
+  }
 
-    .title {
-      font-weight: $global-weight-bold;
-    }
+  .title {
+    font-weight: $global-weight-bold;
+  }
 
-    &.inactive {
-      pointer-events: none;
-      .list-item-content {
-        opacity: 0.3;
-      }
-    }
-
-    .list-item-image {
-      span {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: transparent;
-        background-position: center;
-        width: 40px; 
-        height: 40px; 
-        display: block;
-      }
+  &.inactive {
+    pointer-events: none;
+    .list-item-content {
+      opacity: 0.3;
     }
   }
 }
+
+.list-item-image {
+  * {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+}
+
+
  
