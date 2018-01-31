@@ -6,6 +6,7 @@
   border: 1px solid rgba($adk-gunmetal, 0.4);
 
   &.responsive-image {
+    display: block;
     padding: 0;
     .card-section {
       margin: $space-s $card-padding;
@@ -139,7 +140,7 @@
   &.inactive {
     opacity: 0.3;
 
-    &:hover {
+    &.clickable:hover {
       opacity: 1;
     }
   }
