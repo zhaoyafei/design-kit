@@ -222,7 +222,7 @@
             <div class="sidebar hide-for-small-only">
                 <div class="mb-base">
 
-                    <div class="row">
+                    <div class="row collapse">
                       <div class="columns">
 
                         <!-- Meta Filters -->
@@ -621,30 +621,52 @@
                 </div>
             </div>
 
-            <!-- Cards -->
+            <!-- Feed -->
             <div class="content">
 
-                <!-- Opportunity -->
-                <div class="card clickable condensed">
-                    <!-- Card Image -->
-                    <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1495486275744-2290-114946_2569_1024x1024.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
-                    <!-- Card Content -->
-                    <div class="card-section">
-                        <div class="row align-middle">
-                            <div class="small-10 columns">
-                                <!-- Product Name -->
-                                <div class="row"><strong class="ellipsis" title="Luna Pendant Cord">Concrete Panels</strong></div>
-                                <div class="row">
-                                    <div class="columns shrink subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Schoolhouse Electric">Schoolhouse Electric</div>
-                                    <div class="columns small-3" style="min-width: 55px">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Search -->
+                <div class="grid-x mb-base align-middle">
+                   <div class="cell">
+                        <input ng-model="OpportunitiesCtrl.queryParameters.searchQuery" ng-model-options="{ debounce: 500 }" id="searchQuery" name="searchQuery" class="bg-white ng-pristine ng-untouched ng-valid ng-empty" placeholder="Search…" type="text">
                     </div>
                 </div>
 
+                <!-- Feed -->
+                <div>
+
+                    <!-- Opportunity -->
+                    <div class="card clickable mb-s">
+                        <!-- Card Content -->
+                        <div class="card-section grid-x">
+                            <!-- Product Name -->
+                            <div class="cell align-middle">
+                                <strong class="ellipsis fw-bold title="Combination Smoke &amp; CO Detector">Combination Smoke &amp; CO Detector</strong>
+                                <!---->
+                                <span ng-if="opportunity.approved_dt | isDateWithin:24:'hours'" class="green smallcaps fw-bold">New</span>
+                                <!---->
+                                <!-- Draft icon --> <span ng-show="OpportunitiesCtrl.hasDraft(opportunity.django_id)" tooltip="Draft in progress" tooltip-placement="top" tooltip-append-to-body="true" class="ng-hide"><i class="blue material-icons">drafts</i> </span>
+                                <!-- Replied icon --> <span ng-show="OpportunitiesCtrl.hasReplied(opportunity.django_id)" tooltip="You've replied to this opportunity" tooltip-placement="top" tooltip-append-to-body="true" class="ng-hide"><i class="gray material-icons">mail</i> </span>
+                                <!-- Favorite star icon --> 
+                                <!---->
+                            </div>
+                            <!-- Decscription -->
+                            <div class="cell align-middle">
+                                <div class="subtitle fs-s ellipsis pr-xs" style="max-width: calc(100% - 55px)" title="Schoolhouse Electric">Schoolhouse Electric</div>
+                            </div>
+                            <!-- Metadata -->
+                            <div class="cell align-middle">
+                                <span class="meta">
+                                    <!-- Date --> <span>7 hours ago</span><!-- Project Phase --> <span ng-show="opportunity.phase_display_s" class="">Construction Administration</span><!-- Project Location --> <span ng-show="opportunity.project_location_s" class="">New York, United States</span><!-- Quantity --> <span>10 units</span><!-- Number of other Products --> <span ng-show="false" class="ng-hide">4 products in the running</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+
+                </div>
+
             </div>
+
         </div>
     </div>
 
