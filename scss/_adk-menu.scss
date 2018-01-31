@@ -93,3 +93,9 @@ ul {
   background-color: $white;
   z-index: 1000;
 }
+
+// Accordion Overrides
+// Accordion Arrow color
+.is-accordion-submenu-parent > a::after {
+  border-color: $black transparent transparent;
+}

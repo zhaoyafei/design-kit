@@ -217,290 +217,408 @@
 
     <div class="grid-container">
         <div class="grid-sidebar left">
+
             <!-- Sidebar -->
             <div class="sidebar hide-for-small-only">
-
                 <div class="mb-base">
-                    <div ng-if="OpportunitiesCtrl.user">
-                       <!-- Meta Filters -->
-                       <div class="row">
-                          <div class="columns">
-                             <h5><strong>My Opportunities</strong></h5>
-                             <!-- Meta Filters list --><!---->
-                             <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.meta">
-                                <div class="columns shrink"><input id="favorited" name="favorited" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'meta')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                                <div class="columns pl-0"><label style="font-weight: 400" class="black" for="favorited">Favorited</label></div>
-                             </div>
-                             <!---->
-                             <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.meta">
-                                <div class="columns shrink"><input id="drafts" name="drafts" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'meta')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                                <div class="columns pl-0"><label style="font-weight: 400" class="black" for="drafts">Drafts</label></div>
-                             </div>
-                             <!---->
-                             <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.meta">
-                                <div class="columns shrink"><input id="replied" name="replied" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'meta')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                                <div class="columns pl-0"><label style="font-weight: 400" class="black" for="replied">Replied</label></div>
-                             </div>
-                             <!---->
-                          </div>
-                       </div>
-                    </div>
-                    <!----><!-- Phase -->
-                    <div class="row mt-base">
-                       <div class="columns">
-                          <h5><strong>Project Phase</strong></h5>
-                          <!-- Phases List --><!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.phases track by $index">
-                             <div class="columns shrink"><input id="schematic-design" name="schematic-design" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'phases')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="schematic-design">Schematic Design </label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.phases track by $index">
-                             <div class="columns shrink"><input id="design-development" name="design-development" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'phases')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="design-development">Design Development</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.phases track by $index">
-                             <div class="columns shrink"><input id="construction-documents" name="construction-documents" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'phases')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="construction-documents">Construction Documents</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.phases track by $index">
-                             <div class="columns shrink"><input id="construction-administration" name="construction-administration" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'phases')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="construction-administration">Construction Administration </label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.phases track by $index">
-                             <div class="columns shrink"><input id="under-construction" name="under-construction" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'phases')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="under-construction">Construction</label></div>
-                          </div>
-                          <!---->
-                       </div>
-                    </div>
-                    <!-- Categories --><!---->
-                    <div class="row mt-base" ng-if="OpportunitiesCtrl.filterOptions.categories.length" style="">
-                       <div class="columns">
-                          <h5><strong>Categories</strong></h5>
-                          <!-- Categories List --><!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Acoustical Treatments" name="Acoustical Treatments" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Acoustical Treatments">Acoustical Treatments</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Appliances" name="Appliances" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Appliances">Appliances</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Audio Visual" name="Audio Visual" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Audio Visual">Audio Visual</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Ceramics" name="Ceramics" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Ceramics">Ceramics</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Conveying Systems" name="Conveying Systems" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Conveying Systems">Conveying Systems</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Decking" name="Decking" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Decking">Decking</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Doors" name="Doors" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Doors">Doors</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Electrical Systems" name="Electrical Systems" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Electrical Systems">Electrical Systems</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Facade &amp; Glazing" name="Facade &amp; Glazing" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Facade &amp; Glazing">Facade &amp; Glazing</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Fences &amp; Gates" name="Fences &amp; Gates" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Fences &amp; Gates">Fences &amp; Gates</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Fireplace Accessories" name="Fireplace Accessories" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Fireplace Accessories">Fireplace Accessories</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Fireplaces, Stoves &amp; Grills" name="Fireplaces, Stoves &amp; Grills" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Fireplaces, Stoves &amp; Grills">Fireplaces, Stoves &amp; Grills</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Furniture - Contract" name="Furniture - Contract" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Furniture - Contract">Furniture - Contract</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Furniture - Kitchen" name="Furniture - Kitchen" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Furniture - Kitchen">Furniture - Kitchen</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Furniture - Residential" name="Furniture - Residential" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Furniture - Residential">Furniture - Residential</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Glass" name="Glass" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Glass">Glass</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="HVAC" name="HVAC" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="HVAC">HVAC</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Hardware" name="Hardware" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Hardware">Hardware</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Insulation &amp; Waterproofing" name="Insulation &amp; Waterproofing" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Insulation &amp; Waterproofing">Insulation &amp; Waterproofing</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Kitchen &amp; Table Accessories" name="Kitchen &amp; Table Accessories" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Kitchen &amp; Table Accessories">Kitchen &amp; Table Accessories</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Lighting" name="Lighting" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Lighting">Lighting</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Living Room &amp; Office Accessories" name="Living Room &amp; Office Accessories" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Living Room &amp; Office Accessories">Living Room &amp; Office Accessories</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Mail" name="Mail" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Mail">Mail</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Metals" name="Metals" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Metals">Metals</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Paints &amp; Coatings" name="Paints &amp; Coatings" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Paints &amp; Coatings">Paints &amp; Coatings</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Photovoltaic Systems" name="Photovoltaic Systems" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Photovoltaic Systems">Photovoltaic Systems</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Plumbing - Bath" name="Plumbing - Bath" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Plumbing - Bath">Plumbing - Bath</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Plumbing - Kitchen" name="Plumbing - Kitchen" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Plumbing - Kitchen">Plumbing - Kitchen</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Plumbing - Outdoor" name="Plumbing - Outdoor" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Plumbing - Outdoor">Plumbing - Outdoor</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Prefabricated Structures" name="Prefabricated Structures" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Prefabricated Structures">Prefabricated Structures</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Roofing" name="Roofing" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Roofing">Roofing</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Siding" name="Siding" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Siding">Siding</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Signage &amp; Wayfinding" name="Signage &amp; Wayfinding" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Signage &amp; Wayfinding">Signage &amp; Wayfinding</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Specialty Equipment" name="Specialty Equipment" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Specialty Equipment">Specialty Equipment</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Stairs &amp; Railing" name="Stairs &amp; Railing" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Stairs &amp; Railing">Stairs &amp; Railing</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Stone" name="Stone" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Stone">Stone</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Structural Frames &amp; Systems" name="Structural Frames &amp; Systems" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Structural Frames &amp; Systems">Structural Frames &amp; Systems</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Support Assemblies" name="Support Assemblies" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Support Assemblies">Support Assemblies</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Synthetic Materials" name="Synthetic Materials" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Synthetic Materials">Synthetic Materials</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Textiles" name="Textiles" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Textiles">Textiles</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Trash Cans" name="Trash Cans" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Trash Cans">Trash Cans</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Windows" name="Windows" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Windows">Windows</label></div>
-                          </div>
-                          <!---->
-                          <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
-                             <div class="columns shrink"><input id="Wood" name="Wood" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
-                             <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Wood">Wood</label></div>
-                          </div>
-                          <!---->
-                       </div>
-                    </div>
-                </div>
 
+                    <div class="row">
+                      <div class="columns">
+
+                        <!-- Meta Filters -->
+                        <div ng-if="OpportunitiesCtrl.user">
+                            <ul class="vertical menu" data-accordion-menu>
+                                <li>
+                                    <a class="pl-0"><h5><strong class="black">My Opportunities</strong></h5></a>
+                                    <ul class="menu vertical is-active">
+                                        <li>
+                                            <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.meta">
+                                                <div class="columns shrink"><input id="favorited" name="favorited" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'meta')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                                <div class="columns pl-0"><label style="font-weight: 400" class="black" for="favorited">Favorited</label></div>
+                                            </div>
+                                        </li>
+                                        <!---->
+                                        <li>
+                                            <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.meta">
+                                                <div class="columns shrink"><input id="drafts" name="drafts" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'meta')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                                <div class="columns pl-0"><label style="font-weight: 400" class="black" for="drafts">Drafts</label></div>
+                                            </div>
+                                        </li>
+                                        <!---->
+                                        <li>
+                                            <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.meta">
+                                                <div class="columns shrink"><input id="replied" name="replied" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'meta')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                                <div class="columns pl-0"><label style="font-weight: 400" class="black" for="replied">Replied</label></div>
+                                            </div>
+                                        </li>
+                                        <!---->
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="vertical menu" data-accordion-menu>
+
+                            <!-- Phase -->
+                            <li>
+                                <a class="pl-0"><h5><strong class="black">Project Phase</strong></h5></a>
+                                <ul class="menu vertical is-active">
+                                    <!-- Phases List -->
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.phases track by $index">
+                                            <div class="columns shrink"><input id="schematic-design" name="schematic-design" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'phases')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="schematic-design">Schematic Design </label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.phases track by $index">
+                                            <div class="columns shrink"><input id="design-development" name="design-development" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'phases')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="design-development">Design Development</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.phases track by $index">
+                                            <div class="columns shrink"><input id="construction-documents" name="construction-documents" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'phases')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="construction-documents">Construction Documents</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.phases track by $index">
+                                            <div class="columns shrink"><input id="construction-administration" name="construction-administration" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'phases')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="construction-administration">Construction Administration </label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.phases track by $index">
+                                            <div class="columns shrink"><input id="under-construction" name="under-construction" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'phases')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="under-construction">Construction</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                </ul>
+                            </li>
+
+                            <!-- Categories -->
+                            <li>
+                                <a class="pl-0"><h5><strong class="black">Categories</strong></h5></a>
+                                <ul class="menu vertical is-active">
+                                    <!-- Categories List -->
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Acoustical Treatments" name="Acoustical Treatments" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Acoustical Treatments">Acoustical Treatments</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Appliances" name="Appliances" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Appliances">Appliances</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Audio Visual" name="Audio Visual" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Audio Visual">Audio Visual</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Ceramics" name="Ceramics" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Ceramics">Ceramics</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Conveying Systems" name="Conveying Systems" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Conveying Systems">Conveying Systems</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Decking" name="Decking" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Decking">Decking</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Doors" name="Doors" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Doors">Doors</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Electrical Systems" name="Electrical Systems" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Electrical Systems">Electrical Systems</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Facade &amp; Glazing" name="Facade &amp; Glazing" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Facade &amp; Glazing">Facade &amp; Glazing</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Fences &amp; Gates" name="Fences &amp; Gates" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Fences &amp; Gates">Fences &amp; Gates</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Fireplace Accessories" name="Fireplace Accessories" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Fireplace Accessories">Fireplace Accessories</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Fireplaces, Stoves &amp; Grills" name="Fireplaces, Stoves &amp; Grills" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Fireplaces, Stoves &amp; Grills">Fireplaces, Stoves &amp; Grills</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Furniture - Contract" name="Furniture - Contract" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Furniture - Contract">Furniture - Contract</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Furniture - Kitchen" name="Furniture - Kitchen" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Furniture - Kitchen">Furniture - Kitchen</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Furniture - Residential" name="Furniture - Residential" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Furniture - Residential">Furniture - Residential</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Glass" name="Glass" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Glass">Glass</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="HVAC" name="HVAC" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="HVAC">HVAC</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Hardware" name="Hardware" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Hardware">Hardware</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Insulation &amp; Waterproofing" name="Insulation &amp; Waterproofing" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Insulation &amp; Waterproofing">Insulation &amp; Waterproofing</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Kitchen &amp; Table Accessories" name="Kitchen &amp; Table Accessories" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Kitchen &amp; Table Accessories">Kitchen &amp; Table Accessories</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Lighting" name="Lighting" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Lighting">Lighting</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Living Room &amp; Office Accessories" name="Living Room &amp; Office Accessories" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty"
+                                                    type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Living Room &amp; Office Accessories">Living Room &amp; Office Accessories</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Mail" name="Mail" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Mail">Mail</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Metals" name="Metals" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Metals">Metals</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Paints &amp; Coatings" name="Paints &amp; Coatings" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Paints &amp; Coatings">Paints &amp; Coatings</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Photovoltaic Systems" name="Photovoltaic Systems" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Photovoltaic Systems">Photovoltaic Systems</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Plumbing - Bath" name="Plumbing - Bath" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Plumbing - Bath">Plumbing - Bath</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Plumbing - Kitchen" name="Plumbing - Kitchen" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Plumbing - Kitchen">Plumbing - Kitchen</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Plumbing - Outdoor" name="Plumbing - Outdoor" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Plumbing - Outdoor">Plumbing - Outdoor</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Prefabricated Structures" name="Prefabricated Structures" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Prefabricated Structures">Prefabricated Structures</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Roofing" name="Roofing" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Roofing">Roofing</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Siding" name="Siding" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Siding">Siding</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Signage &amp; Wayfinding" name="Signage &amp; Wayfinding" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Signage &amp; Wayfinding">Signage &amp; Wayfinding</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Specialty Equipment" name="Specialty Equipment" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Specialty Equipment">Specialty Equipment</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Stairs &amp; Railing" name="Stairs &amp; Railing" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Stairs &amp; Railing">Stairs &amp; Railing</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Stone" name="Stone" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Stone">Stone</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Structural Frames &amp; Systems" name="Structural Frames &amp; Systems" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Structural Frames &amp; Systems">Structural Frames &amp; Systems</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Support Assemblies" name="Support Assemblies" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Support Assemblies">Support Assemblies</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Synthetic Materials" name="Synthetic Materials" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Synthetic Materials">Synthetic Materials</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Textiles" name="Textiles" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Textiles">Textiles</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Trash Cans" name="Trash Cans" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Trash Cans">Trash Cans</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Windows" name="Windows" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Windows">Windows</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                    <li>
+                                        <div class="row" ng-repeat="option in OpportunitiesCtrl.filterOptions.categories track by $index">
+                                            <div class="columns shrink"><input id="Wood" name="Wood" ng-model="option.selected" ng-change="OpportunitiesCtrl.onFilterOptionChange(option, 'categories')" class="mb-0 ng-pristine ng-untouched ng-valid ng-empty" type="checkbox"></div>
+                                            <div class="columns pl-0"><label style="font-weight: 400" class="black" for="Wood">Wood</label></div>
+                                        </div>
+                                    </li>
+                                    <!---->
+                                </ul>
+                            </li>
+
+                        </ul>
+                      </div>
+                    </div>
+
+                </div>
             </div>
 
             <!-- Cards -->
@@ -525,7 +643,6 @@
                         </div>
                     </div>
                 </div>
-
 
             </div>
         </div>
