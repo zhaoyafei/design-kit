@@ -577,15 +577,15 @@ $table-head-font-color: $medium-gray;
 // // --------
 
 // $tab-margin: 0;
-// $tab-background: $white;
-$tab-color: map-get(generate-palette($adk-quicksilver), 600);
-$tab-background-active: $global-selected;
-$tab-active-color: map-get(generate-palette($adk-quicksilver), 900);
+$tab-background: none;
+$tab-color: $adk-quicksilver;
+$tab-background-active: none;
+$tab-active-color: $dark-gray;
 $tab-item-font-size: $space;
 $tab-item-background-hover: $global-hover;
-$tab-item-padding: 0.8rem 1.2rem;
+$tab-item-padding: $space;
 // $tab-expand-max: 6;
-// $tab-content-background: $white;
+$tab-content-background: none;
 $tab-content-border: none;
 // $tab-content-color: $body-font-color;
 // $tab-content-padding: 1rem;
