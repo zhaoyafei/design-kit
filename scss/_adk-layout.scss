@@ -61,6 +61,9 @@
   overflow: hidden;
   grid-template-columns: 65px auto 30px;
   grid-gap: $grid-gutter;
+  &.opportunity {
+    grid-template-columns: auto;
+  }
 }
 
 // Card Grid
