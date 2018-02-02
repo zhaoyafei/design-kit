@@ -34,8 +34,9 @@ label {
 
 // Input groups
 span.input-group-label {
-  background: transparent;
+  background: $input-background;
   border-radius: 0 $global-radius $global-radius 0;
+  border: $input-border;
   &.icon {
     display: inline-flex;
     position: relative;

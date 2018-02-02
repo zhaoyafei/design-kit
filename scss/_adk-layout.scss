@@ -176,3 +176,27 @@
     }
   }
 }
+
+// Opp view grid
+.opp-grid {
+  display: grid;
+  grid-gap: $space;
+  grid-template-rows: auto auto;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas: 
+  "details image"
+  "form responses";
+  .details {
+    grid-area: details;
+  }
+  .image {
+    grid-area: image;
+  }
+  .form {
+    grid-area: form;
+  }
+  .responses {
+    grid-area: responses;
+  }
+}
+

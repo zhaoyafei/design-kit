@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Architizer Opportunities Feed CSS Grid</title>
+    <title>Architizer Opportunity View CSS Grid</title>
     <!-- Architizer Design Kit CSS -->
     <link rel="stylesheet" href="/css/adk.css"/>
   </head>
@@ -202,7 +202,7 @@
         <div class="actionbar-dark grid-container">
             <div class="">
                 <h2 style="display:inline-block;" class="fw-medium">Delta Light</h2>
-                <!-- <a class="fs-s fw-medium smallcaps white" href="/templates/grid-all-projects.html">Hollwich Kushner</a> -->
+                <!-- <a class="fs-s fw-medium smallcaps white" href="/templates/grid-opportunities-feed.html">back to opportunities</a> -->
             </div>
             <div style="justify-self:end;">
                 <ul class="menu dark">
@@ -216,22 +216,367 @@
     </div>
 
     <!-- Context bar -->
-    <div class="bg-white">
+<!--     <div class="bg-white">
         <div class="context-bar opportunity grid-container">
-            <!-- Search Info -->
             <div>
                 <h3><strong>Ceramic Tile</strong></h3>
                 <span class="meta"><span>Posted on January 29, 2018</span></span>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="grid-container">
+    <div class="grid-container opp-grid mt-base">
 
-            <!-- Opp -->
-            <div class="content">
+        <!--  Details -->
+        <div class="details">
 
+            <!-- Title -->
+            <div class="mb-base">
+                <h3 class="fw-medium">Ceramic Tile</h3>
+                <span class="meta"><span>Posted on January 29, 2018</span></span>
             </div>
+            
+            <!-- Description -->
+            <div class="mb-base">
+                <h6 class="smallcaps fw-bold mb-xxs">Description</h6>
+                <p class="mb-s">Ceramic/ porcelain tile with marble to accent the idols.</p>
+            </div>
+
+            <!-- Search Details -->
+            <div class="mb-base">
+                <!-- Details -->
+                <h6 class="smallcaps fw-bold mb-xxs">Search Details</h6>
+                <div class="grid-x small-up-2 medium-up-3">
+                    <!-- Estimated Quantity -->
+                    <div class="cell mb-s">
+                        <span>800 sqft</span>
+                        <label style="line-height: 1.3">Estimated Quantity</label>
+                    </div>
+                    <!-- Estimated Price Range -->
+                    <div class="cell mb-s">
+                        <span ng-bind-html="OpportunityCtrl.productRequest.price | priceRange:true"><span class="adk priceRange"><span class="gray-200"><span class="black">$$</span>$</span></span></span>
+                        <label style="line-height: 1.3">Estimated Price Range</label>
+                    </div>
+                    <!-- Structured Data --><!---->
+                </div>
+            </div>
+
+            <!-- Project Details -->
+            <div class="">
+                <!-- Details -->
+                <h6 class="smallcaps fw-bold mb-xxs">Project Details</h6>
+                <div class="grid-x small-up-2 medium-up-3">
+                    <!-- Location -->
+                    <div class="cell mb-s">
+                        <span>Roanoke, VA</span>
+                        <label style="line-height: 1.3">Firm Location</label>
+                    </div>
+                    <!-- Type -->
+                    <div class="cell mb-s">
+                        <span>Religious</span>
+                        <label style="line-height: 1.3">Project Type</label>
+                    </div>
+                    <!-- Proj Location -->
+                    <div class="cell mb-s">
+                        <span>Roanoke, Virginia</span>
+                        <label style="line-height: 1.3">Project Location</label>
+                    </div>
+                    <!-- Phase -->
+                    <div class="cell mb-s">
+                        <span>Schematic Design </span>
+                        <label style="line-height: 1.3">Project Phase</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image -->
+        <div class="image">
+            <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/mediadata/uploads/1517341107646-3521B90F-CC4D-4E66-A020-07BAE535B138.jpeg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+        </div>
+
+        <!-- Form -->
+        <div class="form">
+            <h5 class="mb-s">Send a Product</h5>
+            <div ng-include="'/views/source/bpm/send-product-form.html'">
+                <form name="OpportunityCtrl.form" class="ng-pristine ng-valid-min ng-valid ng-valid-required">
+                    <!-- Brand Name Field Label / Help Text --><!----><!-- Brand (if user has multiple brands) --><!----><!-- Product Name Field Label / Help Text -->
+                    <div class="row mb-0">
+                        <div class="columns">
+                            <label>Product Name</label>
+                        </div>
+                    </div>
+                    <!-- Product Name-->
+                    <div class="row">
+                        <!---->
+                        <div ng-repeat="field in OpportunityCtrl.models.productName.fields" class="columns">
+                            <!-- Input-->
+                            <label>
+                                <!-- Error Messages --> 
+                                <span ng-messages="OpportunityCtrl.form['productName-' + field.name].$error" class="float-right red ng-inactive">
+                                    <!----> 
+                                </span>
+                                <!-- Field --> <input ng-model="field.value" id="productName-value" name="productName-value" placeholder="" ng-required="OpportunityCtrl.form.$submitted" class="ng-pristine ng-untouched ng-empty ng-valid ng-valid-required" type="text">
+                            </label>
+                        </div>
+                        <!---->
+                    </div>
+                    <!-- Product URL Field Label / Help Text -->
+                    <div class="row mb-0">
+                        <div class="columns">
+                            <label>Product URL</label>
+                        </div>
+                    </div>
+                    <!-- Product URL -->
+                    <div class="row">
+                        <!---->
+                        <div ng-repeat="field in OpportunityCtrl.models.productUrl.fields" class="columns">
+                            <!-- Input-->
+                            <label>
+                                <!-- Error Messages --> 
+                                <span ng-messages="OpportunityCtrl.form['productUrl-' + field.name].$error" class="float-right red ng-inactive">
+                                    <!----> 
+                                </span>
+                                <!-- Field --> <input ng-model="field.value" id="productUrl-value" name="productUrl-value" placeholder="" ng-required="OpportunityCtrl.sendMode === 'publish' &amp;&amp; OpportunityCtrl.form.$submitted" class="ng-pristine ng-untouched ng-empty ng-valid ng-valid-required" type="text">
+                            </label>
+                        </div>
+                        <!---->
+                    </div>
+                    <!-- Price Range Field Label / Help Text -->
+                    <div class="row mb-0">
+                        <div class="columns">
+                            <label>Estimated Price Range Per Square Foot</label>
+                        </div>
+                    </div>
+                    <!-- Price Range Fields -->
+                    <div class="row">
+                        <!---->
+                        <div ng-repeat="field in OpportunityCtrl.models.price.fields" class="columns">
+                            <!-- Input-->
+                            <label>
+                                Min Price<!-- Error Messages --> 
+                                <span ng-messages="OpportunityCtrl.form['price-' + field.name + $index].$error" class="float-right red ng-inactive">
+                                    <!----> <!----> <!----> 
+                                </span>
+                                <!-- Field -->
+                                <div class="input-group"><span class="input-group-label">$</span> <input ng-model="field.value" class="input-group-field ng-pristine ng-untouched ng-empty ng-valid-min ng-valid ng-valid-required" id="price-value0" name="price-value0" placeholder="" min="0" ng-required="OpportunityCtrl.sendMode === 'publish' &amp;&amp; OpportunityCtrl.form.$submitted" type="number"></div>
+                            </label>
+                        </div>
+                        <!---->
+                        <div ng-repeat="field in OpportunityCtrl.models.price.fields" class="columns">
+                            <!-- Input-->
+                            <label>
+                                Max Price<!-- Error Messages --> 
+                                <span ng-messages="OpportunityCtrl.form['price-' + field.name + $index].$error" class="float-right red ng-inactive">
+                                    <!----> <!----> <!----> 
+                                </span>
+                                <!-- Field -->
+                                <div class="input-group"><span class="input-group-label">$</span> <input ng-model="field.value" class="input-group-field ng-pristine ng-untouched ng-empty ng-valid-min ng-valid ng-valid-required" id="price-value1" name="price-value1" placeholder="" min="0" ng-required="OpportunityCtrl.sendMode === 'publish' &amp;&amp; OpportunityCtrl.form.$submitted" type="number"></div>
+                            </label>
+                        </div>
+                        <!---->
+                    </div>
+                    <!-- Lead Time Field Label / Help Text -->
+                    <div class="row mb-0">
+                        <div class="columns">
+                            <label>Estimated Lead Time</label>
+                        </div>
+                    </div>
+                    <!-- Lead Time Fields -->
+                    <div class="row">
+                        <!---->
+                        <div ng-repeat="field in OpportunityCtrl.models.leadTime.fields" class="columns">
+                            <!-- Input-->
+                            <label>
+                                Min Lead Time<!-- Error Messages --> 
+                                <span ng-messages="OpportunityCtrl.form['leadTime-' + field.name + $index].$error" class="float-right red ng-inactive">
+                                    <!----> <!----> <!----> 
+                                </span>
+                                <!-- Field -->
+                                <div class="input-group"><input ng-model="field.value" id="leadTime-value0" class="input-group-field ng-pristine ng-untouched ng-empty ng-valid-min ng-valid ng-valid-required" name="leadTime-value0" placeholder="" min="0" ng-required="OpportunityCtrl.sendMode === 'publish' &amp;&amp; OpportunityCtrl.form.$submitted" type="number"> <span class="input-group-label">weeks</span></div>
+                            </label>
+                        </div>
+                        <!---->
+                        <div ng-repeat="field in OpportunityCtrl.models.leadTime.fields" class="columns">
+                            <!-- Input-->
+                            <label>
+                                Max Lead Time<!-- Error Messages --> 
+                                <span ng-messages="OpportunityCtrl.form['leadTime-' + field.name + $index].$error" class="float-right red ng-inactive">
+                                    <!----> <!----> <!----> 
+                                </span>
+                                <!-- Field -->
+                                <div class="input-group"><input ng-model="field.value" id="leadTime-value1" class="input-group-field ng-pristine ng-untouched ng-empty ng-valid-min ng-valid ng-valid-required" name="leadTime-value1" placeholder="" min="0" ng-required="OpportunityCtrl.sendMode === 'publish' &amp;&amp; OpportunityCtrl.form.$submitted" type="number"> <span class="input-group-label">weeks</span></div>
+                            </label>
+                        </div>
+                        <!---->
+                    </div>
+                    <!-- Description Field Label / Help Text -->
+                    <div class="row mb-0">
+                        <div class="small-12 columns">
+                            <label>Description</label>
+                        </div>
+                    </div>
+                    <!-- Description Field -->
+                    <div class="row">
+                        <!---->
+                        <div ng-repeat="field in OpportunityCtrl.models.description.fields" ng-switch="field.ui" class="columns">
+                            <!-- Textarea--><!---->
+                            <label ng-switch-when="textarea">
+                                <!-- Error Messages --> 
+                                <span ng-messages="OpportunityCtrl.form['description-' + field.name + $index].$error" class="float-right red ng-inactive">
+                                    <!----> 
+                                </span>
+                                <!-- Field -->
+                                <textarea ng-model="field.value" id="description-value0" name="description-value0" rows="4" class="no-h-resize ng-pristine ng-untouched ng-empty ng-valid ng-valid-required" ng-required="OpportunityCtrl.sendMode === 'publish' &amp;&amp; OpportunityCtrl.form.$submitted"></textarea>
+                            </label>
+                            <!---->
+                        </div>
+                        <!---->
+                    </div>
+                    <!-- Attachment Field Label / Help Text -->
+                    <div class="row mb-0">
+                        <div class="columns">
+                            <label>Attachments</label>
+                        </div>
+                    </div>
+                    <!-- Upload Attachments-->
+                    <div class="row">
+                        <div class="columns">
+                            <label>
+                                Include images and tear sheets to increase your chances of getting selected
+                                <div dropzone="dropzone" max-filesize="50" max-thumbnail-filesize="50" auto-process="true" message="<span class='material-icons'>attach_file</span>Drag attachments here or click to browse" ng-model="OpportunityCtrl.models.files" class="dropzone bg-white ng-pristine ng-untouched ng-valid dz-clickable ng-not-empty" ng-class="{ 'mb-0': OpportunityCtrl.models.files.length }">
+                                    <div class="dz-default dz-message"><span><span class="material-icons">attach_file</span>Drag attachments here or click to browse</span></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Existing Attachments (for a previously-saved draft) --><!----><!-- Additional Details Field Label / Help Text -->
+                    <div class="row mb-0">
+                        <div class="small-12 columns">
+                            <label>Additional Details</strong><label>Please include any criteria that the architect has specified.</label></h5>
+                        </div>
+                    </div>
+                    <!-- Structured Data / Additional Criteria Data Points --><!-- Criterion Row--><!----><!-- Optional Details Data Point Buttons--><!---->
+                    <div ng-if="OpportunityCtrl.elementConfig.bpmSendProductDataPoints.length" class="row mb-base">
+                        <div class="columns">
+                            <!-- Data Point Buttons--> <!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Application</a><!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Color</a><!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Color Name</a><!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Finish</a><!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Format</a><!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Height</a><!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Length</a><!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Mass</a><!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Material</a><!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Model Number</a><!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Performance</a><!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Volume</a><!----><a ng-repeat="dataPoint in OpportunityCtrl.elementConfig.bpmSendProductDataPoints | orderBy:'label'" ng-click="OpportunityCtrl.onDataPointClick(dataPoint)" class="secondary-light pill button mr-xxs">Width</a><!---->
+                        </div>
+                    </div>
+                    <!----><!-- Phone Number Field Label / Help Text -->
+                    <div class="row mb-0">
+                        <div class="columns">
+                            <label>Phone Number</label>
+                        </div>
+                    </div>
+                    <!-- Work Phone Number -->
+                    <div class="row">
+                        <div class="columns">
+                            <!-- Input-->
+                            <label>
+                                Enter your work phone number. Your brand profile and contact info will be attached.<!-- Error Messages --> 
+                                <span ng-messages="OpportunityCtrl.form['workPhone'].$error" class="float-right red ng-inactive">
+                                    <!----> 
+                                </span>
+                                <!-- Field --> <input ng-model="OpportunityCtrl.models.workPhone" id="workPhone" name="workPhone" placeholder="Enter phone number" ng-required="OpportunityCtrl.sendMode === 'publish' &amp;&amp; OpportunityCtrl.form.$submitted" class="ng-pristine ng-untouched ng-empty ng-valid ng-valid-required" type="text">
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Responses -->
+        <div class="responses card-grid">
+            <span><h5 class="mb-s">Products Under Review</h5></span>
+           <!---->
+           <div class="card clickable" ng-repeat="product in OpportunityCtrl.productResponses" ng-class="{ inactive: (product.marking === 'D') }">
+              <!-- Image -->
+              <div class="card-section">
+                 <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/mosa-scenes-white-grey-grain-white-grey-clay-bathroom-20171117-150238250832.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+              </div>
+              <!-- Info -->
+              <div class="card-section">
+                 <div class="row">
+                    <!-- Response Marking -->
+                    <div class="columns shrink"><span class="caption gray" ng-class="{'gray' : (product.marking === 'N'),
+                       'green' : (product.marking === 'F'),
+                       'light-gray' : (product.marking === 'D') }">In Review</span></div>
+                 </div>
+                 <div class="row align-middle">
+                    <div class="small-10 columns pr-s">
+                       <!-- Product Name -->
+                       <div class="row"><strong class="ellipsis" title="Scenes Porcelain Tile">Scenes Porcelain Tile</strong></div>
+                       <!-- Brand Name -->
+                       <div class="row align-middle">
+                          <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                             <p class="mb-0 ellipsis" title="Mosa">Mosa</p>
+                          </div>
+                          <div class="columns pl-xxs"><span class="architizer-glyph blue-500 pl-0">&nbsp;</span></div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <!---->
+           <div class="card clickable" ng-repeat="product in OpportunityCtrl.productResponses" ng-class="{ inactive: (product.marking === 'D') }">
+              <!-- Image -->
+              <div class="card-section">
+                 <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/3662052_orig-20171117-150332733182.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+              </div>
+              <!-- Info -->
+              <div class="card-section">
+                 <div class="row">
+                    <!-- Response Marking -->
+                    <div class="columns shrink"><span class="caption gray" ng-class="{'gray' : (product.marking === 'N'),
+                       'green' : (product.marking === 'F'),
+                       'light-gray' : (product.marking === 'D') }">In Review</span></div>
+                 </div>
+                 <div class="row align-middle">
+                    <div class="small-10 columns pr-s">
+                       <!-- Product Name -->
+                       <div class="row"><strong class="ellipsis" title="Otro Porcelain Tile">Otro Porcelain Tile</strong></div>
+                       <!-- Brand Name -->
+                       <div class="row align-middle">
+                          <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                             <p class="mb-0 ellipsis" title="C to C Tile">C to C Tile</p>
+                          </div>
+                          <div class="columns pl-xxs"><span class="architizer-glyph blue-500 pl-0">+</span></div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <!---->
+           <div class="card clickable" ng-repeat="product in OpportunityCtrl.productResponses" ng-class="{ inactive: (product.marking === 'D') }">
+              <!-- Image -->
+              <div class="card-section">
+                 <div class="card-image card-image-no-margin image-overlay-info" style="background-image: url('https://architizer-prod.imgix.net/media/profile_build_gallery04-20171117-150427725380.jpg?auto=format,compress&amp;cs=strip&amp;fit=crop&amp;q=60&amp;w=520')"></div>
+              </div>
+              <!-- Info -->
+              <div class="card-section">
+                 <div class="row">
+                    <!-- Response Marking -->
+                    <div class="columns shrink"><span class="caption gray" ng-class="{'gray' : (product.marking === 'N'),
+                       'green' : (product.marking === 'F'),
+                       'light-gray' : (product.marking === 'D') }">In Review</span></div>
+                 </div>
+                 <div class="row align-middle">
+                    <div class="small-10 columns pr-s">
+                       <!-- Product Name -->
+                       <div class="row"><strong class="ellipsis" title="Build Porcelain Tile">Build Porcelain Tile</strong></div>
+                       <!-- Brand Name -->
+                       <div class="row align-middle">
+                          <div class="columns shrink fs-s gray pr-0" style="max-width: 85%">
+                             <p class="mb-0 ellipsis" title="Nemo Tile">Nemo Tile</p>
+                          </div>
+                          <div class="columns pl-xxs"><span class="architizer-glyph blue-500 pl-0">+</span></div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <!---->
+        </div>
 
     </div>
 
