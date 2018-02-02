@@ -738,8 +738,7 @@ The examples below are the main image-based card types on Architizer.
 
 **Project Cards** - Displays project title and phase with edit button. `-wide` (16:9) image ratio w/ information on hover.  
 **Search Cards** - Displays search title and # of products inside. Mosaic of floating product images as card content.  
-**Product Cards** - Displays product and brand names (note smaller type size) with product action button. `-standard` (4:3) image ratio displaying product image and creator info on hover overlay.   
-**Recommended Product Cards, clickable** - Displays recommended product and brand name (along with PRO badge if applicable) with an add button. `-standard` image ratio.
+**Product Cards** - Displays product and brand names (note smaller type size) with product action button. `-standard` (4:3) image ratio displaying product image and creator info on hover overlay.
 
 ```html_example
 <div class="row small-up-1 medium-up-2 large-up-3">
@@ -898,53 +897,6 @@ The examples below are the main image-based card types on Architizer.
           <div class="small-2 columns" style="white-space: nowrap">
             <div class="float-right">
               <a class="button tiny secondary-light hover-bg-green-500""><span class="material-icons fs-base">done</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <!-- Card 4 - Recommended Product Card Fixed-->
-    <div class="card clickable responsive-image recommended">
-      <!-- Card Image -->
-      <div class="img-standard"
-           style="background-image: url('/docs/img/table.jpg')"></div>
-      <!-- Card Content -->
-      <div class="card-section">
-        <div class="row align-middle">
-          <div class="small-10 columns mt-xs">
-            <!-- Product Name -->
-            <div class="row">
-              <strong class="ellipsis">Knoll Custom Teak Executive Table</strong>
-            </div>
-            <div class="row">
-              <!-- Brand Name -->
-              <!-- Brand name column width needs to be calculated so that the addition of the PRO badge doesn't cause a column break -->
-              <div class="columns shrink subtitle fs-base ellipsis pr-xs"
-                   style="max-width: calc(100% - 55px);">Knoll United States of America</div>
-              <div class="columns small-3"
-                   style="min-width: 55px;">
-                <!-- PRO badge width is fixed at 55px so that brand name column can be calculated accordingly -->
-                <div class="row">
-                  <!-- Verified Badge -->
-                  <div class="columns shrink pl-0 pr-xxs">
-                    <span class="verified">+</span>
-                  </div>
-                  <!-- Pro Badge -->
-                  <div class="columns shrink pl-0">
-                    <span class="pro">PRO</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- '+' button -->
-          <div class="small-2 columns" style="white-space: nowrap;">
-            <div class="float-right">
-              <a class="button tiny">
-                <span class="material-icons fs-base">add</span>
-              </a>
             </div>
           </div>
         </div>
