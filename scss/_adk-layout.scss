@@ -70,6 +70,7 @@
 .card-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto 1fr;
   grid-gap: $grid-gutter;
   span {
     grid-column: span 1; 
@@ -178,25 +179,18 @@
 }
 
 // Opp view grid
-.opp-grid {
+.opp-details {
   display: grid;
   grid-gap: $space;
-  grid-template-rows: auto auto;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 5fr 4fr;
   grid-template-areas: 
-  "details image"
-  "form responses";
+  "details image";
+  // "responses .";
   .details {
     grid-area: details;
   }
   .image {
     grid-area: image;
-  }
-  .form {
-    grid-area: form;
-  }
-  .responses {
-    grid-area: responses;
   }
 }
 
