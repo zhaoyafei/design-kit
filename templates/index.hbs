@@ -1,0 +1,36 @@
+<!doctype html>
+<html class="adk no-js" lang="en">
+  <head>
+    <style type="text/css">
+      html, body, .container {
+        height: 100%;
+      }
+      .adk .templates-list {
+        list-style-type: none;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADK Templates</title>
+    <!-- Architizer Design Kit CSS -->
+    <link rel="stylesheet" href="/css/adk.css" />
+  </head>
+
+  <body class="bg-extra-light-gray">
+    <div class="row flex-child-auto flex-container flex-dir-row align-middle align-center">
+      <h1 class="fw-bold columns small-12">
+        ADK Templates
+      </h1>
+      <ul class="templates-list columns small-12">
+        {{#each adkTemplates}}
+          <li>
+            <a href="{{this.url}}">
+              {{this.title}}
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </body>
+</html>
