@@ -10,6 +10,7 @@ dependencies:
     - npm install
     - gulp sass
     - gulp docs
+    - gulp createAdkTemplatesList
 
 test:
   override:
