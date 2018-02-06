@@ -2,16 +2,34 @@ var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
 var sherpa = require('style-sherpa');
 var cssWrap = require('gulp-css-wrap');
+var fs = require('fs');
+var path = require('path');
 
 var sassPaths = [
   'node_modules/normalize-scss/sass',
   'node_modules/foundation-sites/scss',
   'node_modules/motion-ui/src'
 ];
+var adkTemplatesDir = path.resolve(__dirname, 'templates');
+var adkTemplatesData = fs.readdirSync(adkTemplatesDir)
+  .filter(adkTemplateFile => adkTemplateFile.indexOf('index') < 0) // exclude the `.hbs` template
+  .map(adkTemplateFile => {
+    return {
+      title: adkTemplateFile.split('.')[0], // remove `.html` extension
+      url: adkTemplateFile
+    };
+  });
 
 ////////////////////////////////////////////////////////////////////////////////
 // Tasks
 ////////////////////////////////////////////////////////////////////////////////
+
+gulp.task('createAdkTemplatesList', function() {
+  return gulp.src('templates/index.hbs')
+    .pipe($.compileHandlebars({ adkTemplates: adkTemplatesData }))
+    .pipe($.rename('index.html'))
+    .pipe(gulp.dest('templates'));
+});
 
 // Compile Sass
 gulp.task('sass', function() {
@@ -53,10 +71,11 @@ gulp.task('webserver', function() {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   }
+
 });
 
 // Default task
-gulp.task('default', ['sass', 'docs', 'webserver'], function() {
+gulp.task('default', ['sass', 'docs', 'createAdkTemplatesList', 'webserver'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
   gulp.watch(['docs/**/*', 'docs.md', 'docs.hbs'], ['docs']);
 });

@@ -1902,7 +1902,5 @@ We extend the default [`dropzone.scss`](https://github.com/enyo/dropzone/blob/ma
 
 # Templates
 
-[Template 1](/docs/index.html)  
-[Template 2](/docs/index.html)  
-[Template 3](/docs/index.html)  
+[Templates Directory](/templates/)
 
