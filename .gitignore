@@ -4,5 +4,5 @@ npm_debug.log
 npm-debug.log
 docs/index.html
 css
-
+templates/index.html
 templates/masonry-grid.html
