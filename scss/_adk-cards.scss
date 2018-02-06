@@ -227,6 +227,11 @@
 
   // Large breakpoint height
   @include breakpoint(large) {
+    height: 14rem;
+  }
+
+  // XLarge breakpoint height
+  @include breakpoint(xlarge) {
     height: 15rem;
   }
 }
