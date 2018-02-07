@@ -49,6 +49,7 @@
   color: $white;
   background-color: $black;
   grid-template-columns: auto;
+  grid-template-rows: 1fr;
   @include breakpoint(medium) {
     grid-template-columns: repeat(2, auto);
   }
