@@ -1,0 +1,392 @@
+<!doctype html>
+<html class="adk no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Architizer Brand Profile CSS Grid</title>
+    <!-- Architizer Design Kit CSS -->
+    <link rel="stylesheet" href="/css/adk.css"/>
+  </head>
+  <body class="bg-extra-light-gray">
+    <!-- Page content begins here -->
+    <!-- Header -->
+    <div class="header bg-black">
+        <div class="row bg-black align-center collapse pl-m pr-m">
+            <div class="columns">
+                <header class="adk">
+                    <div id="Header">
+                        <div id="small-screen-header" class="row align-middle bg-black hide-for-large">
+                            <a href="/" target="_self" class="js-use-pushstate">
+                                <div class="columns shrink">
+                                    <svg id="architizer-logotype-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 12 18" style="height: 18px;" title="Architizer">
+                                        <title>Architizer</title>
+                                        <defs>
+                                            <style>
+                                                .architizer-logo {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <polygon id="letter-a" class="architizer-logo" points="9.63 13.7 5.76 2.18 5.76 2.18 2.38 12.01 7.15 12.01 7.15 13.6 0 13.6 4.87 0.1 6.85 0.1 11.62 13.6 9.63 13.6 9.63 13.7"></polygon>
+                                    </svg>
+                                </div>
+                            </a>
+                            <div class="columns bg-gray-800">
+                                <div class="row align-middle">
+                                    <div class="columns shrink">
+                                        <span class="gray material-icons">search</span>
+                                    </div>
+                                    <div class="columns p-0">
+                                        <form action="/search/q/q:" id="small-search-form" autocomplete="off">
+                                            <input type="text" id="small-search-form-input" class="searchbar-input bg-gray-800 gray-50 m-0 p-0" placeholder="Search…">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a id="sidebar-link">
+                                <div class="columns shrink">
+                                    <span class="fs-l">☰</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="sidebar-content" class="bg-black">
+                            <a href="/products/q/?q=&amp;type=all-products&amp;viewmode=products" target="_self" onclick="closeSidebar()">
+                                <div class="row align-middle mr-0 p-xs">
+                                    <div class="columns">
+                                        <span class="link-products">Products</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/products/q/?q=&amp;type=all-products&amp;viewmode=brands" target="_self" onclick="closeSidebar()">
+                                <div class="row align-middle mr-0 p-xs">
+                                    <div class="columns">
+                                        <span class="link-brands">Portfolios</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/source" target="_self" onclick="closeSidebar()">
+                                <div class="row align-middle mr-0 p-xs">
+                                    <div class="columns">
+                                        <span class="link-source">Journal</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="m-0">
+                            <a href="/login/" target="_self" onclick="closeSidebar()" class="js-use-pushstate">
+                                <div class="row align-middle mr-0 p-xs">
+                                    <div class="columns">
+                                        <span>Sign In</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/register/" target="_self" onclick="closeSidebar()" class="js-use-pushstate">
+                                <div class="row align-middle mr-0 p-xs">
+                                    <div class="columns">
+                                        <span>Join Now</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- -->
+                        </div>
+                        <div id="large-screen-header" class="row bg-black show-for-large">
+                            <div class="columns align-self-middle shrink pr-0 pl-0">
+                                <a href="/" target="_self" class="js-use-pushstate">
+                                    <svg id="architizer-logotype" xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 72 18" style="height: 18px;" title="Architizer">
+                                        <title>Architizer</title>
+                                        <defs>
+                                            <style>
+                                                .architizer-logo {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <polygon id="letter-a" class="architizer-logo" points="9.63 13.7 5.76 2.18 5.76 2.18 2.38 12.01 7.15 12.01 7.15 13.6 0 13.6 4.87 0.1 6.85 0.1 11.62 13.6 9.63 13.6 9.63 13.7"></polygon>
+                                        <path id="letter-r" class="architizer-logo" d="M17.67,5.66c-.2,0-.4-.1-.6-.1A2.93,2.93,0,0,0,14.3,8.74v5H12.61V4.27H14.3V6.06a3,3,0,0,1,2.88-2,.74.74,0,0,1,.5.1Z" transform="translate(0)"></path>
+                                        <path id="letter-c" class="architizer-logo" d="M22.14,13.9c-2.78,0-4.47-1.89-4.47-5s1.89-5,4.47-5a4.05,4.05,0,0,1,4,2.58l-1.39.7a2.59,2.59,0,0,0-2.58-1.89c-1.69,0-2.78,1.29-2.78,3.57s1.19,3.57,2.78,3.57a2.93,2.93,0,0,0,2.78-1.69l1.29.7A4.22,4.22,0,0,1,22.14,13.9Z" transform="translate(0)"></path>
+                                        <path id="letter-h" class="architizer-logo" d="M35.15,13.7H33.46V8.24c0-2.09-.79-2.68-2.18-2.68a2.53,2.53,0,0,0-2.48,2.78V13.8H27.11V.2h1.69V5.66a3.29,3.29,0,0,1,3.08-1.59,3,3,0,0,1,2.68,1.19,4.51,4.51,0,0,1,.6,2.58V13.7Z" transform="translate(0)"></path>
+                                        <g id="letter-i">
+                                            <rect id="letter-i-line" class="architizer-logo" x="36.54" y="4.27" width="1.69" height="9.43"></rect>
+                                            <path id="letter-i-dot" class="architizer-logo" d="M37.43,2.18a1.1,1.1,0,0,1-1.09-1.09,1.09,1.09,0,1,1,2.18,0A1,1,0,0,1,37.43,2.18Z" transform="translate(0)"></path>
+                                        </g>
+                                        <polygon id="letter-t" class="architizer-logo" points="45.18 5.56 43.09 5.56 43.09 13.6 41.4 13.6 41.4 5.56 39.62 5.56 39.62 4.17 41.4 4.17 41.4 1.19 43.09 1.19 43.09 4.17 45.18 4.17 45.18 5.56"></polygon>
+                                        <g id="letter-i-2" data-name="letter-i">
+                                            <rect id="letter-i-line-2" data-name="letter-i-line" class="architizer-logo" x="46.47" y="4.27" width="1.69" height="9.43"></rect>
+                                            <circle id="letter-i-dot-2" data-name="letter-i-dot" class="architizer-logo" cx="47.36" cy="1.09" r="1.09"></circle>
+                                        </g>
+                                        <polygon id="letter-z" class="architizer-logo" points="56.89 13.7 49.45 13.7 49.45 12.41 54.81 5.66 49.74 5.66 49.74 4.27 56.89 4.27 56.89 5.56 51.43 12.41 56.89 12.41 56.89 13.7 56.89 13.7"></polygon>
+                                        <path id="letter-e" class="architizer-logo" d="M66.13,9.13c0-2.78-1.39-5-4.27-5-2.58,0-4.47,2-4.47,4.87,0,3.08,1.79,5,4.47,5A4.79,4.79,0,0,0,66,11.82l-1.19-.89a3.13,3.13,0,0,1-2.78,1.59,2.91,2.91,0,0,1-3-3.18h7ZM59.18,8A2.75,2.75,0,0,1,62,5.36c1.39,0,2.28,1,2.48,2.68Z" transform="translate(0)"></path>
+                                        <path id="letter-r-2" data-name="letter-r" class="architizer-logo" d="M72.48,5.66c-.2,0-.4-.1-.6-.1a2.93,2.93,0,0,0-2.78,3.18v5H67.42V4.27h1.69V6.06a3,3,0,0,1,2.88-2,.74.74,0,0,1,.5.1Z" transform="translate(0)"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="columns align-self-middle shrink">
+                                <ul class="menu">
+                                    <li>
+                                        <a href=# target="_self">Portfolios</a>
+                                    </li>
+                                    <li>
+                                        <a href=# target="_self">Brands</a>
+                                    </li>
+                                    <li>
+                                        <a href=# target="_self">Journal</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="columns bg-gray-800">
+                                <div class="row align-middle" id="search-form-row">
+                                    <div class="columns shrink">
+                                        <span class="gray material-icons" id="search-icon">search</span>
+                                    </div>
+                                    <div class="columns p-0">
+                                        <form id="search-form" action="/search/q/q:" autocomplete="off">
+                                            <div class="row align-middle">
+                                                <div class="columns">
+                                                    <input type="text" id="search-form-input" class="searchbar-input bg-gray-800 gray-50 m-0 p-0" placeholder="Search…">
+                                                </div>
+                                                <div class="columns shrink">
+                                                    <i class="material-icons gray-500 material-icons gray hover-gray-100 float-right mr-xs hide" id="reset-query">clear</i>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="search-results-row" class="row align-top show-for-large hide">
+                                    <div id="search-results-container" class="bg-gray-800">
+                                        <div id="search-result-list" class="row align-middle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- user dropwdown -->
+                            <div id="dropdown-link" class="columns align-self-middle shrink">
+                                <a id="user-dropdown">
+                                    <div class="row align-middle">
+                                        <div class="columns shrink pr-0">
+                                            <!-- -->
+                                            <!-- -->
+                                            <img id="dropdown-link-avatar" src="https://architizer-prod.imgix.net/media/1466174102182parsa-headshot-sat.JPG?q=60&amp;auto=format,compress&amp;cs=strip&amp;w=200">
+                                            <!-- -->
+                                            <!-- -->
+                                            <!-- -->
+                                        </div>
+                                        <div class="columns">
+                                            <div style="max-width: 200px;" class="ellipsis" title="Parsa Kamali">Parsa Kamali</div>
+                                        </div>
+                                        <div class="columns shrink pl-0">
+                                            <span class="fs-xs">▼</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <style type="text/css">
+                            #large-screen-header .row:before,
+                            #large-screen-header .row:after {
+                                display: none;
+                            }
+                            
+                            #search-results-container {
+                                top: 3rem;
+                            }
+                        </style>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <!-- Context bar -->
+    <div class="bg-white pt-base pb-base">
+        <div class="context-bar grid-container">
+            <img class="mb-0 thumbnail" src="https://architizer-prod.imgix.net/media/1398869635126130615_136.jpg?q=60&amp;auto=format,compress&amp;cs=strip&amp;w=1680" style="width: 60px; height: 60px;">
+            <!-- Search Info -->
+            <div>
+                <h2 style="line-height: 1;"><strong>Knoll</strong></h2>
+                <a href=# class="fs-s">http://knoll.com</a>
+            </div>
+<!--             <div style="justify-self:end;">
+                <ul class="menu">
+                    <li title="Searches" class="active"><a href="/templates/grid-all-searches.html">Searches</a></li>
+                    <li title="Products"><a href="/templates/grid-all-products.html">Products</a></li>
+                    <li title="Messages"><a href="/templates/grid-messages.html">Messages</a></li>
+                    <li title="Details"><a href="">Details</a></li>
+                    <li><a><i class="material-icons">help</i></a></li>
+                </ul>
+            </div> -->
+            <div>
+                <div class="row align-middle">
+                    <div class="small-12 medium-expand columns shrink"><a class="about-link blue" href="#">About</a></div>
+                    <div class="small-12 medium-expand columns shrink">
+                        <a class="projects-link row collapse align-middle gray" href="/brands/knoll/projects/">
+                            <div class="columns shrink bg-white black pl-xxxs pr-xxxs fs-s mr-xs" style="font-weight: bold; border: 1px solid rgba(133, 157, 175, 0.3); border-radius: 3px;">133</div>
+                            <div class="columns">Projects</div>
+                        </a>
+                    </div>
+                    <div class="small-12 medium-expand columns shrink">
+                        <a class="products-link row collapse align-middle gray" href="/brands/knoll/products/">
+                            <span class="columns shrink bg-white black pl-xxxs pr-xxxs fs-s mr-xs" style="font-weight: bold; border: 1px solid rgba(133, 157, 175, 0.3); border-radius: 3px;">0</span>
+                            <div class="columns">Products</div>
+                        </a>
+                    </div>
+                </div>
+<!--                 <div class="">
+                    <a class="button secondary"><span class="material-icons fs-s" style="transform: scaleX(-1);">phone</span></a>
+                    <a class="button secondary settings-icon" href="./edit/details"><span class="fs-s material-icons">settings</span></a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile -->
+    <div class="grid-container">
+        <div class="grid-sidebar left">
+
+            <!-- Details -->
+            <div>
+                <!-- IMG Row -->
+                <div class="card-grid">
+                    <!-- Image -->
+                    <div>
+                        <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/1481311384030barcelonastool3.jpg?q=60&auto=format%2Ccompress&cs=strip&w=580&fit=crop')"></div>
+                    </div> 
+                    <!-- Image -->
+                    <div>
+                        <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/144613702383312551_h.jpg?q=60&auto=format%2Ccompress&cs=strip&w=580&fit=crop')"></div>
+                    </div> 
+                    <!-- Image -->
+                    <div>
+                        <div class="img-standard" style="background-image: url('https://architizer-prod.imgix.net/media/148131169648812242_l.jpg?q=60&auto=format%2Ccompress&cs=strip&w=580&fit=crop')"></div>
+                    </div>
+                </div>
+                <!-- Description -->
+                <p class="mb-base">
+                    Knoll is a constellation of design-driven brands and people, working together with our clients to create inspired modern interiors. Since 1938, we've been thinking about how people interact with their environments, and how their environments impact what they do.
+
+                    Today, our commitment to design, workplace expertise, and dedication to sustainable practices continues to yield a unique portfolio of pieces that respond to evolving needs at home and at work.
+
+                    Knoll is Modern Always® because modern always works.
+                </p>
+                <!-- Projects in Progress -->
+                <div class="card p-base mb-base">
+                    <span class="fw-medium mb-xs">Projects in Progress</span>
+                    <table>
+                        <tbody style="width: 100%; display: table;">
+                            <tr>
+                                <td style="width: 33%;" class="pl-0">High School in New York</td>
+                                <td style="width: 33%;">Construction Documents</td>
+                                <td style="width: 33%;">In Review</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 33%;" class="pl-0">Apartment in New York</td>
+                                <td style="width: 33%;">Schematic Design</td>
+                                <td style="width: 33%;">In Review</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 33%;" class="pl-0">Multi Unit Housing in New York</td>
+                                <td style="width: 33%;">Design Development</td>
+                                <td style="width: 33%;">In Review</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 33%;" class="pl-0">Office in New York</td>
+                                <td style="width: 33%;">Design Development</td>
+                                <td style="width: 33%;">In Review</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 33%;" class="pl-0">Museum in New York</td>
+                                <td style="width: 33%;">Design Development</td>
+                                <td style="width: 33%;">In Review</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Firms Using -->
+                <div class="card p-base mb-base">
+                    <span class="fw-medium mb-xs">Firms Using this Brand</span>
+                    <div class="row small-up-1 medium-up-2 large-up-3 pb-xxs">
+                        <div class="column ellipsis pt-xs pb-xs" style=""><a href="https://architizer.com/firms/perkinswill/" class="black"><img alt="Perkins+Will" src="https://architizer-prod.imgix.net/media/1375212305636logo-stacked-blue.jpg?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>Perkins+Will</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/cannon-design/" class="black"><img alt="CannonDesign" src="https://architizer-prod.imgix.net/mediadata/firms/162013/7da8d9447b8b6d50c00869b4eb7296a1.png?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>CannonDesign</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/gensler/" class="black"><img alt="Gensler" src="https://architizer-prod.imgix.net/media/1447352137596Social_Media_Icon.jpg?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>Gensler</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/rockwell-group/" class="black"><img alt="Rockwell Group" src="https://architizer-prod.imgix.net/media/1376318139640RG_logo_black.JPG?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>Rockwell Group</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/shop-architects/" class="black"><img alt="SHoP Architects" src="https://architizer-prod.imgix.net/media/1433345737024shop_logo.jpg?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>SHoP Architects</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/ennead-architects/" class="black"><img alt="Ennead Architects" src="https://architizer-prod.imgix.net/media/1386887989725ennead_cutout_black.jpg?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>Ennead Architects</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/fxfowle-architects/" class="black"><img alt="FXFOWLE Architects" src="https://architizer-prod.imgix.net/mediadata/firms/452009/fa8b7924b64033454b9e89405755f5e2.jpg?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>FXFOWLE Architects</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/icrave/" class="black"><img alt="ICRAVE" src="https://architizer-prod.imgix.net/mediadata/firms/302011/4d8f42ea5919b2fc7b7978d64bd13ed1.jpg?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>ICRAVE</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/fran-silvestre-arquitectos/" class="black"><img alt="Fran Silvestre Arquitectos" src="https://architizer-prod.imgix.net/media/1380539688665ALT01B.jpg?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>Fran Silvestre Arquitectos</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/brooks-scarpa-formerly-pugh-scarpa-architects/" class="black"><img alt="Brooks + Scarpa (formerly Pugh + Scarpa) Architects" src="https://architizer-prod.imgix.net/mediadata/firms/382010/f003fdd17b9197509834dae13bd665ec.jpg?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>Brooks + Scarpa (formerly Pugh + Scarpa) Architects</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/hernandez-silva-arquitectos/" class="black"><img alt="Hernandez Silva Architects" src="https://architizer-prod.imgix.net/media/1385669680126Untitled-1.jpg?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>Hernandez Silva Architects</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/studiomk27-marcio-kogan/" class="black"><img alt="StudioMK27 - Marcio Kogan" src="https://architizer-prod.imgix.net/media/1491584595996logo_boneca.jpg?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>StudioMK27 - Marcio Kogan</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/belzberg-architects/" class="black"><img alt="Belzberg Architects" src="https://architizer-prod.imgix.net/mediadata/firms/112011/c7f4c9311386ac78965814f28bdde648.jpg?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>Belzberg Architects</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/za-bor-architects/" class="black"><img alt="za bor architects" src="https://architizer-prod.imgix.net/mediadata/firms/432010/0f05af98bd8b27bfdd970940c99ff7b1.jpg?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>za bor architects</span></a></div>
+                        <div class="column ellipsis pt-xs pb-xs" style="border-top: 1px solid rgba(133, 157, 175, 0.075);"><a href="https://architizer.com/firms/eskewdumezripple/" class="black"><img alt="Eskew+Dumez+Ripple" src="https://architizer-prod.imgix.net/mediadata/firms/452012/1571626c9c6e5a7facec62f1913fae36.png?q=60&amp;auto=format%2Ccompress&amp;cs=strip&amp;w=22&amp;h=22&amp;fit=crop" style="width: 22px; height: 22px; margin-right: 10px;"><span>Eskew+Dumez+Ripple</span></a></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar hide-for-small-only">
+                <div class="row collapse pb-base">
+                    <div class="columns">
+                        <h2 class="fw-medium">111</h2>
+                        <h6 class="subheader gray mt-0 mb-s">Firms Using This Brand</h6>
+                        <h6 class="subheader black fw-medium mt-m">Categories</h6>
+                        <span class="tag mr-xxs mt-xs">Lighting</span>
+                        <span class="tag mr-xxs mt-xs">Living Room &amp; Office Accessories</span>
+                        <span class="tag mr-xxs mt-xs">Furniture - Residential</span>
+                        <span class="tag mr-xxs mt-xs">Windows</span>
+                        <span class="tag mr-xxs mt-xs">Synthetic Materials</span>
+                        <span class="tag mr-xxs mt-xs">Furniture - Contract</span>
+                        <span class="tag mr-xxs mt-xs">Textiles</span>
+                        <h6 class="subheader black fw-medium mt-m">Links</h6>
+                        <div class="columns">
+                            <div class="row">
+                                <a href="http://www.facebook.com/knollinc" target="_blank">
+                                    <div class="columns float-left p-0" style="fill: #859DAF;">
+                                    </div>
+                                    <div class="columns float-right">
+                                        <h6 class="mb-0 quicksilver bold fs-base" style="text-transform: capitalize;">facebook</h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="row">
+                                <a href="http://twitter.com/knoll_inc" target="_blank">
+                                    <div class="columns float-left p-0" style="fill: #859DAF;">
+                                    </div>
+                                    <div class="columns float-right">
+                                        <h6 class="mb-0 quicksilver bold fs-base" style="text-transform: capitalize;">twitter</h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="row">
+                                <a href="http://www.pinterest.com/knolldesign/" target="_blank">
+                                    <div class="columns float-left p-0" style="fill: #859DAF;">
+                                    </div>
+                                    <div class="columns float-right">
+                                        <h6 class="mb-0 quicksilver bold fs-base" style="text-transform: capitalize;">pinterest</h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Page content ends here -->
+    <!-- JavaScript dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
