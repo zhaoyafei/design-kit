@@ -1,3 +1,7 @@
+machine:
+  node:
+    version: 4.4.0
+
 general:
   build_dir: .
   artifacts:
@@ -10,6 +14,7 @@ dependencies:
     - npm install
     - gulp sass
     - gulp docs
+    - gulp createAdkTemplatesList
 
 test:
   override:
