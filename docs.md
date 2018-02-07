@@ -738,8 +738,10 @@ The examples below are the main image-based card types on Architizer.
 
 **Project Cards** - Displays project title and phase with edit button. `-wide` (16:9) image ratio w/ information on hover.  
 **Search Cards** - Displays search title and # of products inside. Mosaic of floating product images as card content.  
-**Product Cards** - Displays product and brand names (note smaller type size) with product action button. `-standard` (4:3) image ratio displaying product image and creator info on hover overlay.   
-**Recommended Product Cards, clickable** - Displays recommended product and brand name (along with PRO badge if applicable) with an add button. `-standard` image ratio.
+**Product Cards** - Displays product and brand names (note smaller type size) with product action button. `-standard` (4:3) image ratio displaying product image and creator info on hover overlay.
+**Responsive Search Cards** - Same content as search card above but without the fixed width.
+**Responsive Product Cards** - Displays the product name, brand name, PRO and verified badges (if available) and action button.
+
 
 ```html_example
 <div class="row small-up-1 medium-up-2 large-up-3">
@@ -904,25 +906,69 @@ The examples below are the main image-based card types on Architizer.
       </div>
     </div>
   </div>
-  <div class="column">
-    <!-- Card 4 - Recommended Product Card Fixed-->
-    <div class="card clickable responsive-image recommended">
+  <div class="columns small-4">
+    <!-- Card 4 - Responsive Search Card (Multi-Image) -->
+    <div class="card multi-image responsive-image clickable">
       <!-- Card Image -->
-      <div class="img-standard"
-           style="background-image: url('/docs/img/table.jpg')"></div>
+      <div class="card-section">
+        <div class="card-multi-image card-multi-image-no-margin">
+          <div class="image-items-container pb-0">
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1498657209559-duchateau_chateau_02.png?auto=format,compress&cs=strip&fit=crop&q=60&w=520');"></div>
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1498657209559-duchateau_chateau_02.png?auto=format,compress&cs=strip&fit=crop&q=60&w=520');"></div>
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1498657209559-duchateau_chateau_02.png?auto=format,compress&cs=strip&fit=crop&q=60&w=520');"></div>
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1498657209559-duchateau_chateau_02.png?auto=format,compress&cs=strip&fit=crop&q=60&w=520');"></div>
+            <div class="image-item" style="background-image: url('https://architizer-prod.imgix.net/media/1498657209559-duchateau_chateau_02.png?auto=format,compress&cs=strip&fit=crop&q=60&w=520');"></div>
+          </div>
+        </div>
+      </div>
       <!-- Card Content -->
       <div class="card-section">
         <div class="row align-middle">
-          <div class="small-10 columns mt-xs">
+          <!-- Name -->
+          <div class="small-10 columns">
             <!-- Product Name -->
             <div class="row">
-              <strong class="ellipsis">Knoll Custom Teak Executive Table</strong>
+              <strong class="ellipsis">Product Name</strong>
+            </div>
+            <div class="row">
+              <!-- Brand Name -->
+              <div class="columns shrink subtitle fs-s ellipsis gray">12 Products</div>
+            </div>
+          </div>
+          <!-- Shortlist checkmark button -->
+          <div class="small-2 columns"
+               style="white-space: nowrap;">
+            <div class="float-right">
+              <a class="button tiny secondary hollow"
+                 tooltip="Shortlist">
+                <span class="material-icons">edit</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="columns small-4">
+    <!-- Card 5 - Responsive Product Card -->
+    <div class="card responsive-image clickable">
+      <!-- Card Image -->
+      <div class="img-standard"
+           style="background-image: url('https://architizer-prod.imgix.net/media/1498657209559-duchateau_chateau_02.png?auto=format,compress&cs=strip&fit=crop&q=60&w=520');">
+      </div>
+      <!-- Card Content -->
+      <div class="card-section">
+        <div class="row align-middle">
+          <div class="small-10 columns">
+            <!-- Product Request Name -->
+            <div class="row">
+              <strong class="ellipsis">Product Request Name</strong>
             </div>
             <div class="row">
               <!-- Brand Name -->
               <!-- Brand name column width needs to be calculated so that the addition of the PRO badge doesn't cause a column break -->
               <div class="columns shrink subtitle fs-base ellipsis pr-xs"
-                   style="max-width: calc(100% - 55px);">Knoll United States of America</div>
+                   style="max-width: calc(100% - 55px);">Duravit</div>
               <div class="columns small-3"
                    style="min-width: 55px;">
                 <!-- PRO badge width is fixed at 55px so that brand name column can be calculated accordingly -->
@@ -939,11 +985,13 @@ The examples below are the main image-based card types on Architizer.
               </div>
             </div>
           </div>
-          <!-- '+' button -->
-          <div class="small-2 columns" style="white-space: nowrap;">
+          <!-- Shortlist checkmark button -->
+          <div class="small-2 columns"
+               style="white-space: nowrap;">
             <div class="float-right">
-              <a class="button tiny">
-                <span class="material-icons fs-base">add</span>
+              <a class="button tiny secondary hover-bg-green-500 secondary-light shortlist-button"
+                 tooltip="Shortlist">
+                <span class="material-icons fs-base">check</span>
               </a>
             </div>
           </div>
@@ -1058,13 +1106,11 @@ List views are simple lists that take up 100% of parent element's height and cre
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l pro-icon"
-                          style="display:inline-block; line-height: 1;">+
-                    </span>
+                    <span class="verified">+</span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
+                    <span class="pro">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1096,13 +1142,11 @@ List views are simple lists that take up 100% of parent element's height and cre
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l pro-icon"
-                          style="display:inline-block; line-height: 1;">+
-                    </span>
+                    <span class="verified">+</span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
+                    <span class="pro">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1134,13 +1178,11 @@ List views are simple lists that take up 100% of parent element's height and cre
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l pro-icon"
-                          style="display:inline-block; line-height: 1;">+
-                    </span>
+                    <span class="verified">+</span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
+                    <span class="pro">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1183,13 +1225,11 @@ Please note that if you don't include the list header `.list-view-header`, you m
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l pro-icon"
-                          style="display:inline-block; line-height: 1;">+
-                    </span>
+                    <span class="verified">+</span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
+                    <span class="pro">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1221,13 +1261,11 @@ Please note that if you don't include the list header `.list-view-header`, you m
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l pro-icon"
-                          style="display:inline-block; line-height: 1;">+
-                    </span>
+                    <span class="verified">+</span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
+                    <span class="pro">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1259,13 +1297,11 @@ Please note that if you don't include the list header `.list-view-header`, you m
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l pro-icon"
-                          style="display:inline-block; line-height: 1;">+
-                    </span>
+                    <span class="verified">+</span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
+                    <span class="pro">PRO</span>
                   </div>
                 </div>
               </div>
@@ -1297,13 +1333,11 @@ Please note that if you don't include the list header `.list-view-header`, you m
               <div class="row">
                 <!-- Verified Badge -->
                   <div class="columns shrink pl-0 pr-xxs">
-                    <span class="architizer-glyph blue-500 fs-l pro-icon"
-                          style="display:inline-block; line-height: 1;">+
-                    </span>
+                    <span class="verified">+</span>
                   </div>
                   <!--  Pro Badge -->
                   <div class="columns shrink pl-0">
-                    <span class="blue capitalize fs-s fw-bold pro-text">PRO</span>
+                    <span class="pro">PRO</span>
                   </div>
                 </div>
               </div>
