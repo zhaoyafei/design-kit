@@ -7,7 +7,7 @@
  * Include it like this:
  *
  *  .my-class-to-include-a-loader-on.loading:before {
- *    @include adk-spinner($space);
+ *    @include adk-loading-spinner($space);
  *
  *    // Position the loading spinner like this: (customize for the class you need to extend)
  *    position: absolute;
@@ -33,6 +33,39 @@
   border: $spinner-width solid map-get(generate-palette($adk-quicksilver), 100);
   border-top-color: $adk-quicksilver;
   animation: spinner .6s linear infinite;
+}
+
+// Loaders as individual elements
+// Use this: <div class="loader-s"></div>
+.loading-spinner-s {
+  position: relative;
+  width: $space-s;
+  height: $space-s;
+  &:after {
+    @include adk-loading-spinner($space-s);
+    position: absolute;
+  }
+}
+
+.loading-spinner-m {
+  position: relative;
+  width: $space-m;
+  height: $space-m;
+  &:after {
+    @include adk-loading-spinner($space-m);
+    position: absolute;
+  }
+}
+
+.loading-spinner-l {
+  position: relative;
+  width: $space-l;
+  height: $space-l;
+
+  &:after {
+    @include adk-loading-spinner($space-l);
+    position: absolute;
+  }
 }
 
 /**

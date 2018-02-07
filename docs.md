@@ -1459,6 +1459,17 @@ Refer to the code below to structure a modal or start with the modal template in
 ```
 ---
 
+## Loading Spinners
+
+```html_example
+<div class="row align-middle">
+  <div class="columns shrink"><div class="loading-spinner-s"></div></div>
+  <div class="columns shrink"><div class="loading-spinner-m"></div></div>
+  <div class="columns shrink"><div class="loading-spinner-l"></div></div>
+</div>
+```
+
+---
 
 
 # Forms
@@ -1891,7 +1902,5 @@ We extend the default [`dropzone.scss`](https://github.com/enyo/dropzone/blob/ma
 
 # Templates
 
-[Template 1](/docs/index.html)  
-[Template 2](/docs/index.html)  
-[Template 3](/docs/index.html)  
+[Templates Directory](/templates/index.html)
 
