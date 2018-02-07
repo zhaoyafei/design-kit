@@ -119,6 +119,12 @@
     justify-items: center;
     text-align: center;
   }
+  // // Use flex class to overide fixed width and use the grid to size the card instead
+  // &.flex {
+  //   width: inherit;
+  //   display: block;
+  //   margin-right: 0px;
+  // }
 
   &.clickable {
     cursor: pointer;
@@ -241,6 +247,41 @@
 
   // Large breakpoint height
   @include breakpoint(large) {
+    height: 15rem;
+  }
+}
+
+.card-multi-image {
+  position: relative;
+  border-radius: $space-xxxs $space-xxxs 0 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: inherit;
+  height: 0;
+  padding-top: 75%;
+
+  &.card-multi-image-no-margin {
+    margin-left: -$space;
+    margin-right: -$space;
+    margin-top: -$space;
+  }
+
+  // Small breakpoint height
+  height: 5rem;
+
+  // Medium breakpoint height
+  @include breakpoint(medium) {
+    height: 10rem;
+  }
+
+  // Large breakpoint height
+  @include breakpoint(large) {
+    height: 14rem;
+  }
+
+  // XLarge breakpoint height
+  @include breakpoint(xlarge) {
     height: 15rem;
   }
 }
