@@ -59,7 +59,7 @@
   display: grid;
   align-items: center;
   overflow: hidden;
-  grid-template-columns: 65px auto 30px;
+  grid-template-columns: auto 1fr auto;
   grid-gap: $grid-gutter;
   &.opportunity {
     grid-template-columns: auto;
@@ -87,12 +87,12 @@
       grid-column: span 3;
     }
   }
-  // @include breakpoint(xlarge) {
-  //   grid-template-columns: repeat(4, 1fr);
-  //   span {
-  //     grid-column: span 4;
-  //   }
-  // }
+  @include breakpoint(xlarge) {
+    grid-template-columns: repeat(4, 1fr);
+    span {
+      grid-column: span 4;
+    }
+  }
 
   .card {
     margin:0;
