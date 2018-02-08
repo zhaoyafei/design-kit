@@ -96,3 +96,30 @@
   border-radius: 50%;
   display: block;
 }
+
+// Type mixins
+@mixin smallcaps {
+  font-variant: all-small-caps;
+  letter-spacing: .5px;
+}
+
+@mixin weight-light {
+  font-family: 'NeueHaasUnicaPro-Light';
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin weight-regular {
+  font-family: 'NeueHaasUnicaPro-Regular';
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin weight-medium {
+  font-family: 'NeueHaasUnicaPro-Medium';
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin weight-bold {
+  font-family: 'NeueHaasUnicaPro-Bold';
+  font-weight: normal;
+  font-style: normal;
+}
