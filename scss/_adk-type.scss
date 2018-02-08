@@ -12,6 +12,32 @@
   }
 }
 
+@mixin smallcaps {
+  font-variant: all-small-caps;
+  letter-spacing: .5px;
+}
+
+@mixin weight-light {
+  font-family: 'NeueHaasUnicaPro-Light';
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin weight-regular {
+  font-family: 'NeueHaasUnicaPro-Regular';
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin weight-medium {
+  font-family: 'NeueHaasUnicaPro-Medium';
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin weight-bold {
+  font-family: 'NeueHaasUnicaPro-Bold';
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1,
 h2,
 h3,
@@ -28,30 +54,21 @@ h6 {
 
 strong, 
 b {
-  font-family: 'NeueHaasUnicaPro-Medium';
-  font-weight: normal;
-  font-style: normal;
+  @include weight-medium;
 }
 
 .fw-bold {
-  font-family: 'NeueHaasUnicaPro-Bold';
-  font-weight: normal;
-  font-style: normal;
+  @include weight-bold;
 }
 .fw-medium {
-  font-family: 'NeueHaasUnicaPro-Medium';
-  font-weight: normal;
-  font-style: normal;
+  @include weight-medium;
 }
 .fw-light {
-  font-family: 'NeueHaasUnicaPro-Light';
-  font-weight: normal;
-  font-style: normal;
+  @include weight-light;
 }
 
 .smallcaps {
-  font-variant: all-small-caps;
-  letter-spacing: .5px;
+  @include smallcaps;
 }
 
 .row.actionbar > h1,h2,h3,h4,h5 {
