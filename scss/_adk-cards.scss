@@ -9,9 +9,9 @@
     display: block;
     padding: 0;
     .card-section {
-      margin: $space-s $card-padding;
+      padding: $space-s $card-padding;
       &:last-of-type {
-        margin: $space-s $card-padding;
+        padding: $space-s $card-padding;
       }
     }
   }
@@ -164,7 +164,7 @@
   }
 
   .card-section {
-    margin: $card-content-margin;
+    padding: $card-content-margin;
     // margin: $space-s $card-padding;
     padding: 0;
 
