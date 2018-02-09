@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
 var sherpa = require('style-sherpa');
-var cssWrap = require('gulp-css-wrap');
 var fs = require('fs');
 var path = require('path');
 
@@ -38,8 +37,8 @@ gulp.task('sass', function() {
       includePaths: sassPaths
     })
     .on('error', $.sass.logError))
-    .pipe(cssWrap({
-      // Wrap all Design Kit CSS in .adk class so we can scope it
+    // Wrap all Design Kit CSS in .adk class so we can scope it
+    .pipe($.cssWrap({
       selector: '.adk',
     }))
     .pipe($.autoprefixer({
