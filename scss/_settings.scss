@@ -49,6 +49,7 @@
 // $global-font-size: 100%;
 // $global-width is defined below breakpoints so we can use a breakpoint value
 // $global-lineheight: 1.5;
+$global-lineheight: 1.5;
 $foundation-palette: (
   primary: $adk-blue,
   secondary: map-get(generate-palette($adk-quicksilver), 100),
