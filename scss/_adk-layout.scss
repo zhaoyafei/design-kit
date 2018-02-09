@@ -55,7 +55,19 @@
   grid-template-columns: auto;
   grid-template-rows: 1fr;
   @include breakpoint(medium) {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: auto 1fr;
+  }
+
+  .menu a:hover {
+    color: $white;
+  }
+
+  .menu a {
+    line-height: 1.5;
+  }
+
+  .active > a {
+    color: $white;
   }
 }
 
