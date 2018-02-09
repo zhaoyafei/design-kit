@@ -35,16 +35,18 @@ gulp.task('createAdkTemplatesList', function() {
 gulp.task('sass', function() {
   return gulp.src('scss/adk.scss')
     .pipe($.sass({
-      includePaths: sassPaths,
-      outputStyle: 'compressed'
+      includePaths: sassPaths
     })
-      .on('error', $.sass.logError))
+    .on('error', $.sass.logError))
+    .pipe(cssWrap({
+      // Wrap all Design Kit CSS in .adk class so we can scope it
+      selector: '.adk',
+    }))
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
-    .pipe(cssWrap({
-      selector: '.adk', // Wrap all Design Kit CSS in .adk class so we can scope it
-    }))
+    // Minify the output
+    .pipe($.cleanCss())
     .pipe(gulp.dest('css'));
 });
 
