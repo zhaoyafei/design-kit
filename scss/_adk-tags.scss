@@ -1,10 +1,9 @@
 .tag {
-	color: $black;
-	padding: $space-xxxs;
+	color: $adk-quicksilver;
+	padding: $space-xxs $space-s;
 	font-size: $font-size-s;
 	background-color: $white;
-	border: 1px solid #b0c0cb;
-	border-radius: 0;
+	// border: 1px solid #b0c0cb;
 	cursor: auto;
 	display: inline-block;
 }

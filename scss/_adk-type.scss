@@ -1,15 +1,41 @@
 // ADK Font Weights
-@each $weight, $value in $adk-font-weights {
-  &.fw-#{$weight} {
-    font-weight: $value;
-  }
-}
+// @each $weight, $value in $adk-font-weights {
+//   &.fw-#{$weight} {
+//     font-weight: $value;
+//   }
+// }
 
 // ADK Font Sizes
 @each $size, $value in $adk-font-sizes {
   &.fs-#{$size} {
     font-size: $value;
   }
+}
+
+@mixin smallcaps {
+  font-variant: all-small-caps;
+  letter-spacing: .5px;
+}
+
+@mixin weight-light {
+  font-family: 'NeueHaasUnicaPro-Light';
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin weight-regular {
+  font-family: 'NeueHaasUnicaPro-Regular';
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin weight-medium {
+  font-family: 'NeueHaasUnicaPro-Medium';
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin weight-bold {
+  font-family: 'NeueHaasUnicaPro-Bold';
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1,
@@ -19,11 +45,30 @@ h4,
 h5,
 h6 {
   &.bold {
-    font-weight: $global-weight-bold;
+    // font-weight: $global-weight-bold;
   }
   &.light {
-    font-weight: $global-weight-light;
+    // font-weight: $global-weight-light;
   }
+}
+
+strong, 
+b {
+  @include weight-medium;
+}
+
+.fw-bold {
+  @include weight-bold;
+}
+.fw-medium {
+  @include weight-medium;
+}
+.fw-light {
+  @include weight-light;
+}
+
+.smallcaps {
+  @include smallcaps;
 }
 
 .row.actionbar > h1,h2,h3,h4,h5 {

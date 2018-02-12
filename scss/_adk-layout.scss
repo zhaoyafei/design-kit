@@ -6,37 +6,123 @@
   display: inline-block !important;
 }
 
-// Action Bar
+// CSS Grid
+// To be used on outmost layout element to impose fixed-width
+// Can also be used to make any container a grid
+@mixin grid-container {
+  display: grid;
+  // max-width: $grid-width;
+  max-width: 100%;
+  margin: auto;
+  }
+
+.grid-container {
+  @include grid-container;
+  padding: 0 $space-m;
+  .grid-container {
+    padding: 0;
+  }
+  * {
+    margin: 0;
+  }
+  &.max-width {
+    max-width: $grid-width;
+  }
+}
+
+// Body Grid
+.grid-body {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  height: 100vh;
+}
+
+// Action Bars
 .actionbar {
   @include flex-align(null, middle);
   width: 100%;
   padding: $space-s 0;
-  background-color: $white;
+  color: $white;
+  background-color: $black;
   border-bottom: $global-separator;
+
+  .menu a:hover {
+    color: $white;
+  }
+
+  .menu a {
+    line-height: 1.5;
+  }
+
+  .active > a {
+    color: $white;
+  }
+
 }
 
-// Logos
-.nav-logo {
-  width: 120px;
-}
-
-.grid-container{
+.actionbar-grid {
   display: grid;
+  min-height: 64px;
+  align-items: center;
+  color: $white;
+  background-color: $black;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr;
+  @include breakpoint(medium) {
+    grid-template-columns: auto 1fr;
+  }
+
+  .menu a:hover {
+    color: $white;
+  }
+
+  .menu a {
+    line-height: 1.5;
+  }
+
+  .active > a {
+    color: $white;
+  }
+}
+
+.context-bar {
+  min-height: 64px;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: $grid-gutter;
+  &.opportunity {
+    grid-template-columns: auto;
+  }
 }
 
 // Card Grid
 .card-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: $space-s;
+  grid-template-rows: auto 1fr;
+  grid-gap: $grid-gutter;
+  span {
+    grid-column: span 1; 
+  }
   @include breakpoint(medium) {
     grid-template-columns: repeat(2, 1fr);
+    span {
+      grid-column: span 2;
+    }
   }
   @include breakpoint(large) {
     grid-template-columns: repeat(3, 1fr);
+    span {
+      grid-column: span 3;
+    }
   }
   @include breakpoint(xlarge) {
     grid-template-columns: repeat(4, 1fr);
+    span {
+      grid-column: span 4;
+    }
   }
 
   .card {
@@ -44,12 +130,98 @@
   }
 }
 
-$sidebar-width: 220px;
-.sidebar-grid {
+// Sidebar-default left
+.grid-sidebar {
   display: grid;
+  grid-gap: $grid-gutter;
+  padding-top: $space-m;
+  height: 100%;
   grid-template-columns: 1fr;
   @include breakpoint(medium) {
-    grid-template-columns: 1fr 4fr;
-    // grid-template-columns: $sidebar-width 1fr;
+    &.left {
+      grid-template-columns: $sidebar-width auto;
+      grid-template-areas: "sidebar content";
+    }
+    &.right {
+      grid-template-columns: auto $sidebar-width;
+      grid-template-areas: "content sidebar";
+    }
+  }
+  .sidebar {
+    grid-area: sidebar;
+  }
+  .content {
+    grid-area: content;
   }
 }
+
+// Message Grid
+.grid-messages {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  // .thread {
+  //   overflow: scroll;
+  //   display: grid;
+  //   grid-template-columns: 60px 1fr 1fr 60px;
+  //   .message-l{
+  //     grid-column: 2 / 3;
+  //   }
+  //   .message-r{
+  //     grid-column: 3 / 4;
+  //   }
+  // }
+
+  .message-block {
+    display: grid;
+    grid-gap: $space-xxs;
+    &.right {
+      grid-template-areas: 
+      "name ."
+      "message avatar";
+      .name {
+        text-align: right;
+      }
+    }
+    &.left {
+      grid-template-areas: 
+      ". name"
+      "avatar message";
+    }
+    .name {
+      grid-area: name;
+      padding: 0 $space-s;
+      color: $adk-gunmetal;
+      font-size: $font-size-s;
+    }
+    .message {
+      grid-area: message;
+      font-size: $font-size;
+    }
+    .avatar {
+      grid-area: avatar;
+      width: 32px; 
+      height: 32px; 
+      border-radius: 100px;
+      &.hidden {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+// Opp view grid
+.opp-details {
+  display: grid;
+  grid-gap: $space;
+  grid-template-columns: 5fr 4fr;
+  grid-template-areas: 
+  "details image";
+  // "responses .";
+  .details {
+    grid-area: details;
+  }
+  .image {
+    grid-area: image;
+  }
+}
+

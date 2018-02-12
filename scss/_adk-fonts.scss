@@ -56,6 +56,21 @@
   font-style: normal;
 }
 
+
+// Neue Haas
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/34f928");
+
+@font-face {font-family: 'NeueHaasUnicaPro-Bold';src: url('/fonts/neue/webfonts/34F928_0_0.eot');src: url('/fonts/neue/webfonts/34F928_0_0.eot?#iefix') format('embedded-opentype'),url('/fonts/neue/webfonts/34F928_0_0.woff2') format('woff2'),url('/fonts/neue/webfonts/34F928_0_0.woff') format('woff'),url('/fonts/neue/webfonts/34F928_0_0.ttf') format('truetype');}
+
+@font-face {font-family: 'NeueHaasUnicaPro-Light';src: url('/fonts/neue/webfonts/34F928_1_0.eot');src: url('/fonts/neue/webfonts/34F928_1_0.eot?#iefix') format('embedded-opentype'),url('/fonts/neue/webfonts/34F928_1_0.woff2') format('woff2'),url('/fonts/neue/webfonts/34F928_1_0.woff') format('woff'),url('/fonts/neue/webfonts/34F928_1_0.ttf') format('truetype');}
+
+@font-face {font-family: 'NeueHaasUnicaPro-Medium';src: url('/fonts/neue/webfonts/34F928_2_0.eot');src: url('/fonts/neue/webfonts/34F928_2_0.eot?#iefix') format('embedded-opentype'),url('/fonts/neue/webfonts/34F928_2_0.woff2') format('woff2'),url('/fonts/neue/webfonts/34F928_2_0.woff') format('woff'),url('/fonts/neue/webfonts/34F928_2_0.ttf') format('truetype');}
+
+@font-face {font-family: 'NeueHaasUnicaPro-Regular';src: url('/fonts/neue/webfonts/34F928_3_0.eot');src: url('/fonts/neue/webfonts/34F928_3_0.eot?#iefix') format('embedded-opentype'),url('/fonts/neue/webfonts/34F928_3_0.woff2') format('woff2'),url('/fonts/neue/webfonts/34F928_3_0.woff') format('woff'),url('/fonts/neue/webfonts/34F928_3_0.ttf') format('truetype');}
+
+
+
 .architizer-glyph, .architizer-glyphs {
   font-family: "Architizer Glyphs";
   // vertical-align: sub;

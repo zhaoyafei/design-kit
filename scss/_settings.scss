@@ -49,6 +49,7 @@
 // $global-font-size: 100%;
 // $global-width is defined below breakpoints so we can use a breakpoint value
 // $global-lineheight: 1.5;
+$global-lineheight: 1.5;
 $foundation-palette: (
   primary: $adk-blue,
   secondary: map-get(generate-palette($adk-quicksilver), 100),
@@ -58,7 +59,7 @@ $foundation-palette: (
 );
 // $body-background: $white;
 $body-font-color: $dark-gray;
-$body-font-family: "Theinhardt-web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$body-font-family: "NeueHaasUnicaPro-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 // $body-antialiased: true;
 $global-margin: $space;
 $global-padding: $space;
@@ -91,6 +92,7 @@ $breakpoints: (
   xxlarge: 2000px,
 );
 $global-width: 100%;
+// $global-width: 1280px;
 
 // $print-breakpoint: large;
 $breakpoint-classes: (small medium large xlarge xxlarge);
