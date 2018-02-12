@@ -42,11 +42,25 @@
   @include flex-align(null, middle);
   width: 100%;
   padding: $space-s 0;
-  background-color: $white;
+  color: $white;
+  background-color: $black;
   border-bottom: $global-separator;
+
+  .menu a:hover {
+    color: $white;
+  }
+
+  .menu a {
+    line-height: 1.5;
+  }
+
+  .active > a {
+    color: $white;
+  }
+
 }
 
-.actionbar-dark {
+.actionbar-grid {
   display: grid;
   min-height: 64px;
   align-items: center;
