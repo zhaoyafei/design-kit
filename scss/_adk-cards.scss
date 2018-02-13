@@ -60,41 +60,6 @@
     }
   }
 
-  &.masonry {
-    float: left;
-    margin-right: $space-xs;
-    display: inline-block;
-    // Small breakpoint width
-    width: $card-size-small;
-
-    .card-image {
-      height: $card-size-small / 1.33;  //4:3 by default
-      &.ratio-16-9 {
-        height: $card-size-small / 1.77;
-        width: inherit;
-      }
-    }
-
-    // Medium breakpoint width
-    @include breakpoint(medium) {
-      width: $card-size-base;
-      .card-image {
-        height: $card-size-base / 1.33;
-        &.ratio-16-9 {
-          height: $card-size-base / 1.77;
-          width: inherit;
-        }
-      }
-    }
-  }
-
-  &.add-card {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-  }
-
   &.clickable {
     cursor: pointer;
     box-shadow: 0 0 0 2px transparent;
@@ -216,41 +181,6 @@
 
   // Large breakpoint height
   @include breakpoint(large) {
-    height: 15rem;
-  }
-}
-
-.card-multi-image {
-  position: relative;
-  border-radius: $space-xxxs $space-xxxs 0 0;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: inherit;
-  height: 0;
-  padding-top: 75%;
-
-  &.card-multi-image-no-margin {
-    margin-left: -$space;
-    margin-right: -$space;
-    margin-top: -$space;
-  }
-
-  // Small breakpoint height
-  height: 5rem;
-
-  // Medium breakpoint height
-  @include breakpoint(medium) {
-    height: 10rem;
-  }
-
-  // Large breakpoint height
-  @include breakpoint(large) {
-    height: 14rem;
-  }
-
-  // XLarge breakpoint height
-  @include breakpoint(xlarge) {
     height: 15rem;
   }
 }
