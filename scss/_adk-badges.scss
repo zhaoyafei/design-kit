@@ -1,27 +1,28 @@
 // Badge types
 .beta {
-  line-height: .25;
-  height: 18px;
+  line-height: 1;
   border-radius: 15px;
   vertical-align: middle;
-  padding: $space-xs;
-  text-transform: uppercase;
-  font-size: .8rem;
-  font-weight: 800;
-  color: #FFF;
+  display: inline-block;
+  padding: $space-xxxs $space-xxs;
+  color: $white;
+  font-size: $font-size-s;
+  @include smallcaps;
+  @include weight-medium;
 }
 
 .verified {
   line-height: 1;
   display: inline-block;
-  color: #1CA3FC;
+  color: $adk-blue;
   font-size: 1.5625rem;
   font-family: "Architizer Glyphs";
 }
 
 .pro {
-  color: #1CA3FC;
-  text-transform: uppercase;
-  font-size: .8rem;
-  font-weight: 800;
+  color: $adk-blue;
+  font-size: $font-size-s;
+  @include smallcaps;
+  @include weight-medium;
+
 }

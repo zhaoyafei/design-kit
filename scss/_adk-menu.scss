@@ -15,7 +15,7 @@ a {
 ul {
   &.menu {
     a {
-      color: $adk-quicksilver;
+      color: $light-gray;
       border-bottom: none;
       &:hover {
         color: $menu-item-color-hover;
@@ -27,6 +27,18 @@ ul {
 
         &:hover {
           text-decoration: none;
+        }
+      }
+    }
+    &.dark {
+      a {
+        color: $light-gray;
+        border-bottom: none;
+        &:hover {
+          color: $white;
+        }
+        &:active {
+          color: $white;
         }
       }
     }
@@ -80,4 +92,10 @@ ul {
   padding: $space-xs 0;
   background-color: $white;
   z-index: 1000;
+}
+
+// Accordion Overrides
+// Accordion Arrow color
+.is-accordion-submenu-parent > a::after {
+  border-color: $black transparent transparent;
 }

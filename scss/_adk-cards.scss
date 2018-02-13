@@ -3,15 +3,15 @@
   padding: $card-padding;
   overflow: initial;
   position: relative;
-  border: 1px solid rgba($adk-gunmetal, 0.4);
+  border: none;
 
   &.responsive-image {
     display: block;
     padding: 0;
     .card-section {
-      margin: $space-s $card-padding;
+      padding: $space-s $card-padding;
       &:last-of-type {
-        margin: $space-s $card-padding;
+        padding: $space-s $card-padding;
       }
     }
   }
@@ -60,13 +60,6 @@
     }
   }
 
-  // // Use flex class to overide fixed width and use the grid to size the card instead
-  // &.flex {
-  //   width: inherit;
-  //   display: block;
-  //   margin-right: 0px;
-  // }
-
   &.clickable {
     cursor: pointer;
     box-shadow: 0 0 0 2px transparent;
@@ -75,12 +68,32 @@
       box-shadow: 0 0 12px rgba($adk-quicksilver, 0.4);
     }
     &:active {
-      box-shadow: 0 0 2px 2px rgba($adk-blue, 0.4);
+      box-shadow: 0 0 2px 2px rgba($adk-quicksilver, 0.8);
+    }
+  }
+
+  &.selected {
+    box-shadow: 0 0 10px rgba($adk-quicksilver, 0.4);
+  }
+
+  &.condensed {
+    height: 60px;
+    padding: $space-xs;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 48px auto 20px;
+    grid-gap: 10px;
+    margin-bottom: $space-xs;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    input {
+      border: none;
     }
   }
 
   &.message {
-    min-width: $card-size-base;
+    max-width: $card-size-base;
   }
 
   // Inactive cards
@@ -103,7 +116,6 @@
 
   .caption {
     font-size: $font-size-s;
-    font-weight: $global-weight-bold;
     line-height: 1;
     color: $adk-quicksilver;
   }
@@ -117,7 +129,7 @@
   }
 
   .card-section {
-    margin: $card-content-margin;
+    padding: $card-content-margin;
     // margin: $space-s $card-padding;
     padding: 0;
 
