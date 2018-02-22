@@ -1,0 +1,13 @@
+docs/*
+templates/*
+js/*
+
+circle.yml
+deploy.sh
+docs.hbs
+docs.md
+index.html
+gulpfile.js
+
+npm_debug.log
+npm-debug.log
