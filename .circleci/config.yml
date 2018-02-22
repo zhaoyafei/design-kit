@@ -23,9 +23,9 @@ jobs:
         - ./node_modules
 
     # Build design kit
-    - run: gulp sass
-    - run: gulp docs
-    - run: gulp createAdkTemplatesList
+    - run: npm run build
+    - run: ./node_modules/gulp/bin/gulp.js docs
+    - run: ./node_modules/gulp/bin/gulp.js createAdkTemplatesList
     - run: echo 'No Tests'
 
     - store_artifacts:
