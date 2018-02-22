@@ -1,0 +1,54 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/Architizer/design-kit/.
+    environment:
+      CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
+      CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
+    docker:
+    - image: circleci/node:4
+    steps:
+    - checkout
+    - run: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
+
+    # Install dependencies, or restore from cache
+    - restore_cache:
+        keys:
+        - v1-dep-{{ checksum "package-lock.json" }}
+        - v1-dep-
+    - run: npm install
+    - save_cache:
+        key: v1-dep-{{ checksum "package-lock.json" }}
+        paths:
+        - ./node_modules
+
+    # Build design kit
+    - run: gulp sass
+    - run: gulp docs
+    - run: gulp createAdkTemplatesList
+    - run: echo 'No Tests'
+
+    - store_artifacts:
+        path: css
+    - store_artifacts:
+        path: /tmp/circleci-test-results
+
+  deploy:
+    docker:
+      - image: architizer/docker-aws-eb:latest
+    steps:
+      - checkout
+      - run: bash -x deploy.sh
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
