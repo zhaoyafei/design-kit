@@ -16,6 +16,8 @@ npm install
 npm start
 ```
 
+For a primer on how to use semver to increment versions of this `npm` repository, see [publishing instructions](PUBLISHING.md).
+
 ### Documentation
 
 Edit [docs.md](docs.md) to update the documentation site.
