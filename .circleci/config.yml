@@ -23,6 +23,9 @@ jobs:
     - run: ./node_modules/gulp/bin/gulp.js docs
     - run: ./node_modules/gulp/bin/gulp.js createAdkTemplatesList
     - run: echo 'No Tests'
+    - run:
+        name: Remove node_modules directory before persisting design-kit directory in CircleCI
+        command: rm -rf ./node_modules
 
     - persist_to_workspace:
         root: ~/architizer
