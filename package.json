@@ -1,18 +1,14 @@
 {
   "name": "architizer-design-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Architizer/design-kit"
+    "url": "https://github.com/Architizer/design-kit.git"
   },
   "scripts": {
     "start": "gulp",
     "build": "gulp sass"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Architizer/design-kit.git"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
