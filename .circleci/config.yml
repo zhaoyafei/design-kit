@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/Architizer/design-kit/.
+    working_directory: ~/architizer/design-kit/.
     docker:
     - image: circleci/node:4
     steps:
@@ -25,18 +25,18 @@ jobs:
     - run: echo 'No Tests'
 
     - persist_to_workspace:
-        root: ~/Architizer
+        root: ~/architizer
         paths:
           - design-kit
 
   deploy:
-    working_directory: ~/Architizer/
+    working_directory: ~/architizer/
     docker:
       - image: architizer/docker-aws-eb:latest
     steps:
       - checkout
       - attach_workspace:
-          at: ~/Architizer/
+          at: ~/architizer/
       - run:
           name: Deploy directory to S3
           command: |
@@ -44,12 +44,13 @@ jobs:
             bash -x deploy.sh
 
   publish:
+    working_directory: ~/architizer/
     docker:
     - image: circleci/node:4
     steps:
     - checkout
     - attach_workspace:
-        at: ~/Architizer/
+        at: ~/architizer/
     - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
     - run:
         name: Publish package on npm registry
@@ -75,3 +76,5 @@ workflows:
           filters:
             tags:
               only: /^v.*/
+            branches:
+              ignore: /.*/
