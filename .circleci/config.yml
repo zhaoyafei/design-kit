@@ -37,7 +37,11 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/Architizer/
-      - run: bash -x design-kit/deploy.sh
+      - run:
+          name: Deploy directory to S3
+          command: |
+            cd design-kit
+            bash -x deploy.sh
 
   publish:
     docker:
