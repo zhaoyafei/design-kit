@@ -1,7 +1,19 @@
 {
   "name": "architizer-design-kit",
   "version": "1.0.0",
-  "main": "gulpfile.js",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Architizer/design-kit"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Architizer/design-kit.git"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
@@ -14,16 +26,7 @@
     "gulp-webserver": "^0.9.1",
     "style-sherpa": "^1.0.2"
   },
-  "scripts": {
-    "start": "gulp",
-    "build": "gulp sass"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Architizer/design-kit.git"
-  },
   "license": "Apache-2.0",
-  "private": true,
   "dependencies": {
     "foundation-sites": "^6.4.3",
     "gulp-autoprefixer": "^3.1.0",
