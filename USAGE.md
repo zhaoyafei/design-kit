@@ -1,6 +1,24 @@
 # Usage
 
-To use Architizer Design Kit on a page, include `adk.css`:
+## As `npm` module
+To use the `scss` or `css` from Architizer Design Kit in a node project, you can install the library with
+```bash
+npm install --save architizer-design-kit
+```
+
+This will install the latest version of `architizer-design-kit`. Currently, the library exposes the URL to the built `adk.css` through the `adkCssFile` export. An example of a gulp task which adds `adk.css` to its CSS build:
+```
+const adk = require('architizer-design-kit')
+gulp.task('css', function() {
+  return gulp.src(['style.css', adk.adkCssFile])
+    .pipe(concat('final.css'))
+    .pipe(gulp.dest('./dist/'))
+```
+
+Ultimately, the npm library should also export links to the SCSS files, to allow selective importing of variables and modules for use in SCSS pipelines (e.g. `webpack`).
+
+## As static library
+To use Architizer Design Kit on a page, include `adk.css`, which will always contain the latest `master` build:
 
 ```html
 <head>
