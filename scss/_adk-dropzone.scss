@@ -96,6 +96,14 @@
 }
 .dropzone {
 
+  &.short {
+    min-height: $space-m;
+
+    .dz-message {
+      margin: 0;
+    }
+  }
+
   $image-size: 120px;
 
   &:hover {
