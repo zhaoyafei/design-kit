@@ -972,19 +972,20 @@ The examples below are the main image-based card types on Architizer.
               <div class="columns small-3"
                    style="min-width: 55px;">
                 <!-- PRO badge width is fixed at 55px so that brand name column can be calculated accordingly -->
-                <div class="row">
+                <div class="row align-middle">
                   <!-- Verified Badge -->
-                  <div class="columns shrink pl-0 pr-xxs">
+                  <div class="columns shrink pl-0 pr-xxs pb-xxxs">
                     <span class="verified">+</span>
                   </div>
                   <!-- Pro Badge -->
-                  <div class="columns shrink pl-0">
+                  <div class="columns shrink pl-0 pb-xs">
                     <span class="pro">PRO</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
           <!-- Shortlist checkmark button -->
           <div class="small-2 columns"
                style="white-space: nowrap;">
@@ -1012,14 +1013,14 @@ For the sake of convenience, here is the markup and css classes required to rend
 
 ### Example
 ```html_example
-<div class="row">
+<div class="row align-middle">
   <!-- Verified Badge -->
-  <div class="columns shrink pl-0 pr-xxs">
+  <div class="columns shrink pt-xxxs pl-0 pr-xxs">
     <span class="verified">+
     </span>
   </div>
   <!--  Pro Badge -->
-  <div class="columns shrink pl-0">
+  <div class="columns shrink pl-0 pb-xxxs">
     <span class="pro">PRO</span>
   </div>
 </div>

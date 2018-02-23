@@ -15,14 +15,13 @@
   line-height: 1;
   display: inline-block;
   color: $adk-blue;
-  font-size: 1.5625rem;
+  font-size: $font-size-l;
   font-family: "Architizer Glyphs";
 }
 
 .pro {
   color: $adk-blue;
-  font-size: $font-size-s;
+  font-size: $font-size;
+  font-weight: 600;
   @include smallcaps;
-  @include weight-medium;
-
 }
