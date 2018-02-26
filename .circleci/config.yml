@@ -59,17 +59,14 @@ jobs:
         name: Publish package on npm registry
         command: |
           cd design-kit
-          npm publish
+          bash -x publish.sh
 
 
 workflows:
   version: 2
   build-deploy-publish:
     jobs:
-      - build:
-          filters:
-            tags:
-              only: /.*/
+      - build
       - deploy:
           requires:
             - build
@@ -77,8 +74,6 @@ workflows:
           requires:
             - build
           filters:
-            tags:
-              only: /^v.*/
             branches:
               only:
                 - master
