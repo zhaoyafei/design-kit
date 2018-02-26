@@ -15,6 +15,5 @@ $ npm version major
 On your feature branch, when you are ready to tag a version, you should:
 1. Pull the latest master with `git pull origin master`
 2. After all your commits are done, increment the version for `design-kit` with one of the `npm version` commands.
-  - To force a release with the same version, you can use `npm version --allow-same-version`
 3. When pushing, *make sure to use `git push --follow-tags origin <feature-branch>`*. git tags are not pushed by default
 4. When this branch is merged into `master`, CircleCI will run `npm publish` which will publish the latest tag to the npm registry.
