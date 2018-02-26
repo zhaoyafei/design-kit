@@ -481,6 +481,53 @@ Use `.fill` to set the background color.
 <button class="warning icon fill button"><span class="material-icons">lightbulb_outline</span></button>
 ```
 
+### Pill Groups
+
+Following Material Design's [guidelines on Toggle Buttons](https://material.io/guidelines/components/buttons.html#buttons-toggle-buttons), avoid using Pill Groups when there are fewer than three options.
+
+Use the `.active` class to denote which is selected.
+
+```html
+<div class="row">
+  <div class="small-6 columns">
+    <label>Price Range</label>
+    <div class="row pill-group price-range">
+      <!-- Data Point Buttons-->
+      <a class="columns small-4 pill button mb-0">Low</a>
+      <a class="columns small-4 pill button mb-0">Medium</a>
+      <a class="columns small-4 pill active button mb-0">High</a>
+    </div>
+    <label>Ice Cream Flavor</label>
+    <div class="row pill-group ice-cream">
+      <!-- Data Point Buttons-->
+      <a class="columns small-3 pill button mb-0">Vanilla</a>
+      <a class="columns small-3 pill button mb-0">Chocolate</a>
+      <a class="columns small-3 pill active button mb-0">Strawberry</a>
+      <a class="columns small-3 pill button mb-0">Rocky Road</a>
+    </div>
+  </div>
+</div>
+```
+<div class="row">
+  <div class="small-6 columns">
+    <label>Price Range</label>
+    <div class="row pill-group price-range">
+      <!-- Data Point Buttons-->
+      <a class="columns small-4 pill button mb-0">Low</a>
+      <a class="columns small-4 pill button mb-0">Medium</a>
+      <a class="columns small-4 pill active button mb-0">High</a>
+    </div>
+    <label>Ice Cream Flavor</label>
+    <div class="row pill-group ice-cream">
+      <!-- Data Point Buttons-->
+      <a class="columns small-3 pill button mb-0">Vanilla</a>
+      <a class="columns small-3 pill button mb-0">Chocolate</a>
+      <a class="columns small-3 pill active button mb-0">Strawberry</a>
+      <a class="columns small-3 pill button mb-0">Rocky Road</a>
+    </div>
+  </div>
+</div>
+
 
 
 # Images

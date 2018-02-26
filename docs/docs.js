@@ -12,6 +12,10 @@ $(document).ready(function() {
   });
 });
 
+// Pill Groups
+$('.price-range .pill.button').on('click', function() { $('.price-range .pill.button').removeClass('active'); $(this).addClass('active');});
+$('.ice-cream .pill.button').on('click', function() { $('.ice-cream .pill.button').removeClass('active'); $(this).addClass('active');});
+
 // Initialize Selectize
 $('.selectize').selectize(selectizeOptions());
 
