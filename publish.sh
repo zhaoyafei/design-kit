@@ -8,9 +8,6 @@ NPM_VERSION=$(npm search architizer-design-kit | awk '{ c=$10; gsub("\\|", "", c
 LOCAL_VERSION=$(cat package.json  | jq '.version' | sed 's/\"//g')
 
 # If they are different, we should run `npm publish`
-if [ $NPM_VERSION != $LOCAL_VERSION ]; then
+if [ "$NPM_VERSION" != "$LOCAL_VERSION" ]; then
   npm publish
 fi
-
-# Cleanup
-rm .latest_*
