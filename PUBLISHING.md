@@ -15,5 +15,6 @@ $ npm version major
 On your feature branch, when you are ready to tag a version, you should:
 1. Pull the latest master with `git pull origin master`
 2. After all your commits are done, increment the version for `design-kit` with one of the `npm version` commands.
-3. When pushing, *make sure to use `git push --follow-tags origin <feature-branch>`*. git tags are not pushed by default
-4. When this branch is merged into `master`, CircleCI will run `npm publish` which will publish the latest tag to the npm registry.
+3. When pushing, *make sure to use `git push --follow-tags origin <feature-branch>`*. git tags are not pushed by default.
+4. After you push your tag, it will show up [in Releases](https://github.com/Architizer/design-kit/releases). Find your tag, and add a title and description for the release. The [npm repo](https://github.com/npm/npm/releases/) has good examples of release notes.
+5. When this branch is merged into `master`, CircleCI will run `npm publish` which will publish the latest tag to the npm registry.
