@@ -49,7 +49,7 @@ jobs:
   publish:
     working_directory: ~/architizer/
     docker:
-    - image: circleci/node:4
+    - image: circleci/node:latest
     steps:
     - checkout
     - attach_workspace:
