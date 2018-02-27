@@ -18,7 +18,7 @@
    pill: $space-xxs,
    tiny: $space-xxs,
    small: $space-xs $space-xs,
-   default: $space-xs $space-xs,
+   default: $space-xs $space-s,
    large: $space-s $space-s,
    icon: $space-xxs,
  );
@@ -351,6 +351,35 @@
       top: -0.1em;
       float: none;
       margin-#{$global-left}: 0;
+    }
+  }
+}
+
+.pill-group {
+  border: 1px solid rgb(196, 205, 212);
+  border-radius: $space-xs;
+  background-color: rgb(219, 226, 232);
+
+  .button.pill {
+    color: $medium-gray;
+    margin-bottom: 0;
+    border-right: 1px solid rgb(196, 205, 212);
+    border-radius: 0;
+    background: transparent;
+
+    &.active {
+      background-color: $white;
+    }
+    
+    &:first-of-type {
+      border-top-left-radius: $space-xs;
+      border-bottom-left-radius: $space-xs;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: $space-xs;
+      border-bottom-right-radius: $space-xs;
+      border-right: none;
     }
   }
 }
