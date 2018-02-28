@@ -6,6 +6,10 @@
   display: inline-block !important;
 }
 
+.row.max-width {
+  max-width: $grid-width;
+}
+
 // CSS Grid
 // To be used on outmost layout element to impose fixed-width
 // Can also be used to make any container a grid
