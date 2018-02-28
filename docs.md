@@ -1086,7 +1086,7 @@ For the sake of convenience, here is the markup and css classes required to rend
 <!-- BETA badge -->
 <div class="row align-middle">
   <div class="columns shrink pl-0 pr-0">
-    <span class="beta badge fs-s fw-bold mt-xxs">beta</span>
+    <span class="beta">beta</span>
   </div>
 </div>
 ```
