@@ -50,16 +50,28 @@
   background-color: $black;
   border-bottom: $global-separator;
 
-  .menu a:hover {
-    color: $white;
-  }
+  .menu {
+    a {
+      line-height: 1.5;
+    }
 
-  .menu a {
-    line-height: 1.5;
-  }
+    .active > a,
+    a:hover {
+      color: $white;
+    }
+    
+    .light {
+      background-color: $white;
 
-  .active > a {
-    color: $white;
+      a {
+        color: $black;
+      }
+
+      .active > a,
+      a:hover {
+        color: $adk-blue;
+      }
+    }
   }
 
 }
