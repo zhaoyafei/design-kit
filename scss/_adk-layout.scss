@@ -50,6 +50,14 @@
   background-color: $black;
   border-bottom: $global-separator;
 
+  a {
+    color: $light-gray;
+    &.active,
+    &:hover {
+      color: $white;
+    }
+  }
+
   .menu {
     a {
       line-height: 1.5;
