@@ -50,6 +50,14 @@
   background-color: $black;
   border-bottom: $global-separator;
 
+  a {
+    color: $light-gray;
+    &.active,
+    &:hover {
+      color: $white;
+    }
+  }
+
   .menu {
     a {
       line-height: 1.5;
@@ -59,7 +67,7 @@
     a:hover {
       color: $white;
     }
-    
+
     .light {
       background-color: $white;
 
@@ -120,7 +128,7 @@
   grid-template-rows: auto 1fr;
   grid-gap: $grid-gutter;
   span {
-    grid-column: span 1; 
+    grid-column: span 1;
   }
   @include breakpoint(medium) {
     grid-template-columns: repeat(2, 1fr);
@@ -191,7 +199,7 @@
     display: grid;
     grid-gap: $space-xxs;
     &.right {
-      grid-template-areas: 
+      grid-template-areas:
       "name ."
       "message avatar";
       .name {
@@ -199,7 +207,7 @@
       }
     }
     &.left {
-      grid-template-areas: 
+      grid-template-areas:
       ". name"
       "avatar message";
     }
@@ -215,8 +223,8 @@
     }
     .avatar {
       grid-area: avatar;
-      width: 32px; 
-      height: 32px; 
+      width: 32px;
+      height: 32px;
       border-radius: 100px;
       &.hidden {
         visibility: hidden;
@@ -230,7 +238,7 @@
   display: grid;
   grid-gap: $space;
   grid-template-columns: 5fr 4fr;
-  grid-template-areas: 
+  grid-template-areas:
   "details image";
   // "responses .";
   .details {
