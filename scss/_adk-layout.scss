@@ -154,9 +154,41 @@
       grid-column: span 4;
     }
   }
-
   .card {
     margin:0;
+  }
+}
+
+// Pseudotiers list grid (BPM landing page)
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-column-gap: $space-l;
+  span {
+    grid-column: span 1;
+  }
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+    span {
+      grid-column: span 2;
+    }
+  }
+  @include breakpoint(large) {
+    grid-template-columns: repeat(3, 1fr);
+    span {
+      grid-column: span 3;
+    }
+  }
+  @include breakpoint(xlarge) {
+    grid-template-columns: repeat(4, 1fr);
+    span {
+      grid-column: span 4;
+    }
+  }
+  a {
+    font-size: $font-size-s;
+    border-bottom: 1px solid $adk-blue;
   }
 }
 
