@@ -23,7 +23,11 @@
   display: block;
 }
 
-.reveal {
+.revealProductMessage {
+  width: 1200px;
+}
+
+.reveal, .revealProductMessage {
 
   .header, .footer {
     background-color: transparent;
