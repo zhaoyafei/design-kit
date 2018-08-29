@@ -64,6 +64,17 @@
 
 .revealProductMessage {
   width: 1200px;
+  z-index: 1006;
+  backface-visibility: hidden;
+  padding: .32768rem;
+  border: none;
+  border-radius: .20972rem;
+  background-color: #fff;
+  position: relative;
+  top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow-y: auto;
 }
 
 // Close button styles
