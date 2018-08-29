@@ -19,12 +19,9 @@
 }
 
 .ReactModalPortal .reveal,
+.ReactModalPortal .revealProductMessage,
 .ReactModalPortal .reveal-overlay {
   display: block;
-}
-
-.revealProductMessage {
-  width: 1200px;
 }
 
 .reveal, .revealProductMessage {
@@ -63,6 +60,10 @@
 
     padding-bottom: 0;
   }
+}
+
+.revealProductMessage {
+  width: 1200px;
 }
 
 // Close button styles
