@@ -46,8 +46,6 @@
   }
 
   .footer {
-    @include full-width-border(top)
-
     // Allows for the footer to span the full width of parent
     width: auto;
 
