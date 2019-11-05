@@ -3,6 +3,7 @@ var $    = require('gulp-load-plugins')();
 var sherpa = require('style-sherpa');
 var fs = require('fs');
 var path = require('path');
+const browsersync = require('browser-sync').create();
 
 var sassPaths = [
   'node_modules/normalize-scss/sass',
@@ -22,16 +23,16 @@ var adkTemplatesData = fs.readdirSync(adkTemplatesDir)
 ////////////////////////////////////////////////////////////////////////////////
 // Tasks
 ////////////////////////////////////////////////////////////////////////////////
-
-gulp.task('createAdkTemplatesList', function() {
+// Create adk template list
+function createAdkTemplatesList() {
   return gulp.src('templates/index.hbs')
     .pipe($.compileHandlebars({ adkTemplates: adkTemplatesData }))
     .pipe($.rename('index.html'))
     .pipe(gulp.dest('templates'));
-});
+}
 
 // Compile Sass
-gulp.task('sass', function() {
+function sass() {
   return gulp.src('scss/adk.scss')
     .pipe($.sass({
       includePaths: sassPaths
@@ -47,36 +48,42 @@ gulp.task('sass', function() {
     // Minify the output
     .pipe($.cleanCss())
     .pipe(gulp.dest('css'));
-});
+}
 
 // Generate documentation
-gulp.task('docs', function() {
+function docs(done) {
   return sherpa('docs.md', {
     output: '/docs/index.html',
     template: 'docs.hbs'
-  });
-});
+  }, () => done());
+}
 
-// Run local webserver
-gulp.task('webserver', function() {
-  return gulp.src('')
-    .pipe($.webserver({
-      path: '/',
-      port: 8080,
-      open: false,
-      livereload: false,
-      middleware: [cors],
-    }));
+// Server
+function browserSync(done) {
+  browsersync.init({
+    server: {
+      baseDir: "./"
+    },
+    port: 8080,
+    open: false,
+    livereload: false,
+    middleware: [cors],
+  });
+  done();
 
   function cors (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   }
+}
 
-});
 
 // Default task
-gulp.task('default', ['sass', 'docs', 'createAdkTemplatesList', 'webserver'], function() {
-  gulp.watch(['scss/**/*.scss'], ['sass']);
-  gulp.watch(['docs/**/*', 'docs.md', 'docs.hbs'], ['docs']);
-});
+gulp.task('default', gulp.series(sass, docs, createAdkTemplatesList, browserSync, function(done) {
+  gulp.watch(['scss/**/*.scss'], gulp.series(sass));
+  gulp.watch(['docs/**/*', 'docs.md', 'docs.hbs'], gulp.series(docs));
+  done();
+}));
+
+// SASS task
+gulp.task('sass', sass);
