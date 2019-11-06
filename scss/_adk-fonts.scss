@@ -1,38 +1,38 @@
-@font-face {
-  font-family: "Theinhardt-web";
-  src: url("/fonts/theinhardt/theinhardtlight_alt-webfont.eot");
-  src: url("/fonts/theinhardt/theinhardtlight_alt-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/theinhardt/theinhardtlight_alt-webfont.woff") format("woff"), url("/fonts/theinhardt/theinhardtlight_alt-webfont.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Theinhardt-web";
-  src: url("/fonts/theinhardt/theinhardtlightit-webfont.eot");
-  src: url("/fonts/theinhardt/theinhardtlightit-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/theinhardt/theinhardtlightit-webfont.woff") format("woff"), url("/fonts/theinhardt/theinhardtlightit-webfont.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Theinhardt-web";
-  src: url("/fonts/theinhardt/theinhardtreg-webfont.eot");
-  src: url("/fonts/theinhardt/theinhardtreg-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/theinhardt/theinhardtreg-webfont.woff") format("woff"), url("/fonts/theinhardt/theinhardtreg-webfont.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Theinhardt-web";
-  src: url("/fonts/theinhardt/theinhardtregit-webfont.eot");
-  src: url("/fonts/theinhardt/theinhardtregit-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/theinhardt/theinhardtregit-webfont.woff") format("woff"), url("/fonts/theinhardt/theinhardtregit-webfont.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Theinhardt-web";
-  src: url("/fonts/theinhardt/theinhardtmed-webfont.eot");
-  src: url("/fonts/theinhardt/theinhardtmed-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/theinhardt/theinhardtmed-webfont.woff") format("woff"), url("/fonts/theinhardt/theinhardtmed-webfont.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: "Theinhardt-web";
+//   src: url("/fonts/theinhardt/theinhardtlight_alt-webfont.eot");
+//   src: url("/fonts/theinhardt/theinhardtlight_alt-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/theinhardt/theinhardtlight_alt-webfont.woff") format("woff"), url("/fonts/theinhardt/theinhardtlight_alt-webfont.ttf") format("truetype");
+//   font-weight: 100;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: "Theinhardt-web";
+//   src: url("/fonts/theinhardt/theinhardtlightit-webfont.eot");
+//   src: url("/fonts/theinhardt/theinhardtlightit-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/theinhardt/theinhardtlightit-webfont.woff") format("woff"), url("/fonts/theinhardt/theinhardtlightit-webfont.ttf") format("truetype");
+//   font-weight: 100;
+//   font-style: italic;
+// }
+// @font-face {
+//   font-family: "Theinhardt-web";
+//   src: url("/fonts/theinhardt/theinhardtreg-webfont.eot");
+//   src: url("/fonts/theinhardt/theinhardtreg-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/theinhardt/theinhardtreg-webfont.woff") format("woff"), url("/fonts/theinhardt/theinhardtreg-webfont.ttf") format("truetype");
+//   font-weight: 400;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: "Theinhardt-web";
+//   src: url("/fonts/theinhardt/theinhardtregit-webfont.eot");
+//   src: url("/fonts/theinhardt/theinhardtregit-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/theinhardt/theinhardtregit-webfont.woff") format("woff"), url("/fonts/theinhardt/theinhardtregit-webfont.ttf") format("truetype");
+//   font-weight: 400;
+//   font-style: italic;
+// }
+// @font-face {
+//   font-family: "Theinhardt-web";
+//   src: url("/fonts/theinhardt/theinhardtmed-webfont.eot");
+//   src: url("/fonts/theinhardt/theinhardtmed-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/theinhardt/theinhardtmed-webfont.woff") format("woff"), url("/fonts/theinhardt/theinhardtmed-webfont.ttf") format("truetype");
+//   font-weight: 800;
+//   font-style: normal;
+// }
 
 @font-face {
   font-family: "Architizer Glyphs";
@@ -59,16 +59,54 @@
 
 // Neue Haas
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/34f928");
+// @import url("//hello.myfonts.net/count/34f928");
 
-@font-face {font-family: 'NeueHaasUnicaPro-Bold';src: url('/fonts/neue/webfonts/34F928_0_0.eot');src: url('/fonts/neue/webfonts/34F928_0_0.eot?#iefix') format('embedded-opentype'),url('/fonts/neue/webfonts/34F928_0_0.woff2') format('woff2'),url('/fonts/neue/webfonts/34F928_0_0.woff') format('woff'),url('/fonts/neue/webfonts/34F928_0_0.ttf') format('truetype');}
+// @font-face {font-family: 'NeueHaasUnicaPro-Bold';src: url('/fonts/neue/webfonts/34F928_0_0.eot');src: url('/fonts/neue/webfonts/34F928_0_0.eot?#iefix') format('embedded-opentype'),url('/fonts/neue/webfonts/34F928_0_0.woff2') format('woff2'),url('/fonts/neue/webfonts/34F928_0_0.woff') format('woff'),url('/fonts/neue/webfonts/34F928_0_0.ttf') format('truetype');}
 
-@font-face {font-family: 'NeueHaasUnicaPro-Light';src: url('/fonts/neue/webfonts/34F928_1_0.eot');src: url('/fonts/neue/webfonts/34F928_1_0.eot?#iefix') format('embedded-opentype'),url('/fonts/neue/webfonts/34F928_1_0.woff2') format('woff2'),url('/fonts/neue/webfonts/34F928_1_0.woff') format('woff'),url('/fonts/neue/webfonts/34F928_1_0.ttf') format('truetype');}
+// @font-face {font-family: 'NeueHaasUnicaPro-Light';src: url('/fonts/neue/webfonts/34F928_1_0.eot');src: url('/fonts/neue/webfonts/34F928_1_0.eot?#iefix') format('embedded-opentype'),url('/fonts/neue/webfonts/34F928_1_0.woff2') format('woff2'),url('/fonts/neue/webfonts/34F928_1_0.woff') format('woff'),url('/fonts/neue/webfonts/34F928_1_0.ttf') format('truetype');}
 
-@font-face {font-family: 'NeueHaasUnicaPro-Medium';src: url('/fonts/neue/webfonts/34F928_2_0.eot');src: url('/fonts/neue/webfonts/34F928_2_0.eot?#iefix') format('embedded-opentype'),url('/fonts/neue/webfonts/34F928_2_0.woff2') format('woff2'),url('/fonts/neue/webfonts/34F928_2_0.woff') format('woff'),url('/fonts/neue/webfonts/34F928_2_0.ttf') format('truetype');}
+// @font-face {font-family: 'NeueHaasUnicaPro-Medium';src: url('/fonts/neue/webfonts/34F928_2_0.eot');src: url('/fonts/neue/webfonts/34F928_2_0.eot?#iefix') format('embedded-opentype'),url('/fonts/neue/webfonts/34F928_2_0.woff2') format('woff2'),url('/fonts/neue/webfonts/34F928_2_0.woff') format('woff'),url('/fonts/neue/webfonts/34F928_2_0.ttf') format('truetype');}
 
-@font-face {font-family: 'NeueHaasUnicaPro-Regular';src: url('/fonts/neue/webfonts/34F928_3_0.eot');src: url('/fonts/neue/webfonts/34F928_3_0.eot?#iefix') format('embedded-opentype'),url('/fonts/neue/webfonts/34F928_3_0.woff2') format('woff2'),url('/fonts/neue/webfonts/34F928_3_0.woff') format('woff'),url('/fonts/neue/webfonts/34F928_3_0.ttf') format('truetype');}
+// @font-face {font-family: 'NeueHaasUnicaPro-Regular';src: url('/fonts/neue/webfonts/34F928_3_0.eot');src: url('/fonts/neue/webfonts/34F928_3_0.eot?#iefix') format('embedded-opentype'),url('/fonts/neue/webfonts/34F928_3_0.woff2') format('woff2'),url('/fonts/neue/webfonts/34F928_3_0.woff') format('woff'),url('/fonts/neue/webfonts/34F928_3_0.ttf') format('truetype');}
 
+
+// TeX Gyre Heros
+// http://www.gust.org.pl/projects/e-foundry/tex-gyre/heros
+@font-face {
+  font-family: 'TeXGyreHerosRegular';
+  src: url('/fonts/texgyreheros/texgyreheros-regular-webfont.eot');
+  src: url('/fonts/texgyreheros/texgyreheros-regular-webfont.eot?iefix') format('eot'),
+       url('/fonts/texgyreheros/texgyreheros-regular-webfont.woff') format('woff'),
+       url('/fonts/texgyreheros/texgyreheros-regular-webfont.ttf') format('truetype'),
+       url('/fonts/texgyreheros/texgyreheros-regular-webfont.svg#webfontMiFzEZv2') format('svg');
+}
+
+@font-face {
+  font-family: 'TeXGyreHerosItalic';
+  src: url('/fonts/texgyreheros/texgyreheros-italic-webfont.eot');
+  src: url('/fonts/texgyreheros/texgyreheros-italic-webfont.eot?iefix') format('eot'),
+       url('/fonts/texgyreheros/texgyreheros-italic-webfont.woff') format('woff'),
+       url('/fonts/texgyreheros/texgyreheros-italic-webfont.ttf') format('truetype'),
+       url('/fonts/texgyreheros/texgyreheros-italic-webfont.svg#webfontdz4l6yft') format('svg');
+}
+
+@font-face {
+  font-family: 'TeXGyreHerosBold';
+  src: url('/fonts/texgyreheros/texgyreheros-bold-webfont.eot');
+  src: url('/fonts/texgyreheros/texgyreheros-bold-webfont.eot?iefix') format('eot'),
+       url('/fonts/texgyreheros/texgyreheros-bold-webfont.woff') format('woff'),
+       url('/fonts/texgyreheros/texgyreheros-bold-webfont.ttf') format('truetype'),
+       url('/fonts/texgyreheros/texgyreheros-bold-webfont.svg#webfontoz9PZvKK') format('svg');
+}
+
+@font-face {
+  font-family: 'TeXGyreHerosBoldItalic';
+  src: url('/fonts/texgyreheros/texgyreheros-bolditalic-webfont.eot');
+  src: url('/fonts/texgyreheros/texgyreheros-bolditalic-webfont.eot?iefix') format('eot'),
+       url('/fonts/texgyreheros/texgyreheros-bolditalic-webfont.woff') format('woff'),
+       url('/fonts/texgyreheros/texgyreheros-bolditalic-webfont.ttf') format('truetype'),
+       url('/fonts/texgyreheros/texgyreheros-bolditalic-webfont.svg#webfontUyo0y9zU') format('svg');
+}
 
 
 .architizer-glyph, .architizer-glyphs {

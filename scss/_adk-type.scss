@@ -18,22 +18,22 @@
 }
 
 @mixin weight-light {
-  font-family: 'NeueHaasUnicaPro-Light';
+  font-family: 'TeXGyreHerosRegular', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 @mixin weight-regular {
-  font-family: 'NeueHaasUnicaPro-Regular';
+  font-family: 'TeXGyreHerosRegular', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 @mixin weight-medium {
-  font-family: 'NeueHaasUnicaPro-Medium';
+  font-family: 'TeXGyreHerosRegular', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 @mixin weight-bold {
-  font-family: 'NeueHaasUnicaPro-Bold';
+  font-family: 'TeXGyreHerosBold', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -54,7 +54,7 @@ h6 {
 
 strong, 
 b {
-  @include weight-medium;
+  @include weight-bold;
 }
 
 .fw-bold {
