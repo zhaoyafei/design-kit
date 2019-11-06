@@ -1,0 +1,24 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:4.8.2
+      
+    working_directory: ~/design-kit
+    steps:
+      - checkout
+      - run: sudo npm install -g gulp
+      - run:
+          name: Compile sass and create docs
+          command: |
+            npm install
+            gulp sass
+            gulp docs
+            gulp createAdkTemplatesList
+      - run: sudo apt-get install awscli -y
+      - run:
+          name: deploy
+          command: bash -x deploy.sh
+      - store_artifacts:
+          path: ~/design-kit/css
+          destination: css
