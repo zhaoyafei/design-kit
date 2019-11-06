@@ -87,3 +87,9 @@ gulp.task('default', gulp.series(sass, docs, createAdkTemplatesList, browserSync
 
 // SASS task
 gulp.task('sass', sass);
+
+// Docs task
+gulp.task('docs', docs);
+
+// Create Adk Templates List task
+gulp.task('createAdkTemplatesList', createAdkTemplatesList);
