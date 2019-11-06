@@ -58,7 +58,7 @@ Here's a starter template:
 
 ## Builds
 
-See [gulpfile.js](gulpfile.js), [circle.yml](circle.yml), and [deploy.sh](deploy.sh) for detailed build configuration.
+See [gulpfile.js](gulpfile.js), [circle.yml](.circleci/config.yml), and [deploy.sh](deploy.sh) for detailed build configuration.
 
 ### Master
 When changes are merged to the master branch, the styles and documentation page are rebuilt by CircleCI and pushed to http://design-kit.arc.ht.
@@ -67,3 +67,5 @@ When changes are merged to the master branch, the styles and documentation page 
 When changes are pushed to feature branches, the styles are built by CircleCI and pushed to http://design-kit.arc.ht/css/dev/abcd123.css where `abcd123` is the abbreviated hash of the built commit from the feature branch.
 
 To test a development CSS build on our Angular app, add `?adk=abcd123` to the end of the URL of the page you want to test.
+
+Be careful that the other assets i.e. fonts are deployed only when merged to the master branch.
