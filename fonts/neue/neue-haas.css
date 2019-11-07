@@ -30,7 +30,7 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/34f928");
+/* @import url("//hello.myfonts.net/count/34f928");
 
   
 @font-face {font-family: 'NeueHaasUnicaPro-Bold';src: url('webfonts/34F928_0_0.eot');src: url('webfonts/34F928_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34F928_0_0.woff2') format('woff2'),url('webfonts/34F928_0_0.woff') format('woff'),url('webfonts/34F928_0_0.ttf') format('truetype');}
@@ -42,5 +42,5 @@
 @font-face {font-family: 'NeueHaasUnicaPro-Medium';src: url('webfonts/34F928_2_0.eot');src: url('webfonts/34F928_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34F928_2_0.woff2') format('woff2'),url('webfonts/34F928_2_0.woff') format('woff'),url('webfonts/34F928_2_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'NeueHaasUnicaPro-Regular';src: url('webfonts/34F928_3_0.eot');src: url('webfonts/34F928_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34F928_3_0.woff2') format('woff2'),url('webfonts/34F928_3_0.woff') format('woff'),url('webfonts/34F928_3_0.ttf') format('truetype');}
+@font-face {font-family: 'NeueHaasUnicaPro-Regular';src: url('webfonts/34F928_3_0.eot');src: url('webfonts/34F928_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34F928_3_0.woff2') format('woff2'),url('webfonts/34F928_3_0.woff') format('woff'),url('webfonts/34F928_3_0.ttf') format('truetype');} */
  
