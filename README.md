@@ -63,9 +63,11 @@ See [gulpfile.js](gulpfile.js), [circle.yml](.circleci/config.yml), and [deploy.
 ### Master
 When changes are merged to the master branch, the styles and documentation page are rebuilt by CircleCI and pushed to http://design-kit.arc.ht.
 
+After the deployment is finished and succeeded, you need to create an [invalidation](https://console.aws.amazon.com/cloudfront/home#distribution-settings:E1FEN8SK3LOS5R) for `css/adk.css` in CloudFront `design-kit.arc.ht` CNAME, the reason for that is to force the CDN to pull a fresh version of the file instead of the old one in the cache.
+
 ### Development Builds
 When changes are pushed to feature branches, the styles are built by CircleCI and pushed to http://design-kit.arc.ht/css/dev/abcd123.css where `abcd123` is the abbreviated hash of the built commit from the feature branch.
 
 To test a development CSS build on our Angular app, add `?adk=abcd123` to the end of the URL of the page you want to test.
 
-Be careful that the other assets i.e. fonts are deployed only when merged to the master branch.
+Be aware that other assets such as fonts are only deployed to S3 when the branch gets merged to master.
